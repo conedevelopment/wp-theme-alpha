@@ -1,0 +1,132 @@
+
+@import 'partials/variables';
+@import 'partials/animations';
+@import 'partials/components';
+
+
+// Default Styles
+
+body.is-canvi-ready {
+    overflow-x: hidden;
+}
+
+body.is-canvi-ready .canvi-navbar {
+    display: block;
+    visibility: visible;
+}
+
+body.logged-in {
+    .canvi-navbar {
+        padding-top: 48px;
+    }
+}
+
+.canvi-navbar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    background: #fff;
+    width: 280px;
+    display: none;
+    visibility: hidden;
+    transition: transform $canvi-transition-time $canvi-easing;
+    will-change: transform;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    
+    
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #efefef;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 2px;
+    }
+    
+    &.is-canvi-open {
+        transition: transform $canvi-transition-time $canvi-easing;
+        will-change: transform;
+    }
+    
+    &[data-position="right"] {
+        right: 0;
+        transform: translate3d(100%, 0, 0);
+        
+        &[data-push-content="true"] {
+            transform: translate3d(0, 0, 0);
+        }
+        
+        &.is-canvi-open {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    
+    &[data-position="left"] {
+        left: 0;
+        transform: translate3d(-100%, 0, 0);
+        
+        &[data-push-content="true"] {
+            transform: translate3d(0, 0, 0);
+        }
+        
+        &.is-canvi-open {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    
+    &[data-push-content="false"] {
+        z-index: 10;
+    }
+    
+    &[data-push-content="true"] {
+        z-index: 1;
+    }
+    
+}
+
+.canvi-content {
+    position: relative;
+    z-index: 5;
+    transition: transform $canvi-transition-time $canvi-easing;
+    overflow: hidden;
+    background: #fff;
+    
+    &.is-canvi-open {
+        transition: transform $canvi-transition-time $canvi-easing;
+    }
+}
+
+.canvi-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1031;
+}
+
+.canvi-content.is-canvi-open .canvi-overlay {
+    visibility: visible;
+    animation-name: canvi-animate-in;
+	animation-duration: $canvi-transition-time;
+	animation-fill-mode: forwards;
+    animation-timing-function: $canvi-easing;
+    backface-visibility: hidden;
+}
+
+.canvi-content.is-canvi-open .canvi-overlay.canvi-animate-out {
+    animation-name: canvi-animate-out;
+	animation-duration: $canvi-transition-time;
+	animation-fill-mode: forwards;
+    animation-timing-function: $canvi-easing;
+    backface-visibility: hidden;
+}

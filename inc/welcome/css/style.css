@@ -1,0 +1,7 @@
+.wp-badge.pine-welcome-logo {
+	background-color: rgba(76, 185, 201, 1);
+	background-image: url(../img/pine-logo.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 40%;
+}
