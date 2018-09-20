@@ -10,18 +10,7 @@ Text Domain: pine-alpha
 Tags: custom-background, custom-logo, custom-menu, featured-images, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-*/.canvi-user-info{padding:25px 30px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:left;-ms-flex-pack:left;justify-content:left;background:#010101;margin-bottom:20px;position:relative}
-.canvi-user-info img{max-width:100%;height:auto}
-.canvi-user-info__image{margin-right:20px;width:50px;height:50px;border-radius:50%;overflow:hidden}
-.canvi-user-info__data{width:calc(100% - 70px)}
-.canvi-user-info__title{font-weight:700;color:#fff;font-size:18px;margin:0 0 3px 0;line-height:1.3em;display:block}
-.canvi-user-info__meta{display:inline-block;color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px}
-.canvi-user-info__meta:hover,.canvi-user-info__meta:focus,.canvi-user-info__meta:active{color:rgba(255,255,255,0.9)}
-.canvi-user-info__close{position:absolute;top:calc(50% - 20px);right:30px;background:rgba(255,255,255,0.1);width:40px;height:40px;border-radius:2px;-webkit-transition:.3s;transition:.3s;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-.canvi-user-info__close:hover{background:rgba(255,255,255,0.3)}
-.canvi-user-info__close::before{content:'';width:20px;height:3px;background:#fff;position:absolute;top:18px;left:10px;-webkit-transform:rotate(45deg);transform:rotate(45deg)}
-.canvi-user-info__close::after{content:'';width:20px;height:3px;background:#fff;position:absolute;top:18px;right:10px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
-.canvi-title{font-size:.9rem;text-transform:uppercase;font-weight:700;margin:1.5rem 0 0;color:rgba(0,0,0,0.35);padding:14px 25px;display:block}
+*/.canvi-title{font-size:.9rem;text-transform:uppercase;font-weight:700;margin:1.5rem 0 0;color:rgba(0,0,0,0.35);padding:14px 25px;display:block}
 .canvi-navigation{margin:0;padding:0}
 .canvi-navigation li{list-style:none}
 .canvi-navigation li:not(:last-child){border-bottom:1px solid rgba(0,0,0,0.03)}
@@ -33,8 +22,6 @@ This theme, like WordPress, is licensed under the GPL.
 .canvi-navigation .sub-menu{margin:-5px 0 0 0;padding:0}
 .canvi-navigation .sub-menu li{border:0}
 .canvi-navigation .sub-menu a{padding:6px 25px 6px 40px;text-transform:uppercase}
-.canvi-header{background:linear-gradient(45deg,#00a1ff,#f400ff);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-.canvi-header__image{margin:30px;max-width:100px;height:auto}
 body.is-canvi-ready{overflow-x:hidden}
 body.is-canvi-ready .canvi-navbar{display:block;visibility:visible}
 body.logged-in .canvi-navbar{padding-top:48px}
