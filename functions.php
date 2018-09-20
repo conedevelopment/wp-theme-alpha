@@ -123,9 +123,9 @@ add_action( 'widgets_init', 'pine_alpha_widgets_init' );
 function pine_alpha_scripts() {
 	wp_enqueue_style( 'pine-alpha-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'pine-alpha-navigation', get_template_directory_uri() . '/js/navigation.js', array(), THEME_VERSION, true );
+	wp_enqueue_script( 'pine-alpha-vendor', get_template_directory_uri() . '/assets/dist/vendor.min.js', array(), THEME_VERSION, true );
 
-	wp_enqueue_script( 'pine-alpha-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), THEME_VERSION, true );
+	wp_enqueue_script( 'pine-alpha-custom', get_template_directory_uri() . '/assets/dist/custom.min.js', array(), THEME_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

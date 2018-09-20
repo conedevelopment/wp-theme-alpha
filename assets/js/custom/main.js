@@ -1,5 +1,5 @@
 ( function( $ ) {
-	new Canvi({
+	/*new Canvi({
 		content: '.js-canvi-content',
 		navbar: '.js-canvi-navbar--right',
 		openButton: '.js-canvi-open-button--right',
@@ -14,5 +14,5 @@
 				width: '340px'
 			}
 		]
-	});
+	});*/
 }( jQuery ) );
