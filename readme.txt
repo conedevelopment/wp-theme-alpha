@@ -12,7 +12,7 @@ A magazine theme named Alpha.
 
 == Description ==
 
-Description
+Alpha is a clean and minimalistic magazine/blog theme for those who like to create content each day. It is ideal for creators too because it supports a portfolio CPT. The theme is user-friendly, responsive, retina ready and performs well.
 
 == Installation ==
 
