@@ -1,4 +1,9 @@
 <?php
+/**
+ * pine-alpha Theme Options
+ *
+ * @package pine-alpha
+ */
 
 $prefix = 'pine_alpha_';
 

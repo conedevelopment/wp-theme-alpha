@@ -24,12 +24,12 @@ module.exports = {
 
 	// JS Vendor options.
 	jsVendorSRC: './assets/js/vendor/*.js', // Path to JS vendor folder.
-	jsVendorDestination: './assets/js/', // Path to place the compiled JS vendors file.
+	jsVendorDestination: './assets/dist/', // Path to place the compiled JS vendors file.
 	jsVendorFile: 'vendor', // Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
 
 	// JS Custom options.
 	jsCustomSRC: './assets/js/custom/*.js', // Path to JS custom scripts folder.
-	jsCustomDestination: './assets/js/', // Path to place the compiled JS custom scripts file.
+	jsCustomDestination: './assets/dist/', // Path to place the compiled JS custom scripts file.
 	jsCustomFile: 'custom', // Compiled JS custom file name. Default set to custom i.e. custom.js.
 
 	// Images options.
@@ -43,13 +43,13 @@ module.exports = {
 	watchPhp: './**/*.php', // Path to all PHP files.
 
 	// Translation options.
-	textDomain: 'WPGULP', // Your textdomain here.
-	translationFile: 'WPGULP.pot', // Name of the translation file.
+	textDomain: 'pine-alpha', // Your textdomain here.
+	translationFile: 'pine-alpha.pot', // Name of the translation file.
 	translationDestination: './languages', // Where to save the translation files.
-	packageName: 'WPGULP', // Package name.
-	bugReport: 'https://AhmadAwais.com/contact/', // Where can users report bugs.
-	lastTranslator: 'Ahmad Awais <your_email@email.com>', // Last translator Email ID.
-	team: 'AhmadAwais <your_email@email.com>', // Team's Email ID.
+	packageName: 'pine-alpha', // Package name.
+	bugReport: 'https://pineco.de/about/', // Where can users report bugs.
+	lastTranslator: 'Pine <hello@pineco.de>', // Last translator Email ID.
+	team: 'Pine <hello@pineco.de>', // Team's Email ID.
 
 	// Browsers you care about for autoprefixing. Browserlist https://github.com/ai/browserslist
 	// The following list is set as per WordPress requirements. Though, Feel free to change.

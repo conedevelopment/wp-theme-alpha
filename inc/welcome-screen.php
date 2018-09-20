@@ -1,8 +1,12 @@
 <?php
+/**
+ * pine-alpha Welcome Page
+ *
+ * @package pine-alpha
+ */
 
 /**
  * Adds welcome page sub menu.
- *
  * @since 0.1.0
  */
 function pine_alpha_welcome_page() {

@@ -1,23 +1,15 @@
 /*!
-Theme Name: pine-alpha
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
+Theme Name: Alpha
+Theme URI: https://pineco.de/wordpress/themes/alpha/
+Author: Pine
+Author URI: https://pineco.de/
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
 Text Domain: pine-alpha
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, featured-images, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-pine-alpha is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */.canvi-user-info{padding:25px 30px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:left;-ms-flex-pack:left;justify-content:left;background:#010101;margin-bottom:20px;position:relative}
 .canvi-user-info img{max-width:100%;height:auto}
 .canvi-user-info__image{margin-right:20px;width:50px;height:50px;border-radius:50%;overflow:hidden}
@@ -66,11 +58,10 @@ body.logged-in .canvi-navbar{padding-top:48px}
 .canvi-content.is-canvi-open .canvi-overlay.canvi-animate-out{-webkit-animation-name:canvi-animate-out;animation-name:canvi-animate-out;-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-timing-function:cubic-bezier(0.42,0,0.58,1);animation-timing-function:cubic-bezier(0.42,0,0.58,1);-webkit-backface-visibility:hidden;backface-visibility:hidden}
 :root{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:90%}
 *,::before,::after{-webkit-box-sizing:inherit;box-sizing:inherit}
-::-moz-selection{background:#e07c4a;color:#fff}
-::selection{background:#e07c4a;color:#fff}
-a{-webkit-transition:color .25s ease;transition:color .25s ease;color:#e07c4a}
-a:hover,a:active,a:focus{text-decoration:none;-webkit-transition:color .25s ease;transition:color .25s ease;color:#6aa182}
-body{background:purple;color:#fff}
+::-moz-selection{background:red;color:#fff}
+::selection{background:red;color:#fff}
+a{-webkit-transition:color .25s ease;transition:color .25s ease;color:red}
+a:hover,a:active,a:focus{text-decoration:none;-webkit-transition:color .25s ease;transition:color .25s ease;color:blue}
 @media(min-width:992px){:root{font-size:100%}
 }@-webkit-keyframes canvi-animate-in{0%{opacity:0}
 100%{opacity:1}

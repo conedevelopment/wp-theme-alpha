@@ -1,4 +1,9 @@
 <?php
+/**
+ * pine-alpha Dependencies
+ *
+ * @package pine-alpha
+ */
 
 add_action( 'tgmpa_register', 'pine_alpha_register_required_plugins' );
 
