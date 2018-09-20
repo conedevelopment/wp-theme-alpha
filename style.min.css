@@ -70,7 +70,7 @@ body.logged-in .canvi-navbar{padding-top:48px}
 ::selection{background:#e07c4a;color:#fff}
 a{-webkit-transition:color .25s ease;transition:color .25s ease;color:#e07c4a}
 a:hover,a:active,a:focus{text-decoration:none;-webkit-transition:color .25s ease;transition:color .25s ease;color:#6aa182}
-body{background:blue}
+body{background:purple;color:#fff}
 @media(min-width:992px){:root{font-size:100%}
 }@-webkit-keyframes canvi-animate-in{0%{opacity:0}
 100%{opacity:1}

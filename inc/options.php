@@ -2,7 +2,6 @@
 
 $prefix = 'pine_alpha_';
 
-
 add_action( 'cmb2_admin_init', 'pine_alpha_register_theme_options_metabox' );
 
 /**
