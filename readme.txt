@@ -24,12 +24,12 @@ Description
 
 = Does this theme support any plugins? =
 
-pine-alpha includes support for Infinite Scroll in Jetpack.
+Alpha includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
 = 0.1.0 - Sept 20 2018 =
-* Initial release
+* Development release
 
 == Credits ==
 
