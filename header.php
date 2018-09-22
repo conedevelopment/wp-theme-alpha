@@ -22,6 +22,15 @@
 
 <body <?php body_class(); ?>>
 
+	<?php $image = get_theme_mod( 'pine_header_section_logo_image', '' ); ?>
+	<img src="<?php echo esc_url( $image['url'] ); ?>" alt="">
+
+	<?php if ( true == get_theme_mod( 'pine_header_section_navigation_search', true ) ) : ?>
+		<p>Search is enabled</p>
+	<?php else : ?>
+		<p>Search is disabled</p>
+	<?php endif; ?>
+
 	<?php if ( pine_alpha_get_option( 'pine_alpha_theme_options_blog_schema_checkbox' ) ) : ?>
 		pine_alpha_theme_options_blog_schema_checkbox
 	<?php endif; ?>
