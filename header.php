@@ -22,10 +22,10 @@
 
 <body <?php body_class(); ?>>
 
-	<?php $image = get_theme_mod( 'pine_header_section_logo_image', '' ); ?>
+	<?php $image = get_theme_mod( 'pine_alpha_header_section_logo_image', '' ); ?>
 	<img src="<?php echo esc_url( $image['url'] ); ?>" alt="">
 
-	<?php if ( true == get_theme_mod( 'pine_header_section_navigation_search', true ) ) : ?>
+	<?php if ( true == get_theme_mod( 'pine_alpha_header_section_navigation_search', true ) ) : ?>
 		<p>Search is enabled</p>
 	<?php else : ?>
 		<p>Search is disabled</p>
