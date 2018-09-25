@@ -105,6 +105,25 @@ function pine_alpha_register_theme_options_metabox() {
 		'id'      => $prefix . 'category_color', 
 		'type'    => 'colorpicker',
 		'default' => '#24d2e5',
+		'column' => true
+	) );
+
+
+	/** 
+ 	* Metabox to add fields to categories
+ 	*/ 
+	$cmb_post = new_cmb2_box( array( 
+		'id'               => $prefix . 'post_fields', 
+		'title'            => esc_html__( 'Theme Specific Settings', 'pine-alpha' ),
+		'object_types'     => array( 'post' )
+	) );
+	
+	 $cmb_post->add_field( array(
+		'name'   => esc_html__( 'Show this in slider?', 'pine-alpha' ),
+		'desc'   => esc_html__( 'If you check this field, this post will be shown in the slider section in the header if it is enabled.', 'pine-alpha' ),
+		'id'     => $prefix . 'show_in_slider', 
+		'type'   => 'checkbox',
+		'column' => true
 	) );
 
 }

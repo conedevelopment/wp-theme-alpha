@@ -69,8 +69,9 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		add_image_size( 'alpha-slider-image-small', 400, 500, true );
+		add_image_size( 'alpha-slider-image-large', 800, 1000, true );
 		add_image_size( 'alpha-featured-image', 2000, 1200, true );
-
 		add_image_size( 'alpha-thumbnail-avatar', 100, 100, true );
 
 		// This theme uses wp_nav_menu() in one location.
