@@ -1,3 +1,18 @@
-$color__default: blue;
-$color__secondary: red;
-$color__black: #231f20;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1260px
+);
+
+$headings-font-family: 'Merriweather', serif;
+$headings-font-weight:  700;
+
+$colors: (
+    "default":    #00F1FF,
+    "secondary":  #0095FF,
+    "black":      #231F20
+);
+
+$font__heading: 'Merriweather', serif;
+$font__body: 'Source Sans Pro', sans-serif;

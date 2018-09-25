@@ -7,6 +7,13 @@
  * @package pine-alpha
  */
 
+ function pine_alpha_get_category_list($ID) {
+	$categories = get_the_category($ID);  
+	foreach  ($categories as $category) {
+		echo '<span class="category-label">' . $category->name . '</span>';
+	}
+ }
+
 if ( ! function_exists( 'pine_alpha_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.

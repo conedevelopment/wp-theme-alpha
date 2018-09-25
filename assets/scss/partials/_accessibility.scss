@@ -1,0 +1,19 @@
+.sreen-reader-text {
+    @include sr-only();
+}
+
+.skip-link {
+    background: map-get($colors, 'black');
+    padding: 1rem 2rem;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    position: fixed;
+    left: -100vw;
+
+    &:focus {
+        top: 1rem;
+        left: 1rem;
+        color: #fff;
+    }
+}

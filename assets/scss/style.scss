@@ -1,5 +1,5 @@
 /*!
-Theme Name: Alpha
+Theme Name: pine-alpha
 Theme URI: https://pineco.de/wordpress/themes/alpha/
 Author: Pine
 Author URI: https://pineco.de/
@@ -29,7 +29,7 @@ This theme, like WordPress, is licensed under the GPL.
     box-sizing: border-box;
     font-size: 90%;
 
-    @media (min-width: 992px) {
+    @include media-breakpoint-up(md) {
         font-size: 100%;
     }
 }
@@ -41,19 +41,24 @@ This theme, like WordPress, is licensed under the GPL.
 }
 
 ::selection {
-    background: $color__secondary;
+    background: map-get($colors, 'secondary');
     color: #fff;
+}
+
+body {
+    font-family: $font__body;
+    font-size: 1rem;
 }
 
 a {
     transition: color 0.25s ease;
-    color: $color__secondary;
+    color: map-get($colors, 'secondary');
 
     &:hover,
     &:active,
     &:focus {
         text-decoration: none;
         transition: color 0.25s ease;
-        color: $color__default;
+        color: map-get($colors, 'default');
     }
 }

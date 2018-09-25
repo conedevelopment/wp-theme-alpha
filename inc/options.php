@@ -89,6 +89,24 @@ function pine_alpha_register_theme_options_metabox() {
 		'id' => $prefix . 'theme_options_code_body_textareacode',
 		'type' => 'textarea_code'
 	) );
+
+ 	/** 
+ 	 * Metabox to add fields to categories
+ 	 */ 
+ 	$cmb_term = new_cmb2_box( array( 
+ 		'id'               => $prefix . 'category_fields', 
+ 		'title'            => esc_html__( 'Category Metabox', 'pine-alpha' ),
+ 		'object_types'     => array( 'term' ),
+ 		'taxonomies'       => array( 'category' )
+	) );
+	 
+	$cmb_term->add_field( array(
+		'name'    => esc_html__( 'Category Color', 'pine-alpha' ),
+		'id'      => $prefix . 'category_color', 
+		'type'    => 'colorpicker',
+		'default' => '#24d2e5',
+	) );
+
 }
 
 

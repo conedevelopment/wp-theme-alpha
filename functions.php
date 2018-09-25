@@ -26,14 +26,14 @@ require_once __DIR__ . '/inc/tgmpa/class-tgm-plugin-activation.php';
 // require_once __DIR__ . '/vendor/autoload.php';
 
 
-if( ! defined( 'THEME_VERSION' ) ) :
+if( ! defined( 'THEME_VERSION' ) ) {
 	/**
 	 * Define theme version
 	 */
 	define( 'THEME_VERSION', '0.1.0' );
-endif;
+}
 
-if ( ! function_exists( 'pine_alpha_setup' ) ) :
+if ( ! function_exists( 'pine_alpha_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -69,9 +69,14 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		add_image_size( 'alpha-featured-image', 2000, 1200, true );
+
+		add_image_size( 'alpha-thumbnail-avatar', 100, 100, true );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'pine-alpha' ),
+			'header' => esc_html__( 'Header', 'pine-alpha' ),
+			'footer' => esc_html__( 'Footer', 'pine-alpha' ),
 		) );
 
 		/*
@@ -86,10 +91,109 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) :
 			'caption',
 		) );
 
+		/*
+		 * Enable support for Post Formats.
+		 *
+		 * See: https://codex.wordpress.org/Post_Formats
+		 */
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+			'gallery',
+			'audio',
+		) );
+
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Define and register starter content to showcase the theme on new sites.
+		/*$starter_content = array(
+			'widgets' => array(
+				// Place three core-defined widgets in the sidebar area.
+				'sidebar-1' => array(
+					'text_business_info',
+					'search',
+					'text_about',
+				),
+
+				// Add the core-defined business info widget to the footer 1 area.
+				'footer-1' => array(
+					'text_business_info',
+				),
+
+				// Put two core-defined widgets in the footer 2 area.
+				'footer-2' => array(
+					'text_about',
+					'search',
+				),
+			),
+
+			// Specify the core-defined pages to create and add custom thumbnails to some of them.
+			'posts' => array(
+				'home',
+				'about' => array(
+					'thumbnail' => '{{image-coast}}',
+				),
+				'contact' => array(
+					'thumbnail' => '{{image-mountain}}',
+				),
+				'blog' => array(
+					'thumbnail' => '{{image-coast}}',
+				),
+				'homepage-section' => array(
+					'thumbnail' => '{{image-mountain}}',
+				),
+			),
+
+			// Create the custom image attachments used as post thumbnails for pages.
+			'attachments' => array(
+				'image-coast' => array(
+					'post_title' => _x( 'Espresso', 'Theme starter content', 'pine-alpha' ),
+					'file' => 'assets/demo/thumbnails/coast.jpg', // URL relative to the template directory.
+				),
+				'image-mountain' => array(
+					'post_title' => _x( 'Sandwich', 'Theme starter content', 'pine-alpha' ),
+					'file' => 'assets/demo/thumbnails/mountain.jpg',
+				)
+			),
+
+			// Default to a static front page and assign the front and posts pages.
+			'options' => array(
+				'show_on_front' => 'page',
+				'page_on_front' => '{{home}}',
+				'page_for_posts' => '{{blog}}',
+			),
+
+			// Set up nav menus for each of the two areas registered in the theme.
+			'nav_menus' => array(
+				// Assign a menu to the "top" location.
+				'header' => array(
+					'name' => __( 'Header Menu', 'pine-alpha' ),
+					'items' => array(
+						'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+						'page_about',
+						'page_blog',
+						'page_contact',
+					),
+				),
+			),
+		); */
+
+		/**
+		 * Filters Alpha array of starter content.
+		 *
+		 * @since Alpha 0.1.0
+		 *
+		 * @param array $starter_content Array of starter content.
+		 */
+		/* $starter_content = apply_filters( 'pine_alpha_starter_content', $starter_content );
+
+		add_theme_support( 'starter-content', $starter_content ); */
 	}
-endif;
+}
 add_action( 'after_setup_theme', 'pine_alpha_setup' );
 
 /**
@@ -116,7 +220,27 @@ function pine_alpha_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'pine-alpha' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'pine-alpha' ),
+		'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'pine-alpha' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 1', 'pine-alpha' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'pine-alpha' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 2', 'pine-alpha' ),
+		'id'            => 'footer-2',
+		'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'pine-alpha' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -124,6 +248,71 @@ function pine_alpha_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'pine_alpha_widgets_init' );
+
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with ... and
+ * a 'Continue reading' link.
+ *
+ * @since 0.1.0
+ *
+ * @param string $link Link to single post/page.
+ * @return string 'Continue reading' link prepended with an ellipsis.
+ */
+function pine_alpha_excerpt_more( $link ) {
+	if ( is_admin() ) {
+		return $link;
+	}
+
+	$link = sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		/* translators: %s: Name of current post */
+		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'pine-alpha' ), get_the_title( get_the_ID() ) )
+	);
+	return ' &hellip; ' . $link;
+}
+add_filter( 'excerpt_more', 'pine_alpha_excerpt_more' );
+
+/**
+ * TODO: actualize for the final theme 
+ *
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for content images.
+ *
+ * @since 0.1.0
+ *
+ * @param string $sizes A source size value for use in a 'sizes' attribute.
+ * @param array  $size  Image size. Accepts an array of width and height
+ *                      values in pixels (in that order).
+ * @return string A source size value for use in a content image 'sizes' attribute.
+ */
+function pine_alpha_content_image_sizes_attr( $sizes, $size ) {
+	$width = $size[0];
+
+	if ( 740 <= $width ) {
+		$sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
+	}
+
+	if ( is_active_sidebar( 'sidebar-1' ) || is_archive() || is_search() || is_home() || is_page() ) {
+		if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
+			 $sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
+		}
+	}
+
+	return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'pine_alpha_content_image_sizes_attr', 10, 2 );
+
+/**
+ * Display custom CSS styles.
+ */
+function pine_alpha_css_wrap() {
+	require_once( get_parent_theme_file_path( '/inc/custom-styles.php' ) );
+?>
+	<style type="text/css" id="custom-theme-styles">
+		<?php echo pine_alpha_custom_styles(); ?>
+	</style>
+<?php }
+add_action( 'wp_head', 'pine_alpha_css_wrap' );
 
 /**
  * Enqueue scripts and styles.
@@ -140,6 +329,39 @@ function pine_alpha_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pine_alpha_scripts' );
+
+/**
+ * Use front-page.php when Front page displays is set to a static page.
+ *
+ * @since 0.1.0
+ *
+ * @param string $template front-page.php.
+ *
+ * @return string The template to be used: blank if is_home() is true (defaults to index.php), else $template.
+ */
+function pine_alpha_front_page_template( $template ) {
+	return is_home() ? '' : $template;
+}
+add_filter( 'frontpage_template',  'pine_alpha_front_page_template' );
+
+/**
+ * Modifies tag cloud widget arguments to display all tags in the same font size
+ * and use list format for better accessibility.
+ *
+ * @since 0.1.0
+ *
+ * @param array $args Arguments for tag cloud widget.
+ * @return array The filtered arguments for tag cloud widget.
+ */
+function pine_alpha_widget_tag_cloud_args( $args ) {
+	$args['largest']  = 1;
+	$args['smallest'] = 1;
+	$args['unit']     = 'em';
+	$args['format']   = 'list';
+
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'pine_alpha_widget_tag_cloud_args' );
 
 /**
  * Enqueue admin scripts and styles.
@@ -179,6 +401,11 @@ require get_template_directory() . '/inc/dependencies.php';
  * Add welcome screen.
  */
 require get_template_directory() . '/inc/welcome-screen.php';
+
+/**
+ * Add custom styles.
+ */
+require get_template_directory() . '/inc/custom-styles.php';
 
 /**
  * Load Jetpack compatibility file.

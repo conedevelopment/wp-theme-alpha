@@ -212,7 +212,6 @@ Kirki::add_section( 'pine_alpha_footer_scrolltop', array(
     'priority'       => 160,
 ) );
 
-
 Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'toggle',
 	'settings'    => 'pine_alpha_footer_scrolltop_enable',

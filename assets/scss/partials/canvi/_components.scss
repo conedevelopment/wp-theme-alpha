@@ -30,7 +30,7 @@
         align-items: center;
         opacity: 0.7;
         text-decoration: none;
-        color: $color__black;
+        color: map-get($colors, 'black');
         font-size: 0.9rem;
         font-weight: 700;
         text-transform: uppercase;
