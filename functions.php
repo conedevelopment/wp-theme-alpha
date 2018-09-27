@@ -409,6 +409,11 @@ require get_template_directory() . '/inc/welcome-screen.php';
 require get_template_directory() . '/inc/custom-styles.php';
 
 /**
+ * Add SVG icons.
+ */
+require get_template_directory() . '/inc/icon-functions.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

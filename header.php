@@ -26,8 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'pine-alpha' ); ?></a>
 
 	<header class="site-header">
-		<?php get_template_part( 'template-parts/header/top', 'section' ); ?>
-		<?php get_template_part( 'template-parts/header/bottom', 'section' ); ?>
+		<?php get_template_part( 'template-parts/header/main', 'section' ); ?>
 	</header>
 
 	<?php /* if ( true == get_theme_mod( 'pine_alpha_header_section_navigation_search', true ) ) : ?>
