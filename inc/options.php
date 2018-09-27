@@ -108,6 +108,18 @@ function pine_alpha_register_theme_options_metabox() {
 		'column' => true
 	) );
 
+	$cmb_term->add_field( array(
+		'name'    => esc_html__( 'Category Cover Image', 'pine-alpha' ),
+		'id'      => $prefix . 'category_cover_image', 
+		'type'    => 'file',
+		'options' => array(
+			'url' => false, 
+		),
+		'text'    => array(
+			'add_upload_file_text' =>  esc_html__( 'Add File', 'pine-alpha' )
+		),
+		'preview_size' => 'alpha-category-cover',
+	) );
 
 	/** 
  	* Metabox to add fields to categories

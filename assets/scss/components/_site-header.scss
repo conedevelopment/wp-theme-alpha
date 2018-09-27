@@ -1,6 +1,6 @@
 .site-header {
     background: #fff;
-    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    // box-shadow: 0 0 4px rgba(0,0,0,0.1);
     position: relative;
     z-index: 51;
 
@@ -69,7 +69,7 @@
 
     &__social-item {
         display: inline-block;
-        margin: 0 0 0 0.6rem;
+        margin: 0 0 0 1.2rem;
 
         &:hover,
         &:focus,
@@ -81,9 +81,35 @@
         }
 
         svg {
-            height: 2rem;
-            width: 2rem;
+            height: 1rem;
+            width: 1rem;
             transition: fill 0.25s ease;
+        }
+    }
+
+    &__search {
+        height: 2.4rem;
+        width: 2.4rem;
+        border: none;
+        border-radius: 50%;
+        background: map-get($colors, 'black');
+        margin-left: 3rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: linear-gradient(45deg, map-get($colors, 'default'), map-get($colors, 'secondary'));
+        }
+
+        svg {
+            height: 1.2rem;
+            width: 1.2rem;
+            fill: #fff;
         }
     }
 }

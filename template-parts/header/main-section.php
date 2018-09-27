@@ -37,6 +37,10 @@
                             <?php echo pine_alpha_get_svg( array( 'icon' => 'linkedin' ) ); ?>
                         </a>
                     </div>
+                    
+                    <button class="site-header__search">
+                        <?php echo pine_alpha_get_svg( array( 'icon' => 'search' ) ); ?>
+                    </button>
                 </div>
             </div>
         </div>
