@@ -1,5 +1,4 @@
-
-<?php // Show four most recent posts.
+<?php
 $slider_posts = new WP_Query( array(
     'post_type'           => 'post',
     'posts_per_page'      => 12,
@@ -21,10 +20,14 @@ $slider_posts = new WP_Query( array(
 
             <a href="<?php the_permalink(); ?>"> 
                 <div <?php post_class( 'slider-item' ); ?> style="background-image: url(<?php echo $featured_img_url; ?>); color: <?php echo $term_color; ?>;">
+                    <div class="slider-item__categories"><?php pine_alpha_get_category_list( $post->ID ); ?></div>
                     <div class="slider-item__caption">
-                        <span class="slider-item__categories"><?php pine_alpha_get_category_list( $post->ID ); ?></span>
+                        <span class="slider-item__date"><?php echo pine_alpha_posted_on(); ?></span>
                         <h2 class="slider-item__title"><?php the_title(); ?></h2>
-                        <span class="slider-item__date"><?php echo esc_html( get_the_date() ); ?></span>
+                        <div class="slider-item__author">
+                            <img src="<?php echo get_avatar_url( get_the_author_meta('user_email'), '80', '' ); ?>" alt="<?php echo get_the_author_meta( 'display_name', $post->post_author ); ?>" />
+                            <span><?php echo get_the_author_meta( 'display_name', $post->post_author ); ?></span>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -32,5 +35,5 @@ $slider_posts = new WP_Query( array(
         endwhile;
         wp_reset_postdata();
         ?>
-    </div><!-- .recent-posts -->
+    </div>
 <?php endif; ?>
