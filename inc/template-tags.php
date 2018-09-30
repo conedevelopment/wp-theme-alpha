@@ -8,9 +8,17 @@
  */
 
  function pine_alpha_get_category_list($ID) {
-	$categories = get_the_category($ID);  
+	$categories = get_the_category($ID);
+	$i = 0;
+	$length = count($categories);
+
 	foreach  ($categories as $category) {
-		echo '<span class="category-label">' . $category->name . '</span>';
+		if ($i != $length - 1) {
+			echo '<span class="category-label">' . $category->name . ',</span>';
+		} else {
+			echo '<span class="category-label">' . $category->name . '</span>';
+		}
+		$i++;
 	}
  }
 
@@ -31,7 +39,7 @@ if ( ! function_exists( 'pine_alpha_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'pine-alpha' ), $time_string
+			esc_html_x( '%s', 'post date', 'pine-alpha' ), $time_string
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.

@@ -1,0 +1,136 @@
+.list-item {
+    margin-bottom: 1.5rem;
+
+    &:hover {
+        .list-item__image {
+
+        }
+    }
+
+    &.is-secondary {
+        display: flex;
+        margin-bottom: 2rem;
+
+        .list-item__image {
+            width: 220px;
+            margin-right: 2rem;
+        }
+
+        .list-item__content {
+            padding: 0;
+            width: calc(100% - 2rem - 220px);
+        }
+    }
+
+    &__image {
+        border-radius: 2px;
+        display: block;
+        position: relative;
+        z-index: 5;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            background: linear-gradient(0deg, rgba(45,45,45,1), rgba(0, 0, 0, 0));
+            opacity: 0;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 10;
+        background: #fff;
+        // padding: 1.5rem 1.5rem 0 1.5rem;
+        // margin: -3rem 1.5rem 0 1.5rem;
+        padding: 1.5rem 0;
+    }
+
+    &__meta {
+        font-size: 0.94rem;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.3);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        margin: 0.6rem 0 0.8rem;
+        font-size: 1.3rem;
+
+        a {
+            color: map-get($colors, 'black');
+        }
+    }
+
+    &__excerpt {
+        color: rgba(0,0,0,0.7);
+        margin-bottom: 0.8rem;
+    }
+
+    &__read-more {
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: map-get($colors, 'black');
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            background: rgba(0,0,0,0.1);
+            transition: width 0.15s ease;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            &::before {
+                width: 100%;
+                transition: width 0.15s ease;
+            }
+        }
+    }
+
+    .category-label {
+        margin: 0 0.5rem 0 0;
+    }
+    
+    &__separator {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.1);
+        margin: 0 0.6rem;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.8rem;
+
+        img {
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+            margin-right: 0.7rem;
+        }
+
+        span {
+            color: rgba(0,0,0,0.3);
+        }
+    }
+}

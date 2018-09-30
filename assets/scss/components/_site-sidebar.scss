@@ -1,0 +1,20 @@
+.site-sidebar {
+    position: relative;
+    padding: 3rem 0 3rem 2rem;
+    height: 100%;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: -100vw;
+        bottom: 0;
+        left: 0;
+        background: map-get($colors, 'light-gray');
+    }
+
+    > * + * {
+        margin-top: 3rem;
+    }
+}

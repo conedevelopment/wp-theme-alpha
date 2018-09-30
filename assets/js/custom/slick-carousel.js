@@ -12,7 +12,6 @@
 			responsive: [ {
 				breakpoint: 783,
 				settings: {
-					centerPadding: '0',
 					dots: false,
 					variableWidth: true
 				}

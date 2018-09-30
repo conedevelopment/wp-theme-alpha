@@ -3,7 +3,7 @@
 ?>
 
 <div class="site-header__bottom-section">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 site-header__inside">
                 <?php $image = get_theme_mod( 'pine_alpha_header_section_logo_image', '' ); ?>
@@ -35,6 +35,12 @@
                         </a>
                         <a href="#" class="site-header__social-item">
                             <?php echo pine_alpha_get_svg( array( 'icon' => 'linkedin' ) ); ?>
+                        </a>
+                        <a href="#" class="site-header__social-item">
+                            <?php echo pine_alpha_get_svg( array( 'icon' => 'instagram' ) ); ?>
+                        </a>
+                        <a href="#" class="site-header__social-item">
+                            <?php echo pine_alpha_get_svg( array( 'icon' => 'youtube' ) ); ?>
                         </a>
                     </div>
                     

@@ -118,7 +118,7 @@ function pine_alpha_register_theme_options_metabox() {
 		'text'    => array(
 			'add_upload_file_text' =>  esc_html__( 'Add File', 'pine-alpha' )
 		),
-		'preview_size' => 'alpha-category-cover',
+		'preview_size' => 'medium',
 	) );
 
 	/** 

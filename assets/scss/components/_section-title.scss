@@ -1,0 +1,24 @@
+.section-title {
+    font-size: 1.6rem;
+    color: map-get($colors, 'black');
+    margin-bottom: 2rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        top: calc(50% + 1px);
+        height: 1px;
+        width: 100%;
+        background: rgba(0,0,0,0.05);
+    }
+
+    &__helper {
+        background: #fff;
+        position: relative;
+        z-index: 10;
+        padding-right: 1rem;
+    }
+}

@@ -7,11 +7,11 @@
     height: 260px;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-start;
+    justify-content: flex-start; 
     padding: 2rem;
     border-radius: 2px;
     position: relative;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    // box-shadow: 0 0 4px rgba(0,0,0,0.1);
     transition: transform 0.1s ease;
 
     &:hover {

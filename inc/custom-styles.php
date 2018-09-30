@@ -15,7 +15,7 @@ function pine_alpha_custom_styles() {
 	$css = '
 
 a {
-    color: ' . $default_color . ';
+    
 }
     ';
 

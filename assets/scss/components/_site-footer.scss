@@ -1,0 +1,19 @@
+.site-footer {
+    background: map-get($colors, 'black');
+    text-align: center;
+    color: #fff;
+    padding: 3rem 0;
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        margin-bottom: 3rem;
+    }
+
+    &__copyright {
+        margin: 0;
+    }
+}

@@ -20,9 +20,13 @@ $slider_posts = new WP_Query( array(
 
             <a href="<?php the_permalink(); ?>"> 
                 <div <?php post_class( 'slider-item' ); ?> style="background-image: url(<?php echo $featured_img_url; ?>); color: <?php echo $term_color; ?>;">
-                    <div class="slider-item__categories"><?php pine_alpha_get_category_list( $post->ID ); ?></div>
+                    <?php /*<div class="slider-item__categories"</div> */ ?>
                     <div class="slider-item__caption">
-                        <span class="slider-item__date"><?php echo pine_alpha_posted_on(); ?></span>
+                        <span class="slider-item__date">
+                            <?php echo pine_alpha_posted_on(); ?>
+                            <span class="slider-item__separator"></span>
+                            <?php pine_alpha_get_category_list( $post->ID ); ?>
+                        </span>
                         <h2 class="slider-item__title"><?php the_title(); ?></h2>
                         <div class="slider-item__author">
                             <img src="<?php echo get_avatar_url( get_the_author_meta('user_email'), '80', '' ); ?>" alt="<?php echo get_the_author_meta( 'display_name', $post->post_author ); ?>" />

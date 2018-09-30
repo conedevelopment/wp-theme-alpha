@@ -17,52 +17,59 @@ get_header();
 
 	<?php get_template_part( 'template-parts/hero/front', 'slider' ); ?>
 
-	<div class="categories-section">
+	<div class="highlighted-posts">
 		<div class="container">
 			<div class="row">
+				<div class="col-12">
+					<h2 class="section-title">
+						<span class="section-title__helper">Popular Posts</span>
+					</h2>
+				</div>
 				<?php
-					$categories = get_terms( 'category', array(
-						'orderby'    => 'rand',
-						'hide_empty' => 0,
-						'number'     => 4
-					) );
+				$latest_posts = new WP_Query( array(
+					'post_type'           => 'post',
+					'posts_per_page'      => 4,
+					'post_status'         => 'publish',
+					'ignore_sticky_posts' => true
+				) );
 				?>
-				<?php if ( ! empty( $categories ) && ! is_wp_error( $categories ) ) : ?>
-					<?php foreach ( $categories as $category ) : ?>
-						<div class="col-3">
-							<a href="<?php echo get_category_link( $category->term_id ); ?>" class="category-item" style="background-image: url(); color: <?php echo get_term_meta( $category->term_id, 'pine_alpha_category_color', true ); ?>;">
-								<h3 class="category-item__name"><?php echo $category->name; ?></h3>
-								<div class="category-item__background" style="background-image: url(<?php echo wp_get_attachment_image_src( get_term_meta( $category->term_id, 'pine_alpha_category_cover_image_id', true ), 'alpha-category-cover' )[0]; ?>);"></div>
-							</a>
+
+				<?php if ( $latest_posts->have_posts() ) : ?>
+					<?php while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
+						<div class="col-6">
+							<?php get_template_part( 'template-parts/post/content', 'list-secondary' ); ?>
 						</div>
-					<?php endforeach; ?>
+					<?php endwhile; ?>
 				<?php endif; ?>
 			</div>
 		</div>
 	</div>
+
+	<?php get_template_part( 'template-parts/components/categories', 'section' ); ?>
 	
 	<div class="container">
 		<div class="row">
-			<main id="main" class="col-8">
+			<main id="main" class="site-main col-8">
+				<h2 class="section-title">
+					<span class="section-title__helper">Latest Posts</span>
+				</h2>
 				<?php
-				if ( have_posts() ) :
-
-					/* Start the Loop */
-					while ( have_posts() ) :
-						the_post();
-
-						get_template_part( 'template-parts/post/content', get_post_type() );
-
-					endwhile;
-
-					the_posts_navigation();
-
-				else :
-
-					get_template_part( 'template-parts/content', 'none' );
-
-				endif;
+				$latest_posts = new WP_Query( array(
+					'post_type'           => 'post',
+					'posts_per_page'      => 6,
+					'post_status'         => 'publish',
+				) );
 				?>
+
+				<?php if ( $latest_posts->have_posts() ) : ?>
+					<div class="row">
+						<?php while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
+							<div class="col-6">
+								<?php get_template_part( 'template-parts/post/content', 'list' ); ?>
+							</div>
+						<?php endwhile; ?>
+					</div>
+				<?php endif; ?>
 			</main>
 			<aside class="col-4">
 				<?php get_sidebar(); ?>

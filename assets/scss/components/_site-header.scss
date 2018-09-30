@@ -32,7 +32,7 @@
             display: inline-block;
             height: 30px;
             width: 1px;
-            background: rgba(0,0,0,0.1);
+            background: rgba(0,0,0,0.05);
             position: absolute;
             top: calc(50% - 15px);
             left: 0;
@@ -91,7 +91,7 @@
         height: 2.4rem;
         width: 2.4rem;
         border: none;
-        border-radius: 50%;
+        border-radius: 2px;
         background: map-get($colors, 'black');
         margin-left: 3rem;
         position: relative;

@@ -11,15 +11,31 @@
 
 ?>
 
-	<?php
-	/* translators: %s: CMS name, i.e. WordPress. */
-	printf( esc_html__( 'Proudly powered by %s', 'pine-alpha' ), 'WordPress' );
-	?>
-
-	<?php
-	/* translators: 1: Theme name, 2: Theme author. */
-	printf( esc_html__( 'Theme: %1$s by %2$s.', 'pine-alpha' ), 'pine-alpha', '<a href="http://underscores.me/">Underscores.me</a>' );
-	?>
+	<div class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="site-footer__socials">
+						<a href="#" class="social-item">
+							<?php echo pine_alpha_get_svg( array( 'icon' => 'twitter' ) ); ?>
+							<span class="social-item__name">Twitter</span>
+						</a>
+						<a href="#" class="social-item">
+							<?php echo pine_alpha_get_svg( array( 'icon' => 'facebook' ) ); ?>
+							<span class="social-item__name">Facebook</span>
+						</a>
+						<a href="#" class="social-item">
+							<?php echo pine_alpha_get_svg( array( 'icon' => 'linkedin' ) ); ?>
+							<span class="social-item__name">LinkedIn</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-12">
+					<p class="site-footer__copyright">© 2018 Alpha - A magazine theme. Some right reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <?php wp_footer(); ?>
 

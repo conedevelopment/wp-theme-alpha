@@ -72,8 +72,8 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 		add_image_size( 'alpha-slider-image-small', 400, 500, true );
 		add_image_size( 'alpha-slider-image-large', 800, 1000, true );
 		add_image_size( 'alpha-category-cover', 800, 800, true );
-		add_image_size( 'alpha-featured-image', 2000, 1200, true );
-		add_image_size( 'alpha-thumbnail-avatar', 100, 100, true );
+		add_image_size( 'alpha-featured-image', 1000, 600, true );
+		add_image_size( 'alpha-featured-image-small', 400, 240, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(

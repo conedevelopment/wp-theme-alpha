@@ -48,6 +48,7 @@ This theme, like WordPress, is licensed under the GPL.
 body {
     font-family: $font__body;
     font-size: 1rem;
+    overflow-x: hidden;
 }
 
 a {
@@ -60,5 +61,12 @@ a {
         text-decoration: none;
         transition: color 0.25s ease;
         color: map-get($colors, 'default');
+    }
+}
+
+.container-fluid {
+    @include media-breakpoint-up(md) {
+        padding-left: 45px;
+        padding-right: 45px;
     }
 }
