@@ -358,7 +358,7 @@ add_filter( 'frontpage_template',  'pine_alpha_front_page_template' );
 function pine_alpha_widget_tag_cloud_args( $args ) {
 	$args['largest']  = 1;
 	$args['smallest'] = 1;
-	$args['unit']     = 'em';
+	$args['unit']     = 'rem';
 	$args['format']   = 'list';
 
 	return $args;
