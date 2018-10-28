@@ -50,9 +50,9 @@ Kirki::add_field( 'pine_alpha', array(
 	'settings'    => 'pine_alpha_header_section_logo_width',
 	'label'       => esc_attr__( 'Set the max-width of the logo', 'pine-alpha' ),
 	'section'     => 'pine_alpha_header_section_logo',
-	'default'     => 160,
+	'default'     => 120,
 	'choices'     => array(
-		'min'  => '100',
+		'min'  => '40',
 		'max'  => '260',
 		'step' => '1',
 	),
@@ -71,7 +71,7 @@ Kirki::add_section( 'pine_alpha_header_section_navigation', array(
 Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'multicheck',
 	'settings'    => 'pine_alpha_header_section_navigation_responsive_display',
-	'label'       => esc_attr__( 'Show Mobile Menu On', 'pine-alpha' ),
+	'label'       => esc_attr__( 'Hide Navigation Menu On', 'pine-alpha' ),
 	'section'     => 'pine_alpha_header_section_navigation',
 	'default'     => array('xs', 'sm', 'md'),
 	'priority'    => 10,
@@ -85,12 +85,54 @@ Kirki::add_field( 'pine_alpha', array(
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
-	'type'        => 'toggle',
-	'settings'    => 'pine_alpha_header_section_navigation_search',
-	'label'       => esc_attr__( 'Show Search Field', 'pine-alpha' ),
+	'type'        => 'multicheck',
+	'settings'    => 'pine_alpha_header_section_mobile_navigation_responsive_display',
+	'label'       => esc_attr__( 'Hide Mobile Menu On', 'pine-alpha' ),
 	'section'     => 'pine_alpha_header_section_navigation',
-	'default'     => '0',
+	'default'     => array('lg', 'xl'),
 	'priority'    => 10,
+	'choices'     => array(
+		'xs' => esc_attr__( 'Extra small devices', 'pine-alpha' ),
+		'sm' => esc_attr__( 'Small devices', 'pine-alpha' ),
+		'md' => esc_attr__( 'Medium devices', 'pine-alpha' ),
+		'lg' => esc_attr__( 'Large devices', 'pine-alpha' ),
+		'xl' => esc_attr__( 'Extra large devices', 'pine-alpha' ),
+	),
+) );
+
+
+/**
+ * Add Header / Social Section
+ */
+Kirki::add_section( 'pine_alpha_header_section_socials', array(
+    'title'          => esc_attr__( 'Socials', 'pine-alpha' ),
+    'panel'          => 'pine_alpha_header',
+    'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_header_section_navigation_show_socials',
+	'label'       => esc_attr__( 'Enable Social Links', 'pine-alpha' ),
+	'section'     => 'pine_alpha_header_section_socials',
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'multicheck',
+	'settings'    => 'pine_alpha_header_section_social_responsive_display',
+	'label'       => esc_attr__( 'Hide Social Menu On', 'pine-alpha' ),
+	'section'     => 'pine_alpha_header_section_socials',
+	'default'     => array('xs', 'sm', 'md'),
+	'priority'    => 10,
+	'choices'     => array(
+		'xs' => esc_attr__( 'Extra small devices', 'pine-alpha' ),
+		'sm' => esc_attr__( 'Small devices', 'pine-alpha' ),
+		'md' => esc_attr__( 'Medium devices', 'pine-alpha' ),
+		'lg' => esc_attr__( 'Large devices', 'pine-alpha' ),
+		'xl' => esc_attr__( 'Extra large devices', 'pine-alpha' ),
+	),
 ) );
 
 
@@ -114,26 +156,8 @@ Kirki::add_field( 'pine_alpha', array(
 
 Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'toggle',
-	'settings'    => 'pine_alpha_header_section_navigation_top_bar',
-	'label'       => esc_attr__( 'Enable Menu Top Bar', 'pine-alpha' ),
-	'section'     => 'pine_alpha_header_section_display',
-	'default'     => '0',
-	'priority'    => 10,
-) );
-
-Kirki::add_field( 'pine_alpha', array(
-	'type'        => 'toggle',
-	'settings'    => 'pine_alpha_header_section_navigation_top_bar_contact_info',
-	'label'       => esc_attr__( 'Enable Contact Info', 'pine-alpha' ),
-	'section'     => 'pine_alpha_header_section_display',
-	'default'     => '0',
-	'priority'    => 10,
-) );
-
-Kirki::add_field( 'pine_alpha', array(
-	'type'        => 'toggle',
-	'settings'    => 'pine_alpha_header_section_navigation_top_bar_socials',
-	'label'       => esc_attr__( 'Enable Social Links', 'pine-alpha' ),
+	'settings'    => 'pine_alpha_header_section_navigation_search',
+	'label'       => esc_attr__( 'Show Search', 'pine-alpha' ),
 	'section'     => 'pine_alpha_header_section_display',
 	'default'     => '0',
 	'priority'    => 10,

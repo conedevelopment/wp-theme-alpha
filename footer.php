@@ -11,32 +11,32 @@
 
 ?>
 
-	<div class="site-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="site-footer__socials">
-						<a href="#" class="social-item">
-							<?php echo pine_alpha_get_svg( array( 'icon' => 'twitter' ) ); ?>
-							<span class="social-item__name">Twitter</span>
-						</a>
-						<a href="#" class="social-item">
-							<?php echo pine_alpha_get_svg( array( 'icon' => 'facebook' ) ); ?>
-							<span class="social-item__name">Facebook</span>
-						</a>
-						<a href="#" class="social-item">
-							<?php echo pine_alpha_get_svg( array( 'icon' => 'linkedin' ) ); ?>
-							<span class="social-item__name">LinkedIn</span>
-						</a>
+		<div class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="site-footer__socials">
+							<a href="#" class="social-item">
+								<?php echo pine_alpha_get_svg( array( 'icon' => 'twitter' ) ); ?>
+								<span class="social-item__name">Twitter</span>
+							</a>
+							<a href="#" class="social-item">
+								<?php echo pine_alpha_get_svg( array( 'icon' => 'facebook' ) ); ?>
+								<span class="social-item__name">Facebook</span>
+							</a>
+							<a href="#" class="social-item">
+								<?php echo pine_alpha_get_svg( array( 'icon' => 'linkedin' ) ); ?>
+								<span class="social-item__name">LinkedIn</span>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div class="col-12">
-					<p class="site-footer__copyright">© 2018 Alpha - A magazine theme. Some right reserved.</p>
+					<div class="col-12">
+						<p class="site-footer__copyright">© 2018 Alpha - A magazine theme. Some right reserved.</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 <?php wp_footer(); ?>
 
 </body>

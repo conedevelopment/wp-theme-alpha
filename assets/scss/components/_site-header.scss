@@ -1,6 +1,5 @@
 .site-header {
     background: #fff;
-    // box-shadow: 0 0 4px rgba(0,0,0,0.1);
     position: relative;
     z-index: 51;
 
@@ -18,7 +17,6 @@
 
     &__logo {
         display: block;
-        width: 120px;
     }
 
     &__navigation {
@@ -110,6 +108,44 @@
             height: 1.2rem;
             width: 1.2rem;
             fill: #fff;
+        }
+    }
+    
+    &__toggle {
+        width: 25px;
+        cursor: pointer;
+        margin-left: 2rem;
+        display: inline-block;
+        background: none;
+        border: none;
+
+        &:hover {
+            span {
+                &:first-child {
+                    width: 20px;
+                }
+
+                &:last-child {
+                    width: 15px;
+                }
+            }
+        }
+
+        span {
+            background: map-get($colors, 'black');
+            height: 3px;
+            border-radius: map-get($settings, 'border-radius');
+            margin: 5px 0;
+            display: block;
+            transition: 0.3s;
+
+            &:first-child {
+                width: 15px;
+            }
+
+            &:last-child {
+                width: 20px;
+            }
         }
     }
 }

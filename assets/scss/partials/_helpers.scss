@@ -1,0 +1,29 @@
+@include media-breakpoint-only(xs) {
+	.d-only-xs-none {
+		display: none !important;
+	}
+}
+
+@include media-breakpoint-only(sm) {
+	.d-only-sm-none {
+		display: none !important;
+	}
+}
+
+@include media-breakpoint-only(md) {
+	.d-only-md-none {
+		display: none !important;
+	}
+}
+
+@include media-breakpoint-only(lg) {
+	.d-only-lg-none {
+		display: none !important;
+	}
+}
+
+@include media-breakpoint-only(xl) {
+	.d-only-xl-none {
+		display: none !important;
+	}
+}
