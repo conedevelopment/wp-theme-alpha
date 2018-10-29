@@ -3,6 +3,15 @@
     position: relative;
     z-index: 51;
 
+    &.is-search-open {
+        .site-header__helper.is-left,
+        .site-header__socials,
+        .site-header__search {
+            opacity: 0.3;
+            transition: 0.15s ease;
+        }
+    }
+
     &__inside {
         height: 100px; 
         display: flex;
@@ -13,6 +22,14 @@
     &__helper {
         display: flex;
         align-items: center;
+        
+        &.is-left {
+            transition: 0.15s ease;
+        }
+
+        &.is-right {
+            position: relative;
+        }
     }
 
     &__logo {
@@ -63,6 +80,7 @@
     &__socials {
         display: flex;
         align-items: center;
+        transition: 0.15s ease;
     }
 
     &__social-item {
@@ -97,6 +115,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        transition: 0.15s ease;
 
         &:hover,
         &:focus,
@@ -146,6 +165,98 @@
             &:last-child {
                 width: 20px;
             }
+        }
+    }
+}
+
+.top-search-form {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 0;
+    z-index: 51;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #efefef;
+    border-radius: map-get($settings, 'border-radius');
+    width: 300px;
+    transform: translateX(25px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.15s ease;
+
+    &.is-open {
+        transform: translateX(2px);
+        opacity: 1;
+        visibility: visible;
+        transition: 0.15s ease;
+    }
+
+    &__input {
+        background: transparent;
+        border: none;
+        padding: 0.5rem 1rem;
+        width: 300px;
+        height: 50px;
+        font-size: 1rem;
+        outline: none;
+    }
+
+    &__submit {
+        position: absolute;
+        top: 9px;
+        right: 45px;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: map-get($colors, 'black');
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 1rem;
+        width: 20px;
+        height: 20px;
+        background: rgba(0,0,0,0.2);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        transition: background 0.25s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: rgba(0,0,0,0.4);
+            transition: background 0.25s ease;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: #fff;
+            border-radius: 1px;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: #fff;
+            border-radius: 1px;
+            transform: rotate(-45deg);
         }
     }
 }

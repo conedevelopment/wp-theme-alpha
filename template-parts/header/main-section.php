@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12 site-header__inside">
             <?php $image = get_theme_mod( 'pine_alpha_header_section_logo_image', '' ); ?>
-            <div class="site-header__helper">
+            <div class="site-header__helper is-left">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-header__logo">
                     <?php if( ! empty($site_logo['url']) ) : ?>
                         <img src="<?php echo esc_url( $image['url'] ); ?>" class="img-fluid" alt="<?php _e( 'Site Logo', 'pine-alpha' ); ?>">
@@ -34,7 +34,12 @@
                     ?>
                 </nav>
             </div>
-            <div class="site-header__helper">
+            <div class="site-header__helper is-right">
+                <div class="site-header__search-helper">
+                    <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_search', 0 ) == 1) : ?>
+                        <?php get_template_part( 'template-parts/header/search', 'bar' ); ?>
+                    <?php endif; ?>
+                </div>
                 <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_show_socials', 1 ) == 1) : ?>
                     <div class="site-header__socials
                         <?php

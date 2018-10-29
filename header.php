@@ -42,9 +42,6 @@
 
 		<header class="site-header">
 			<?php get_template_part( 'template-parts/header/main', 'section' ); ?>
-			<?php if( get_theme_mod( 'pine_alpha_header_section_navigation_search', 0 ) == 1) : ?>
-				<?php get_template_part( 'template-parts/header/search', 'bar' ); ?>
-			<?php endif; ?>
 		</header>
 
 		<?php /* if ( true == get_theme_mod( 'pine_alpha_header_section_navigation_search', true ) ) : ?>

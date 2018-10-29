@@ -28,6 +28,4 @@
 			}
 		}, false );
 	}
-
-	console.log('hi');
 }());

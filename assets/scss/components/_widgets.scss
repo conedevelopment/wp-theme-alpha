@@ -5,38 +5,13 @@
         font-family: $font__body;
         color: rgba(0,0,0,0.2);
         position: relative;
-        // padding-bottom: 1rem;
         margin-bottom: 1rem;
-/*
-        &::before {
-            content: '';
-            position: absolute;
-            z-index: 5;
-            left: 0;
-            bottom: 0;
-            height: 3px;
-            width: 50px;
-            background: map-get($colors, 'default');
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            left: 0;
-            bottom: 0;
-            height: 3px;
-            width: 100%;
-            background: rgba(0,0,0,0.05);
-        }
-        */
     }
 
     .textwidget {
         background: #fff;
         border-radius: 2px;
         padding: 1.5rem;
-        //box-shadow: 0 0 8px rgba(0,0,0,0.05);
 
         > *:last-child {
             margin-bottom: 0;

@@ -4,6 +4,12 @@
     background: map-get($colors, 'light-gray');
 }
 
+.slick-slide {
+    > div {
+        margin: 1rem;
+    }
+}
+
 .slider-item {
     background-size: cover;
     background-position: center center;
@@ -17,9 +23,6 @@
     height: 500px;
     width: 400px !important;
     max-width: 100%;
-    margin: 1rem;
-    // box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-    // box-shadow: 0 0 4px rgba(0,0,0,0.1);
 
     &::before {
         content: "";

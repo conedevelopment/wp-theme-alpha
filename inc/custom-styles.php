@@ -14,7 +14,7 @@ function pine_alpha_custom_styles() {
     $default_color = get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' );
     $secondary_color = '';
 
-    $logo_width = get_theme_mod( 'pine_alpha_header_section_logo_width', '120px' );
+    $logo_width = get_theme_mod( 'pine_alpha_header_section_logo_width', '120' );
 
 	$css = '
 

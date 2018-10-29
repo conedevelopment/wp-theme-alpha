@@ -1,22 +1,37 @@
 "use strict";
 
 (function ($) {
-  /*new Canvi({
-  	content: '.js-canvi-content',
-  	navbar: '.js-canvi-navbar--right',
-  	openButton: '.js-canvi-open-button--right',
-  	position: 'right',
-  	pushContent: false,
-  	isDebug: false,
-  	speed: '0.2s',
-  	width: '70vw',
-  	responsiveWidths: [
-  		{
-  			breakpoint: '600px',
-  			width: '340px'
-  		}
-  	]
-  });*/
+  new Canvi({
+    content: '.js-canvi-content',
+    navbar: '.js-canvi-navbar--right',
+    openButton: '.js-canvi-open-button--right',
+    position: 'right',
+    pushContent: false,
+    isDebug: false,
+    speed: '0.2s',
+    width: '70vw',
+    responsiveWidths: [{
+      breakpoint: '600px',
+      width: '340px'
+    }]
+  });
+  $('.site-header__search').on('click', function () {
+    var searchForm = $('.top-search-form'),
+        header = $('.site-header');
+    searchForm.addClass('is-open');
+    header.addClass('is-search-open');
+    setTimeout(function () {
+      searchForm.find('input').focus();
+    }, 200);
+  });
+  $('.top-search-form__close').on('click', function (e) {
+    e.preventDefault();
+    var searchForm = $('.top-search-form'),
+        header = $('.site-header');
+    searchForm.removeClass('is-open');
+    header.removeClass('is-search-open');
+    searchForm.find('input').blur();
+  });
 })(jQuery);
 "use strict";
 
@@ -50,8 +65,6 @@
       }
     }, false);
   }
-
-  console.log('hi');
 })();
 "use strict";
 
@@ -66,19 +79,7 @@
       autoplay: true,
       autoplaySpeed: 2000,
       speed: 1000,
-      responsive: [{
-        breakpoint: 783,
-        settings: {
-          dots: false,
-          variableWidth: true
-        }
-      }, {
-        breakpoint: 1200,
-        settings: {
-          dots: false,
-          variableWidth: true
-        }
-      }]
+      variableWidth: true
     }).click(function (e) {
       if (e.pageX < $(window).width() * (1 / 5)) {
         $(this).slick('slickPrev');
