@@ -1,10 +1,14 @@
 <?php 
-    $site_logo = get_theme_mod( 'pine_alpha_header_section_logo_image', '' );
+    $site_logo = get_theme_mod( 'pine_alpha_header_section_logo_image' );
 ?>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 site-header__inside">
+        <div class="col-12 site-header__inside 
+            <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_remove_separator', 0 ) == 1 ) : ?>
+                has-no-menu-separator
+            <?php endif; ?>
+        ">
             <?php $image = get_theme_mod( 'pine_alpha_header_section_logo_image', '' ); ?>
             <div class="site-header__helper is-left">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-header__logo">
@@ -14,63 +18,27 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/demo/logo.svg" class="img-fluid" alt="<?php _e( 'Alpha Theme Site Logo', 'pine-alpha' ); ?>">
                     <?php endif; ?>
                 </a>
-
-                <nav class="site-header__navigation
-                    <?php
-                    $menu_visibility = get_theme_mod( 'pine_alpha_header_section_navigation_responsive_display', array( 'xs', 'sm', 'md' ) );
-
-                    if( ! empty( $menu_visibility ) ) {
-                        foreach ( $menu_visibility as $checked_value ) {
-                            echo 'd-only-' . $checked_value . '-none ';
-                        }
-                    }
-                    ?>
-                ">
-                    <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'header',
-                        'menu_id'        => 'primary-menu',
-                    ) );
-                    ?>
-                </nav>
+                
+                <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_push_right', 0 ) == 0 ) : ?>
+                    <?php get_template_part( 'template-parts/header/main', 'navigation' ); ?>
+                <?php endif; ?>
             </div>
             <div class="site-header__helper is-right">
                 <div class="site-header__search-helper">
-                    <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_search', 0 ) == 1) : ?>
+                    <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_search', 0 ) == 1 ) : ?>
                         <?php get_template_part( 'template-parts/header/search', 'bar' ); ?>
                     <?php endif; ?>
                 </div>
-                <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_show_socials', 1 ) == 1) : ?>
-                    <div class="site-header__socials
-                        <?php
-                        $menu_visibility = get_theme_mod( 'pine_alpha_header_section_social_responsive_display', array( 'xs', 'sm', 'md' ) );
 
-                        if( ! empty( $menu_visibility ) ) {
-                            foreach ( $menu_visibility as $checked_value ) {
-                                echo 'd-only-' . $checked_value . '-none ';
-                            }
-                        }
-                        ?>
-                    ">
-                        <a href="#" class="site-header__social-item">
-                            <?php echo pine_alpha_get_svg( array( 'icon' => 'twitter' ) ); ?>
-                        </a>
-                        <a href="#" class="site-header__social-item">
-                            <?php echo pine_alpha_get_svg( array( 'icon' => 'facebook' ) ); ?>
-                        </a>
-                        <a href="#" class="site-header__social-item">
-                            <?php echo pine_alpha_get_svg( array( 'icon' => 'linkedin' ) ); ?>
-                        </a>
-                        <a href="#" class="site-header__social-item">
-                            <?php echo pine_alpha_get_svg( array( 'icon' => 'instagram' ) ); ?>
-                        </a>
-                        <a href="#" class="site-header__social-item">
-                            <?php echo pine_alpha_get_svg( array( 'icon' => 'youtube' ) ); ?>
-                        </a>
-                    </div>
+                <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_push_right', 0 ) == 1 ) : ?>
+                    <?php get_template_part( 'template-parts/header/main', 'navigation' ); ?>
+                <?php endif; ?>
+
+                <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_show_socials', 1 ) == 1 ) : ?>
+                    <?php get_template_part( 'template-parts/header/social', 'links' ); ?>
                 <?php endif; ?>
                 
-                <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_search', 0 ) == 1) : ?>
+                <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_search', 0 ) == 1 ) : ?>
                     <button class="site-header__search">
                         <?php echo pine_alpha_get_svg( array( 'icon' => 'search' ) ); ?>
                     </button>

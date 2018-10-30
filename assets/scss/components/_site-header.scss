@@ -17,6 +17,20 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        &.has-no-menu-separator {
+            .site-header__navigation::before {
+                display: none !important;
+            }
+
+            .site-header__helper.is-left .site-header__navigation {
+                padding-left: 0;
+            }
+
+            .site-header__helper.is-right .site-header__navigation {
+                padding-right: 0;
+            }
+        }
     }
 
     &__helper {
@@ -25,10 +39,50 @@
         
         &.is-left {
             transition: 0.15s ease;
+
+            .site-header__navigation {
+                padding-left: 3rem;
+                margin-left: 3rem;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    height: 30px;
+                    width: 1px;
+                    background: rgba(0,0,0,0.05);
+                    position: absolute;
+                    top: calc(50% - 15px);
+                    left: 0;
+                }
+
+                li {
+                    margin-right: 2rem;
+                }
+            }
         }
 
         &.is-right {
             position: relative;
+
+            .site-header__navigation {
+                padding-right: 3rem;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    height: 30px;
+                    width: 1px;
+                    background: rgba(0,0,0,0.05);
+                    position: absolute;
+                    top: calc(50% - 15px);
+                    right: 0;
+                }
+
+
+                li {
+                    margin-left: 2rem;
+                }
+            }
         }
     }
 
@@ -39,19 +93,6 @@
     &__navigation {
         font-weight: 700;
         position: relative;
-        padding-left: 3rem;
-        margin-left: 3rem;
-
-        &::before {
-            content: '';
-            display: inline-block;
-            height: 30px;
-            width: 1px;
-            background: rgba(0,0,0,0.05);
-            position: absolute;
-            top: calc(50% - 15px);
-            left: 0;
-        }
 
         ul {
             margin: 0;
@@ -61,7 +102,6 @@
         li {
             display: inline-block;
             list-style: none;
-            margin-right: 2rem;
 
             &.current-menu-item {
                 a {
@@ -81,6 +121,7 @@
         display: flex;
         align-items: center;
         transition: 0.15s ease;
+        margin-left: 3rem;
     }
 
     &__social-item {

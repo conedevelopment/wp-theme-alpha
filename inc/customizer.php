@@ -69,6 +69,24 @@ Kirki::add_section( 'pine_alpha_header_section_navigation', array(
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_header_section_navigation_push_right',
+	'label'       => esc_attr__( 'Push Navigation to The Right', 'pine-alpha' ),
+	'section'     => 'pine_alpha_header_section_navigation',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_header_section_navigation_remove_separator',
+	'label'       => esc_attr__( 'Remove Separator', 'pine-alpha' ),
+	'section'     => 'pine_alpha_header_section_navigation',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'multicheck',
 	'settings'    => 'pine_alpha_header_section_navigation_responsive_display',
 	'label'       => esc_attr__( 'Hide Navigation Menu On', 'pine-alpha' ),
@@ -199,6 +217,414 @@ Kirki::add_field( 'pine_alpha', array(
 	'section'     => 'pine_alpha_general_colors',
 	'default'     => '#9748e5',
 ) );
+
+
+/**
+ * Add General / Social Section
+ */
+Kirki::add_section( 'pine_alpha_general_social_links', array(
+    'title'          => esc_attr__( 'Social Links', 'pine-alpha' ),
+    'panel'          => 'pine_alpha_general',
+    'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_twitter',
+	'label'       => __( 'Twitter', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_twitter_in_header',
+	'label'       => esc_attr__( 'Show Twitter in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_twitter_in_footer',
+	'label'       => esc_attr__( 'Show Twitter in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_twitter_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_facebook',
+	'label'       => __( 'Facebook', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_facebook_in_header',
+	'label'       => esc_attr__( 'Show Facebook in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_facebook_in_footer',
+	'label'       => esc_attr__( 'Show Facebook in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_facebook_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_linkedin',
+	'label'       => __( 'LinkedIn', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_linkedin_in_header',
+	'label'       => esc_attr__( 'Show LinkedIn in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_linkedin_in_footer',
+	'label'       => esc_attr__( 'Show LinkedIn in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_linkedin_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_instagram',
+	'label'       => __( 'Instagram', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_instagram_in_header',
+	'label'       => esc_attr__( 'Show Instagram in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_instagram_in_footer',
+	'label'       => esc_attr__( 'Show Instagram in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_instagram_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_flickr',
+	'label'       => __( 'Flickr', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_flickr_in_header',
+	'label'       => esc_attr__( 'Show Flickr in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_flickr_in_footer',
+	'label'       => esc_attr__( 'Show Flickr in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_flickr_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_tumblr',
+	'label'       => __( 'Tumblr', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_tumblr_in_header',
+	'label'       => esc_attr__( 'Show Tumblr in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_tumblr_in_footer',
+	'label'       => esc_attr__( 'Show Tumblr in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_tumblr_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_pinterest',
+	'label'       => __( 'Pinterest', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_pinterest_in_header',
+	'label'       => esc_attr__( 'Show Pinterest in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_pinterest_in_footer',
+	'label'       => esc_attr__( 'Show Pinterest in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_pinterest_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_github',
+	'label'       => __( 'GitHub', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_github_in_header',
+	'label'       => esc_attr__( 'Show GitHub in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_github_in_footer',
+	'label'       => esc_attr__( 'Show GitHub in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_github_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_youtube',
+	'label'       => __( 'YouTube', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_youtube_in_header',
+	'label'       => esc_attr__( 'Show YouTube in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_youtube_in_footer',
+	'label'       => esc_attr__( 'Show YouTube in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_youtube_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_dribbble',
+	'label'       => __( 'Dribbble', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_dribbble_in_header',
+	'label'       => esc_attr__( 'Show Dribbble in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_dribbble_in_footer',
+	'label'       => esc_attr__( 'Show Dribbble in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_dribbble_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_vk',
+	'label'       => __( 'VK', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_vk_in_header',
+	'label'       => esc_attr__( 'Show VK in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_vk_in_footer',
+	'label'       => esc_attr__( 'Show VK in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_vk_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'url',
+	'settings'    => 'pine_alpha_general_social_links_section_spotify',
+	'label'       => __( 'Spotify', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links'
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_spotify_in_header',
+	'label'       => esc_attr__( 'Show Spotify in Header', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_social_links_section_show_spotify_in_footer',
+	'label'       => esc_attr__( 'Show Spotify in Footer', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_general_social_links_section_spotify_separator',
+	'section'     => 'pine_alpha_general_social_links',
+	'default'     => '<hr style="margin: 10px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
 
 /**
  * Add Footer Panel
