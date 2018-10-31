@@ -15,66 +15,12 @@
 get_header();
 ?>
 
-	<?php get_template_part( 'template-parts/hero/front', 'slider' ); ?>
+	<?php
+    $template_parts = get_theme_mod( 'pine_alpha_layout_front_page_section_order', array( 'hero', 'popular-posts', 'categories', 'blogroll' ) );
 
-	<div class="highlighted-posts">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<h2 class="section-title">
-						<span class="section-title__helper">Popular Posts</span>
-					</h2>
-				</div>
-				<?php
-				$latest_posts = new WP_Query( array(
-					'post_type'           => 'post',
-					'posts_per_page'      => 4,
-					'post_status'         => 'publish',
-					'ignore_sticky_posts' => true
-				) );
-				?>
+    foreach ( $template_parts as $template_part ) : ?>
+    	<?php get_template_part( 'template-parts/components/' . $template_part . '-section' ); ?>
+    <?php endforeach; ?>
 
-				<?php if ( $latest_posts->have_posts() ) : ?>
-					<?php while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
-						<div class="col-12 col-md-6">
-							<?php get_template_part( 'template-parts/post/content', 'list-secondary' ); ?>
-						</div>
-					<?php endwhile; ?>
-				<?php endif; ?>
-			</div>
-		</div>
-	</div>
-
-	<?php get_template_part( 'template-parts/components/categories', 'section' ); ?>
-	
-	<div class="container">
-		<div class="row">
-			<main id="main" class="site-main col-8">
-				<h2 class="section-title">
-					<span class="section-title__helper"><?php _e( 'Latest Posts', 'pine-alpha' ); ?></span>
-				</h2>
-				<?php
-				$latest_posts = new WP_Query( array(
-					'post_type'           => 'post',
-					'posts_per_page'      => 6,
-					'post_status'         => 'publish',
-				) );
-				?>
-
-				<?php if ( $latest_posts->have_posts() ) : ?>
-					<div class="row">
-						<?php while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
-							<div class="col-12 col-lg-6">
-								<?php get_template_part( 'template-parts/post/content', 'list' ); ?>
-							</div>
-						<?php endwhile; ?>
-					</div>
-				<?php endif; ?>
-			</main>
-			<aside class="col-4">
-				<?php get_sidebar(); ?>
-			</aside>
-		</div>
-	</div>
 <?php
 get_footer();

@@ -10,15 +10,44 @@
     &.is-secondary {
         display: flex;
         margin-bottom: 2rem;
+        flex-direction: column;
+
+        @media (min-width: 430px) {
+            flex-direction: row;
+        }
 
         .list-item__image {
-            width: 220px;
-            margin-right: 2rem;
+            margin-bottom: 1.5rem;
+
+            @media (min-width: 430px) {
+                margin-right: 2rem;
+                margin-bottom: 0;
+                width: 160px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 200px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: 220px;
+            }
         }
 
         .list-item__content {
             padding: 0;
-            width: calc(100% - 2rem - 220px);
+
+            @media (min-width: 430px) {
+                width: calc(100% - 2rem - 160px);
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: calc(100% - 2rem - 200px);
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: calc(100% - 2rem - 220px);
+            }
         }
     }
 
@@ -44,7 +73,6 @@
     &__content {
         position: relative;
         z-index: 10;
-        background: #fff;
         padding: 1.5rem 0;
     }
 

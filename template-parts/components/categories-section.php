@@ -1,6 +1,16 @@
 <div class="categories-section">
     <div class="container">
         <div class="row">
+            <?php if( get_theme_mod( 'pine_alpha_components_categories_section_hide_title', 0 ) == 0 &&
+					  get_theme_mod( 'pine_alpha_components_categories_section_title' )) : ?>
+				<div class="col-12">
+					<h2 class="section-title">
+						<span class="section-title__helper">
+							<?php echo esc_attr__( get_theme_mod( 'pine_alpha_components_categories_section_title' ), 'pine-alpha'); ?>
+						</span>
+					</h2>
+				</div>
+			<?php endif; ?>
             <?php
                 $categories = get_terms( 'category', array(
                     'orderby'    => 'rand',

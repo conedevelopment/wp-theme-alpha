@@ -5,3 +5,7 @@
 	background-position: center center;
 	background-size: 40%;
 }
+
+.customize-control-kirki-custom[id*="line_separator"] {
+	pointer-events: none !important;
+}

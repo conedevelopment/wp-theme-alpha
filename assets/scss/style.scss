@@ -65,7 +65,7 @@ a {
 }
 
 .container-fluid {
-    @include media-breakpoint-up(md) {
+    @media (min-width: 1330px) {
         padding-left: 45px;
         padding-right: 45px;
     }

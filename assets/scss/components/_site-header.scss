@@ -13,10 +13,14 @@
     }
 
     &__inside {
-        height: 100px; 
+        height: 80px; 
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include media-breakpoint-up(md) {
+            height: 100px;
+        }
 
         &.has-no-menu-separator {
             .site-header__navigation::before {
@@ -78,7 +82,6 @@
                     right: 0;
                 }
 
-
                 li {
                     margin-left: 2rem;
                 }
@@ -88,6 +91,15 @@
 
     &__logo {
         display: block;
+
+        img {
+            height: 35px;
+            width: auto;
+            
+            @include media-breakpoint-up(md) {
+                height: 45px;
+            }
+        }
     }
 
     &__navigation {
