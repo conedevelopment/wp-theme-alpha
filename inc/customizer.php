@@ -87,6 +87,15 @@ Kirki::add_field( 'pine_alpha', array(
 	'priority'    => 10,
 ) );
 
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_header_section_navigation_line_separator_1',
+	'section'     => 'pine_alpha_header_section_navigation',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
 Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'multicheck',
 	'settings'    => 'pine_alpha_header_section_navigation_responsive_display',
@@ -101,6 +110,14 @@ Kirki::add_field( 'pine_alpha', array(
 		'lg' => esc_attr__( 'Large devices', 'pine-alpha' ),
 		'xl' => esc_attr__( 'Extra large devices', 'pine-alpha' ),
 	),
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_header_section_navigation_line_separator_2',
+	'section'     => 'pine_alpha_header_section_navigation',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
@@ -282,7 +299,7 @@ Kirki::add_field( 'pine_alpha', array(
 
 Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'custom',
-	'settings'    => 'pine_alpha_general_social_links_section_twitter_separator',
+	'settings'    => 'pine_alpha_general_social_links_line_separator_0',
 	'section'     => 'pine_alpha_general_social_links',
 	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
 	'priority'    => 10,
@@ -476,6 +493,15 @@ Kirki::add_section( 'pine_alpha_components_popular_posts', array(
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
+	'type'     => 'text',
+	'settings' => 'pine_alpha_components_popular_posts_section_title',
+	'label'    => __( 'Section Title', 'pine-alpha' ),
+	'section'  => 'pine_alpha_components_popular_posts',
+	'default'  => esc_attr__( 'Popular Posts', 'pine-alpha' ),
+	'priority' => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'toggle',
 	'settings'    => 'pine_alpha_components_popular_posts_section_hide_title',
 	'label'       => esc_attr__( 'Hide Section Title', 'pine-alpha' ),
@@ -485,12 +511,11 @@ Kirki::add_field( 'pine_alpha', array(
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
-	'type'     => 'text',
-	'settings' => 'pine_alpha_components_popular_posts_section_title',
-	'label'    => __( 'Section Title', 'pine-alpha' ),
-	'section'  => 'pine_alpha_components_popular_posts',
-	'default'  => esc_attr__( 'Popular Posts', 'pine-alpha' ),
-	'priority' => 10,
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_components_popular_posts_line_separator_1',
+	'section'     => 'pine_alpha_components_popular_posts',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
@@ -506,6 +531,28 @@ Kirki::add_field( 'pine_alpha', array(
 	),
 ) );
 
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_components_popular_posts_line_separator_2',
+	'section'     => 'pine_alpha_components_popular_posts',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'theme_config_id', array(
+	'type'        => 'number',
+	'settings'    => 'pine_alpha_components_popular_posts_section_post_number',
+	'label'       => esc_attr__( 'The Number of Posts to Show', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_popular_posts',
+	'default'     => 4,
+	'choices'     => array(
+		'min'  => 2,
+		'max'  => 6,
+		'step' => 1,
+	),
+) );
+
+
 /**
  * Add Components / Categories Section
  */
@@ -513,15 +560,6 @@ Kirki::add_section( 'pine_alpha_components_categories', array(
     'title'          => esc_attr__( 'Categories', 'pine-alpha' ),
     'panel'          => 'pine_alpha_components',
     'priority'       => 160,
-) );
-
-Kirki::add_field( 'pine_alpha', array(
-	'type'        => 'toggle',
-	'settings'    => 'pine_alpha_components_categories_section_hide_title',
-	'label'       => esc_attr__( 'Hide Section Title', 'pine-alpha' ),
-	'section'     => 'pine_alpha_components_categories',
-	'default'     => '1',
-	'priority'    => 10,
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
@@ -534,6 +572,23 @@ Kirki::add_field( 'pine_alpha', array(
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_components_categories_section_hide_title',
+	'label'       => esc_attr__( 'Hide Section Title', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_categories',
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_components_categories_line_separator_1',
+	'section'     => 'pine_alpha_components_categories',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'color-palette',
 	'settings'    => 'pine_alpha_components_categories_section_background',
 	'label'       => esc_attr__( 'Background Color', 'pine-alpha' ),
@@ -543,6 +598,56 @@ Kirki::add_field( 'pine_alpha', array(
 	'choices'     => array(
 		'colors' => array( '#ffffff', '#f9f9f9' ),
 		'style'  => 'round',
+	),
+) );
+
+
+/**
+ * Add Components / Categories Section
+ */
+Kirki::add_section( 'pine_alpha_components_blogroll', array(
+    'title'          => esc_attr__( 'Blogroll', 'pine-alpha' ),
+    'panel'          => 'pine_alpha_components',
+    'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'     => 'text',
+	'settings' => 'pine_alpha_components_blogroll_section_title',
+	'label'    => __( 'Section Title', 'pine-alpha' ),
+	'section'  => 'pine_alpha_components_blogroll',
+	'default'  => esc_attr__( 'Latest Posts', 'pine-alpha' ),
+	'priority' => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_components_blogroll_section_hide_title',
+	'label'       => esc_attr__( 'Hide Section Title', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_blogroll',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_components_blogroll_section_line_separator_1',
+	'section'     => 'pine_alpha_components_blogroll',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'pine_alpha_components_blogroll_section_sidebar_position',
+	'label'       => __( 'Show Sidebar On', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_blogroll',
+	'default'     => 'right',
+	'priority'    => 10,
+	'choices'     => array(
+		'none'   => esc_attr__( 'None', 'pine-alpha' ),
+		'left' => esc_attr__( 'Left', 'pine-alpha' ),
+		'right'  => esc_attr__( 'Right', 'pine-alpha' ),
 	),
 ) );
 
@@ -628,6 +733,14 @@ Kirki::add_field( 'pine_alpha', array(
 	'label'       => esc_attr__( 'Enable Scroll Top', 'pine-alpha' ),
 	'section'     => 'pine_alpha_footer_scrolltop',
 	'default'     => '0',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_footer_scrolltop_line_separator_1',
+	'section'     => 'pine_alpha_footer_scrolltop',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
 	'priority'    => 10,
 ) );
 

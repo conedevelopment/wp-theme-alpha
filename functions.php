@@ -322,6 +322,8 @@ add_action( 'wp_head', 'pine_alpha_css_wrap' );
 function pine_alpha_scripts() {
 	wp_enqueue_style( 'pine-alpha-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'pine-alpha-headroom', get_template_directory_uri() . '/assets/js/vendor/headroom.js', array(), THEME_VERSION, true );
+
 	wp_enqueue_script( 'pine-alpha-vendor', get_template_directory_uri() . '/assets/dist/vendor.min.js', array(), THEME_VERSION, true );
 
 	wp_enqueue_script( 'pine-alpha-custom', get_template_directory_uri() . '/assets/dist/custom.min.js', array(), THEME_VERSION, true );

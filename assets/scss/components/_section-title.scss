@@ -1,8 +1,12 @@
 .section-title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: map-get($colors, 'black');
     margin-bottom: 2rem;
     position: relative;
+
+    @include media-breakpoint-up(md) {
+        font-size: 1.6rem;
+    }
 
     &::before {
         content: '';

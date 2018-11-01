@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<div class="site-sidebar">
+<div class="site-sidebar__inside">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div>

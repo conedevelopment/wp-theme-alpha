@@ -1,10 +1,24 @@
 .categories-section {
     background: map-get($colors, 'light-gray');
-    padding: 3rem 0;
+    padding: 2rem 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 3rem 0;
+    }
+
+    &__inside {
+        .category-item {
+            margin: 1rem 0;
+
+            @include media-breakpoint-up(lg) {
+                margin: 0;
+            }
+        }
+    }
 }
 
 .category-item {
-    height: 260px;
+    height: 200px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start; 
@@ -13,9 +27,17 @@
     position: relative;
     transition: transform 0.1s ease;
 
-    &:hover {
-        transform: scale(1.03);
-        transition: transform 0.1s ease;
+    @include media-breakpoint-up(sm) {
+        height: 260px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &:hover,
+        &:focus,
+        &:active {
+            transform: scale(1.03);
+            transition: transform 0.1s ease;
+        }
     }
 
     &::before {
@@ -49,6 +71,10 @@
         position: relative;
         z-index: 5;
         color: #fff;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.3rem;
+        }    
     }
 }

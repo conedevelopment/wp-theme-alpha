@@ -14,7 +14,7 @@
 			<?php
 			$latest_posts = new WP_Query( array(
 				'post_type'           => 'post',
-				'posts_per_page'      => 4,
+				'posts_per_page'      => get_theme_mod( 'pine_alpha_components_popular_posts_section_post_number', 4 ),
 				'post_status'         => 'publish',
 				'ignore_sticky_posts' => true
 			) );
