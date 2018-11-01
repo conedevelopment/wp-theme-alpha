@@ -22,7 +22,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> 
+	<?php if( get_theme_mod( 'pine_alpha_header_section_navigation_sticky', 0 ) == 1 ) : ?> data-sticky="true" <?php endif; ?>
+>
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'pine-alpha' ); ?></a>
 
 	<div class="js-canvi-navbar--right canvi-navbar animate--in">
@@ -39,8 +41,9 @@
 	</div>
 
 	<div class="js-canvi-content canvi-content">
-
-		<header class="site-header">
+		<header class="site-header"
+			<?php if( get_theme_mod( 'pine_alpha_header_section_navigation_sticky', 0 ) == 1 ) : ?> data-sticky="true" <?php endif; ?>
+		>
 			<?php get_template_part( 'template-parts/header/main', 'section' ); ?>
 		</header>
 

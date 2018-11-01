@@ -15,6 +15,20 @@
       width: '340px'
     }]
   });
+
+  if ($('.site-header[data-sticky="true"]').length) {
+    $('.site-header[data-sticky="true"]').headroom({
+      offset: 100
+    });
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 0) {
+        $('.site-header[data-sticky="true"]').addClass('is-scroll');
+      } else if ($(window).scrollTop() <= 0) {
+        $('.site-header[data-sticky="true"]').removeClass('is-scroll');
+      }
+    });
+  }
+
   $('.site-header__search').on('click', function () {
     var searchForm = $('.top-search-form'),
         header = $('.site-header');

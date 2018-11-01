@@ -49,6 +49,16 @@ body {
     font-family: $font__body;
     font-size: 1rem;
     overflow-x: hidden;
+
+    @include media-breakpoint-up(lg) {
+        &[data-sticky="true"] {
+            padding-top: 100px;
+        }
+
+        &[data-sticky="true"].logged-in:not(.customize-partial-edit-shortcuts-shown) .site-header {
+            top: 32px;
+        }
+    }
 }
 
 a {

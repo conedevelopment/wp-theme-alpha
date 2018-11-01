@@ -3,6 +3,29 @@
     position: relative;
     z-index: 51;
 
+    @include media-breakpoint-up(lg) {
+        &[data-sticky="true"] {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        &.headroom--unpinned {
+            transform: translateY(-100%);
+            transition: .2s ease-in-out;
+        }
+
+        &.headroom--pinned {
+            transform: translateY(0);
+            transition: .2s ease-in-out;
+        }
+
+        &.is-scroll {
+            box-shadow: 0 0 7px rgba(0,0,0,0.08);
+        }
+    }
+
     &.is-search-open {
         .site-header__helper.is-left,
         .site-header__socials,
