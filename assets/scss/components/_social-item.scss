@@ -3,10 +3,20 @@
     display: flex;
     align-items: center;
 
+    &:hover,
+    &:focus,
+    &:active {
+        .icon {
+            fill: map-get($colors, 'default');
+            transition: 0.15s ease;
+        }
+    }
+
     .icon {
         width: 1rem;
         height: 1rem;
         fill: #fff;
+        transition: 0.15s ease;
     }
 
     &__name {

@@ -13,41 +13,41 @@
 
 		<div class="site-footer">
 			<div class="container">
-				<div class="row">
-					<div class="col-3">
+				<div class="site-footer__widgets row">
+					<div class="col-12 col-md-6 col-lg-3">
 						<?php dynamic_sidebar( 'footer-1' ); ?>
 					</div>
-					<div class="col-3">
+					<div class="col-12 col-md-6 col-lg-3">
 						<?php dynamic_sidebar( 'footer-2' ); ?>
 					</div>
-					<div class="col-3">
+					<div class="col-12 col-md-6 col-lg-3">
 						<?php dynamic_sidebar( 'footer-3' ); ?>
 					</div>
-					<div class="col-3">
+					<div class="col-12 col-md-6 col-lg-3">
 						<?php dynamic_sidebar( 'footer-4' ); ?>
 					</div>
-					<div class="col-12">
-						<div class="site-footer__socials">
-							<a href="#" class="social-item">
-								<?php echo pine_alpha_get_svg( array( 'icon' => 'twitter' ) ); ?>
-								<span class="social-item__name">Twitter</span>
-							</a>
-							<a href="#" class="social-item">
-								<?php echo pine_alpha_get_svg( array( 'icon' => 'facebook' ) ); ?>
-								<span class="social-item__name">Facebook</span>
-							</a>
-							<a href="#" class="social-item">
-								<?php echo pine_alpha_get_svg( array( 'icon' => 'linkedin' ) ); ?>
-								<span class="social-item__name">LinkedIn</span>
-							</a>
+				</div>
+				<div class="row">
+					<?php if( get_theme_mod( 'pine_alpha_footer_section_navigation_show_socials', 1 ) == 1 ) : ?>
+						<div class="col-12">
+							<?php get_template_part( 'template-parts/footer/social', 'links' ); ?>
 						</div>
-					</div>
+					<?php endif; ?>
 					<div class="col-12">
-						<p class="site-footer__copyright">© 2018 Alpha - A magazine theme. Some right reserved.</p>
+						<p class="site-footer__copyright">
+							<?php echo get_theme_mod( 'pine_alpha_footer_general_legal_copy' ); ?>
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
+		<?php if( get_theme_mod( 'pine_alpha_footer_scrolltop_enable', 0 ) == 1 ) : ?>
+			<span class="scroll-to-top 
+				<?php echo get_theme_mod( 'pine_alpha_footer_scrolltop_position', 'is-right' ); ?>
+			">
+				<?php echo pine_alpha_get_svg( array( 'icon' => 'keyboard-arrow-up' ) ); ?>
+			</span>
+		<?php endif; ?>
 	</div>
 <?php wp_footer(); ?>
 

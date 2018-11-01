@@ -700,6 +700,84 @@ Kirki::add_panel( 'pine_alpha_footer', array(
 ) );
 
 /**
+ * Add Footer / Socials Section
+ */
+Kirki::add_section( 'pine_alpha_footer_section_socials', array(
+    'title'          => esc_attr__( 'Socials', 'pine-alpha' ),
+    'panel'          => 'pine_alpha_footer',
+    'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_footer_section_navigation_show_socials',
+	'label'       => esc_attr__( 'Enable Social Links', 'pine-alpha' ),
+	'section'     => 'pine_alpha_footer_section_socials',
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_footer_section_socials_line_separator_1',
+	'section'     => 'pine_alpha_footer_section_socials',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'multicheck',
+	'settings'    => 'pine_alpha_footer_section_social_responsive_display',
+	'label'       => esc_attr__( 'Hide Social Menu On', 'pine-alpha' ),
+	'section'     => 'pine_alpha_footer_section_socials',
+	'default'     => array('xs', 'sm', 'md'),
+	'priority'    => 10,
+	'choices'     => array(
+		'xs' => esc_attr__( 'Extra small devices', 'pine-alpha' ),
+		'sm' => esc_attr__( 'Small devices', 'pine-alpha' ),
+		'md' => esc_attr__( 'Medium devices', 'pine-alpha' ),
+		'lg' => esc_attr__( 'Large devices', 'pine-alpha' ),
+		'xl' => esc_attr__( 'Extra large devices', 'pine-alpha' ),
+	),
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_footer_section_socials_line_separator_2',
+	'section'     => 'pine_alpha_footer_section_socials',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'sortable',
+	'settings'    => 'pine_alpha_footer_section_social_display_elements',
+	'label'       => __( 'Social Link Order and Visibility', 'pine-alpha' ),
+	'description' => esc_attr__( 'Here you can set the order of your social links.', 'pine-alpha' ),
+	'section'     => 'pine_alpha_footer_section_socials',
+	'default'     => array(
+		'twitter',
+		'facebook'
+	),
+	'choices'     => array(
+		'twitter' => esc_attr__( 'Twitter', 'pine-alpha' ),
+		'facebook' => esc_attr__( 'Facebook', 'pine-alpha' ),
+		'linkedin' => esc_attr__( 'LinkedIn', 'pine-alpha' ),
+		'instagram' => esc_attr__( 'Instagram', 'pine-alpha' ),
+		'flickr' => esc_attr__( 'Flickr', 'pine-alpha' ),
+		'tumblr' => esc_attr__( 'Tumblr', 'pine-alpha' ),
+		'pinterest' => esc_attr__( 'Pinterest', 'pine-alpha' ),
+		'github' => esc_attr__( 'GitHub', 'pine-alpha' ),
+		'youtube' => esc_attr__( 'YouTube', 'pine-alpha' ),
+		'dribbble' => esc_attr__( 'Dribbble', 'pine-alpha' ),
+		'vk' => esc_attr__( 'VK', 'pine-alpha' ),
+		'spotify' => esc_attr__( 'Spotify', 'pine-alpha' )
+	),
+	'priority'    => 10,
+) );
+
+
+/**
  * Add Footer / General Section
  */
 Kirki::add_section( 'pine_alpha_footer_general', array(
@@ -713,7 +791,7 @@ Kirki::add_field( 'pine_alpha', array(
 	'settings' => 'pine_alpha_footer_general_legal_copy',
 	'label'    => __( 'Footnote', 'pine-alpha' ),
 	'section'  => 'pine_alpha_footer_general',
-	'default'  => esc_attr__( 'Some rights are reserved! © 2018', 'pine-alpha' ),
+	'default'  => esc_attr__( '© 2018 - Aplha, a magazine theme by Pine.', 'pine-alpha' ),
 	'priority' => 10,
 ) );
 
@@ -745,16 +823,14 @@ Kirki::add_field( 'pine_alpha', array(
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
-	'type'        => 'select',
+	'type'        => 'radio-buttonset',
 	'settings'    => 'pine_alpha_footer_scrolltop_position',
 	'label'       => __( 'Position', 'pine-alpha' ),
 	'section'     => 'pine_alpha_footer_scrolltop',
-	'default'     => 'bottom-right-fixed',
+	'default'     => 'is-right',
 	'priority'    => 10,
-	'multiple'    => 1,
 	'choices'     => array(
-		'bottom-right-fixed' => esc_attr__( 'Bottom right (Fixed)', 'pine-alpha' ),
-		'bottom-left-fixed' => esc_attr__( 'Bottom left (Fixed)', 'pine-alpha' ),
-		'footer' => esc_attr__( 'Footer', 'pine-alpha' ),
+		'is-left' => esc_attr__( 'Bottom left (Fixed)', 'pine-alpha' ),
+		'is-right'   => esc_attr__( 'Bottom right (Fixed)', 'pine-alpha' )
 	),
 ) );

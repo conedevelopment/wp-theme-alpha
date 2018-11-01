@@ -1,0 +1,36 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    z-index: 1041;
+    width: 40px;
+    height: 40px;
+    border-radius: map-get($settings, 'border-radius');
+    background: linear-gradient(45deg, map-get($colors, 'default'), map-get($colors, 'secondary'));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.15s ease;
+
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.15s ease;
+    }
+
+    &.is-right {
+        right: 2rem;
+    }
+
+    &.is-left {
+        left: 2rem;
+    }
+
+    svg {
+        fill: #fff;
+        width: 25px;
+        height: 25px;
+    }
+}

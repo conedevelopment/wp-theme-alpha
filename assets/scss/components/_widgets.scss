@@ -1,5 +1,6 @@
 .widget {
-    &.widget_archive {
+    &.widget_archive,
+    &.widget_categories {
         ul li { 
             display: flex;
             align-items: center;
