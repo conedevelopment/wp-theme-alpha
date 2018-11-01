@@ -14,6 +14,18 @@
 		<div class="site-footer">
 			<div class="container">
 				<div class="row">
+					<div class="col-3">
+						<?php dynamic_sidebar( 'footer-1' ); ?>
+					</div>
+					<div class="col-3">
+						<?php dynamic_sidebar( 'footer-2' ); ?>
+					</div>
+					<div class="col-3">
+						<?php dynamic_sidebar( 'footer-3' ); ?>
+					</div>
+					<div class="col-3">
+						<?php dynamic_sidebar( 'footer-4' ); ?>
+					</div>
 					<div class="col-12">
 						<div class="site-footer__socials">
 							<a href="#" class="social-item">

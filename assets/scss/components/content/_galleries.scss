@@ -1,0 +1,24 @@
+.gallery {
+	margin-bottom: 1.5rem;
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+
+	@for $i from 2 through 9 {
+		.gallery-columns-#{$i} & {
+			max-width: calc( #{map-get( $columns, $i )} - 1rem );
+		}
+	}
+}
+
+.gallery-caption {
+	display: block;
+}

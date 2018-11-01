@@ -232,7 +232,7 @@ function pine_alpha_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer 1', 'pine-alpha' ),
 		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'pine-alpha' ),
+		'description'   => esc_html__( 'Add widgets here to appear in your footer col #1.', 'pine-alpha' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -242,7 +242,27 @@ function pine_alpha_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer 2', 'pine-alpha' ),
 		'id'            => 'footer-2',
-		'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'pine-alpha' ),
+		'description'   => esc_html__( 'Add widgets here to appear in your footer col #2.', 'pine-alpha' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 3', 'pine-alpha' ),
+		'id'            => 'footer-3',
+		'description'   => esc_html__( 'Add widgets here to appear in your footer col #3.', 'pine-alpha' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer 4', 'pine-alpha' ),
+		'id'            => 'footer-4',
+		'description'   => esc_html__( 'Add widgets here to appear in your footer col #4.', 'pine-alpha' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

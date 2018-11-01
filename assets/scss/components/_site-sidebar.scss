@@ -1,23 +1,38 @@
 .site-sidebar {
     &.is-left {
         .site-sidebar__inside {
-            padding: 3rem 2rem 3rem 0;
+            padding: 3rem 0;
+
+            @include media-breakpoint-up(lg) {
+                padding: 3rem 2rem 3rem 0;
+            }
 
             &::before {
                 left: -100vw;
-                right: 0;
+                right: -100vw;
+
+                @include media-breakpoint-up(lg) {
+                    right: 0;
+                }
             }
         }
-
     }
 
     &.is-right {
         .site-sidebar__inside {
-            padding: 3rem 0 3rem 2rem;
+            padding: 3rem 0;
+
+            @include media-breakpoint-up(lg) {
+                padding: 3rem 0 3rem 2rem;
+            }
 
             &::before {
                 right: -100vw;
-                left: 0;
+                left: -100vw;
+
+                @include media-breakpoint-up(lg) {
+                    left: 0;
+                }
             }
         }
     }

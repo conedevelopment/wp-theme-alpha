@@ -1,4 +1,53 @@
 .widget {
+    &.widget_archive {
+        ul li { 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &.widget_rss {
+        .widget-title {
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-right: 0.3rem;
+                color: map-get($colors, 'default');
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: map-get($colors, 'secondary');
+                }
+            }
+
+            img {
+                display: block;
+            }
+        }
+
+        li > .rsswidget {
+            font-family: map-get($fonts, 'heading');
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            display: block;
+            line-height: 1.3em;
+        }
+
+        .rss-date {
+            font-style: italic;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .rssSummary {
+            color: rgba(0,0,0,0.6);
+            margin-bottom: 0.3rem;
+        }
+    }
+
     &-title {
         font-size: 0.9rem;
         text-transform: uppercase;
@@ -30,12 +79,15 @@
         }
 
         li {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             list-style: none;
             color: rgba(0,0,0,0.3);
             font-weight: 400;
+            word-wrap: break-word;
+
+            > ul {
+                margin-left: 1.5rem;
+                margin-top: 1rem;
+            }
         }
 
         a {
