@@ -430,11 +430,12 @@ a.text-dark:hover,a.text-dark:focus{color:#1d2124 !important}
 .text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
 .visible{visibility:visible !important}
 .invisible{visibility:hidden !important}
-.canvi-title{font-size:.9rem;text-transform:uppercase;font-weight:700;margin:1.5rem 0 0;color:rgba(0,0,0,0.35);padding:14px 25px;display:block}
+.canvi-title{font-size:.9rem;text-transform:uppercase;font-weight:700;margin:1rem 0 0;color:rgba(0,0,0,0.3);padding:.8rem 1.5rem .2rem 1.5rem;display:block}
 .canvi-navigation{margin:0;padding:0}
 .canvi-navigation li{list-style:none}
 .canvi-navigation li:not(:last-child){border-bottom:1px solid rgba(0,0,0,0.03)}
-.canvi-navigation a{display:block;padding:12px 25px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;opacity:.7;text-decoration:none;color:#231f20;font-size:.9rem;font-weight:700;text-transform:uppercase}
+.canvi-navigation li.current-menu-item a{color:#0095ff}
+.canvi-navigation a{display:block;padding:.8rem 1.5rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-decoration:none;color:#231f20;font-size:.9rem;font-weight:700;text-transform:uppercase}
 .canvi-navigation a.is-active,.canvi-navigation a:hover{opacity:1}
 .canvi-navigation__icon-wrapper{margin-right:20px;width:30px;height:30px;border-radius:3px;background:#aaa;color:#fff;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .canvi-navigation__icon{font-size:17px;line-height:1em}
@@ -458,6 +459,8 @@ body.logged-in .canvi-navbar{padding-top:48px}
 .canvi-navbar[data-position="left"].is-canvi-open{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 .canvi-navbar[data-push-content="false"]{z-index:10}
 .canvi-navbar[data-push-content="true"]{z-index:1}
+.canvi-navbar__widgets{padding:0 1.5rem;margin-bottom:2rem}
+.canvi-navbar__widgets>*{margin-top:2.5rem}
 .canvi-content{position:relative;z-index:5;-webkit-transition:-webkit-transform .3s cubic-bezier(0.42,0,0.58,1);transition:-webkit-transform .3s cubic-bezier(0.42,0,0.58,1);transition:transform .3s cubic-bezier(0.42,0,0.58,1);transition:transform .3s cubic-bezier(0.42,0,0.58,1),-webkit-transform .3s cubic-bezier(0.42,0,0.58,1);overflow:hidden;background:#fff}
 .canvi-content.is-canvi-open{-webkit-transition:-webkit-transform .3s cubic-bezier(0.42,0,0.58,1);transition:-webkit-transform .3s cubic-bezier(0.42,0,0.58,1);transition:transform .3s cubic-bezier(0.42,0,0.58,1);transition:transform .3s cubic-bezier(0.42,0,0.58,1),-webkit-transform .3s cubic-bezier(0.42,0,0.58,1)}
 .canvi-overlay{position:absolute;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.4);opacity:0;visibility:hidden;z-index:1031}
@@ -624,8 +627,8 @@ body.logged-in .canvi-navbar{padding-top:48px}
 #wp-calendar a:hover,#wp-calendar a:focus,#wp-calendar a:active{color:#00f1ff}
 #wp-calendar caption{background:linear-gradient(45deg,#00f1ff,#0095ff);color:#fff;padding:.4rem;text-align:center;border-radius:0 0 2px 2px}
 #wp-calendar thead tr{border-right:1px solid #f9f9f9}
-#wp-calendar thead th{font-size:90%;font-weight:bold;padding:.4rem;background:#f9f9f9;text-transform:uppercase;text-align:center}
-#wp-calendar tbody td{position:relative;padding:.4rem 1rem;text-align:center;border:1px solid #f9f9f9;background:#fff}
+#wp-calendar thead th{font-size:90%;font-weight:bold;padding:.4rem 2px;background:#f9f9f9;text-transform:uppercase;text-align:center}
+#wp-calendar tbody td{position:relative;padding:.4rem 2px;text-align:center;border:1px solid #f9f9f9;background:#fff}
 #wp-calendar tbody td.pad{opacity:.7}
 #wp-calendar tbody td#today{font-weight:bold}
 #wp-calendar tbody td#today:after{content:'';position:absolute;top:0;right:0;width:0;height:0;border-top:10px solid #f9f9f9;border-left:10px solid transparent}

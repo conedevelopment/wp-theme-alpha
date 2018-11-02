@@ -30,7 +30,7 @@
 
 	<div class="js-canvi-navbar--right canvi-navbar animate--in">
 		<div class="canvi-navbar__inside">
-			<div class="canvi-navbar__title"><?php _e( 'Navigation', 'pine-alpha' ); ?></div>
+			<div class="canvi-title"><?php _e( 'Navigation', 'pine-alpha' ); ?></div>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'header',
@@ -38,6 +38,10 @@
 					'menu_class'	 => 'canvi-navigation'
 				) );
 			?>
+			
+			<div class="canvi-navbar__widgets">
+				<?php dynamic_sidebar( 'sidebar-1' ); ?>
+			</div>
 		</div>
 	</div>
 

@@ -230,6 +230,16 @@ function pine_alpha_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name'          => esc_html__( 'Canvi (Off-canvas navigation)', 'pine-alpha' ),
+		'id'            => 'canvi-1',
+		'description'   => esc_html__( 'Add widgets here to appear in your off-canvas navigation.', 'pine-alpha' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
 		'name'          => esc_html__( 'Footer 1', 'pine-alpha' ),
 		'id'            => 'footer-1',
 		'description'   => esc_html__( 'Add widgets here to appear in your footer col #1.', 'pine-alpha' ),

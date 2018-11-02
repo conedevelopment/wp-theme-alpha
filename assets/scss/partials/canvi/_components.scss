@@ -3,9 +3,9 @@
     font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: 700;
-    margin: 1.5rem 0 0;
-    color: rgba(0,0,0,0.35);
-    padding: 14px 25px;
+    margin: 1rem 0 0;
+    color: rgba(0,0,0,0.3);
+    padding: 0.8rem 1.5rem 0.2rem 1.5rem;
     display: block;
 }
 
@@ -21,14 +21,17 @@
         &:not(:last-child) {
             border-bottom: 1px solid rgba(0,0,0,0.03);
         }
+
+        &.current-menu-item a {   
+            color: map-get($colors, 'default');
+        }
     }
     
     a {
         display: block;
-        padding: 12px 25px;
+        padding: 0.8rem 1.5rem;
         display: flex;
         align-items: center;
-        opacity: 0.7;
         text-decoration: none;
         color: map-get($colors, 'black');
         font-size: 0.9rem;
