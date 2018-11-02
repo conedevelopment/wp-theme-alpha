@@ -14,11 +14,15 @@
 
 	@for $i from 2 through 9 {
 		.gallery-columns-#{$i} & {
-			max-width: calc( #{map-get( $columns, $i )} - 1rem );
+			max-width: calc(#{map-get($columns, $i)} - 1rem);
 		}
 	}
 }
 
 .gallery-caption {
 	display: block;
+	margin-top: 0.3rem;
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 0.9rem;
+	line-height: 1.3em;
 }

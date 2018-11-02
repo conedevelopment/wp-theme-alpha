@@ -23,7 +23,7 @@
 			<?php
 			$latest_posts = new WP_Query( array(
 				'post_type'           => 'post',
-				'posts_per_page'      => 6,
+				'posts_per_page'      => get_theme_mod( 'pine_alpha_components_blogroll_section_post_number', 6 ),
 				'post_status'         => 'publish',
 			) );
 			?>

@@ -474,6 +474,25 @@ Kirki::add_field( 'pine_alpha', array(
 	'section'     => 'pine_alpha_general_social_links'
 ) );
 
+/**
+ * Add General / Display Section
+ */
+Kirki::add_section( 'pine_alpha_general_display', array(
+    'title'          => esc_attr__( 'Display', 'pine-alpha' ),
+    'panel'          => 'pine_alpha_general',
+    'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_display_section_magnific_popup',
+	'label'       => esc_attr__( 'Enable Magnific Popup', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_display',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+
 
 /**
  * Add Components Panel
@@ -648,6 +667,27 @@ Kirki::add_field( 'pine_alpha', array(
 		'none'   => esc_attr__( 'None', 'pine-alpha' ),
 		'left' => esc_attr__( 'Left', 'pine-alpha' ),
 		'right'  => esc_attr__( 'Right', 'pine-alpha' ),
+	),
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_components_blogroll_section_line_separator_2',
+	'section'     => 'pine_alpha_components_blogroll',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'theme_config_id', array(
+	'type'        => 'number',
+	'settings'    => 'pine_alpha_components_blogroll_section_post_number',
+	'label'       => esc_attr__( 'The Number of Posts to Show', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_blogroll',
+	'default'     => 6,
+	'choices'     => array(
+		'min'  => 6,
+		'max'  => 14,
+		'step' => 1,
 	),
 ) );
 
@@ -833,4 +873,23 @@ Kirki::add_field( 'pine_alpha', array(
 		'is-left' => esc_attr__( 'Bottom left (Fixed)', 'pine-alpha' ),
 		'is-right'   => esc_attr__( 'Bottom right (Fixed)', 'pine-alpha' )
 	),
+) );
+
+
+/**
+ * Add Footer / Display Section
+ */
+Kirki::add_section( 'pine_alpha_footer_display', array(
+    'title'          => esc_attr__( 'Display', 'pine-alpha' ),
+    'panel'          => 'pine_alpha_footer',
+    'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_footer_display_section_hide_widgets',
+	'label'       => esc_attr__( 'Hide Widgets', 'pine-alpha' ),
+	'section'     => 'pine_alpha_footer_display',
+	'default'     => '0',
+	'priority'    => 10,
 ) );

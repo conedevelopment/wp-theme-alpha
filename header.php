@@ -25,6 +25,7 @@
 <body <?php body_class(); ?> 
 	<?php if( get_theme_mod( 'pine_alpha_header_section_navigation_sticky', 0 ) == 1 ) : ?> data-sticky="true" <?php endif; ?>
 	<?php if( get_theme_mod( 'pine_alpha_footer_scrolltop_enable', 0 ) == 1 ) : ?> data-scroll-top="true" <?php endif; ?>
+	<?php if( get_theme_mod( 'pine_alpha_general_display_section_magnific_popup', 0 ) == 1 ) : ?> data-magnific="true" <?php endif; ?>
 >
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'pine-alpha' ); ?></a>
 

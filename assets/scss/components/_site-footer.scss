@@ -1,83 +1,91 @@
 .site-footer {
-    background: map-get($colors, 'black');
-    text-align: center;
-    color: #fff;
-    padding: 3rem 0;
+	background: map-get($colors, "black");
+	text-align: center;
+	color: #fff;
+	padding: 3rem 0;
 
-    &__widgets {
-        text-align: left;
-        color: #fff;
-        margin-bottom: 2rem;
-    }
+	&__widgets {
+		text-align: left;
+		color: #fff;
+		margin-bottom: 2rem;
+	}
 
-    .widget {
-        margin-bottom: 2rem;
+	.widget {
+		margin-bottom: 2rem;
 
-        &-title {
-            color: rgba(255,255,255,0.3);
-            margin-bottom: 1.5rem;
-        }
+		&-title {
+			color: rgba(255, 255, 255, 0.3);
+			margin-bottom: 1.5rem;
+		}
 
-        .textwidget {
-            background: transparent;
-            padding: 0;
-        }
+		.textwidget {
+			background: transparent;
+			padding: 0;
+		}
 
-        ul {
-            > * + * {
-                border-top: 1px solid rgba(255,255,255,0.05);
-            }
-        }
+		.gallery-caption {
+			color: rgba(255, 255, 255, 0.3);
+		}
 
-        ul li {
-            color: rgba(255,255,255,0.6);
-        }
+		ul {
+			> * + * {
+				border-top: 1px solid rgba(255, 255, 255, 0.05);
+			}
+		}
 
-        a {
-            color: #fff;
+		ul li {
+			color: rgba(255, 255, 255, 0.6);
+		}
 
-            &:hover,
-            &:focus,
-            &:active {
-                color: map-get($colors, 'default');
-            }
-        }
+		a {
+			color: #fff;
 
-        .tagcloud {
-            ul > * + * {
-                padding-top: 0;
-                margin-bottom: 0.7rem;
-            }
+			&:hover,
+			&:focus,
+			&:active {
+				color: map-get($colors, "default");
+			}
+		}
 
-            a {
-                color: #fff;
-                background: linear-gradient(45deg, map-get($colors, 'default'), map-get($colors, 'secondary'));
-    
-                &:hover,
-                &:focus,
-                &:active {
-                    background: #fff;
-                    color: map-get($colors, 'default');
-                }
-            }
-        }
-    }
+		.tagcloud {
+			ul > * + * {
+				padding-top: 0;
+				margin-bottom: 0.7rem;
+			}
 
-    &__socials {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        margin-bottom: 3rem;
+			a {
+				color: #fff;
+				background: linear-gradient(
+					45deg,
+					map-get($colors, "default"),
+					map-get($colors, "secondary")
+				);
 
-        .social-item {
-            margin-bottom: 1rem;
-        }
-    }
+				&:hover,
+				&:focus,
+				&:active {
+					background: #fff;
+					color: map-get($colors, "default");
+				}
+			}
+		}
+	}
 
-    &__copyright {
-        margin: 0;
-    }
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		margin-bottom: 3rem;
+
+		.social-item {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__copyright {
+		margin: 0;
+	}
 }

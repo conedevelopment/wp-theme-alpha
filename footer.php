@@ -10,23 +10,24 @@
  */
 
 ?>
-
 		<div class="site-footer">
 			<div class="container">
-				<div class="site-footer__widgets row">
-					<div class="col-12 col-md-6 col-lg-3">
-						<?php dynamic_sidebar( 'footer-1' ); ?>
+				<?php if( get_theme_mod( 'pine_alpha_footer_display_section_hide_widgets', 0 ) == 0 ) : ?>
+					<div class="site-footer__widgets row">
+						<div class="col-12 col-md-6 col-lg-3">
+							<?php dynamic_sidebar( 'footer-1' ); ?>
+						</div>
+						<div class="col-12 col-md-6 col-lg-3">
+							<?php dynamic_sidebar( 'footer-2' ); ?>
+						</div>
+						<div class="col-12 col-md-6 col-lg-3">
+							<?php dynamic_sidebar( 'footer-3' ); ?>
+						</div>
+						<div class="col-12 col-md-6 col-lg-3">
+							<?php dynamic_sidebar( 'footer-4' ); ?>
+						</div>
 					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<?php dynamic_sidebar( 'footer-2' ); ?>
-					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<?php dynamic_sidebar( 'footer-3' ); ?>
-					</div>
-					<div class="col-12 col-md-6 col-lg-3">
-						<?php dynamic_sidebar( 'footer-4' ); ?>
-					</div>
-				</div>
+				<?php endif; ?>
 				<div class="row">
 					<?php if( get_theme_mod( 'pine_alpha_footer_section_navigation_show_socials', 1 ) == 1 ) : ?>
 						<div class="col-12">

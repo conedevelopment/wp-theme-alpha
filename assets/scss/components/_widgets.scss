@@ -1,163 +1,165 @@
 .widget {
-    &.widget_archive,
-    &.widget_categories {
-        ul li { 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    }
+	&.widget_archive,
+	&.widget_categories {
+		ul li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
 
-    &.widget_rss {
-        .widget-title {
-            display: flex;
-            align-items: center;
+	&.widget_rss {
+		.widget-title {
+			display: flex;
+			align-items: center;
 
-            a {
-                margin-right: 0.3rem;
-                color: map-get($colors, 'default');
+			a {
+				margin-right: 0.3rem;
+				color: map-get($colors, "default");
 
-                &:hover,
-                &:focus,
-                &:active {
-                    color: map-get($colors, 'secondary');
-                }
-            }
+				&:hover,
+				&:focus,
+				&:active {
+					color: map-get($colors, "secondary");
+				}
+			}
 
-            img {
-                display: block;
-            }
-        }
+			img {
+				display: block;
+			}
+		}
 
-        li > .rsswidget {
-            font-family: map-get($fonts, 'heading');
-            font-size: 1.2rem;
-            margin-bottom: 0.3rem;
-            display: block;
-            line-height: 1.3em;
-        }
+		li > .rsswidget {
+			font-family: map-get($fonts, "heading");
+			font-size: 1.2rem;
+			margin-bottom: 0.3rem;
+			display: block;
+			line-height: 1.3em;
+		}
 
-        .rss-date {
-            font-style: italic;
-            margin-bottom: 0.3rem;
-            display: block;
-        }
+		.rss-date {
+			font-style: italic;
+			margin-bottom: 0.3rem;
+			display: block;
+		}
 
-        .rssSummary {
-            color: rgba(0,0,0,0.6);
-            margin-bottom: 0.3rem;
-        }
-    }
+		.rssSummary {
+			color: rgba(0, 0, 0, 0.6);
+			margin-bottom: 0.3rem;
+		}
+	}
 
-    &-title {
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        font-family: $font__body;
-        color: rgba(0,0,0,0.2);
-        position: relative;
-        margin-bottom: 1rem;
-    }
+	&-title {
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		font-family: $font__body;
+		color: rgba(0, 0, 0, 0.2);
+		position: relative;
+		margin-bottom: 1rem;
+	}
 
-    .textwidget {
-        background: #fff;
-        border-radius: 2px;
-        padding: 1.5rem;
+	.textwidget {
+		background: #fff;
+		border-radius: 2px;
+		padding: 1.5rem;
 
-        > *:last-child {
-            margin-bottom: 0;
-        }
-    }
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
 
-    ul {
-        margin: 0;
-        padding: 0;
+	ul {
+		margin: 0;
+		padding: 0;
 
-        > * + * {
-            margin-top: 0.7rem;
-            padding-top: 0.7rem;
-            border-top: 1px solid rgba(0,0,0,0.05);
+		> * + * {
+			margin-top: 0.7rem;
+			padding-top: 0.7rem;
+			border-top: 1px solid rgba(0, 0, 0, 0.05);
+		}
 
-        }
+		li {
+			list-style: none;
+			color: rgba(0, 0, 0, 0.3);
+			font-weight: 400;
+			word-wrap: break-word;
 
-        li {
-            list-style: none;
-            color: rgba(0,0,0,0.3);
-            font-weight: 400;
-            word-wrap: break-word;
+			> ul {
+				margin-left: 1.5rem;
+				margin-top: 1rem;
+			}
+		}
 
-            > ul {
-                margin-left: 1.5rem;
-                margin-top: 1rem;
-            }
-        }
+		a {
+			color: map-get($colors, "black");
+			font-weight: 700;
 
-        a {
-            color: map-get($colors, 'black');
-            font-weight: 700;
+			&:hover,
+			&:focus,
+			&:active {
+				color: map-get($colors, "default");
+			}
+		}
+	}
 
-            &:hover,
-            &:focus,
-            &:active {
-                color: map-get($colors, 'default');
-            }
-        }
-    }
+	.tagcloud {
+		li {
+			display: inline-block;
+			margin: 0 0.5rem 0 0;
+			border: none;
+		}
 
-    .tagcloud {
-        ul {
+		a {
+			background: map-get($colors, "black");
+			display: inline-block;
+			padding: 0.4em 0.8em;
+			border-radius: 2px;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 0.8rem !important;
 
-        }
-
-        li {
-            display: inline-block;
-            margin: 0 0.5rem 0 0;
-            border: none;
-        }
-
-        a {
-            background: map-get($colors, 'black');
-            display: inline-block;
-            padding: 0.4em 0.8em;
-            border-radius: 2px;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 0.8rem !important;
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: #fff;
-                background: linear-gradient(45deg, map-get($colors, 'default'), map-get($colors, 'secondary'));
-            }
-        }
-    }
+			&:hover,
+			&:focus,
+			&:active {
+				color: #fff;
+				background: linear-gradient(
+					45deg,
+					map-get($colors, "default"),
+					map-get($colors, "secondary")
+				);
+			}
+		}
+	}
 }
-
 
 #wp-calendar {
 	width: 100%;
 	max-width: 37.5rem;
 	background: #fff;
 	margin-left: auto;
-    margin-right: auto;
-    
-    a {
-        color: map-get($colors, 'default');
+	margin-right: auto;
 
-        &:hover,
-        &:focus,
-        &:active {
-            color: map-get($colors, 'secondary');
-        }
-    }
+	a {
+		color: map-get($colors, "default");
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: map-get($colors, "secondary");
+		}
+	}
 
 	caption {
-		background: linear-gradient(45deg, map-get($colors, 'secondary'), map-get($colors, 'default'));
+		background: linear-gradient(
+			45deg,
+			map-get($colors, "secondary"),
+			map-get($colors, "default")
+		);
 		color: #fff;
 		padding: 0.4rem;
-        text-align: center;
-        border-radius: 0 0 2px 2px;
+		text-align: center;
+		border-radius: 0 0 2px 2px;
 	}
 
 	thead {
@@ -190,7 +192,7 @@
 			font-weight: bold;
 
 			&:after {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 0;
 				right: 0;
@@ -203,7 +205,7 @@
 	}
 
 	tfoot tr {
-		background: rgba( #fff, 0.7 );
+		background: rgba(#fff, 0.7);
 		border: 1px solid #f9f9f9;
 
 		td {
@@ -230,30 +232,30 @@
 }
 
 .search-form {
-    position: relative;
-    height: 50px;
+	position: relative;
+	height: 50px;
 
-    &__input {
-        background: #fff;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 2px;
-        border: 1px solid #efefef;
-        width: 100%;
-        height: 50px;
-    }
+	&__input {
+		background: #fff;
+		border: none;
+		padding: 0.5rem 1rem;
+		border-radius: 2px;
+		border: 1px solid #efefef;
+		width: 100%;
+		height: 50px;
+	}
 
-    &__submit {
-        position: absolute;
-        top: 10px;
-        right: 0.5rem;
-        background: none;
-        border: none;
-        cursor: pointer;
+	&__submit {
+		position: absolute;
+		top: 10px;
+		right: 0.5rem;
+		background: none;
+		border: none;
+		cursor: pointer;
 
-        svg {
-            width: 20px;
-            height: 20px;
-        }
-    }
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
 }
