@@ -76,7 +76,6 @@ class Canvi {
 
         this.overlay.classList.add('canvi-animate-out');
         this.content.style.transform = 'translateX(0)';
-        this.body.classList.remove('is-canvi-open');
         this.navbar.classList.remove('is-canvi-open');
 
         (this.options.pushContent ? this.content : this.navbar)
@@ -209,11 +208,16 @@ class Canvi {
         this._triggerCanviEvent('canvi.after-close');
         this._removeOverlay();
         this._resetZindex();
+        this.content.style.transform = '';
 
         (this.options.pushContent ? this.content : this.navbar)
             .removeEventListener(this.transitionEvent, event => this._transitionCloseEnd(event));
-
+        
         this.content.classList.remove('is-canvi-open');
+
+        setTimeout(() => {
+            this.body.classList.remove('is-canvi-open');
+        }, 300);
     }
 
     _setTransitionSpeed() {

@@ -59,6 +59,29 @@ body {
             top: 32px;
         }
     }
+
+    // Canvi Fix: hide and overwrite position: fixed; elements
+    &.is-canvi-open[data-sticky="true"] .scroll-to-top {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.15s ease;
+    }
+
+    &.is-canvi-open[data-sticky="true"].logged-in:not(.customize-partial-edit-shortcuts-shown) .site-header {
+        top: 0;
+    }
+
+    &.is-canvi-open[data-sticky="true"] .site-header {
+        transition: none !important;
+    }
+
+    &.is-canvi-open[data-sticky="true"] {
+        padding-top: 0;
+
+        .site-header {
+            position: relative;
+        }
+    }
 }
 
 a {
