@@ -100,10 +100,8 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 		 */
 		add_theme_support( 'post-formats', array(
 			'aside',
-			'image',
 			'video',
 			'quote',
-			'link',
 			'gallery',
 			'audio',
 		) );

@@ -74,6 +74,10 @@
         position: relative;
         z-index: 10;
         padding: 1.5rem 0;
+
+        &.is-gallery {
+            padding: 1rem 0 1.5rem 0;
+        }
     }
 
     &__meta {
@@ -157,6 +161,74 @@
 
         span {
             color: rgba(0,0,0,0.3);
+        }
+    }
+
+    .gallery {
+        margin-bottom: 0;
+    }
+
+    &__quote {
+        background: map-get($colors, 'light-gray');
+        border: 1px solid #efefef;
+        padding: 2rem;
+        border-radius: map-get($settings, 'border-radius');
+        position: relative;
+
+        &::before {
+            content: '“';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 5rem;
+            line-height: 1;
+            color: rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+
+        blockquote {
+            margin: 0;
+            z-index: 5;
+            position: relative;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        a {
+            color: rgba(0,0,0,0.5);
+        }
+
+        cite {
+            font-style: italic;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+    }
+
+    &__aside {
+        background: map-get($colors, 'light-gray');
+        border: 1px solid #efefef;
+        padding: 2rem;
+        border-radius: map-get($settings, 'border-radius');
+    }
+
+    &__aside {
+        color: rgba(0,0,0,0.7);
+        margin-bottom: 0.8rem;
+
+        .list-item__title {
+            margin-top: 0;
+        }
+
+        .list-item__author {
+            margin-bottom: 0;
         }
     }
 }
