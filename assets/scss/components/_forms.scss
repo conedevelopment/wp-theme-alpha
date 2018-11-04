@@ -1,8 +1,69 @@
-select {
-    width: 100%;
-    padding: 0.7rem 0.5rem;
+.wpcf7-submit,
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: map-get($fonts, 'header');
+    background: linear-gradient(45deg, map-get($colors, 'default'), map-get($colors, 'secondary'));
+    background-size: 140% auto;
+    background-position: left top;
+    border: none;
+    font-weight: 700;
+    transition: 0.25s ease;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    line-height: 1em;
     border-radius: map-get($settings, 'border-radius');
-    border: 1px solid #efefef;
-    background: #fff;
-    color: rgba(0,0,0,0.7);
+    cursor: pointer;
+
+    @include media-breakpoint-up(md) {
+        font-size: 1rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        transition: 0.25s ease;
+        color: #fff;
+        text-decoration: none;
+        background-position: right top;
+    }
+}
+
+.entry-content {
+    .input-group {
+        margin-bottom: 1.5rem;
+
+        &.is-submit {
+            display: flex;
+            align-items: center;
+
+            > * + * {
+                margin-left: 1rem;
+            }
+        }
+
+        > label {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+    }
+
+    input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea {
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 0.7rem 0.5rem;
+        border-radius: map-get($settings, 'border-radius');
+        background: #fff;
+        color: rgba(0,0,0,0.7);
+
+        &:focus {
+            border-color: map-get($colors, 'default');
+            outline: none;
+        }
+    }
 }

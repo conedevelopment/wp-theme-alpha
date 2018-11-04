@@ -412,6 +412,11 @@ function pine_alpha_admin_scripts() {
 add_action( 'admin_enqueue_scripts', 'pine_alpha_admin_scripts' );
 
 /**
+ * Remove wpcf7 stylesheet.
+ */
+add_filter( 'wpcf7_load_css', '__return_false' );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';

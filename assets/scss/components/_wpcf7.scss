@@ -1,0 +1,109 @@
+// Generic
+.wpcf7 {
+    .ajax-loader {
+        display: none;
+        width: 20px;
+        height: 20px;
+        background-color: #777;
+        float: left;
+        
+        &.is-active {
+            display: inline-block;
+            animation: loader 1.2s infinite ease-in-out;
+        }
+    }
+
+    .ajax-error {
+        display: none;
+    }
+
+    .placeheld {
+        color: map-get($colors, 'medium-gray');
+    }
+
+    input[type="file"] {
+        cursor: pointer;
+    }
+
+    input[type="file"]:disabled {
+        cursor: default;
+    }
+
+    .wpcf7-submit:disabled {
+        cursor: not-allowed;
+    }
+}
+
+// Validation messages
+.wpcf7-response-output {
+	margin: 1.5rem 0 0 0;
+    padding: 0.8em 1em;
+    border-radius: map-get($settings, 'border-radius');
+    background: map-get($colors, 'medium-gray');
+    color: map-get($colors, 'black');
+
+    &.wpcf7-mail-sent-ok {
+        background: map-get($colors, 'success');
+        color: #fff;
+    }
+
+    &.wpcf7-mail-sent-ng,
+    &.wpcf7-aborted {
+        background: map-get($colors, 'error');
+        color: #fff;
+    }
+
+    &.wpcf7-spam-blocked,
+    &.wpcf7-validation-errors,
+    &.wpcf7-acceptance-missing {
+        background: map-get($colors, 'warning');
+        color: #fff;
+    }
+}
+
+// Field wrapper
+.wpcf7-form-control-wrap {
+    display: block;
+    position: relative;
+    
+    .wpcf7-not-valid-tip {
+        color: map-get($colors, 'error');
+        font-size: 0.9rem;
+        display: block;
+        margin-top: 0.2rem;
+    }
+}
+
+// Radio and Checkbox list element
+.wpcf7-list-item {
+	display: inline-block;
+    margin: 0 1rem 0 0;
+    
+    > label {
+        display: flex;
+        align-items: center;
+
+        input {
+            margin-right: 0.3rem;
+        }
+
+        .wpcf7-list-item-label {
+            line-height: 1.2em;
+        }
+    }
+}
+
+// Hide element
+.wpcf7-display-none {
+	display: none;
+}
+
+@keyframes loader {
+    0% { 
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    } 50% { 
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    } 100% { 
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
