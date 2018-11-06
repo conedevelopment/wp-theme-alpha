@@ -31,6 +31,15 @@
     }
 }
 
+select {
+    width: 100%;
+    border: 1px solid #efefef;
+    padding: 0.7rem 0.5rem;
+    border-radius: map-get($settings, 'border-radius');
+    background: #fff;
+    color: rgba(0,0,0,0.7);
+}
+
 .entry-content {
     .input-group {
         margin-bottom: 1.5rem;

@@ -3,6 +3,7 @@
 ?>
 
 <div <?php post_class('list-item'); ?>>
+
     <?php if ( has_post_thumbnail() && 
                get_post_format() != 'gallery' &&
                get_post_format() != 'audio' &&

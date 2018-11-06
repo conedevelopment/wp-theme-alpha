@@ -78,6 +78,11 @@
         &.is-gallery {
             padding: 1rem 0 1.5rem 0;
         }
+
+        &.is-quote,
+        &.is-aside {
+            padding: 0;
+        }
     }
 
     &__meta {

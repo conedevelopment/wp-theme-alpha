@@ -1,0 +1,81 @@
+.page-header {
+    padding: 3rem 0;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        z-index: 3;
+        background: linear-gradient(45deg, currentColor, rgba(255, 255, 255, 0.5));
+        transition: opacity 0.25s ease;
+        opacity: 0.65;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 5;
+        color: #fff;
+        font-size: 1.7rem;
+        text-shadow: 0 0 04px rgba(0,0,0,0.1);
+        margin: 0;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__description {
+        position: relative;
+        z-index: 5;
+        color: rgba(255,255,255,0.7);
+        margin: 0.4rem 0 0 0;
+        font-size: 1rem;
+        text-shadow: 0 0 04px rgba(0,0,0,0.1);
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.2rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.navigation.pagination {
+    margin-top: 1rem;
+
+    .page-numbers {
+        background: map-get($colors, 'black');
+        display: inline-block;
+        padding: 0.6rem 1rem;
+        border-radius: map-get($settings, 'border-radius');
+        margin-right: 0.2rem;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.15s ease;
+
+        &.current,
+        &:hover,
+        &:active,
+        &:focus {
+            background: linear-gradient(45deg, map-get($colors, 'default'), map-get($colors, 'secondary'));
+            text-decoration: none;
+            transition: 0.15s ease;
+        }
+
+        &.dots {
+            background: map-get($colors, 'black');
+            text-decoration: none;
+        }
+    }
+}

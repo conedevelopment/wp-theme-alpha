@@ -1,4 +1,4 @@
-// Generic
+// Generic styles
 .wpcf7 {
     .ajax-loader {
         display: none;
@@ -71,6 +71,10 @@
         font-size: 0.9rem;
         display: block;
         margin-top: 0.2rem;
+    }
+
+    .wpcf7-not-valid {
+        border-color: map-get($colors, 'error') !important;
     }
 }
 
