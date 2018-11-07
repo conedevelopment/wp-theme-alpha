@@ -1,30 +1,24 @@
-<div <?php post_class('list-item is-secondary'); ?>>
-    <?php if ( has_post_thumbnail() ) : ?>
-        <a href="<?php the_permalink(); ?>" class="list-item__image">
-            <?php the_post_thumbnail( 'alpha-featured-image-small', array( 'class' => 'img-fluid' ) ); ?>
-        </a>
+<div <?php post_class('list-item is-secondary'); ?>
+    <?php $terms = get_the_terms( get_the_ID(), 'category');
+    if( !empty($terms) ) :
+        $term = array_pop($terms); ?>
+        style="color: <?php echo get_term_meta( $term->term_id, 'pine_alpha_category_color', true ); ?>;"
     <?php endif; ?>
+>
+    <div class="list-item__image-wrapper">
+        <?php if ( has_post_thumbnail() ) : ?>
+            <a href="<?php the_permalink(); ?>" class="list-item__image">
+                <?php the_post_thumbnail( 'alpha-featured-image-small', array( 'class' => 'img-fluid' ) ); ?>
+            </a>
+        <?php endif; ?>
+    </div>
 
     <div class="list-item__content">
-        <div class="list-item__meta">
-            <?php pine_alpha_posted_on(); ?>
-            <span class="list-item__separator"></span>
-            <?php pine_alpha_get_category_list( $post->ID ); ?>
-        </div>
-        
-        <h2 class="list-item__title">
-            <a href="<?php the_permalink(); ?>">
-                <?php the_title(); ?>
-            </a>
-        </h2>
+        <?php
+        $template_parts = get_theme_mod( 'pine_alpha_layout_list_item_section_order_secondary', array( 'meta', 'title', 'content', 'author' ) );
 
-        <p class="list-item__excerpt">
-            <?php echo wp_trim_words( get_the_excerpt(), $num_words = 15, $more = '...' ); ?>
-        </p>
-
-        <div class="list-item__author">
-            <img src="<?php echo get_avatar_url( get_the_author_meta('user_email'), '80', '' ); ?>" alt="<?php echo get_the_author_meta( 'display_name', $post->post_author ); ?>" />
-            <span><?php echo get_the_author_meta( 'display_name', $post->post_author ); ?></span>
-        </div>
+        foreach ( $template_parts as $template_part ) : ?>
+            <?php get_template_part( 'template-parts/post/secondary-list-parts/part-' . $template_part ); ?>
+        <?php endforeach; ?>
     </div>
 </div>

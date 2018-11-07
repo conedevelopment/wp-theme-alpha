@@ -25,7 +25,7 @@ $slider_posts = new WP_Query( array(
                         <span class="slider-item__date">
                             <?php echo pine_alpha_posted_on(); ?>
                             <span class="slider-item__separator"></span>
-                            <?php pine_alpha_get_category_list( $post->ID ); ?>
+                            <?php pine_alpha_get_category_list( $post->ID, false ); ?>
                         </span>
                         <h2 class="slider-item__title"><?php the_title(); ?></h2>
                         <div class="slider-item__author">

@@ -11,6 +11,12 @@
 	width: 100%;
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
+	transition: 0.15s ease;
+
+	&:hover {
+		opacity: 0.7;
+		transition: 0.15s ease;
+	}
 
 	@for $i from 2 through 9 {
 		.gallery-columns-#{$i} & {

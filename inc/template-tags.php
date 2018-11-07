@@ -7,16 +7,24 @@
  * @package pine-alpha
  */
 
- function pine_alpha_get_category_list($ID) {
+ function pine_alpha_get_category_list($ID, $url) {
 	$categories = get_the_category($ID);
 	$i = 0;
 	$length = count($categories);
 
 	foreach  ($categories as $category) {
 		if ($i != $length - 1) {
-			echo '<span class="category-label">' . $category->name . ',</span>';
+			if ( $url == true ) {
+				echo '<span class="category-label"><a href="' . get_category_link( $category->ID ) . '">' . $category->name . '</a>,</span>';
+			} else {
+				echo '<span class="category-label">' . $category->name . ',</span>';
+			}
 		} else {
-			echo '<span class="category-label">' . $category->name . '</span>';
+			if ( $url == true ) {
+				echo '<span class="category-label"><a href="' . get_category_link( $category->ID ) . '">' . $category->name . '</a></span>';
+			} else {
+				echo '<span class="category-label">' . $category->name . '</span>';
+			}
 		}
 		$i++;
 	}

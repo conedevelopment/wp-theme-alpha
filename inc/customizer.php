@@ -701,7 +701,7 @@ Kirki::add_panel( 'pine_alpha_layout', array(
 ) );
 
 /**
- * Add Layout / Colors Section
+ * Add Layout / Front Page Section
  */
 Kirki::add_section( 'pine_alpha_layout_front_page', array(
     'title'          => esc_attr__( 'Front Page', 'pine-alpha' ),
@@ -726,6 +726,63 @@ Kirki::add_field( 'pine_alpha', array(
 		'popular-posts' => esc_attr__( 'Popular Posts Section', 'pine-alpha' ),
 		'categories' => esc_attr__( 'Categories Section', 'pine-alpha' ),
 		'blogroll' => esc_attr__( 'Blogroll Section', 'pine-alpha' )
+	),
+	'priority'    => 10,
+) );
+
+
+/**
+ * Add Layout / List Item Section
+ */
+Kirki::add_section( 'pine_alpha_layout_list_item', array(
+    'title'          => esc_attr__( 'List Item', 'pine-alpha' ),
+    'panel'          => 'pine_alpha_layout',
+    'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'sortable',
+	'settings'    => 'pine_alpha_layout_list_item_section_order',
+	'label'       => __( 'Main Component Order', 'pine-alpha' ),
+	'description' => esc_attr__( 'Here you can set the component order for the main list item.', 'pine-alpha' ),
+	'section'     => 'pine_alpha_layout_list_item',
+	'default'     => array(
+		'image',
+		'meta',
+		'title',
+		'content',
+		'author',
+		'read-more'
+	),
+	'choices'     => array(
+		'image' => esc_attr__( 'Image', 'pine-alpha' ),
+		'meta' => esc_attr__( 'Meta', 'pine-alpha' ),
+		'title' => esc_attr__( 'Title', 'pine-alpha' ),
+		'content' => esc_attr__( 'Content', 'pine-alpha' ),
+		'author' => esc_attr__( 'Author', 'pine-alpha' ),
+		'read-more' => esc_attr__( 'Read More', 'pine-alpha' )
+	),
+	'priority'    => 10,
+) );
+
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'sortable',
+	'settings'    => 'pine_alpha_layout_list_item_section_order_secondary',
+	'label'       => __( 'Secondary Component Order', 'pine-alpha' ),
+	'description' => esc_attr__( 'Here you can set the component order for the secondary (top or related posts) list item.', 'pine-alpha' ),
+	'section'     => 'pine_alpha_layout_list_item',
+	'default'     => array(
+		'meta',
+		'title',
+		'content',
+		'author'
+	),
+	'choices'     => array(
+		'meta' => esc_attr__( 'Meta', 'pine-alpha' ),
+		'title' => esc_attr__( 'Title', 'pine-alpha' ),
+		'content' => esc_attr__( 'Content', 'pine-alpha' ),
+		'author' => esc_attr__( 'Author', 'pine-alpha' )
 	),
 	'priority'    => 10,
 ) );
