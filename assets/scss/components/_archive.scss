@@ -4,18 +4,38 @@
     background-size: cover;
     background-position: center center;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: block;
-        z-index: 3;
-        background: linear-gradient(45deg, currentColor, rgba(255, 255, 255, 0.5));
-        transition: opacity 0.25s ease;
-        opacity: 0.65;
+    &.is-white {
+        background: #fff;
+
+        .page-header__title {
+            color: map-get($colors, 'black');
+            text-shadow: none;
+        }
+
+        .page-header__description {
+            color: rgba(0,0,0,0.5);
+            text-shadow: none;
+        }
+    }
+
+    &.is-colorful {
+        background: currentColor;
+    }
+
+    &.is-image {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            z-index: 3;
+            background: linear-gradient(45deg, currentColor, rgba(255, 255, 255, 0.5));
+            transition: opacity 0.25s ease;
+            opacity: 0.65;
+        }
     }
 
     &__title {

@@ -799,7 +799,11 @@ img{height:auto;max-width:100%}
 .wpcf7-list-item>label .wpcf7-list-item-label{line-height:1.2em}
 .wpcf7-display-none{display:none}
 .page-header{padding:3rem 0;position:relative;background-size:cover;background-position:center center}
-.page-header::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;display:block;z-index:3;background:linear-gradient(45deg,currentColor,rgba(255,255,255,0.5));-webkit-transition:opacity .25s ease;transition:opacity .25s ease;opacity:.65}
+.page-header.is-white{background:#fff}
+.page-header.is-white .page-header__title{color:#231f20;text-shadow:none}
+.page-header.is-white .page-header__description{color:rgba(0,0,0,0.5);text-shadow:none}
+.page-header.is-colorful{background:currentColor}
+.page-header.is-image::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;display:block;z-index:3;background:linear-gradient(45deg,currentColor,rgba(255,255,255,0.5));-webkit-transition:opacity .25s ease;transition:opacity .25s ease;opacity:.65}
 .page-header__title{position:relative;z-index:5;color:#fff;font-size:1.7rem;text-shadow:0 0 4px rgba(0,0,0,0.1);margin:0}
 .page-header__description{position:relative;z-index:5;color:rgba(255,255,255,0.7);margin:.4rem 0 0 0;font-size:1rem;text-shadow:0 0 4px rgba(0,0,0,0.1)}
 .page-header__description p:last-child{margin-bottom:0}
