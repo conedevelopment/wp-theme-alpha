@@ -2,7 +2,13 @@
     $site_logo = get_theme_mod( 'pine_alpha_header_section_logo_image' );
 ?>
 
-<div class="container-fluid">
+<div class="
+    <?php if( get_theme_mod( 'pine_alpha_header_section_display_width', 'wide' ) == 'wide' ) : ?>
+        container-fluid
+    <?php else: ?>
+        container
+    <?php endif; ?>
+">
     <div class="row">
         <div class="col-12 site-header__inside 
             <?php if( get_theme_mod( 'pine_alpha_header_section_navigation_remove_separator', 0 ) == 1 ) : ?>

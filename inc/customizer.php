@@ -44,20 +44,6 @@ Kirki::add_field( 'pine_alpha', array(
         'save_as' => 'array',
     ),
 ) );
-/*
-Kirki::add_field( 'pine_alpha', array(
-	'type'        => 'slider',
-	'settings'    => 'pine_alpha_header_section_logo_width',
-	'label'       => esc_attr__( 'Set the max-width of the logo', 'pine-alpha' ),
-	'section'     => 'pine_alpha_header_section_logo',
-	'default'     => 120,
-	'choices'     => array(
-		'min'  => '40',
-		'max'  => '260',
-		'step' => '1',
-	),
-) );
-*/
 
 
 /**
@@ -86,7 +72,6 @@ Kirki::add_field( 'pine_alpha', array(
 	'default'     => '0',
 	'priority'    => 10,
 ) );
-
 
 Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'custom',
@@ -240,6 +225,20 @@ Kirki::add_field( 'pine_alpha', array(
 	'section'     => 'pine_alpha_header_section_display',
 	'default'     => '0',
 	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'pine_alpha_header_section_display_width',
+	'label'       => __( 'Width', 'pine-alpha' ),
+	'section'     => 'pine_alpha_header_section_display',
+	'description' => esc_attr__( 'Set the width of the header container.', 'pine-alpha' ),
+	'default'     => 'wide',
+	'priority'    => 10,
+	'choices'     => array(
+		'narrow'   => esc_attr__( 'Narrow', 'pine-alpha' ),
+		'wide' => esc_attr__( 'Wide', 'pine-alpha' )
+	),
 ) );
 
 
@@ -490,6 +489,21 @@ Kirki::add_field( 'pine_alpha', array(
 	'section'     => 'pine_alpha_general_display',
 	'default'     => '0',
 	'priority'    => 10,
+) );
+
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'pine_alpha_general_display_sidebar_type',
+	'label'       => __( 'Sidebar Type', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_display',
+	'description' => esc_attr__( 'Set the style of the sidebar.', 'pine-alpha' ),
+	'default'     => 'gray',
+	'priority'    => 10,
+	'choices'     => array(
+		'light'   => esc_attr__( 'Light', 'pine-alpha' ),
+		'gray' => esc_attr__( 'Gray', 'pine-alpha' )
+	),
 ) );
 
 
@@ -789,6 +803,20 @@ Kirki::add_section( 'pine_alpha_layout_list_item', array(
     'title'          => esc_attr__( 'List Item', 'pine-alpha' ),
     'panel'          => 'pine_alpha_layout',
     'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'number',
+	'settings'    => 'pine_alpha_layout_list_item_section_excerpt_length',
+	'label'       => esc_attr__( 'Excerpt Length', 'pine-alpha' ),
+	'description' => esc_attr__( 'Set the length of the excerpt text in words.', 'pine-alpha' ),
+	'section'     => 'pine_alpha_layout_list_item',
+	'default'     => 15,
+	'choices'     => array(
+		'min'  => 10,
+		'max'  => 35,
+		'step' => 1,
+	),
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
