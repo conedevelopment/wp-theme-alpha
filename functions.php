@@ -345,9 +345,40 @@ function pine_alpha_css_wrap() {
 add_action( 'wp_head', 'pine_alpha_css_wrap' );
 
 /**
+ * Register Google Fonts
+ */
+function pine_alpha_fonts_url() {
+	$fonts_url = '';
+	/*
+	 *Translators: If there are characters in your language that are not
+	 * supported by Noto Serif, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$fonts = esc_html_x( 'on', 'Merriweather and Source Sans Pro font: on or off', 'pine-alpha' );
+
+	if ( 'off' !== $fonts ) {
+		$font_families = array();
+		$font_families[] = 'Merriweather:400,700';
+		$font_families[] = 'Source Sans Pro:400,700';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return $fonts_url;
+
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function pine_alpha_scripts() {
+	wp_enqueue_style( 'pine-alpha-fonts', pine_alpha_fonts_url(), array(), null );
+
 	wp_enqueue_style( 'pine-alpha-style', get_stylesheet_uri() );
 
 	if( get_theme_mod( 'pine_alpha_header_section_navigation_sticky', 0 ) == 1 ) {

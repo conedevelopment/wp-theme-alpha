@@ -559,7 +559,7 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .mfp-with-zoom.mfp-removing .mfp-with-anim{-webkit-transform:scale(0.8);transform:scale(0.8);opacity:0}
 .mfp-with-zoom.mfp-removing.mfp-bg{opacity:0}
 .site-header{background:#fff;position:relative;z-index:51}
-.site-header.is-search-open .site-header__helper.is-left,.site-header.is-search-open .site-header__socials,.site-header.is-search-open .site-header__search{opacity:.3;-webkit-transition:.15s ease;transition:.15s ease}
+.site-header.is-search-open .site-header__helper.is-left,.site-header.is-search-open .site-header__socials,.site-header.is-search-open .site-header__search,.site-header.is-search-open .site-header__navigation{opacity:.3;-webkit-transition:.15s ease;transition:.15s ease}
 .site-header__inside{height:80px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .site-header__inside.has-no-menu-separator .site-header__navigation::before{display:none !important}
 .site-header__inside.has-no-menu-separator .site-header__helper.is-left .site-header__navigation{padding-left:0}

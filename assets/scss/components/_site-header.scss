@@ -29,7 +29,8 @@
     &.is-search-open {
         .site-header__helper.is-left,
         .site-header__socials,
-        .site-header__search {
+        .site-header__search,
+        .site-header__navigation {
             opacity: 0.3;
             transition: 0.15s ease;
         }
