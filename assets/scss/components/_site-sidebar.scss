@@ -1,5 +1,5 @@
 .site-sidebar {
-    &.is-left {
+    &.is-left.is-gray {
         .site-sidebar__inside {
             padding: 3rem 0;
 
@@ -8,8 +8,14 @@
             }
 
             &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                bottom: 0;
                 left: -100vw;
                 right: -100vw;
+                background: map-get($colors, 'light-gray');
 
                 @include media-breakpoint-up(lg) {
                     right: 0;
@@ -18,7 +24,7 @@
         }
     }
 
-    &.is-right {
+    &.is-right.is-gray {
         .site-sidebar__inside {
             padding: 3rem 0;
 
@@ -27,8 +33,14 @@
             }
 
             &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                bottom: 0;
                 right: -100vw;
                 left: -100vw;
+                background: map-get($colors, 'light-gray');
 
                 @include media-breakpoint-up(lg) {
                     left: 0;
@@ -37,19 +49,32 @@
         }
     }
 
+    &.is-left.is-white {
+        .site-sidebar__inside {
+            padding: 3rem 0;
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
+
+            @include media-breakpoint-up(lg) {
+                padding: 3rem 2rem 3rem 0;
+            }
+        }
+    }
+
+    &.is-right.is-white {
+        .site-sidebar__inside {
+            padding: 3rem 0;
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
+
+            @include media-breakpoint-up(lg) {
+                padding: 3rem 0 3rem 2rem;
+            }
+        }
+    }
+
     &__inside {
         position: relative;
         height: 100%;
 
-        &::before {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            bottom: 0;
-            background: map-get($colors, 'light-gray');
-        }
-    
         > * + * {
             margin-top: 3rem;
         }

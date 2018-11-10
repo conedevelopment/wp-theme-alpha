@@ -1,7 +1,9 @@
-<div class="container">
+<div class="container blogroll-wrapper">
     <div class="row">
         <?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'left' ) : ?>
-            <aside class="site-sidebar is-left col-12 col-lg-4">
+            <aside class="site-sidebar is-left col-12 col-lg-4
+                is-<?php echo get_theme_mod( 'pine_alpha_general_display_sidebar_type', 'white' ); ?>
+            ">
                 <?php get_sidebar(); ?>
             </aside>
         <?php endif; ?>
@@ -32,7 +34,9 @@
         </main>
 
         <?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'right' ) : ?>
-            <aside class="site-sidebar is-right col-12 col-lg-4">
+            <aside class="site-sidebar is-right col-12 col-lg-4
+                is-<?php echo get_theme_mod( 'pine_alpha_general_display_sidebar_type', 'white' ); ?>
+            ">
                 <?php get_sidebar(); ?>
             </aside>
         <?php endif; ?>

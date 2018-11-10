@@ -501,7 +501,7 @@ Kirki::add_field( 'pine_alpha', array(
 	'default'     => 'gray',
 	'priority'    => 10,
 	'choices'     => array(
-		'light'   => esc_attr__( 'Light', 'pine-alpha' ),
+		'white'   => esc_attr__( 'White', 'pine-alpha' ),
 		'gray' => esc_attr__( 'Gray', 'pine-alpha' )
 	),
 ) );
