@@ -492,21 +492,6 @@ Kirki::add_field( 'pine_alpha', array(
 ) );
 
 
-Kirki::add_field( 'pine_alpha', array(
-	'type'        => 'radio-buttonset',
-	'settings'    => 'pine_alpha_general_display_sidebar_type',
-	'label'       => __( 'Sidebar Type', 'pine-alpha' ),
-	'section'     => 'pine_alpha_general_display',
-	'description' => esc_attr__( 'Set the style of the sidebar.', 'pine-alpha' ),
-	'default'     => 'gray',
-	'priority'    => 10,
-	'choices'     => array(
-		'white'   => esc_attr__( 'White', 'pine-alpha' ),
-		'gray' => esc_attr__( 'Gray', 'pine-alpha' )
-	),
-) );
-
-
 
 /**
  * Add Components Panel
@@ -585,6 +570,42 @@ Kirki::add_field( 'pine_alpha', array(
 	),
 ) );
 
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_components_popular_posts_line_separator_3',
+	'section'     => 'pine_alpha_components_popular_posts',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'number',
+	'settings'    => 'pine_alpha_components_popular_posts_section_padding_top',
+	'label'       => esc_attr__( 'Padding Top', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_popular_posts',
+	'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
+	'default'     => 3,
+	'choices'     => array(
+		'min'  => 0,
+		'max'  => 3,
+		'step' => 1,
+	),
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'number',
+	'settings'    => 'pine_alpha_components_popular_posts_section_padding_bottom',
+	'label'       => esc_attr__( 'Padding Bottom', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_popular_posts',
+	'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
+	'default'     => 1,
+	'choices'     => array(
+		'min'  => 0,
+		'max'  => 3,
+		'step' => 1,
+	),
+) );
+
 
 /**
  * Add Components / Categories Section
@@ -633,6 +654,43 @@ Kirki::add_field( 'pine_alpha', array(
 		'style'  => 'round',
 	),
 ) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_components_categories_line_separator_2',
+	'section'     => 'pine_alpha_components_categories',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'number',
+	'settings'    => 'pine_alpha_components_categories_section_padding_top',
+	'label'       => esc_attr__( 'Padding Top', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_categories',
+	'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
+	'default'     => 3,
+	'choices'     => array(
+		'min'  => 0,
+		'max'  => 3,
+		'step' => 1,
+	),
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'number',
+	'settings'    => 'pine_alpha_components_categories_section_padding_bottom',
+	'label'       => esc_attr__( 'Padding Bottom', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_categories',
+	'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
+	'default'     => 3,
+	'choices'     => array(
+		'min'  => 0,
+		'max'  => 3,
+		'step' => 1,
+	),
+) );
+
 
 
 /**
@@ -704,6 +762,65 @@ Kirki::add_field( 'pine_alpha', array(
 		'step' => 1,
 	),
 ) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_components_blogroll_section_line_separator_3',
+	'section'     => 'pine_alpha_components_blogroll',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'pine_alpha_components_blogroll_section_sidebar_type',
+	'label'       => __( 'Sidebar Type', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_blogroll',
+	'description' => esc_attr__( 'Set the style of the sidebar.', 'pine-alpha' ),
+	'default'     => 'gray',
+	'priority'    => 10,
+	'choices'     => array(
+		'white'   => esc_attr__( 'White', 'pine-alpha' ),
+		'gray' => esc_attr__( 'Gray', 'pine-alpha' )
+	),
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_components_blogroll_section_line_separator_4',
+	'section'     => 'pine_alpha_components_blogroll',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'number',
+	'settings'    => 'pine_alpha_components_blogroll_section_padding_top',
+	'label'       => esc_attr__( 'Padding Top', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_blogroll',
+	'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
+	'default'     => 3,
+	'choices'     => array(
+		'min'  => 0,
+		'max'  => 3,
+		'step' => 1,
+	),
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'number',
+	'settings'    => 'pine_alpha_components_blogroll_section_padding_bottom',
+	'label'       => esc_attr__( 'Padding Bottom', 'pine-alpha' ),
+	'section'     => 'pine_alpha_components_blogroll',
+	'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
+	'default'     => 3,
+	'choices'     => array(
+		'min'  => 0,
+		'max'  => 3,
+		'step' => 1,
+	),
+) );
+
 
 /**
  * Add Components / Archive Title Section

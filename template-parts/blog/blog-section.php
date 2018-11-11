@@ -2,7 +2,7 @@
     <div class="row">
         <?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'left' ) : ?>
             <aside class="site-sidebar is-left col-12 col-lg-4
-                is-<?php echo get_theme_mod( 'pine_alpha_general_display_sidebar_type', 'white' ); ?>
+                is-<?php echo get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_type', 'white' ); ?>
             ">
                 <?php get_sidebar(); ?>
             </aside>
@@ -35,7 +35,7 @@
 
         <?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'right' ) : ?>
             <aside class="site-sidebar is-right col-12 col-lg-4
-                is-<?php echo get_theme_mod( 'pine_alpha_general_display_sidebar_type', 'white' ); ?>
+                is-<?php echo get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_type', 'white' ); ?>
             ">
                 <?php get_sidebar(); ?>
             </aside>
