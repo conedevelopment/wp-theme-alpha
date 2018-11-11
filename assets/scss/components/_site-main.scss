@@ -1,3 +1,15 @@
+.blogroll-wrapper {
+    &.has-sidebar--white {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        .site-main {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
 .site-main {
     padding-top: 3rem;
     padding-bottom: 3rem;

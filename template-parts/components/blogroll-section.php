@@ -1,4 +1,9 @@
-<div class="container blogroll-wrapper">
+<div class="container blogroll-wrapper
+	<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) != 'none' &&
+			  get_theme_mod( 'pine_alpha_general_display_sidebar_type', 'white' ) == 'white' ) : ?>
+		has-sidebar--white
+	<?php endif; ?>
+">
 	<div class="row">
 		<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'left' ) : ?>
 			<aside class="site-sidebar is-left col-12 col-lg-4

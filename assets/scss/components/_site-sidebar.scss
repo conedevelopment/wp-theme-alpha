@@ -51,22 +51,22 @@
 
     &.is-left.is-white {
         .site-sidebar__inside {
-            padding: 3rem 0;
-            border-right: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 2rem 0 0 0;
 
             @include media-breakpoint-up(lg) {
-                padding: 3rem 2rem 3rem 0;
+                padding: 0 2rem 0 0;
+                border-right: 1px solid rgba(0, 0, 0, 0.05);
             }
         }
     }
 
     &.is-right.is-white {
         .site-sidebar__inside {
-            padding: 3rem 0;
-            border-left: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 2rem 0 0 0;
 
             @include media-breakpoint-up(lg) {
-                padding: 3rem 0 3rem 2rem;
+                padding: 0 0 0 2rem;
+                border-left: 1px solid rgba(0, 0, 0, 0.05);
             }
         }
     }
