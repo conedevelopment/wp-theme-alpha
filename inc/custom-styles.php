@@ -55,17 +55,17 @@ function pine_alpha_custom_styles() {
     padding-bottom: '. $page_header_bottom_padding . 'rem;
 }
 
-.site-main {
+.blogroll-wrapper.is-component .site-main {
     padding-top: '. $blogroll_section_padding_top . 'rem;
     padding-bottom: '. $blogroll_section_padding_bottom . 'rem;
 }
 
-.blogroll-wrapper.has-sidebar--white {
+.blogroll-wrapper.is-component.has-sidebar--white {
     margin-top: '. $blogroll_section_padding_top . 'rem;
     margin-bottom: '. $blogroll_section_padding_bottom . 'rem;
 }
 
-.site-sidebar.is-gray .site-sidebar__inside {
+.blogroll-wrapper.is-component .site-sidebar.is-gray .site-sidebar__inside {
     padding-top: '. $blogroll_section_padding_top . 'rem !important;
     padding-bottom: '. $blogroll_section_padding_bottom . 'rem !important;
 }

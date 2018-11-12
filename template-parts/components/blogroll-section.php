@@ -1,4 +1,4 @@
-<div class="container blogroll-wrapper
+<div class="container blogroll-wrapper is-component
 	<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) != 'none' &&
 			  get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_type', 'white' ) == 'white' ) : ?>
 		has-sidebar--white

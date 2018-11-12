@@ -263,19 +263,19 @@ Kirki::add_section( 'pine_alpha_general_colors', array(
 Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'color',
 	'settings'    => 'pine_alpha_general_colors_section_default',
-	'label'       => __( 'Set The Default Color', 'pine-alpha' ),
+	'label'       => __( 'Default Color', 'pine-alpha' ),
 	'description' => esc_attr__( 'Declare your theme default color.', 'pine-alpha' ),
 	'section'     => 'pine_alpha_general_colors',
-	'default'     => '#283dff',
+	'default'     => '#0095FF',
 ) );
 
 Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'color',
 	'settings'    => 'pine_alpha_general_colors_section_secondary',
-	'label'       => __( 'Set The Secondary Color', 'pine-alpha' ),
+	'label'       => __( 'Secondary Color', 'pine-alpha' ),
 	'description' => esc_attr__( 'Declare your theme secondary color.', 'pine-alpha' ),
 	'section'     => 'pine_alpha_general_colors',
-	'default'     => '#9748e5',
+	'default'     => '#00F1FF',
 ) );
 
 
@@ -981,6 +981,85 @@ Kirki::add_field( 'pine_alpha', array(
 		'author' => esc_attr__( 'Author', 'pine-alpha' )
 	),
 	'priority'    => 10,
+) );
+
+/**
+ * Add Layout / Archive Pages Section
+ */
+Kirki::add_section( 'pine_alpha_layout_archive_pages', array(
+    'title'          => esc_attr__( 'Archive Pages', 'pine-alpha' ),
+    'panel'          => 'pine_alpha_layout',
+    'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'pine_alpha_layout_archive_pages_section_sidebar_position',
+	'label'       => __( 'Show Sidebar On', 'pine-alpha' ),
+	'section'     => 'pine_alpha_layout_archive_pages',
+	'default'     => 'right',
+	'priority'    => 10,
+	'choices'     => array(
+		'none'   => esc_attr__( 'None', 'pine-alpha' ),
+		'left' => esc_attr__( 'Left', 'pine-alpha' ),
+		'right'  => esc_attr__( 'Right', 'pine-alpha' ),
+	),
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'custom',
+	'settings'    => 'pine_alpha_layout_archive_pages_section_line_separator_1',
+	'section'     => 'pine_alpha_layout_archive_pages',
+	'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
+	'priority'    => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'pine_alpha_layout_archive_pages_section_sidebar_type',
+	'label'       => __( 'Sidebar Type', 'pine-alpha' ),
+	'section'     => 'pine_alpha_layout_archive_pages',
+	'description' => esc_attr__( 'Set the style of the sidebar.', 'pine-alpha' ),
+	'default'     => 'gray',
+	'priority'    => 10,
+	'choices'     => array(
+		'white'   => esc_attr__( 'White', 'pine-alpha' ),
+		'gray' => esc_attr__( 'Gray', 'pine-alpha' )
+	),
+) );
+
+/**
+ * Add Layout / Blog Section
+ */
+Kirki::add_section( 'pine_alpha_layout_blog', array(
+    'title'          => esc_attr__( 'Blog', 'pine-alpha' ),
+    'panel'          => 'pine_alpha_layout',
+    'priority'       => 160,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'     => 'text',
+	'settings' => 'pine_alpha_layout_blog_section_title',
+	'label'    => __( 'Section Title', 'pine-alpha' ),
+	'section'  => 'pine_alpha_layout_blog',
+	'default'  => esc_attr__( 'Blog', 'pine-alpha' ),
+	'priority' => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'     => 'textarea',
+	'settings' => 'pine_alpha_layout_blog_description',
+	'label'    => __( 'Description', 'pine-alpha' ),
+	'section'  => 'pine_alpha_layout_blog',
+	'priority' => 10,
+) );
+
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'image',
+	'settings'    => 'pine_alpha_layout_blog_background',
+	'label'       => esc_attr__( 'Header Background Image', 'pine-alpha' ),
+	'section'     => 'pine_alpha_layout_blog',
+	'default'     => ''
 ) );
 
 
