@@ -10,11 +10,9 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'pine-alpha' ); ?></h1>
-	</header><!-- .page-header -->
+	<h2 class="not-found__title"><?php esc_html_e( 'Nothing Found', 'pine-alpha' ); ?></h2>
 
-	<div class="page-content">
+	<div class="not-found__content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
@@ -47,5 +45,5 @@
 
 		endif;
 		?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+	</div>
+</section>

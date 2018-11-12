@@ -9,27 +9,24 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('list-item'); ?> style="color: <?php echo get_theme_mod( 'pine_alpha_general_colors_section_default' ); ?>;">
+	<div class="list-item__meta">
+        <?php pine_alpha_posted_on(); ?>
+        <span class="list-item__separator"></span>
+        <?php pine_alpha_get_category_list( $post->ID, true ); ?>
+    </div>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			pine_alpha_posted_on();
-			pine_alpha_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<h2 class="list-item__title">
+        <a href="<?php the_permalink(); ?>">
+            <?php the_title(); ?>
+        </a>
+    </h2>
 
-	<?php pine_alpha_post_thumbnail(); ?>
+	<div class="list-item__content">
+		<p class="list-item__excerpt">
+			<?php echo wp_trim_words( get_the_excerpt(), $num_words = get_theme_mod( 'pine_alpha_layout_list_item_section_excerpt_length', 15 ), $more = '...' ); ?>
+		</p>
+	</div>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php pine_alpha_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	<a href="<?php the_permalink(); ?>" class="list-item__read-more"><?php _e( 'Read More', 'pine-alpha' ); ?></a>
+</article>

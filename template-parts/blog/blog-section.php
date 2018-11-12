@@ -22,17 +22,22 @@
                 <div class="row">
                     <?php
                     while ( have_posts() ) :
-
                         the_post(); ?>
                         
-                        <div class="col-12 col-sm-6">
-                            <?php get_template_part( 'template-parts/post/content', 'list' ); ?>
-                        </div>
+                        <?php if ( is_search() ) : ?>
+                            <div class="col-12">
+                                <?php get_template_part( 'template-parts/post/content', 'search' ); ?>
+                            </div>
+                        <?php else : ?>
+                            <div class="col-12 col-sm-6">
+                                <?php get_template_part( 'template-parts/post/content', 'list' ); ?>
+                            </div>
+                        <?php endif; ?>
 
                     <?php endwhile; ?>
                 </div>
             <?php else: ?>
-                <?php get_template_part( 'template-parts/content', 'none' ); ?>
+                <?php get_template_part( 'template-parts/post/content', 'none' ); ?>
             <?php endif; ?>
 
             <?php the_posts_pagination(); ?>

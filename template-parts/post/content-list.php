@@ -1,4 +1,4 @@
-<div <?php post_class('list-item'); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('list-item'); ?>
     <?php if ( get_post_format() == 'gallery' ): ?> data-type="gallery" <?php endif; ?>
     <?php if ( get_post_format() == 'quote' ): ?> data-type="quote" <?php endif; ?>
     <?php if ( get_post_format() == 'aside' ): ?> data-type="aside" <?php endif; ?>
@@ -15,4 +15,4 @@
     foreach ( $template_parts as $template_part ) : ?>
     	<?php get_template_part( 'template-parts/post/list-parts/part-' . $template_part ); ?>
     <?php endforeach; ?>
-</div>
+</article>

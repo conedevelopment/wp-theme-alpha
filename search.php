@@ -9,31 +9,22 @@
 
 get_header();
 ?>
+	<header class="page-header is-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="page-header__title">
+						<?php
+						/* translators: %s: search query. */
+						printf( esc_html__( 'Search Results for: %s', 'pine-alpha' ), '<span>' . get_search_query() . '</span>' );
+						?>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</header>
 
-	<?php if ( have_posts() ) : ?>
-
-		<?php
-		/* translators: %s: search query. */
-		printf( esc_html__( 'Search Results for: %s', 'pine-alpha' ), '<span>' . get_search_query() . '</span>' );
-		?>
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'search' );
-
-		endwhile;
-
-		the_posts_navigation();
-
-	else :
-
-		get_template_part( 'template-parts/content', 'none' );
-
-	endif;
-	?>
+	<?php get_template_part( 'template-parts/blog/blog', 'section' ); ?>
 
 <?php
-get_sidebar();
 get_footer();

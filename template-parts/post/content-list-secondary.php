@@ -1,4 +1,4 @@
-<div <?php post_class('list-item is-secondary'); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('list-item is-secondary'); ?>
     <?php $terms = get_the_terms( get_the_ID(), 'category');
     if( !empty($terms) ) :
         $term = array_pop($terms); ?>
@@ -21,4 +21,4 @@
             <?php get_template_part( 'template-parts/post/secondary-list-parts/part-' . $template_part ); ?>
         <?php endforeach; ?>
     </div>
-</div>
+</article>
