@@ -1,0 +1,30 @@
+.page-404 {
+    text-align: center;
+    padding: 3rem 0;
+
+    &__inside {
+        margin-bottom: 3rem;
+    }
+
+    &__error-code {
+        font-size: 8rem;
+        color: rgba(0,0,0,0.05);
+        z-index: -1;
+        font-family: map-get($fonts, 'body');
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1;
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    &__description {
+        font-size: 1.1rem;
+        color: rgba(0,0,0,0.5);
+        margin-bottom: 1.5rem;
+    }
+}
