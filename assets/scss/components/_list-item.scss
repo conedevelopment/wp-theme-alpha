@@ -168,6 +168,22 @@
                 color: currentColor;
             }
         }
+
+        .category-label {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: relative;
+                top: -2px;
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: rgba(0,0,0,0.1);
+                margin: 0 0.6rem;
+            }
+        }
     }
 
     &__title {
@@ -227,15 +243,6 @@
         margin: 0 0.5rem 0 0;
     }
     
-    &__separator {
-        display: inline-block;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: rgba(0,0,0,0.1);
-        margin: 0 0.6rem;
-    }
-
     &__author {
         display: flex;
         align-items: center;
