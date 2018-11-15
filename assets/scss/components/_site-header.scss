@@ -140,7 +140,7 @@
             list-style: none;
 
             &.current-menu-item {
-                a {
+                > a {
                     color: map-get($colors, 'default');
                 }
             }
@@ -150,6 +150,127 @@
             color: map-get($colors, 'black');
             text-transform: uppercase;
             font-size: 0.96rem;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: map-get($colors, 'default');
+            }
+        }
+
+        .menu-item-has-children {
+            position: relative;
+        }
+
+        ul.menu > .menu-item-has-children {
+            padding-right: 15px;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(50% - 2px);
+                right: 0;
+                width: 0; 
+                height: 0; 
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid #ccc;
+            }
+
+            &:hover {
+                > a {
+                    color: map-get($colors, 'default');
+                }
+                    
+                > .sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    transition: 0.15s ease;
+                }
+            }
+        }
+
+        ul.menu > .menu-item-has-children .menu-item-has-children {
+            &:hover {
+                background: map-get($colors, 'default');
+
+                a {
+                    color: #fff !important;
+                }
+
+                > .sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    transition: 0.15s ease;
+                }
+            }
+
+            a {
+                padding: 0.5rem 1rem 0.5rem 0.7rem;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(50% - 4px);
+                right: 0.7rem;
+                width: 0; 
+                height: 0; 
+                border-bottom: 4px solid transparent;
+                border-top: 4px solid transparent;
+                border-left: 5px solid rgba(255,255,255,0.7);
+            }
+        }
+
+        ul.menu > li > .sub-menu {
+            border-top: 10px solid #fff;
+        }
+
+        .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border-radius: map-get($settings, 'border-radius');
+            background: map-get($colors, 'black');
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.15s ease;
+
+            .current-menu-item {
+                background: map-get($colors, 'default');
+
+                a {
+                    color: #fff;
+                }
+            }
+
+            li {
+                display: block;
+                min-width: 180px;
+                padding: 0 !important;
+                margin: 0 !important;
+                line-height: 1.1em;
+            }
+
+            a {
+                color: #fff;
+                padding: 0.6rem 0.7rem;
+                font-size: 0.86rem;
+                display: block;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background: map-get($colors, 'default');
+                }
+            }
+
+            .sub-menu {
+                top: 0;
+                left: 100%;
+                border-radius: 0 map-get($settings, 'border-radius') map-get($settings, 'border-radius') 0;
+            }
         }
     }
 

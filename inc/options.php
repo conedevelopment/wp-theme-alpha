@@ -37,14 +37,7 @@ function pine_alpha_register_theme_options_metabox() {
 		'desc' => esc_html__( 'Turn on BlogPosting schema.org data', 'pine-alpha' ),
 		'type' => 'checkbox'
 	) );
-
-	$cmb_options->add_field( array(
-		'name'    => esc_html__( 'Hide Author Box', 'pine-alpha' ),
-		'id'   => $prefix . 'theme_options_author_box_checkbox',
-		'desc' => esc_html__( 'Turn off the author box on post single view', 'pine-alpha' ),
-		'type' => 'checkbox'
-	) );
-
+	
 
 	$cmb_options->add_field( array(
 		'name' => esc_html__( 'Cookie Notification', 'pine-alpha' ),

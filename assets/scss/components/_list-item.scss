@@ -169,7 +169,11 @@
             }
         }
 
-        .category-label {
+        .separator {
+            color: rgba(0,0,0,0.3);
+        }
+
+        .categories-wrapper {
             position: relative;
 
             &::before {

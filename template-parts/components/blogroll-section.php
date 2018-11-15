@@ -38,7 +38,13 @@
 			<?php if ( $latest_posts->have_posts() ) : ?>
 				<div class="row">
 					<?php while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
-						<div class="col-12 col-sm-6">
+						<div class="col-12 
+						<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'none' ) : ?>
+							col-sm-4
+						<?php else : ?>
+							col-sm-6
+						<?php endif; ?>
+						">
 							<?php get_template_part( 'template-parts/post/content', 'list' ); ?>
 						</div>
 					<?php endwhile; ?>

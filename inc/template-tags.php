@@ -12,10 +12,11 @@
 	$i = 0;
 	$length = count($categories);
 
+	echo '<span class="categories-wrapper">';
 	foreach  ($categories as $category) {
 		if ($i != $length - 1) {
 			if ( $url == true ) {
-				echo '<span class="category-label"><a href="' . get_category_link( $category->ID ) . '">' . $category->name . '</a>,</span>';
+				echo '<span class="category-label"><a href="' . get_category_link( $category->ID ) . '">' . $category->name . '</a><span class="separator">,</span></span>';
 			} else {
 				echo '<span class="category-label">' . $category->name . ',</span>';
 			}
@@ -28,6 +29,7 @@
 		}
 		$i++;
 	}
+	echo '</span>';
  }
 
 if ( ! function_exists( 'pine_alpha_posted_on' ) ) :

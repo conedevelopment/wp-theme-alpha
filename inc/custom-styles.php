@@ -55,7 +55,7 @@ function pine_alpha_custom_styles() {
     padding-bottom: '. $page_header_bottom_padding . 'rem;
 }
 
-.blogroll-wrapper.is-component .site-main {
+.blogroll-wrapper.is-component:not(.has-sidebar--white) .site-main {
     padding-top: '. $blogroll_section_padding_top . 'rem;
     padding-bottom: '. $blogroll_section_padding_bottom . 'rem;
 }

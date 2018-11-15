@@ -39,8 +39,11 @@
         text-transform: uppercase;
 
         &.is-active,
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
             opacity: 1;
+            color: map-get($colors, 'default');
         }
     }
     
@@ -73,7 +76,7 @@
     }
 
     .sub-menu {
-        margin: -5px 0 0 0;
+        margin: 0 0 0 1rem;
         padding: 0;
 
         li {
@@ -81,7 +84,7 @@
         }
 
         a {
-            padding: 6px 25px 6px 40px;
+            padding: 0.8rem 1.5rem;
             text-transform: uppercase;
         }
     }
