@@ -1,5 +1,7 @@
 .wpcf7-submit,
-.btn {
+.btn,
+.submit,
+input[type="submit"] {
     display: inline-block;
     padding: 0.9rem 1.1rem;
     color: #fff;
@@ -40,7 +42,8 @@ select {
     color: rgba(0,0,0,0.7);
 }
 
-.entry-content {
+.entry-content,
+.comment-respond {
     .input-group {
         margin-bottom: 1.5rem;
 
@@ -64,10 +67,10 @@ select {
     select,
     textarea {
         width: 100%;
-        border: 1px solid #ccc;
+        border: 1px solid #eee;
         padding: 0.7rem 0.5rem;
         border-radius: map-get($settings, 'border-radius');
-        background: #fff;
+        background: #f6f6f6;
         color: rgba(0,0,0,0.7);
 
         &:focus {
