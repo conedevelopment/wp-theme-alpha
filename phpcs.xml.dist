@@ -54,7 +54,7 @@
 		 Multiple valid text domains can be provided as a comma-delimited list. -->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="_s"/>
+			<property name="text_domain" type="array" value="pine_alpha"/>
 		</properties>
 	</rule>
 
@@ -86,7 +86,7 @@
 		 Multiple valid prefixes can be provided as a comma-delimited list. -->
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
-			<property name="prefixes" type="array" value="_s" />
+			<property name="prefixes" type="array" value="pine_alpha" />
 		</properties>
 	</rule>
 
@@ -123,10 +123,12 @@
 	</rule>
 
 	<!-- Whitelist the WP Core mysql_to_rfc3339() function. -->
+	<!-- 
 	<rule ref="PHPCompatibility.PHP.RemovedExtensions">
 		<properties>
 			<property name="functionWhitelist" type="array" value="mysql_to_rfc3339"/>
 		</properties>
 	</rule>
+	-->
 
 </ruleset>

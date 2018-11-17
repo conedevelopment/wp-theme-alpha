@@ -662,8 +662,8 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .social-item:hover .icon,.social-item:focus .icon,.social-item:active .icon{fill:#0095ff;-webkit-transition:.15s ease;transition:.15s ease}
 .social-item .icon{width:1rem;height:1rem;fill:#fff;-webkit-transition:.15s ease;transition:.15s ease}
 .social-item__name{font-weight:700;text-transform:uppercase;font-size:.8rem;color:rgba(255,255,255,0.7);margin-left:.6rem}
-.blogroll-wrapper.has-sidebar--white{margin-top:3rem;margin-bottom:3rem}
-.blogroll-wrapper.has-sidebar--white .site-main{padding-top:0;padding-bottom:0}
+.site-main-wrapper.has-sidebar--white{margin-top:3rem;margin-bottom:3rem}
+.site-main-wrapper.has-sidebar--white .site-main{padding-top:0;padding-bottom:0}
 .site-main{padding-top:3rem;padding-bottom:3rem}
 .site-sidebar.is-left.is-gray .site-sidebar__inside{padding:3rem 0}
 .site-sidebar.is-left.is-gray .site-sidebar__inside::before{content:'';position:absolute;z-index:-1;top:0;bottom:0;left:-100vw;right:-100vw;background:#f9f9f9}
@@ -835,6 +835,8 @@ img{height:auto;max-width:100%}
 .page-header.is-white .page-header__description{color:rgba(0,0,0,0.5);text-shadow:none}
 .page-header.is-colorful{background:currentColor}
 .page-header.is-image::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;display:block;z-index:3;background:linear-gradient(45deg,currentColor,rgba(255,255,255,0.5));-webkit-transition:opacity .25s ease;transition:opacity .25s ease;opacity:.65}
+.page-header.is-medium{padding:5rem 0}
+.page-header.is-large{padding:12rem 0 3rem}
 .page-header__title{position:relative;z-index:5;color:#fff;font-size:1.7rem;text-shadow:0 0 4px rgba(0,0,0,0.1);margin:0}
 .page-header__description{position:relative;z-index:5;color:rgba(255,255,255,0.7);margin:.4rem 0 0 0;font-size:1rem;text-shadow:0 0 4px rgba(0,0,0,0.1)}
 .page-header__description p:last-child{margin-bottom:0}

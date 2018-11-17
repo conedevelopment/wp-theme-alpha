@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-	<header class="page-header
+	<header class="page-header is-archive
 		<?php 
 			if( empty( get_term_meta( get_queried_object()->term_id, 'pine_alpha_category_color', true ) ) ) {
 				echo 'is-white';
@@ -41,6 +41,6 @@ get_header();
 		</div>
 	</header>
 
-	<?php get_template_part( 'template-parts/blog/blog', 'section' ); ?>
-<?php
+	<?php get_template_part( 'template-parts/blog/blog', 'section' );
+	
 get_footer();

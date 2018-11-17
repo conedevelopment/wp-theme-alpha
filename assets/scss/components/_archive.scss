@@ -38,6 +38,14 @@
         }
     }
 
+    &.is-medium {
+        padding: 5rem 0;
+    }
+
+    &.is-large {
+        padding: 12rem 0 3rem;
+    }
+
     &__title {
         position: relative;
         z-index: 5;

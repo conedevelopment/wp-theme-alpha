@@ -24,7 +24,6 @@ get_header();
 		</div>
 	</header>
 
-	<?php get_template_part( 'template-parts/blog/blog', 'section' ); ?>
-
-<?php
+	<?php get_template_part( 'template-parts/blog/blog', 'section' );
+	
 get_footer();

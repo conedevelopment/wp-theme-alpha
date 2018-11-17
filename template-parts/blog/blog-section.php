@@ -1,4 +1,4 @@
-<div class="container blogroll-wrapper
+<div class="container site-main-wrapper
 <?php if( get_theme_mod( 'pine_alpha_layout_archive_pages_section_sidebar_position', 'right' ) != 'none' &&
           get_theme_mod( 'pine_alpha_layout_archive_pages_section_sidebar_type', 'white' ) == 'white' ) : ?>
     has-sidebar--white

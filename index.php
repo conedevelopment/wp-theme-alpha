@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-	<header class="page-header
+	<header class="page-header is-blog
 		<?php echo 'is-' . get_theme_mod( 'pine_alpha_components_archive_title_section_sidebar_position', 'image' );  ?>
 		"
 		style="
@@ -42,7 +42,6 @@ get_header();
 		</div>
 	</header>
 
-	<?php get_template_part( 'template-parts/blog/blog', 'section' ); ?>
-
-<?php
+	<?php get_template_part( 'template-parts/blog/blog', 'section' );
+	
 get_footer();

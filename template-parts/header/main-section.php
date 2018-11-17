@@ -3,11 +3,11 @@
 ?>
 
 <div class="
-    <?php if( get_theme_mod( 'pine_alpha_header_section_display_width', 'wide' ) == 'wide' ) : ?>
-        container-fluid
-    <?php else: ?>
-        container
-    <?php endif; ?>
+    <?php if( get_theme_mod( 'pine_alpha_header_section_display_width', 'wide' ) == 'wide' ) {
+        echo 'container-fluid';
+    } else {
+        echo 'container';
+    } ?>
 ">
     <div class="row">
         <div class="col-12 site-header__inside 

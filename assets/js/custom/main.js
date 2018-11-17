@@ -76,9 +76,7 @@
 	});
 
 	if ( $( 'body[data-magnific="true"]' ).length ) {
-		$(
-			'a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]'
-		).each( function() {
+		$('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').each( function() {
 			if ( 0 == $( this ).parents( '.gallery' ).length ) {
 				$( this ).magnificPopup({
 					type: 'image',

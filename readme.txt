@@ -1,7 +1,7 @@
 === pine-alpha ===
 
 Contributors: pine
-Tags: custom-background, custom-logo, custom-menu, featured-images, translation-ready
+Tags: custom-logo, custom-menu, featured-images, translation-ready
 
 Requires at least: 4.5
 Tested up to: 4.9

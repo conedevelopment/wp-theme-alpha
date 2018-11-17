@@ -13,14 +13,11 @@
  */
 
 get_header();
-?>
 
-	<?php
     $template_parts = get_theme_mod( 'pine_alpha_layout_front_page_section_order', array( 'hero', 'popular-posts', 'categories', 'blogroll' ) );
 
-    foreach ( $template_parts as $template_part ) : ?>
-    	<?php get_template_part( 'template-parts/components/' . $template_part . '-section' ); ?>
-    <?php endforeach; ?>
+    foreach ( $template_parts as $template_part ) {
+    	get_template_part( 'template-parts/components/' . $template_part . '-section' );
+    }
 
-<?php
 get_footer();

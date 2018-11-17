@@ -12,7 +12,7 @@ add_action( 'cmb2_admin_init', 'pine_alpha_register_theme_options_metabox' );
  */
 function pine_alpha_register_theme_options_metabox() {
 
-	$prefix = 'pine_alpha_';
+	$prefix = '_pine_alpha_';
 	
 	$cmb_options = new_cmb2_box( array(
 		'id'              => $prefix . 'theme_options_page',
@@ -115,7 +115,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	/** 
- 	* Metabox to add fields to categories
+ 	* Metabox to add fields to posts
  	*/ 
 	$cmb_post = new_cmb2_box( array( 
 		'id'               => $prefix . 'post_fields', 
@@ -129,6 +129,83 @@ function pine_alpha_register_theme_options_metabox() {
 		'id'     => $prefix . 'show_in_slider', 
 		'type'   => 'checkbox',
 		'column' => true
+	) );
+
+
+	/** 
+ 	* Metabox to add fields to pages
+ 	*/ 
+	$cmb_page = new_cmb2_box( array( 
+		'id'               => $prefix . 'page_fields', 
+		'title'            => esc_html__( 'Theme Specific Settings', 'pine-alpha' ),
+		'object_types'     => array( 'page' ),
+		'closed'           => true
+	) );
+		 
+	$cmb_page->add_field( array(
+		'name'    => esc_html__( 'Color', 'pine-alpha' ),
+		'id'      => $prefix . 'color', 
+		'type'    => 'colorpicker',
+		'default' => '#0095FF',
+		'column' => true
+	) );
+
+	$cmb_page->add_field( array(
+		'name'    => 'Sidebar Position',
+		'id'      => $prefix . 'sidebar_poisition', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'none' => __( 'None', 'pine-alpha' ),
+			'left'   => __( 'Left', 'pine-alpha' ),
+			'right'     => __( 'right', 'pine-alpha' ),
+		),
+		'default' => 'none',
+	) );
+
+	$cmb_page->add_field( array(
+		'name'    => 'Sidebar Style',
+		'id'      => $prefix . 'sidebar_style', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'white' => __( 'White', 'pine-alpha' ),
+			'gray'   => __( 'Gray', 'pine-alpha' ),
+		),
+		'default' => 'white',
+	) );
+
+	$cmb_page->add_field( array(
+		'name'    => 'Title Display Type',
+		'id'      => $prefix . 'title_display_type', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'white' => __( 'White', 'pine-alpha' ),
+			'colorful'   => __( 'Colorful', 'pine-alpha' ),
+			'image'   => __( 'Image', 'pine-alpha' ),
+		),
+		'default' => 'white',
+	) );
+
+	$cmb_page->add_field( array(
+		'name'    => 'Title Size',
+		'id'      => $prefix . 'title_padding_size', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'small' => __( 'Small', 'pine-alpha' ),
+			'medium'   => __( 'Medium', 'pine-alpha' ),
+			'large'   => __( 'Large', 'pine-alpha' ),
+		),
+		'default' => 'small',
+	) );
+
+	$cmb_page->add_field( array(
+		'name'    => 'Show Meta Data After Title',
+		'id'      => $prefix . 'show_meta_data', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'no' => __( 'No', 'pine-alpha' ),
+			'yes'   => __( 'Yes', 'pine-alpha' )
+		),
+		'default' => 'no',
 	) );
 
 }

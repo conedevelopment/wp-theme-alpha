@@ -1,5 +1,6 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('list-item is-secondary'); ?>
-    <?php $terms = get_the_terms( get_the_ID(), 'category');
+<article id="post-<?php the_ID(); ?>" <?php post_class('list-item is-secondary');
+    $terms = get_the_terms( get_the_ID(), 'category');
+
     if( !empty($terms) ) :
         $term = array_pop($terms); ?>
         style="color: <?php echo get_term_meta( $term->term_id, 'pine_alpha_category_color', true ); ?>;"
@@ -17,8 +18,8 @@
         <?php
         $template_parts = get_theme_mod( 'pine_alpha_layout_list_item_section_order_secondary', array( 'meta', 'title', 'content', 'author' ) );
 
-        foreach ( $template_parts as $template_part ) : ?>
-            <?php get_template_part( 'template-parts/post/secondary-list-parts/part-' . $template_part ); ?>
-        <?php endforeach; ?>
+        foreach ( $template_parts as $template_part ) {
+            get_template_part( 'template-parts/post/secondary-list-parts/part-' . $template_part );
+        } ?>
     </div>
 </article>
