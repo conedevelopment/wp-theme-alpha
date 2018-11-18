@@ -11,7 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="entry-content">
+	<div class="entry-content
+		<?php
+		if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) == 'none' ) {
+			echo 'is-narrow';
+		}
+		?>
+	">
 		<?php
 		the_content();
 

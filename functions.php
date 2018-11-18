@@ -317,6 +317,7 @@ add_filter( 'excerpt_more', 'pine_alpha_excerpt_more' );
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
 function pine_alpha_content_image_sizes_attr( $sizes, $size ) {
+	/*
 	$width = $size[0];
 
 	if ( 740 <= $width ) {
@@ -330,6 +331,7 @@ function pine_alpha_content_image_sizes_attr( $sizes, $size ) {
 	}
 
 	return $sizes;
+	*/
 }
 add_filter( 'wp_calculate_image_sizes', 'pine_alpha_content_image_sizes_attr', 10, 2 );
 

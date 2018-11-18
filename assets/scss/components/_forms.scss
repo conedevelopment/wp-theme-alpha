@@ -68,10 +68,11 @@ select {
     textarea {
         width: 100%;
         border: 1px solid #eee;
-        padding: 0.7rem 0.5rem;
+        padding: 0.4em 0.8em;
         border-radius: map-get($settings, 'border-radius');
         background: #f6f6f6;
         color: rgba(0,0,0,0.7);
+        font-size: 1rem;
 
         &:focus {
             border-color: map-get($colors, 'default');

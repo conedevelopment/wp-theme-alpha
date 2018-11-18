@@ -138,8 +138,7 @@ function pine_alpha_register_theme_options_metabox() {
 	$cmb_page = new_cmb2_box( array( 
 		'id'               => $prefix . 'page_fields', 
 		'title'            => esc_html__( 'Theme Specific Settings', 'pine-alpha' ),
-		'object_types'     => array( 'page' ),
-		'closed'           => true
+		'object_types'     => array( 'page' )
 	) );
 		 
 	$cmb_page->add_field( array(
