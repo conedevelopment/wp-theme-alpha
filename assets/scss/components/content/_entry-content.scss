@@ -1,17 +1,25 @@
 .entry-content {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: map-get($colors, 'text');
     line-height: 1.7em;
+    font-weight: 300;
 
     &.is-narrow > * {
         width: 100%;
         max-width: map-get($settings, 'narrow-width');
         flex: 0 0 map-get($settings, 'narrow-width');
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-left: auto;
+        // padding-right: 15px;
+        // padding-left: 15px;
+        margin-left: auto; 
         margin-right: auto;
         margin-bottom: 0;
+
+        &:not(.alignfull) {
+            @include media-breakpoint-up(lg) {
+                position: relative;
+                left: -6vw;
+            }
+        }
     }
 
     > * + * {
@@ -24,7 +32,7 @@
     h4 + *,
     h5 + *,
     h6 + * {
-        margin-top: 1.4rem;
+        margin-top: 1.2rem;
     }
 
     h1,
@@ -108,11 +116,11 @@
     
     .wp-block-quote {
         padding: 0 2rem;
-        font-size: 1rem;
         color: map-get($colors, 'black');
         font-family: map-get($fonts, 'heading');
         border-left: 5px solid map-get($colors, 'black');
         font-size: 1.1rem;
+        line-height: 1.6em;
 
         &.is-large,
         &.is-style-large {
@@ -122,7 +130,7 @@
             padding-bottom: 0;
 
             p {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 line-height: 1.7em;
             }
         }
@@ -141,6 +149,7 @@
         max-width: 100%;
         padding-left: 0;
         padding-right: 0;
+        margin-left: -15px;
     }
 
     ul,
@@ -213,6 +222,37 @@
         left: 0;
         bottom: 0;
         right: 0;
+    }
+
+    .wp-block-embed-vimeo,
+    .wp-block-embed-youtube {
+        .wp-block-embed__wrapper {
+            position: relative;
+            display: block;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            padding-bottom: 56.25%;
+        
+            iframe,
+            embed,
+            object,
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                border: 0;
+            }
+        }
+    }
+
+    .wp-block-embed-wordpress,
+    .wp-block-embed-twitter {
+        display: flex;
+        justify-content: center;
     }
 }
   

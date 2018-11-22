@@ -362,7 +362,7 @@ function pine_alpha_fonts_url() {
 	if ( 'off' !== $fonts ) {
 		$font_families = array();
 		$font_families[] = 'Merriweather:400,700';
-		$font_families[] = 'Source Sans Pro:400,700';
+		$font_families[] = 'Source Sans Pro:300,400,700';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),

@@ -1,0 +1,11 @@
+.alert {
+    font-weight: 700;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: block;
+    border-radius: map-get($settings, 'border-radius');
+
+    &.is-warning {
+        background: map-get($colors, 'warning');
+    }
+}

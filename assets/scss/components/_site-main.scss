@@ -14,4 +14,9 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     width: 100%;
+
+    &.is-single {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
 }

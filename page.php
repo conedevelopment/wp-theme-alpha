@@ -31,17 +31,9 @@ get_header();
 		">
 		<div class="container">
 			<div class="row">
-				<div class="
-					<?php
-					if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) != 'none' ) {
-						echo 'col-12';
-					} else {
-						echo 'page-header__narrow-inside';
-					}
-					?>
-				">
+				<div class="col-12">
 					<?php the_title( '<h1 class="page-header__title">', '</h1>' ); ?>
-					<?php if ( get_post_meta( get_the_ID(), '_pine_alpha_show_meta_data', true ) == true ) : ?>
+					<?php if ( get_post_meta( get_the_ID(), '_pine_alpha_show_meta_data', 'no' ) == 'yes' ) : ?>
 						<div class="page-header__description"><?php pine_alpha_posted_on(); ?></div>
 					<?php endif; ?>
 				</div>
@@ -101,7 +93,7 @@ get_header();
 				}
 			?>
 		">
-			<main id="main" class="site-main">
+			<main id="main" class="site-main is-single">
 				<?php
 				while ( have_posts() ) :
 					the_post();

@@ -1,13 +1,22 @@
 .comment-content a {
 	word-wrap: break-word;
 }
+
 .bypostauthor {
 	display: block;
 }
-.comment-respond {
+
+.post-comment {
 	margin-top: 3rem;
 	padding-top: 3rem;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-left: -15px;
+
+    &.is-one-col {
+        .comment-form-col {
+            margin-top: 2rem;
+        }
+    }
     
     label {
         font-weight: 700;
@@ -28,4 +37,68 @@
 
 .bypostauthor {
 	display: block;
+}
+
+.comment-title {
+    margin-bottom: 1rem;
+}
+
+.comment-form-col {
+    margin-top: 2rem;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
+}
+
+.comment-list{
+    margin: 0 0 1em;
+    padding: 0;
+    list-style: none;
+
+    .comment-respond {
+        margin-top: 2rem;
+    }
+
+    ul {
+    	list-style: none;
+    	margin: 0;
+    	padding: 0;
+    }
+
+ 	li.comment {
+
+        &:not(:last-child) {   
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+        }
+             
+        p {
+            color: map-get($colors, 'text');
+        }
+            
+        ul {
+            margin-left: 2rem;
+        }
+
+        .comment-metadata {
+            margin-bottom: 0.5rem;
+        }
+            
+        .avatar{
+            border-radius: 50%;
+            float: right;
+        }
+
+        .reply a{
+            font-weight: bold;
+        }
+
+        .children{
+            margin: 2rem 0 0 0;
+            padding-left: 2rem;
+            border-left: 3px solid rgba(0,0,0,0.05);
+        }
+    }
 }
