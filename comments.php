@@ -30,8 +30,8 @@ if ( post_password_required() ) {
 <?php if( $sidebar_poisition == 'none' ) : ?>
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-6">
 <?php endif; ?>
+			<div class="<?php if( $sidebar_poisition == 'none' ) { echo 'col-12 col-md-6'; } ?>">	
 				<?php
 					// You can start editing here -- including this comment!
 					if ( have_comments() ) :
@@ -82,14 +82,10 @@ if ( post_password_required() ) {
 					<?php endif; // Check for have_comments().
 				?>
 			</div>
-			<div class="col-12 comment-form-col
-				<?php if( $sidebar_poisition == 'none' ) {
-					echo 'col-md-6';
-				} ?>
-			">
+			<div class="comment-form-col <?php if( $sidebar_poisition == 'none' ) { echo 'col-12 col-md-6'; } ?>">
 				<?php comment_form(); ?>
-<?php if( $sidebar_poisition == 'none' ) : ?>
 			</div>
+<?php if( $sidebar_poisition == 'none' ) : ?>
 		</div>
 	</div>
 <?php endif; ?>

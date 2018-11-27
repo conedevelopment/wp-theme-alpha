@@ -895,7 +895,8 @@ img{height:auto;max-width:100%}
 .navigation.pagination .page-numbers.dots{background:#231f20;text-decoration:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
-.post-comment{margin-top:3rem;padding-top:3rem;border-top:1px solid rgba(0,0,0,0.05);margin-left:-15px}
+.post-comment{margin-top:3rem;padding-top:3rem;border-top:1px solid rgba(0,0,0,0.05)}
+.post-comment:not(.is-one-col){margin-left:-15px}
 .post-comment.is-one-col .comment-form-col{margin-top:2rem}
 .post-comment label{font-weight:700;text-transform:uppercase;font-size:.9rem}
 .comment-form>p{margin-bottom:1.5rem}
