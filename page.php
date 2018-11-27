@@ -12,17 +12,23 @@
  * @package pine-alpha
  */
 
+$title_display_type = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_title_display_type' )  ? get_post_meta( get_the_ID(), '_pine_alpha_title_display_type', true ) : 'white' );
+$title_padding_size = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_title_padding_size' )  ? get_post_meta( get_the_ID(), '_pine_alpha_title_padding_size', true ) : 'small' );
+$show_meta_data = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_show_meta_data' )  ? get_post_meta( get_the_ID(), '_pine_alpha_show_meta_data', true ) : 'no' );
+$sidebar_poisition = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_sidebar_poisition' )  ? get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) : 'right' );
+$sidebar_style = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_sidebar_style' )  ? get_post_meta( get_the_ID(), '_pine_alpha_sidebar_style', true ) : 'white' );
+
 get_header();
 ?>
 	<header class="page-header
 		<?php 
-			echo 'is-' . get_post_meta( get_the_ID(), '_pine_alpha_title_display_type', true ) . ' ';
-			echo 'is-' . get_post_meta( get_the_ID(), '_pine_alpha_title_padding_size', true );
+			echo 'is-' . $title_display_type . ' ';
+			echo 'is-' . $title_padding_size;
 		?>
 		"
 		style="
 		<?php 
-			if( has_post_thumbnail() && get_post_meta( get_the_ID(), '_pine_alpha_title_display_type', true ) == 'image' ) {
+			if( has_post_thumbnail() && $title_display_type == 'image' ) {
 				echo 'background-image: url(' . get_the_post_thumbnail_url(get_the_ID(),'pine_alpha_category_cover_image_id') . ');';
 			}
 
@@ -33,7 +39,7 @@ get_header();
 			<div class="row">
 				<div class="col-12">
 					<?php the_title( '<h1 class="page-header__title">', '</h1>' ); ?>
-					<?php if ( get_post_meta( get_the_ID(), '_pine_alpha_show_meta_data', 'no' ) == 'yes' ) : ?>
+					<?php if ( $show_meta_data == 'yes' ) : ?>
 						<div class="page-header__description"><?php pine_alpha_posted_on(); ?></div>
 					<?php endif; ?>
 				</div>
@@ -41,19 +47,19 @@ get_header();
 		</div>
 	</header>
 
-	<?php if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) != 'none' ) : ?>
+	<?php if( $sidebar_poisition != 'none' ) : ?>
 		<div class="container site-main-wrapper
 			<?php 
-				if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) != 'none' &&
-					get_post_meta( get_the_ID(), '_pine_alpha_sidebar_style', true ) == 'white' ) {
+				if( $sidebar_poisition != 'none' &&
+					$sidebar_style == 'white' ) {
 					echo 'has-sidebar--white';
 				}
 			?>
 		">
 			<div class="row">
-				<?php if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) == 'left' ) : ?>
+				<?php if( $sidebar_poisition == 'left' ) : ?>
 					<aside class="site-sidebar is-left col-12 col-lg-4
-						is-<?php echo get_post_meta( get_the_ID(), '_pine_alpha_sidebar_style', true ); ?>
+						is-<?php echo $sidebar_style; ?>
 					">
 						<?php get_sidebar(); ?>
 					</aside>
@@ -75,9 +81,9 @@ get_header();
 					?>
 				</main>
 
-				<?php if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) == 'right' ) : ?>
+				<?php if( $sidebar_poisition == 'right' ) : ?>
 					<aside class="site-sidebar is-right col-12 col-lg-4
-						is-<?php echo get_post_meta( get_the_ID(), '_pine_alpha_sidebar_style', true ); ?>
+						is-<?php echo $sidebar_style; ?>
 					">
 						<?php get_sidebar(); ?>
 					</aside>

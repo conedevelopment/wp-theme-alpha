@@ -10,6 +10,8 @@
  * @package pine-alpha
  */
 
+$sidebar_poisition = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_sidebar_poisition' )  ? get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) : 'right' );
+
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
@@ -21,17 +23,15 @@ if ( post_password_required() ) {
 ?>
 
 <div class="post-comment
-	<?php if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) != 'none' ) {
+	<?php if( $sidebar_poisition != 'none' ) {
 		echo 'is-one-col';
 	} ?>
 ">
+<?php if( $sidebar_poisition == 'none' ) : ?>
 	<div class="container">
 		<div class="row">
-			<div class="col-12 
-				<?php if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) == 'none' ) {
-					echo 'col-md-6';
-				} ?>
-			">
+			<div class="col-12 col-md-6">
+<?php endif; ?>
 				<?php
 					// You can start editing here -- including this comment!
 					if ( have_comments() ) :
@@ -83,12 +83,14 @@ if ( post_password_required() ) {
 				?>
 			</div>
 			<div class="col-12 comment-form-col
-				<?php if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) == 'none' ) {
+				<?php if( $sidebar_poisition == 'none' ) {
 					echo 'col-md-6';
 				} ?>
 			">
 				<?php comment_form(); ?>
+<?php if( $sidebar_poisition == 'none' ) : ?>
 			</div>
 		</div>
 	</div>
+<?php endif; ?>
 </div>
