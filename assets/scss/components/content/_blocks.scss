@@ -1,0 +1,26 @@
+.wp-block-cover-text {
+    padding: 1rem 2rem;
+    font-family: map-get($fonts, 'heading');
+    font-size: 1.9rem;
+    line-height: 1.5em;
+}
+
+.wp-block-table {
+    display: block;
+    overflow-x: auto;
+}
+
+.wp-block-table table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.wp-block-code,
+.wp-block-preformatted,
+.wp-block-verse {
+    padding: 2rem;
+    background: #f1f1f1;
+    border-radius: map-get($settings, 'border-radius');
+    font-size: 0.9rem;
+    line-height: 1.5em;
+}
