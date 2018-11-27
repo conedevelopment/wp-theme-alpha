@@ -24,23 +24,6 @@ function pine_alpha_jetpack_setup() {
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
-
-	// Add theme support for Content Options.
-	add_theme_support( 'jetpack-content-options', array(
-		'post-details'    => array(
-			'stylesheet' => 'pine-alpha-style',
-			'date'       => '.posted-on',
-			'categories' => '.cat-links',
-			'tags'       => '.tags-links',
-			'author'     => '.byline',
-			'comment'    => '.comments-link',
-		),
-		'featured-images' => array(
-			'archive'    => true,
-			'post'       => true,
-			'page'       => true,
-		),
-	) );
 }
 add_action( 'after_setup_theme', 'pine_alpha_jetpack_setup' );
 
@@ -51,9 +34,9 @@ function pine_alpha_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
-			get_template_part( 'template-parts/content', 'search' );
+			get_template_part( 'template-parts/post/content', 'search' );
 		else :
-			get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/post/content', get_post_type() );
 		endif;
 	}
 }

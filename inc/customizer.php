@@ -5,7 +5,7 @@
  * @package pine-alpha
  */
 
- 
+
 /**
  * Config Kirki
  */
@@ -491,6 +491,14 @@ Kirki::add_field( 'pine_alpha', array(
 	'priority'    => 10,
 ) );
 
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'toggle',
+	'settings'    => 'pine_alpha_general_display_section_highlight_js',
+	'label'       => esc_attr__( 'Enable highlight.js', 'pine-alpha' ),
+	'section'     => 'pine_alpha_general_display',
+	'default'     => '0',
+	'priority'    => 10,
+) );
 
 
 /**

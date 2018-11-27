@@ -105,4 +105,10 @@
 			});
 		});
 	}
+
+	if ( $( 'body[data-highlight-js="true"]' ).length ) {
+		$( '.wp-block-code code' ).each(function(i, block) {
+			hljs.highlightBlock(block);
+		});
+	}
 }(jQuery));

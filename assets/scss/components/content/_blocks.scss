@@ -15,11 +15,17 @@
     width: 100%
 }
 
-.wp-block-code,
 .wp-block-preformatted,
 .wp-block-verse {
     padding: 2rem;
     background: #f1f1f1;
+    border-radius: map-get($settings, 'border-radius');
+    font-size: 0.9rem;
+    line-height: 1.5em;
+}
+
+.wp-block-code code {
+    padding: 2rem;
     border-radius: map-get($settings, 'border-radius');
     font-size: 0.9rem;
     line-height: 1.5em;
