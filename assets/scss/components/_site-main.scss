@@ -18,5 +18,9 @@
     &.is-single {
         margin-right: 15px;
         margin-left: 15px;
+
+        .entry-content > .alignfull {
+            margin-left: -15px;
+        }
     }
 }

@@ -85,14 +85,7 @@ get_header();
 			</div>
 		</div>
 	<?php else : ?>
-		<div class="site-main-wrapper
-			<?php 
-				if( get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) != 'none' &&
-					get_post_meta( get_the_ID(), '_pine_alpha_sidebar_style', true ) == 'white' ) {
-					echo 'has-sidebar--white';
-				}
-			?>
-		">
+		<div class="site-main-wrapper">
 			<main id="main" class="site-main is-single">
 				<?php
 				while ( have_posts() ) :
