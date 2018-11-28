@@ -15,12 +15,12 @@
 
 			a {
 				margin-right: 0.3rem;
-				color: map-get($colors, "default");
+				color: map-get($colors, 'default');
 
 				&:hover,
 				&:focus,
 				&:active {
-					color: map-get($colors, "secondary");
+					color: map-get($colors, 'secondary');
 				}
 			}
 
@@ -30,7 +30,7 @@
 		}
 
 		li > .rsswidget {
-			font-family: map-get($fonts, "heading");
+			font-family: map-get($fonts, 'heading');
 			font-size: 1.2rem;
 			margin-bottom: 0.3rem;
 			display: block;
@@ -91,13 +91,13 @@
 		}
 
 		a {
-			color: map-get($colors, "black");
+			color: map-get($colors, 'black');
 			font-weight: 700;
 
 			&:hover,
 			&:focus,
 			&:active {
-				color: map-get($colors, "default");
+				color: map-get($colors, 'default');
 			}
 		}
 	}
@@ -110,7 +110,7 @@
 		}
 
 		a {
-			background: map-get($colors, "black");
+			background: map-get($colors, 'black');
 			display: inline-block;
 			padding: 0.4em 0.8em;
 			border-radius: 2px;
@@ -123,11 +123,7 @@
 			&:focus,
 			&:active {
 				color: #fff;
-				background: linear-gradient(
-					45deg,
-					map-get($colors, "default"),
-					map-get($colors, "secondary")
-				);
+				background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 20%));
 			}
 		}
 	}
@@ -141,21 +137,17 @@
 	margin-right: auto;
 
 	a {
-		color: map-get($colors, "default");
+		color: map-get($colors, 'default');
 
 		&:hover,
 		&:focus,
 		&:active {
-			color: map-get($colors, "secondary");
+			color: map-get($colors, 'secondary');
 		}
 	}
 
 	caption {
-		background: linear-gradient(
-			45deg,
-			map-get($colors, "secondary"),
-			map-get($colors, "default")
-		);
+		background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 20%));
 		color: #fff;
 		padding: 0.4rem;
 		text-align: center;
@@ -192,7 +184,7 @@
 			font-weight: bold;
 
 			&:after {
-				content: "";
+				content: '';
 				position: absolute;
 				top: 0;
 				right: 0;

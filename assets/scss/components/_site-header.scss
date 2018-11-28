@@ -318,7 +318,7 @@
         &:hover,
         &:focus,
         &:active {
-            background: linear-gradient(45deg, map-get($colors, 'default'), map-get($colors, 'secondary'));
+            background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 20%));
         }
 
         svg {

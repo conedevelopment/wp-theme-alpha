@@ -495,6 +495,11 @@ require get_template_directory() . '/inc/custom-styles.php';
 require get_template_directory() . '/inc/icon-functions.php';
 
 /**
+ * Add helpers.
+ */
+require get_template_directory() . '/inc/helpers.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

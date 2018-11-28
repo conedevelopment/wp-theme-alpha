@@ -616,7 +616,7 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .site-header__social-item:hover svg,.site-header__social-item:focus svg,.site-header__social-item:active svg{fill:#0095ff;-webkit-transition:fill .25s ease;transition:fill .25s ease}
 .site-header__social-item svg{height:1rem;width:1rem;-webkit-transition:fill .25s ease;transition:fill .25s ease}
 .site-header__search{height:2.4rem;width:2.4rem;border:0;border-radius:2px;background:#231f20;margin-left:3rem;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;cursor:pointer;-webkit-transition:.15s ease;transition:.15s ease}
-.site-header__search:hover,.site-header__search:focus,.site-header__search:active{background:linear-gradient(45deg,#0095ff,#00f1ff)}
+.site-header__search:hover,.site-header__search:focus,.site-header__search:active{background:linear-gradient(45deg,#0095ff,#66bfff)}
 .site-header__search svg{height:1.2rem;width:1.2rem;fill:#fff}
 .site-header__toggle{width:25px;cursor:pointer;margin-left:2rem;display:inline-block;background:0;border:0}
 .site-header__toggle:hover span:first-child{width:20px}
@@ -665,7 +665,7 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .site-footer .widget a{color:#fff}
 .site-footer .widget a:hover,.site-footer .widget a:focus,.site-footer .widget a:active{color:#0095ff}
 .site-footer .widget .tagcloud ul>*+*{padding-top:0;margin-bottom:.7rem}
-.site-footer .widget .tagcloud a{color:#fff;background:linear-gradient(45deg,#0095ff,#00f1ff)}
+.site-footer .widget .tagcloud a{color:#fff;background:linear-gradient(45deg,#0095ff,#66bfff)}
 .site-footer .widget .tagcloud a:hover,.site-footer .widget .tagcloud a:focus,.site-footer .widget .tagcloud a:active{background:#fff;color:#0095ff}
 .site-footer__socials{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:3rem}
 .site-footer__socials .social-item{margin-bottom:1rem}
@@ -706,17 +706,17 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .widget ul a:hover,.widget ul a:focus,.widget ul a:active{color:#0095ff}
 .widget .tagcloud li{display:inline-block;margin:0 .5rem 0 0;border:0}
 .widget .tagcloud a{background:#231f20;display:inline-block;padding:.4em .8em;border-radius:2px;color:#fff;text-transform:uppercase;font-weight:700;font-size:.8rem !important}
-.widget .tagcloud a:hover,.widget .tagcloud a:focus,.widget .tagcloud a:active{color:#fff;background:linear-gradient(45deg,#0095ff,#00f1ff)}
+.widget .tagcloud a:hover,.widget .tagcloud a:focus,.widget .tagcloud a:active{color:#fff;background:linear-gradient(45deg,#0095ff,#66bfff)}
 #wp-calendar{width:100%;max-width:37.5rem;background:#fff;margin-left:auto;margin-right:auto}
 #wp-calendar a{color:#0095ff}
 #wp-calendar a:hover,#wp-calendar a:focus,#wp-calendar a:active{color:#00f1ff}
-#wp-calendar caption{background:linear-gradient(45deg,#00f1ff,#0095ff);color:#fff;padding:.4rem;text-align:center;border-radius:0 0 2px 2px}
+#wp-calendar caption{background:linear-gradient(45deg,#0095ff,#66bfff);color:#fff;padding:.4rem;text-align:center;border-radius:0 0 2px 2px}
 #wp-calendar thead tr{border-right:1px solid #f9f9f9}
 #wp-calendar thead th{font-size:90%;font-weight:bold;padding:.4rem 2px;background:#f9f9f9;text-transform:uppercase;text-align:center}
 #wp-calendar tbody td{position:relative;padding:.4rem 2px;text-align:center;border:1px solid #f9f9f9;background:#fff}
 #wp-calendar tbody td.pad{opacity:.7}
 #wp-calendar tbody td#today{font-weight:bold}
-#wp-calendar tbody td#today:after{content:"";position:absolute;top:0;right:0;width:0;height:0;border-top:10px solid #f9f9f9;border-left:10px solid transparent}
+#wp-calendar tbody td#today:after{content:'';position:absolute;top:0;right:0;width:0;height:0;border-top:10px solid #f9f9f9;border-left:10px solid transparent}
 #wp-calendar tfoot tr{background:rgba(255,255,255,0.7);border:1px solid #f9f9f9}
 #wp-calendar tfoot tr td{border:0;padding:0}
 #wp-calendar tfoot tr a{display:block;padding:.4rem .75rem}
@@ -781,7 +781,7 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .list-item__quote p:last-child{margin:0}
 .list-item__quote a{color:rgba(0,0,0,0.5)}
 .list-item__quote cite{font-style:italic;text-transform:uppercase;font-size:.9rem}
-.wpcf7-submit,.btn,.submit,input[type="submit"]{display:inline-block;padding:.9rem 1.1rem;color:#fff;text-decoration:none;background:linear-gradient(45deg,#0095ff,#00f1ff);background-size:140% auto;background-position:left top;border:0;font-weight:700;-webkit-transition:.25s ease;transition:.25s ease;font-size:.8rem;text-transform:uppercase;line-height:1em;border-radius:2px;cursor:pointer}
+.wpcf7-submit,.btn,.submit,input[type="submit"]{display:inline-block;padding:.9rem 1.1rem;color:#fff;text-decoration:none;background:linear-gradient(45deg,#0095ff,#66bfff);background-size:140% auto;background-position:left top;border:0;font-weight:700;-webkit-transition:.25s ease;transition:.25s ease;font-size:.8rem;text-transform:uppercase;line-height:1em;border-radius:2px;cursor:pointer}
 .wpcf7-submit:hover,.wpcf7-submit:active,.wpcf7-submit:focus,.btn:hover,.btn:active,.btn:focus,.submit:hover,.submit:active,.submit:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus{-webkit-transition:.25s ease;transition:.25s ease;color:#fff;text-decoration:none;background-position:right top}
 select{width:100%;border:1px solid #efefef;padding:.7rem .5rem;border-radius:2px;background:#fff;color:rgba(0,0,0,0.7)}
 .entry-content .input-group,.comment-respond .input-group{margin-bottom:1.5rem}
@@ -865,7 +865,7 @@ img{height:auto;max-width:100%}
 .wp-block-table table{border-collapse:collapse;width:100%}
 .wp-block-preformatted,.wp-block-verse{padding:2rem;background:#f1f1f1;border-radius:2px;font-size:.9rem;line-height:1.5em}
 .wp-block-code code{padding:2rem;border-radius:2px;font-size:.9rem;line-height:1.5em}
-.scroll-to-top{position:fixed;bottom:2rem;z-index:1041;width:40px;height:40px;border-radius:2px;background:linear-gradient(45deg,#0095ff,#00f1ff);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;-webkit-transition:.15s ease;transition:.15s ease}
+.scroll-to-top{position:fixed;bottom:2rem;z-index:1041;width:40px;height:40px;border-radius:2px;background:linear-gradient(45deg,#0095ff,#66bfff);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;-webkit-transition:.15s ease;transition:.15s ease}
 .scroll-to-top.is-visible{opacity:1;visibility:visible;-webkit-transition:.15s ease;transition:.15s ease}
 .scroll-to-top.is-right{right:2rem}
 .scroll-to-top.is-left{left:2rem}
@@ -891,7 +891,7 @@ img{height:auto;max-width:100%}
 .wpcf7-display-none{display:none}
 .navigation.pagination{margin-top:1rem}
 .navigation.pagination .page-numbers{background:#231f20;display:inline-block;padding:.6rem 1rem;border-radius:2px;margin-right:.2rem;color:#fff;font-size:.8rem;font-weight:700;text-transform:uppercase;-webkit-transition:.15s ease;transition:.15s ease}
-.navigation.pagination .page-numbers.current,.navigation.pagination .page-numbers:hover,.navigation.pagination .page-numbers:active,.navigation.pagination .page-numbers:focus{background:linear-gradient(45deg,#0095ff,#00f1ff);text-decoration:none;-webkit-transition:.15s ease;transition:.15s ease}
+.navigation.pagination .page-numbers.current,.navigation.pagination .page-numbers:hover,.navigation.pagination .page-numbers:active,.navigation.pagination .page-numbers:focus{background:linear-gradient(45deg,#0095ff,#66bfff);text-decoration:none;-webkit-transition:.15s ease;transition:.15s ease}
 .navigation.pagination .page-numbers.dots{background:#231f20;text-decoration:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

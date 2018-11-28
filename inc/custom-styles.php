@@ -10,9 +10,10 @@
  * Generate the CSS for the current custom color scheme.
  */
 function pine_alpha_custom_styles() {
-
+    
     $default_color = get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' );
-    $secondary_color = '';
+    $default_color_lighter = color_luminance( $default_color, 0.5);
+    $secondary_color = get_theme_mod( 'pine_alpha_general_colors_section_secondary', '#00f1ff' );
     
     $popular_posts_section_background_color = get_theme_mod( 'pine_alpha_components_popular_posts_section_background', '#ffffff' );
     $popular_posts_section_padding_top = get_theme_mod( 'pine_alpha_components_popular_posts_section_padding_top', '3' );
@@ -28,7 +29,97 @@ function pine_alpha_custom_styles() {
     $page_header_top_padding = get_theme_mod( 'pine_alpha_components_archive_title_padding_top', '3' );
     $page_header_bottom_padding = get_theme_mod( 'pine_alpha_components_archive_title_padding_bottom', '3' );
 
-	$css = '
+    $css = '
+::selection {
+    background:' . $secondary_color . ';
+    color: #fff;
+}
+
+a,
+.canvi-navigation a,
+.canvi-navigation.current-menu-item > a,
+.site-header__navigation li.current-menu-item > a,
+.site-header__navigation a:hover,
+.site-header__navigation a:focus,
+.site-header__navigation a:active,
+.site-header__navigation ul.menu > .menu-item-has-children:hover > a,
+.widget.widget_rss .widget-title a,
+.widget ul a:hover,
+.widget ul a:focus,
+.widget ul a:active,
+#wp-calendar a,
+.site-footer .widget a:hover,
+.site-footer .widget a:focus,
+.site-footer .widget a:active,
+.site-footer .widget .tagcloud a:hover,
+.site-footer .widget .tagcloud a:focus,
+.site-footer .widget .tagcloud a:active {
+    color: ' . $default_color . ';
+}
+
+.site-header__navigation ul.menu > .menu-item-has-children .menu-item-has-children:hover,
+.site-header__navigation .sub-menu .current-menu-item,
+.site-header__navigation .sub-menu a:hover,
+.site-header__navigation .sub-menu a:focus,
+.site-header__navigation .sub-menu a:active {
+    background: ' . $default_color . ';
+}
+
+.site-header__navigation .sub-menu a:hover,
+.site-header__navigation .sub-menu a:focus,
+.site-header__navigation .sub-menu a:active {
+    color: #fff;
+}
+
+a:hover,
+a:active,
+a:focus,
+.widget.widget_rss .widget-title a:hover,
+.widget.widget_rss .widget-title a:focus,
+.widget.widget_rss .widget-title a:active,
+#wp-calendar a:hover,
+#wp-calendar a:focus,
+#wp-calendar a:active {
+    color:' . $secondary_color . ';
+}
+
+.site-header__search:hover,
+.site-header__search:focus,
+.site-header__search:active,
+.scroll-to-top,
+.wpcf7-submit,
+.btn,
+.submit,
+input[type="submit"],
+.navigation.pagination .page-numbers.current,
+.navigation.pagination .page-numbers:hover,
+.navigation.pagination .page-numbers:active,
+.navigation.pagination .page-numbers:focus,
+.widget .tagcloud a:hover,
+.widget .tagcloud a:focus,
+.widget .tagcloud a:active,
+#wp-calendar caption,
+.site-footer .widget .tagcloud a {
+    background: linear-gradient(45deg, ' . $default_color . ', ' . $default_color_lighter . ');
+}
+
+.social-item:hover .icon,
+.social-item:active .icon,
+.social-item:focus .icon,
+.site-header__social-item:hover svg,
+.site-header__social-item:focus svg,
+.site-header__social-item:active svg {
+    fill: ' . $default_color . ';
+}
+
+.entry-content input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):focus,
+.entry-content select:focus,
+.entry-content textarea:focus,
+.comment-respond input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):focus,
+.comment-respond select:focus,
+.comment-respond textarea:focus {
+    border-color: ' . $default_color . ';
+}
 
 .highlighted-posts.is-popular {
     background: '. $popular_posts_section_background_color . ';

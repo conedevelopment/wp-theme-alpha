@@ -264,7 +264,7 @@ Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'color',
 	'settings'    => 'pine_alpha_general_colors_section_default',
 	'label'       => __( 'Default Color', 'pine-alpha' ),
-	'description' => esc_attr__( 'Declare your theme default color.', 'pine-alpha' ),
+	'description' => esc_attr__( 'Declare your theme default color. It will be used for basic UI elements.', 'pine-alpha' ),
 	'section'     => 'pine_alpha_general_colors',
 	'default'     => '#0095FF',
 ) );
@@ -273,7 +273,7 @@ Kirki::add_field( 'pine_alpha', array(
 	'type'        => 'color',
 	'settings'    => 'pine_alpha_general_colors_section_secondary',
 	'label'       => __( 'Secondary Color', 'pine-alpha' ),
-	'description' => esc_attr__( 'Declare your theme secondary color.', 'pine-alpha' ),
+	'description' => esc_attr__( 'Declare your theme secondary color. It will be used mostly for :hover states.', 'pine-alpha' ),
 	'section'     => 'pine_alpha_general_colors',
 	'default'     => '#00F1FF',
 ) );
