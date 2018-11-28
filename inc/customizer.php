@@ -275,7 +275,7 @@ Kirki::add_field( 'pine_alpha', array(
 	'label'       => __( 'Secondary Color', 'pine-alpha' ),
 	'description' => esc_attr__( 'Declare your theme secondary color. It will be used mostly for :hover states.', 'pine-alpha' ),
 	'section'     => 'pine_alpha_general_colors',
-	'default'     => '#00F1FF',
+	'default'     => '#62BDFF',
 ) );
 
 

@@ -17,13 +17,13 @@
 		foreach  ($categories as $category) {
 			if ( $i != $length - 1 ) {
 				if ( $url == true ) {
-					echo '<span class="category-label"><a href="' . get_category_link( $category->ID ) . '">' . $category->name . '</a><span class="separator">,</span></span>';
+					echo '<span class="category-label"><a href="' . get_category_link( $category->term_taxonomy_id ) . '">' . $category->name . '</a><span class="separator">,</span></span>';
 				} else {
 					echo '<span class="category-label">' . $category->name . ',</span>';
 				}
 			} else {
 				if ( $url == true ) {
-					echo '<span class="category-label"><a href="' . get_category_link( $category->ID ) . '">' . $category->name . '</a></span>';
+					echo '<span class="category-label"><a href="' . get_category_link( $category->term_taxonomy_id ) . '">' . $category->name . '</a></span>';
 				} else {
 					echo '<span class="category-label">' . $category->name . '</span>';
 				}

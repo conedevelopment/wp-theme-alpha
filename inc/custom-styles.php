@@ -36,7 +36,9 @@ function pine_alpha_custom_styles() {
 }
 
 a,
-.canvi-navigation a,
+.canvi-navigation a:hover,
+.canvi-navigation a:focus,
+.canvi-navigation a:active,
 .canvi-navigation.current-menu-item > a,
 .site-header__navigation li.current-menu-item > a,
 .site-header__navigation a:hover,
@@ -87,10 +89,6 @@ a:focus,
 .site-header__search:focus,
 .site-header__search:active,
 .scroll-to-top,
-.wpcf7-submit,
-.btn,
-.submit,
-input[type="submit"],
 .navigation.pagination .page-numbers.current,
 .navigation.pagination .page-numbers:hover,
 .navigation.pagination .page-numbers:active,
@@ -101,6 +99,15 @@ input[type="submit"],
 #wp-calendar caption,
 .site-footer .widget .tagcloud a {
     background: linear-gradient(45deg, ' . $default_color . ', ' . $default_color_lighter . ');
+}
+
+.wpcf7-submit,
+.btn,
+.submit,
+input[type="submit"] {
+    background: linear-gradient(45deg, ' . $default_color . ', ' . $default_color_lighter . ');
+    background-size: 140% auto;
+    background-position: left top;
 }
 
 .social-item:hover .icon,
