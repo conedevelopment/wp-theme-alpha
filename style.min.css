@@ -1264,7 +1264,7 @@ a:hover,a:active,a:focus{text-decoration:none;-webkit-transition:color .25s ease
 .slider-item__title{font-size:1.6rem}
 .category-item__name{font-size:1.3rem}
 .section-title{font-size:1.6rem;margin-bottom:2rem}
-.wpcf7-submit,.btn,.submit,input[type="submit"]{font-size:1rem}
+.wpcf7-submit,.btn,.submit,input[type="submit"]{font-size:.9rem}
 .entry-content h1,.entry-content h2{font-size:1.6rem}
 .entry-content h3{font-size:1.5rem}
 .entry-content h4{font-size:1.4rem}

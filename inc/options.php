@@ -156,9 +156,9 @@ function pine_alpha_register_theme_options_metabox() {
 		'options' => array(
 			'none' => __( 'None', 'pine-alpha' ),
 			'left'   => __( 'Left', 'pine-alpha' ),
-			'right'     => __( 'right', 'pine-alpha' ),
+			'right'     => __( 'Right', 'pine-alpha' ),
 		),
-		'default' => 'none',
+		'default' => 'right',
 	) );
 
 	$cmb_page->add_field( array(
@@ -193,7 +193,7 @@ function pine_alpha_register_theme_options_metabox() {
 			'medium'   => __( 'Medium', 'pine-alpha' ),
 			'large'   => __( 'Large', 'pine-alpha' ),
 		),
-		'default' => 'small',
+		'default' => 'medium',
 	) );
 
 	$cmb_page->add_field( array(

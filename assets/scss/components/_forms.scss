@@ -20,7 +20,7 @@ input[type="submit"] {
     cursor: pointer;
 
     @include media-breakpoint-up(md) {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     &:hover,
