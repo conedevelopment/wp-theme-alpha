@@ -45,6 +45,19 @@ Kirki::add_field( 'pine_alpha', array(
     ),
 ) );
 
+Kirki::add_field( 'pine_alpha', array(
+	'type'        => 'slider',
+	'settings'    => 'pine_alpha_header_section_logo_height',
+	'label'       => esc_attr__( 'Set the max-height of the logo', 'pine-alpha' ),
+	'section'     => 'pine_alpha_header_section_logo',
+	'default'     => 45,
+	'choices'     => array(
+		'min'  => '35',
+		'max'  => '45',
+		'step' => '1',
+	),
+) );
+
 
 /**
  * Add Header / Navigation Section

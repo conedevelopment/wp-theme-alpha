@@ -29,6 +29,8 @@ function pine_alpha_custom_styles() {
     $page_header_top_padding = get_theme_mod( 'pine_alpha_components_archive_title_padding_top', '3' );
     $page_header_bottom_padding = get_theme_mod( 'pine_alpha_components_archive_title_padding_bottom', '3' );
 
+    $logo_height = get_theme_mod( 'pine_alpha_header_section_logo_height', '45' );
+
     $css = '
 ::selection {
     background:' . $secondary_color . ';
@@ -169,6 +171,15 @@ input[type="submit"] {
     padding-bottom: '. $blogroll_section_padding_bottom . 'rem !important;
 }
 
+.site-header__logo img {
+    height: calc('. $logo_height .'px - 10px);
+}
+
+@media (min-width: 768px) {
+    .site-header__logo img {
+        height: '. $logo_height .'px;
+    }
+}
     ';
 
     return $css;
