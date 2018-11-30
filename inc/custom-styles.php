@@ -65,7 +65,8 @@ a,
 .site-header__navigation .sub-menu .current-menu-item,
 .site-header__navigation .sub-menu a:hover,
 .site-header__navigation .sub-menu a:focus,
-.site-header__navigation .sub-menu a:active {
+.site-header__navigation .sub-menu a:active,
+.author-box__url {
     background: ' . $default_color . ';
 }
 
@@ -117,7 +118,10 @@ input[type="submit"] {
 .social-item:focus .icon,
 .site-header__social-item:hover svg,
 .site-header__social-item:focus svg,
-.site-header__social-item:active svg {
+.site-header__social-item:active svg,
+.author-box__social-item:hover svg,
+.author-box__social-item:focus svg,
+.author-box__social-item:active svg {
     fill: ' . $default_color . ';
 }
 
