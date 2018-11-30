@@ -30,20 +30,6 @@ function pine_alpha_register_theme_options_metabox() {
 		'type' => 'title',
 		'id'   => $prefix . 'theme_options_posts_title'
 	) );
-		
-	$cmb_options->add_field( array(
-		'name'    => esc_html__( 'Enable Microdata', 'pine-alpha' ),
-		'id'   => $prefix . 'theme_options_blog_schema_checkbox',
-		'desc' => esc_html__( 'Turn on BlogPosting schema.org data', 'pine-alpha' ),
-		'type' => 'checkbox'
-	) );
-	
-	$cmb_options->add_field( array(
-		'name' => esc_html__( 'Add code to the theme', 'pine-alpha' ),
-		'desc' => esc_html__( 'Here you can declare code in the <head> and <body> section. It is useful for Analytics and Facebook tracking code.', 'pine-alpha' ),
-		'type' => 'title',
-		'id'   => $prefix . 'theme_options_code_title'
-	) );
 
 	$cmb_options->add_field( array(
 		'name' => esc_html__( '<head></head> Code', 'pine-alpha' ),
@@ -54,7 +40,7 @@ function pine_alpha_register_theme_options_metabox() {
 
 	$cmb_options->add_field( array(
 		'name' => esc_html__( '<body></body> Code', 'pine-alpha' ),
-		'desc' => esc_html__( 'Add code between your <body> element.', 'pine-alpha' ),
+		'desc' => esc_html__( 'Add code between your <body> element (before the </body> tag).', 'pine-alpha' ),
 		'id' => $prefix . 'theme_options_code_body_textareacode',
 		'type' => 'textarea_code'
 	) );
@@ -206,10 +192,10 @@ function pine_alpha_register_theme_options_metabox() {
 function pine_alpha_get_option( $key = '', $default = false ) {
 	if ( function_exists( 'cmb2_get_option' ) ) {
 		// Use cmb2_get_option as it passes through some key filters.
-		return cmb2_get_option( 'pine_alpha_theme_options', $key, $default );
+		return cmb2_get_option( '_pine_alpha_theme_options', $key, $default );
 	}
 	// Fallback to get_option if CMB2 is not loaded yet.
-	$opts = get_option( 'pine_alpha_theme_options', $default );
+	$opts = get_option( '_pine_alpha_theme_options', $default );
 	$val = $default;
 	if ( 'all' == $key ) {
 		$val = $opts;

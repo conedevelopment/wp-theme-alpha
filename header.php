@@ -42,7 +42,7 @@
 			?>
 			
 			<div class="canvi-navbar__widgets">
-				<?php dynamic_sidebar( 'sidebar-1' ); ?>
+				<?php dynamic_sidebar( 'canvi-1' ); ?>
 			</div>
 		</div>
 	</div>
