@@ -38,30 +38,6 @@ function pine_alpha_register_theme_options_metabox() {
 		'type' => 'checkbox'
 	) );
 	
-
-	$cmb_options->add_field( array(
-		'name' => esc_html__( 'Cookie Notification', 'pine-alpha' ),
-		'desc' => esc_html__( 'Enable our basic cookie notification.', 'pine-alpha' ),
-		'type' => 'title',
-		'id'   => $prefix . 'theme_options_cookie_title'
-	) );
-
-	$cmb_options->add_field( array(
-		'name'    => esc_html__( 'Enable Cookie Notification', 'pine-alpha' ),
-		'id'   => $prefix . 'theme_options_cookie_notification_checkbox',
-		'desc' => esc_html__( 'Turn on the notification', 'pine-alpha' ),
-		'type' => 'checkbox'
-	) );
-
-	$cmb_options->add_field( array(
-		'name' => esc_html__( 'Notification Text', 'pine-alpha' ),
-		'desc' => esc_html__( 'This is an HTML editor so you can use HTML tags. For the best result follow the example.', 'pine-alpha' ),
-		'default' => esc_html__( '<p>To make this site work properly, we sometimes place small data files called <a href="//yoursiteurl.com/privacy-policy/">cookies on your device</a>. Most big websites do this too.</p>', 'pine-alpha' ),
-		'id' => $prefix . 'theme_options_cookie_notification_text_textareacode',
-		'type' => 'textarea_code'
-	) );
-
-
 	$cmb_options->add_field( array(
 		'name' => esc_html__( 'Add code to the theme', 'pine-alpha' ),
 		'desc' => esc_html__( 'Here you can declare code in the <head> and <body> section. It is useful for Analytics and Facebook tracking code.', 'pine-alpha' ),
@@ -207,6 +183,16 @@ function pine_alpha_register_theme_options_metabox() {
 		'default' => 'no',
 	) );
 
+	$cmb_page->add_field( array(
+		'name'    => 'Show Author Box',
+		'id'      => $prefix . 'show_author_box', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'no' => __( 'No', 'pine-alpha' ),
+			'yes'   => __( 'Yes', 'pine-alpha' )
+		),
+		'default' => 'no',
+	) );
 }
 
 

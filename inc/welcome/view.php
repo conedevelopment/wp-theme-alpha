@@ -9,7 +9,7 @@
 	<?php settings_errors(); ?>
 
 	<div class="about-text">
-		<?php _e( 'Alpha is a clean and minimalistic magazine/blog theme for those who like to create content each day. It is ideal for creators too because it supports a portfolio CPT. The theme is user-friendly, responsive, retina ready and performs well. It supports WPML, Jetpack features, and WooCommerce.', 'pine-alpha' ); ?>
+		<?php _e( 'Alpha is a clean and minimalistic magazine/blog theme for those who like to create content each day. The theme is user-friendly, responsive, retina ready and performs well. It currently supports Contact Form 7 and various Jetpack features.', 'pine-alpha' ); ?>
 	</div>
 
 	<div class="wp-badge pine-welcome-logo"></div>

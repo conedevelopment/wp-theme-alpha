@@ -42,8 +42,8 @@ function pine_alpha_register_required_plugins() {
 		),
 
 		array(
-			'name'      => 'Custom Post Type UI',
-			'slug'      => 'custom-post-type-ui',
+			'name'      => 'Schema',
+			'slug'      => 'schema',
 			'required'  => false,
 		),
 

@@ -450,6 +450,33 @@ function pine_alpha_admin_scripts() {
 add_action( 'admin_enqueue_scripts', 'pine_alpha_admin_scripts' );
 
 /**
+ * Add new user profile fields
+ *
+ */
+
+if ( ! function_exists( 'pine_alpha_modify_contact_methods' ) ) :
+
+    function pine_alpha_modify_contact_methods( $contactmethods ) {
+        $contactmethods['twitter'] = __( 'Twitter', 'pine-alpha' );
+        $contactmethods['facebook'] = __( 'Facebook', 'pine-alpha' );
+        $contactmethods['linkedin'] = __( 'LinkedIn', 'pine-alpha' );
+        $contactmethods['instagram'] = __( 'Instagram', 'pine-alpha' );
+        $contactmethods['flickr'] = __( 'Flickr', 'pine-alpha' );
+        $contactmethods['tumblr'] = __( 'Tumblr', 'pine-alpha' );
+        $contactmethods['pinterest'] = __( 'Pinterest', 'pine-alpha' );
+        $contactmethods['github'] = __( 'GitHub', 'pine-alpha' );
+        $contactmethods['youtube'] = __( 'YouTube', 'pine-alpha' );
+        $contactmethods['dribbble'] = __( 'Dribbble', 'pine-alpha' );
+        $contactmethods['vk'] = __( 'VK', 'pine-alpha' );
+        $contactmethods['spotify'] = __( 'Spotify', 'pine-alpha' );
+
+        return $contactmethods;
+    }
+    add_filter( 'user_contactmethods','pine_alpha_modify_contact_methods', 10, 1 );
+
+endif;
+
+/**
  * Remove wpcf7 stylesheet.
  */
 add_filter( 'wpcf7_load_css', '__return_false' );
