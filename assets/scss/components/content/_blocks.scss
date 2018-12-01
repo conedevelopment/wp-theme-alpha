@@ -30,3 +30,17 @@
     font-size: 0.9rem;
     line-height: 1.5em;
 }
+
+.wp-block-button__link {
+    @include btn;
+}
+
+.wp-block-file {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .wp-block-file__button {
+        @include btn;
+    }
+}

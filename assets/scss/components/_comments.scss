@@ -11,10 +11,6 @@
 	padding-top: 3rem;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 
-    &:not(.is-one-col) {
-        margin-left: -15px;
-    }
-
     &.is-one-col {
         .comment-form-col {
             margin-top: 2rem;

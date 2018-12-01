@@ -70,6 +70,12 @@ a,
     background: ' . $default_color . ';
 }
 
+.author-box__url:hover,
+.author-box__url:focus,
+.author-box__url:active {
+    background: ' . $secondary_color . ';
+}
+
 .site-header__navigation .sub-menu a:hover,
 .site-header__navigation .sub-menu a:focus,
 .site-header__navigation .sub-menu a:active {
@@ -185,6 +191,23 @@ input[type="submit"] {
     }
 }
     ';
+
+    if ( is_page() ) {
+        $color = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_color' )  ? get_post_meta( get_the_ID(), '_pine_alpha_color', true ) : get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' ) );
+        $color_hover = color_luminance( $color, -0.3);
+
+        $css .= '
+            .entry-content a:not(button):not(.author-box__url):not([class*="button"]):not([class*="btn"]) {
+                color: '. $color .';
+            }
+
+            .entry-content a:not(button):not(.author-box__url):not([class*="button"]):not([class*="btn"]):hover,
+            .entry-content a:not(button):not(.author-box__url):not([class*="button"]):not([class*="btn"]):active,
+            .entry-content a:not(button):not(.author-box__url):not([class*="button"]):not([class*="btn"]):focus {
+                color: '. $color_hover .';
+            }
+        ';
+    }
 
     return $css;
 }

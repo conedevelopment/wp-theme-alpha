@@ -2,35 +2,7 @@
 .btn,
 .submit,
 input[type="submit"] {
-    display: inline-block;
-    padding: 0.9rem 1.1rem;
-    color: #fff;
-    text-decoration: none;
-    font-family: map-get($fonts, 'header');
-    background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 20%));
-    background-size: 140% auto;
-    background-position: left top;
-    border: none;
-    font-weight: 700;
-    transition: 0.25s ease;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    line-height: 1em;
-    border-radius: map-get($settings, 'border-radius');
-    cursor: pointer;
-
-    @include media-breakpoint-up(md) {
-        font-size: 0.9rem;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-        transition: 0.25s ease;
-        color: #fff;
-        text-decoration: none;
-        background-position: right top;
-    }
+    @include btn;
 }
 
 select {

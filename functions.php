@@ -61,6 +61,11 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 		 * provide it for us.
 		 */
 		add_theme_support( 'title-tag' );
+		
+		/**
+		 * Add wide image support
+		 */
+		add_theme_support( 'align-wide' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.

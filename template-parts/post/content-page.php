@@ -9,7 +9,6 @@
 
 $sidebar_poisition = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_sidebar_poisition' )  ? get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) : 'right' );
 $show_author_box = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_show_author_box' )  ? get_post_meta( get_the_ID(), '_pine_alpha_show_author_box', true ) : 'no' );
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

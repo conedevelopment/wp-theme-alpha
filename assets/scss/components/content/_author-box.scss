@@ -83,12 +83,14 @@
         margin: 0 1rem 0 0;
         line-height: 1em;
         text-transform: uppercase;
+        transition: background 0.15s ease;
 
         &:hover,
         &:focus,
         &:active {
             color: #fff;
             background: map-get($colors, 'secondary');
+            transition: background 0.15s ease;
         }
     }
 

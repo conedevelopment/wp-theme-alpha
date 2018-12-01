@@ -85,7 +85,7 @@
 			}
 		});
 
-		$( '.gallery' ).each( function() {
+		$( '.gallery, .wp-block-gallery' ).each( function() {
 			$( this ).magnificPopup({
 				delegate: 'a',
 				type: 'image',
