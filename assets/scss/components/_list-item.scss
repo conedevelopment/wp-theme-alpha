@@ -52,8 +52,32 @@
         border-radius: map-get($settings, 'border-radius');
         color: rgba(0,0,0,0.7);
 
-        * {
+        *:not([class="list-item__title"]):not([href]) {
             color: rgba(0,0,0,0.7);
+        }
+
+        .list-item__title a {
+            color: map-get($colors, 'black');
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: currentColor;
+            }
+        }
+
+        .list-item__author {
+            &:hover,
+            &:active,
+            &:focus {
+                span {
+                    color: rgba(0, 0, 0, 0.8) !important;
+                }
+            }
+
+            span {
+                color: rgba(0, 0, 0, 0.5) !important;
+            }
         }
     }
 
