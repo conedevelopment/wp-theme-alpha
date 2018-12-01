@@ -93,6 +93,84 @@ function pine_alpha_register_theme_options_metabox() {
 		'column' => true
 	) );
 
+			 
+	$cmb_post->add_field( array(
+		'name'    => esc_html__( 'Color', 'pine-alpha' ),
+		'id'      => $prefix . 'color', 
+		'type'    => 'colorpicker',
+		'default' => '#0095FF',
+		'column' => true
+	) );
+
+	$cmb_post->add_field( array(
+		'name'    => 'Sidebar Position',
+		'id'      => $prefix . 'sidebar_poisition', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'none' => __( 'None', 'pine-alpha' ),
+			'left'   => __( 'Left', 'pine-alpha' ),
+			'right'     => __( 'Right', 'pine-alpha' ),
+		),
+		'default' => 'right',
+	) );
+
+	$cmb_post->add_field( array(
+		'name'    => 'Sidebar Style',
+		'id'      => $prefix . 'sidebar_style', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'white' => __( 'White', 'pine-alpha' ),
+			'gray'   => __( 'Gray', 'pine-alpha' ),
+		),
+		'default' => 'white',
+	) );
+
+	$cmb_post->add_field( array(
+		'name'    => 'Title Display Type',
+		'id'      => $prefix . 'title_display_type', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'white' => __( 'White', 'pine-alpha' ),
+			'colorful'   => __( 'Colorful', 'pine-alpha' ),
+			'image'   => __( 'Image', 'pine-alpha' ),
+		),
+		'default' => 'white',
+	) );
+
+	$cmb_post->add_field( array(
+		'name'    => 'Title Size',
+		'id'      => $prefix . 'title_padding_size', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'small' => __( 'Small', 'pine-alpha' ),
+			'medium'   => __( 'Medium', 'pine-alpha' ),
+			'large'   => __( 'Large', 'pine-alpha' ),
+		),
+		'default' => 'medium',
+	) );
+
+	$cmb_post->add_field( array(
+		'name'    => 'Show Meta Data After Title',
+		'id'      => $prefix . 'show_meta_data', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'no' => __( 'No', 'pine-alpha' ),
+			'yes'   => __( 'Yes', 'pine-alpha' )
+		),
+		'default' => 'no',
+	) );
+
+	$cmb_post->add_field( array(
+		'name'    => 'Show Author Box',
+		'id'      => $prefix . 'show_author_box', 
+		'type'    => 'radio_inline',
+		'options' => array(
+			'no' => __( 'No', 'pine-alpha' ),
+			'yes'   => __( 'Yes', 'pine-alpha' )
+		),
+		'default' => 'no',
+	) );
+
 
 	/** 
  	* Metabox to add fields to pages
@@ -179,6 +257,7 @@ function pine_alpha_register_theme_options_metabox() {
 		),
 		'default' => 'no',
 	) );
+
 }
 
 
