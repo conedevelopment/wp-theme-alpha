@@ -46,9 +46,21 @@
     &__name {
         color: map-get($colors, 'black');
 
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none !important;
+
+            h3 {
+                color: map-get($colors, 'default');
+                transition: 0.15s ease;
+            }
+        }
+
         h3 {
             margin: 0 0 0.5rem;
             font-size: 1.4rem;
+            transition: 0.15s ease;
         }
     }
 

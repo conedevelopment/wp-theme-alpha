@@ -57,7 +57,10 @@ a,
 .site-footer .widget a:active,
 .site-footer .widget .tagcloud a:hover,
 .site-footer .widget .tagcloud a:focus,
-.site-footer .widget .tagcloud a:active {
+.site-footer .widget .tagcloud a:active,
+.author-box__name:hover h3, 
+.author-box__name:focus h3, 
+.author-box__name:active h3 {
     color: ' . $default_color . ';
 }
 

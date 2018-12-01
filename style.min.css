@@ -899,7 +899,9 @@ img{height:auto;max-width:100%}
 .author-box__image-wrapper img{border-radius:2px;max-width:100%;height:auto}
 .author-box__content{width:100%}
 .author-box__name{color:#231f20}
-.author-box__name h3{margin:0 0 .5rem;font-size:1.4rem}
+.author-box__name:hover,.author-box__name:focus,.author-box__name:active{text-decoration:none !important}
+.author-box__name:hover h3,.author-box__name:focus h3,.author-box__name:active h3{color:#0095ff;-webkit-transition:.15s ease;transition:.15s ease}
+.author-box__name h3{margin:0 0 .5rem;font-size:1.4rem;-webkit-transition:.15s ease;transition:.15s ease}
 .author-box__description{color:#676767;font-size:1.1rem;line-height:1.6em;margin:0}
 .author-box__socials{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-transition:.15s ease;transition:.15s ease;margin:.8rem 0 0 0}
 .author-box__url{font-weight:700;display:inline-block;padding:.5rem .8rem;border-radius:2px;color:#fff;background:#0095ff;font-size:.8rem;margin:0 1rem 0 0;line-height:1em;text-transform:uppercase;-webkit-transition:background .15s ease;transition:background .15s ease}
