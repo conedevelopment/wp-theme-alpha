@@ -37,7 +37,7 @@ get_header();
 		">
 		<div class="container">
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 col-sm-10 col-md-8">
 					<?php the_title( '<h1 class="page-header__title">', '</h1>' ); ?>
 					<?php if ( $show_meta_data == 'yes' ) : ?>
 						<div class="page-header__description"><?php pine_alpha_posted_on(); ?></div>
