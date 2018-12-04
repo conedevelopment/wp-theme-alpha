@@ -197,7 +197,7 @@ input[type="submit"],
 }
     ';
 
-    if ( is_page() ) {
+    if ( is_page() || is_single() ) {
         $color = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_color' )  ? get_post_meta( get_the_ID(), '_pine_alpha_color', true ) : get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' ) );
         $color_hover = color_luminance( $color, -0.3);
 

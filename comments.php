@@ -78,7 +78,7 @@ if ( post_password_required() ) {
 						endif;
 					
 					else: ?>
-						<span class="alert is-warning"><?php esc_html_e( 'Currently, there aren\'t any comment. Let\'s write the first one!', 'pine-alpha' ); ?></span>
+						<span class="alert is-generic"><?php esc_html_e( 'Currently, there aren\'t any comment. Let\'s write the first one!', 'pine-alpha' ); ?></span>
 					<?php endif; // Check for have_comments().
 				?>
 			</div>
