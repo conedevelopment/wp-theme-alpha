@@ -31,7 +31,7 @@ get_header();
 		">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-sm-10 col-md-8">
+				<div class="col-12 col-sm-10 col-lg-8">
 					<?php
 					the_archive_title( '<h1 class="page-header__title">', '</h1>' );
 					the_archive_description( '<div class="page-header__description">', '</div>' );

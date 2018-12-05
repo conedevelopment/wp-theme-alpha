@@ -157,7 +157,7 @@ function pine_alpha_register_theme_options_metabox() {
 			'no' => __( 'No', 'pine-alpha' ),
 			'yes'   => __( 'Yes', 'pine-alpha' )
 		),
-		'default' => 'no',
+		'default' => 'yes',
 	) );
 
 	$cmb_post->add_field( array(

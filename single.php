@@ -14,7 +14,7 @@
 
 $title_display_type = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_title_display_type' )  ? get_post_meta( get_the_ID(), '_pine_alpha_title_display_type', true ) : 'white' );
 $title_padding_size = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_title_padding_size' )  ? get_post_meta( get_the_ID(), '_pine_alpha_title_padding_size', true ) : 'medium' );
-$show_meta_data = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_show_meta_data' )  ? get_post_meta( get_the_ID(), '_pine_alpha_show_meta_data', true ) : 'no' );
+$show_meta_data = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_show_meta_data' )  ? get_post_meta( get_the_ID(), '_pine_alpha_show_meta_data', true ) : 'yes' );
 $sidebar_poisition = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_sidebar_poisition' )  ? get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) : 'right' );
 $sidebar_style = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_sidebar_style' )  ? get_post_meta( get_the_ID(), '_pine_alpha_sidebar_style', true ) : 'white' );
 
@@ -37,10 +37,15 @@ get_header();
 		">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-sm-10 col-md-8">
+				<div class="col-12 col-sm-10 col-lg-8">
 					<?php the_title( '<h1 class="page-header__title">', '</h1>' ); ?>
 					<?php if ( $show_meta_data == 'yes' ) : ?>
-						<div class="page-header__description"><?php pine_alpha_posted_on(); ?></div>
+						<div class="page-header__description is-single">
+							<?php 
+								pine_alpha_posted_on();
+								pine_alpha_entry_footer(); 
+							?>
+						</div>
 					<?php endif; ?>
 				</div>
 			</div>

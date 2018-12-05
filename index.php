@@ -30,7 +30,7 @@ get_header();
 	">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-sm-10 col-md-8">
+				<div class="col-12 col-sm-10 col-lg-8">
 					<h1 class="page-header__title"><?php echo get_theme_mod( 'pine_alpha_layout_blog_section_title', __( 'Blog', 'pine-alpha' ) ); ?></h1>
 					<?php if ( get_theme_mod( 'pine_alpha_layout_blog_description' ) ) : ?>
 					<div class="page-header__description">

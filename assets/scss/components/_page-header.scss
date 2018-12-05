@@ -15,14 +15,34 @@
         .page-header__description {
             color: rgba(0,0,0,0.5);
             text-shadow: none;
+            
+            a {
+                color: rgba(0,0,0,0.5);
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: map-get($colors, 'black');
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
     &.is-colorful {
         background: currentColor;
+
+        .page-header__description.is-single > span:not(:first-child)::before {
+            background: rgba(255,255,255,0.2) !important;
+        }
     }
 
     &.is-image {
+        
+        .page-header__description.is-single > span:not(:first-child)::before {
+            background: rgba(255,255,255,0.2) !important;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -93,6 +113,43 @@
         margin: 0.2rem 0 0 0;
         font-size: 1rem;
         text-shadow: 0 0 4px rgba(0,0,0,0.1);
+
+        a {
+            color: rgba(255,255,255,0.7);
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+
+        &.is-single {
+            > span:not(:first-child) {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: relative;
+                    top: -2px;
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: rgba(0,0,0,0.1);
+                    margin: 0 1rem;
+
+                    @include media-breakpoint-up(lg) {
+                        top: -3px;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        top: -4px;
+                    }
+                }
+            }
+        }
 
         @include media-breakpoint-up(lg) {
             font-size: 1.2rem;
