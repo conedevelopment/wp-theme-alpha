@@ -93,15 +93,6 @@ function pine_alpha_register_theme_options_metabox() {
 		'column' => true
 	) );
 
-			 
-	$cmb_post->add_field( array(
-		'name'    => esc_html__( 'Color', 'pine-alpha' ),
-		'id'      => $prefix . 'color', 
-		'type'    => 'colorpicker',
-		'default' => '#0095FF',
-		'column' => true
-	) );
-
 	$cmb_post->add_field( array(
 		'name'    => 'Sidebar Position',
 		'id'      => $prefix . 'sidebar_poisition', 

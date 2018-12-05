@@ -21,9 +21,6 @@ function pine_alpha_jetpack_setup() {
 		'render'    => 'pine_alpha_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
-
-	// Add theme support for Responsive Videos.
-	add_theme_support( 'jetpack-responsive-videos' );
 }
 add_action( 'after_setup_theme', 'pine_alpha_jetpack_setup' );
 
@@ -36,7 +33,7 @@ function pine_alpha_infinite_scroll_render() {
 		if ( is_search() ) :
 			get_template_part( 'template-parts/post/content', 'search' );
 		else :
-			get_template_part( 'template-parts/post/content', get_post_type() );
+			get_template_part( 'template-parts/post/content', 'list' );
 		endif;
 	}
 }

@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 	<div class="container">
 		<div class="row">
 <?php endif; ?>
-			<div class="<?php if( $sidebar_poisition == 'none' ) { echo 'col-12 col-md-6'; } ?>">	
+			<div class="comment-list-col<?php if( $sidebar_poisition == 'none' ) { echo 'col-12 col-md-6'; } ?>">	
 				<?php
 					// You can start editing here -- including this comment!
 					if ( have_comments() ) :
@@ -76,10 +76,7 @@ if ( post_password_required() ) {
 							<?php esc_html_e( 'Comments are closed.', 'pine-alpha' ); ?>
 							<?php
 						endif;
-					
-					else: ?>
-						<span class="alert is-generic"><?php esc_html_e( 'Currently, there aren\'t any comment. Let\'s write the first one!', 'pine-alpha' ); ?></span>
-					<?php endif; // Check for have_comments().
+					endif; // Check for have_comments().
 				?>
 			</div>
 			<div class="comment-form-col <?php if( $sidebar_poisition == 'none' ) { echo 'col-12 col-md-6'; } ?>">

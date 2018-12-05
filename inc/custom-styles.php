@@ -197,25 +197,16 @@ input[type="submit"],
 }
     ';
 
-    if ( is_page() ) {
-        $color = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_color' )  ? get_post_meta( get_the_ID(), '_pine_alpha_color', true ) : get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' ) );
-        $color_hover = color_luminance( $color, -0.3);
+    if ( is_page() || is_single() ) {
 
-        $css .= '
-            .entry-content a:not(button):not(.author-box__url):not([class*="button"]):not([class*="btn"]) {
-                color: '. $color .';
-            }
+        if ( is_page() ) {
+            $color = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_color' )  ? get_post_meta( get_the_ID(), '_pine_alpha_color', true ) : get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' ) );
+        }
 
-            .entry-content a:not(button):not(.author-box__url):not([class*="button"]):not([class*="btn"]):hover,
-            .entry-content a:not(button):not(.author-box__url):not([class*="button"]):not([class*="btn"]):active,
-            .entry-content a:not(button):not(.author-box__url):not([class*="button"]):not([class*="btn"]):focus {
-                color: '. $color_hover .';
-            }
-        ';
-    }
-
-    if ( is_single() ) {
-        $color = ( get_term_meta( get_the_terms( get_the_ID(), 'category' )[0]->term_id, 'pine_alpha_category_color', true )  ? get_term_meta( get_the_terms( get_the_ID(), 'category' )[0]->term_id, 'pine_alpha_category_color', true ) : get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' ) );
+        if ( is_single() ) {
+            $color = ( get_term_meta( get_the_terms( get_the_ID(), 'category' )[0]->term_id, 'pine_alpha_category_color', true )  ? get_term_meta( get_the_terms( get_the_ID(), 'category' )[0]->term_id, 'pine_alpha_category_color', true ) : get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' ) );
+        }
+        
         $color_hover = color_luminance( $color, -0.3);
 
         $css .= '
