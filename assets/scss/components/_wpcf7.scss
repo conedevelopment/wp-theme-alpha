@@ -36,11 +36,13 @@
 
 // Validation messages
 .wpcf7-response-output {
-	margin: 1.5rem 0 0 0;
-    padding: 0.8em 1em;
+    margin: 1.5rem 0 0 0;
+    padding: 0.6em 1.2em;
     border-radius: map-get($settings, 'border-radius');
     background: map-get($colors, 'medium-gray');
     color: map-get($colors, 'black');
+    font-size: 1rem;
+    font-weight: 700;
 
     &.wpcf7-mail-sent-ok {
         background: map-get($colors, 'success');

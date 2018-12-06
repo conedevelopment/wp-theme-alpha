@@ -921,7 +921,7 @@ img{height:auto;max-width:100%}
 .wpcf7 input[type="file"]{cursor:pointer}
 .wpcf7 input[type="file"]:disabled{cursor:default}
 .wpcf7 .wpcf7-submit:disabled{cursor:not-allowed}
-.wpcf7-response-output{margin:1.5rem 0 0 0;padding:.8em 1em;border-radius:2px;background:#a9a9a9;color:#231f20}
+.wpcf7-response-output{margin:1.5rem 0 0 0;padding:.6em 1.2em;border-radius:2px;background:#a9a9a9;color:#231f20;font-size:1rem;font-weight:700}
 .wpcf7-response-output.wpcf7-mail-sent-ok{background:#43cc66;color:#fff}
 .wpcf7-response-output.wpcf7-mail-sent-ng,.wpcf7-response-output.wpcf7-aborted{background:#ff4d4d;color:#fff}
 .wpcf7-response-output.wpcf7-spam-blocked,.wpcf7-response-output.wpcf7-validation-errors,.wpcf7-response-output.wpcf7-acceptance-missing{background:#57a2ff;color:#fff}
