@@ -19,7 +19,7 @@
             <?php endif; ?>
         ">
             <?php if ( have_posts() ) : ?>
-                <div class="row">
+                <div id="jetpack-infinite-scroll-wrapper" class="row">
                     <?php
                     while ( have_posts() ) :
                         the_post(); ?>
@@ -46,7 +46,11 @@
                 <?php get_template_part( 'template-parts/post/content', 'none' ); ?>
             <?php endif; ?>
 
-            <?php the_posts_pagination(); ?>
+            <?php 
+                if ( class_exists( 'Jetpack' ) && !Jetpack::is_module_active( 'infinite-scroll' ) ) {
+                    the_posts_pagination();
+                }
+            ?>
         </main>
 
         <?php if( get_theme_mod( 'pine_alpha_layout_archive_pages_section_sidebar_position', 'right' ) == 'right' ) : ?>

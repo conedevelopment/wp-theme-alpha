@@ -17,9 +17,10 @@
 function pine_alpha_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
+		'container' => 'jetpack-infinite-scroll-wrapper',
 		'render'    => 'pine_alpha_infinite_scroll_render',
-		'footer'    => 'page',
+		'footer'    => false,
+		'wrapper'   => false
 	) );
 }
 add_action( 'after_setup_theme', 'pine_alpha_jetpack_setup' );
@@ -30,10 +31,20 @@ add_action( 'after_setup_theme', 'pine_alpha_jetpack_setup' );
 function pine_alpha_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
-		if ( is_search() ) :
-			get_template_part( 'template-parts/post/content', 'search' );
-		else :
-			get_template_part( 'template-parts/post/content', 'list' );
-		endif;
+		if ( is_search() ) : ?>
+			<div class="col-12">
+				<?php get_template_part( 'template-parts/post/content', 'search' ); ?>
+			</div>
+		<?php else : ?>
+			<div class="col-12 
+			<?php if( get_theme_mod( 'pine_alpha_layout_archive_pages_section_sidebar_position', 'right' ) == 'none' ) : ?>
+				col-sm-4
+			<?php else : ?>
+				col-sm-6
+			<?php endif; ?>
+			">
+				<?php get_template_part( 'template-parts/post/content', 'list' ); ?>
+			</div>
+		<?php endif;
 	}
 }

@@ -5,7 +5,7 @@
 
     $terms = get_the_terms( get_the_ID(), 'category');
     if( !empty($terms) ) :
-        $term = array_pop($terms); ?>
+        $term = array_shift($terms); ?>
         style="color: <?php echo get_term_meta( $term->term_id, 'pine_alpha_category_color', true ); ?>;"
     <?php endif; ?>
 >    

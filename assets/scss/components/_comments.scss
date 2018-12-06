@@ -11,10 +11,24 @@
 	padding-top: 3rem;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 
-    &.is-one-col {
-        .comment-list-col {
-            margin-bottom: 2rem;
+    &.is-narrow {
+        width: 100%;
+        max-width: map-get($settings, 'narrow-width');
+        flex: 0 0 map-get($settings, 'narrow-width');
+        margin-left: auto; 
+        margin-right: auto;
+        margin-bottom: 0;
+
+        &:not(.alignfull) {
+            @include media-breakpoint-up(lg) {
+                position: relative;
+                left: -6vw;
+            }
         }
+    }
+
+    &__list {
+        margin-bottom: 2rem;
     }
     
     label {
@@ -40,6 +54,11 @@
 
 .comment-title {
     margin-bottom: 1rem;
+}
+
+.comment-title,
+.comment-reply-title {
+    font-size: 1.4rem;
 }
 
 .comment-form-col {

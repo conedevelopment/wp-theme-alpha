@@ -1,0 +1,12 @@
+#infinite-handle {
+    width: 100%;
+    margin: 0 15px;
+
+    span {
+        @include btn;
+
+        button {
+            text-transform: uppercase;
+        }
+    }
+}

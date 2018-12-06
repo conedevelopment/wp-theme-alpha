@@ -940,12 +940,14 @@ img{height:auto;max-width:100%}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .post-comment{margin-top:3rem;padding-top:3rem;border-top:1px solid rgba(0,0,0,0.05)}
-.post-comment.is-one-col .comment-list-col{margin-bottom:2rem}
+.post-comment.is-narrow{width:100%;max-width:740px;-webkit-box-flex:0;-ms-flex:0 0 740px;flex:0 0 740px;margin-left:auto;margin-right:auto;margin-bottom:0}
+.post-comment__list{margin-bottom:2rem}
 .post-comment label{font-weight:700;text-transform:uppercase;font-size:.9rem}
 .comment-form>p{margin-bottom:1.5rem}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .comment-title{margin-bottom:1rem}
+.comment-title,.comment-reply-title{font-size:1.4rem}
 .comment-form-col{margin-top:2rem}
 .comment-list{margin:0 0 1em;padding:0;list-style:none}
 .comment-list .comment-respond{margin-top:2rem}
@@ -979,8 +981,10 @@ img{height:auto;max-width:100%}
 .page-header__description.is-single>span:not(:first-child){position:relative}
 .page-header__description.is-single>span:not(:first-child)::before{content:'';position:relative;top:-2px;display:inline-block;width:5px;height:5px;border-radius:50%;background:rgba(0,0,0,0.1);margin:0 1rem}
 .page-header__description p:last-child{margin-bottom:0}
-.alert{display:block;padding:1em 1.5em;border-radius:2px}
-.alert.is-generic{background:#a2bdc3;color:rgba(255,255,255,0.9)}
+#infinite-handle{width:100%;margin:0 15px}
+#infinite-handle span{display:inline-block;padding:.9rem 1.1rem;color:#fff;text-decoration:none;background:linear-gradient(45deg,#0095ff,#66bfff);background-size:140% auto;background-position:left top;border:0;font-weight:700;-webkit-transition:.25s ease;transition:.25s ease;font-size:.8rem;text-transform:uppercase;line-height:1em;border-radius:2px;cursor:pointer}
+#infinite-handle span:hover,#infinite-handle span:active,#infinite-handle span:focus{-webkit-transition:.25s ease;transition:.25s ease;color:#fff;text-decoration:none;background-position:right top}
+#infinite-handle span button{text-transform:uppercase}
 :root{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:90%}
 *,::before,::after{-webkit-box-sizing:inherit;box-sizing:inherit}
 ::-moz-selection{background:#62bdff;color:#fff}
@@ -1330,6 +1334,7 @@ a:hover,a:active,a:focus{text-decoration:none;-webkit-transition:color .25s ease
 .wp-block-button__link{font-size:.9rem}
 .wp-block-file .wp-block-file__button{font-size:.9rem}
 .comment-form-col{margin-top:0}
+#infinite-handle span{font-size:.9rem}
 :root{font-size:100%}
 }@media(min-width:768px) and (max-width:991.98px){.d-only-md-none{display:none !important}
 }@media(min-width:992px){.container{max-width:960px}
@@ -1510,6 +1515,7 @@ a:hover,a:active,a:focus{text-decoration:none;-webkit-transition:color .25s ease
 .entry-content h4{font-size:1.6rem}
 .entry-content h5{font-size:1.4rem}
 .entry-content h6{font-size:1.2rem}
+.post-comment.is-narrow:not(.alignfull){position:relative;left:-6vw}
 .page-header__title{font-size:2.4rem}
 .page-header__description.is-single>span:not(:first-child)::before{top:-3px}
 .page-header__description{font-size:1.2rem}

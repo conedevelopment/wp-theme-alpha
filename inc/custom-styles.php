@@ -118,7 +118,8 @@ a:focus,
 .submit,
 input[type="submit"],
 .wp-block-button__link,
-.wp-block-file .wp-block-file__button {
+.wp-block-file .wp-block-file__button,
+#infinite-handle span {
     background: linear-gradient(45deg, ' . $default_color . ', ' . $default_color_lighter . ');
     background-size: 140% auto;
     background-position: left top;
