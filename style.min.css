@@ -836,6 +836,7 @@ img{height:auto;max-width:100%}
 .entry-content h4{font-size:1.2rem}
 .entry-content h5{font-size:1rem}
 .entry-content h6{font-size:.8rem}
+.entry-content p.empty{padding:0;margin:0;line-height:0}
 .entry-content a[href*="http://"],.entry-content a[href*="https://"],.entry-content a[href*="www"]{word-wrap:break-word}
 .entry-content .wp-block-quote,.entry-content blockquote{padding:0 2rem;color:#231f20;font-family:"'Merriweather', serif";border-left:5px solid #231f20;font-size:1.1rem;line-height:1.6em}
 .entry-content .wp-block-quote.is-large,.entry-content .wp-block-quote.is-style-large,.entry-content blockquote.is-large,.entry-content blockquote.is-style-large{margin-top:2rem;margin-bottom:0;padding-top:0;padding-bottom:0}
@@ -1689,8 +1690,7 @@ body[data-sticky="true"].logged-in:not(.customize-partial-edit-shortcuts-shown) 
 .table-responsive-xl>.table-bordered{border:0}
 }@media(max-width:991.98px){.table-responsive-lg{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}
 .table-responsive-lg>.table-bordered{border:0}
-}@media all and (max-width:900px){.mfp-arrow{-webkit-transform:scale(0.75);transform:scale(0.75)}
-.mfp-arrow-left{-webkit-transform-origin:0 0;transform-origin:0 0}
+}@media all and (max-width:900px){.mfp-arrow-left{-webkit-transform-origin:0 0;transform-origin:0 0}
 .mfp-arrow-right{-webkit-transform-origin:100%;transform-origin:100%}
 .mfp-container{padding-left:6px;padding-right:6px}
 }@media screen and (max-width:800px) and (orientation:landscape),screen and (max-height:300px){.mfp-img-mobile .mfp-image-holder{padding-left:0;padding-right:0}

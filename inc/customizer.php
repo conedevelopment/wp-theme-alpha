@@ -778,7 +778,7 @@ Kirki::add_field( 'pine_alpha', array(
 	'section'     => 'pine_alpha_components_blogroll',
 	'default'     => 6,
 	'choices'     => array(
-		'min'  => 6,
+		'min'  => 3,
 		'max'  => 14,
 		'step' => 1,
 	),
