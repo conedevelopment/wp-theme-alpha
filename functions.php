@@ -382,6 +382,26 @@ function pine_alpha_fonts_url() {
 }
 
 /**
+ * Post view counter data save.
+ */
+function pine_alpha_count_post_visits() {
+    if( is_single() ) {
+        global $post;
+		$views = get_post_meta( $post->ID, '_pine_alpha_viewed', true );
+		
+        if( $views == '' ) {
+            update_post_meta( $post->ID, '_pine_alpha_viewed', '1' );   
+        } else {
+            $views = intval( $views );
+            update_post_meta( $post->ID, '_pine_alpha_viewed', ++$views );
+        }
+    }
+}
+
+add_action( 'wp_head', 'pine_alpha_count_post_visits' );
+
+
+/**
  * Enqueue scripts and styles.
  */
 function pine_alpha_scripts() {
