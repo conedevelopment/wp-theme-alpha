@@ -62,7 +62,7 @@
             &:hover,
             &:focus,
             &:active {
-                color: currentColor;
+                color: map-get($colors, 'default');
             }
         }
 
@@ -189,7 +189,7 @@
             &:hover,
             &:focus,
             &:active {
-                color: currentColor;
+                color: map-get($colors, 'default');
             }
         }
 
@@ -224,7 +224,7 @@
             &:hover,
             &:focus,
             &:active {
-                color: currentColor;
+                color: map-get($colors, 'default');
             }
         }
     }
@@ -258,7 +258,7 @@
         &:hover,
         &:focus,
         &:active {
-            color: currentColor;
+            color: map-get($colors, 'default');
 
             &::before {
                 width: 100%;

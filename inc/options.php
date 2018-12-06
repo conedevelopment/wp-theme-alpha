@@ -57,7 +57,8 @@ function pine_alpha_register_theme_options_metabox() {
 	 
 	$cmb_term->add_field( array(
 		'name'    => esc_html__( 'Category Color', 'pine-alpha' ),
-		'id'      => $prefix . 'category_color', 
+		'id'      => $prefix . 'category_color',
+		'desc'	  => esc_html__( 'We use this color to highlight the category\'s images in the layout.', 'pine-alpha' ),
 		'type'    => 'colorpicker',
 		'default' => '#24d2e5',
 		'column' => true
@@ -176,6 +177,7 @@ function pine_alpha_register_theme_options_metabox() {
 		'name'    => esc_html__( 'Color', 'pine-alpha' ),
 		'id'      => $prefix . 'color', 
 		'type'    => 'colorpicker',
+		'desc'	  => esc_html__( 'We use this color to highlight the page\'s header image in the layout.', 'pine-alpha' ),
 		'default' => '#0095FF',
 		'column' => true
 	) );
