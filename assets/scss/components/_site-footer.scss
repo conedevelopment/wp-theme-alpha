@@ -55,7 +55,7 @@
 
 			a {
 				color: #fff;
-				background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 20%));
+				background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 10%));
 
 				&:hover,
 				&:focus,
@@ -83,5 +83,6 @@
 
 	&__copyright {
 		margin: 0;
+		color: rgba(255,255,255,0.6);
 	}
 }

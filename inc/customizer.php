@@ -5,7 +5,6 @@
  * @package pine-alpha
  */
 
-
 /**
  * Config Kirki
  */

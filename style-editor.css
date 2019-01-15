@@ -1538,7 +1538,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 .wp-block-code code { padding: 2rem; border-radius: 2px; font-size: 0.9rem; line-height: 1.5em; }
 
-.wp-block-button__link { display: inline-block; padding: 0.9rem 1.1rem; color: #fff; text-decoration: none; background: linear-gradient(45deg, #0095FF, #66bfff); background-size: 140% auto; background-position: left top; border: none; font-weight: 700; -webkit-transition: 0.25s ease; transition: 0.25s ease; font-size: 0.8rem; text-transform: uppercase; line-height: 1em; border-radius: 2px; cursor: pointer; }
+.wp-block-button__link { display: inline-block; padding: 0.9rem 1.1rem; color: #fff; text-decoration: none; background: linear-gradient(45deg, #0095FF, #33aaff); background-size: 140% auto; background-position: left top; border: none; font-weight: 700; -webkit-transition: 0.25s ease; transition: 0.25s ease; font-size: 0.8rem; text-transform: uppercase; line-height: 1em; border-radius: 2px; cursor: pointer; }
 
 @media (min-width: 768px) { .wp-block-button__link { font-size: 0.9rem; } }
 
@@ -1546,7 +1546,7 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 .wp-block-file { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.wp-block-file .wp-block-file__button { display: inline-block; padding: 0.9rem 1.1rem; color: #fff; text-decoration: none; background: linear-gradient(45deg, #0095FF, #66bfff); background-size: 140% auto; background-position: left top; border: none; font-weight: 700; -webkit-transition: 0.25s ease; transition: 0.25s ease; font-size: 0.8rem; text-transform: uppercase; line-height: 1em; border-radius: 2px; cursor: pointer; }
+.wp-block-file .wp-block-file__button { display: inline-block; padding: 0.9rem 1.1rem; color: #fff; text-decoration: none; background: linear-gradient(45deg, #0095FF, #33aaff); background-size: 140% auto; background-position: left top; border: none; font-weight: 700; -webkit-transition: 0.25s ease; transition: 0.25s ease; font-size: 0.8rem; text-transform: uppercase; line-height: 1em; border-radius: 2px; cursor: pointer; }
 
 @media (min-width: 768px) { .wp-block-file .wp-block-file__button { font-size: 0.9rem; } }
 

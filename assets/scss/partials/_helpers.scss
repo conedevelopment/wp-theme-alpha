@@ -34,7 +34,7 @@
     color: #fff;
     text-decoration: none;
     font-family: map-get($fonts, 'header');
-    background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 20%));
+    background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 10%));
     background-size: 140% auto;
     background-position: left top;
     border: none;

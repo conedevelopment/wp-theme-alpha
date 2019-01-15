@@ -417,17 +417,18 @@ add_action( 'wp_enqueue_scripts', 'pine_alpha_scripts' );
 /**
  * Enqueue admin scripts and styles
  */
-function atomic_blocks_admin_scripts( $hook ) {
+function pine_alpha_admin_scripts( $hook ) {
 	if ( 'post.php' != $hook ) {
         return;
 	}
 	
-	/**
-	* Load editor fonts from Google
-	*/
+	// Load editor fonts from Google
 	wp_enqueue_style( 'pine-alpha-fonts', pine_alpha_fonts_url(), array(), null );
+
+	// Load welcome screen CSS
+	wp_enqueue_style( 'pine-alpha-welcome-style', get_template_directory_uri() . '/inc/welcome/css/style.css', array(), THEME_VERSION, 'all' );
 }
-add_action( 'admin_enqueue_scripts', 'atomic_blocks_admin_scripts', 5 );
+add_action( 'admin_enqueue_scripts', 'pine_alpha_admin_scripts', 5 );
 
 /**
  * Use front-page.php when Front page displays is set to a static page.
@@ -461,15 +462,6 @@ function pine_alpha_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'pine_alpha_widget_tag_cloud_args' );
-
-/**
- * Enqueue admin scripts and styles.
- */
-function pine_alpha_admin_scripts() {
-	wp_enqueue_style( 'wpw_style', get_template_directory_uri() . '/inc/welcome/css/style.css', array(), THEME_VERSION, 'all' );
-}
-
-add_action( 'admin_enqueue_scripts', 'pine_alpha_admin_scripts' );
 
 /**
  * Add new user profile fields
