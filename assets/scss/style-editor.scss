@@ -1,0 +1,153 @@
+// -------------------------
+// # Custom Config
+// -------------------------
+
+@import 'partials/variables';
+
+
+
+// -------------------------
+// # Import Bootstrap
+// -------------------------
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+
+
+// -------------------------
+// # Import Partials
+// -------------------------
+
+@import 'partials/helpers';
+
+
+
+// -------------------------
+// # Gutenberg Block
+// -------------------------
+
+@import 'components/content/blocks';
+
+
+
+body {
+    font-family: $font__body;
+    color: map-get($colors, 'text');
+
+    &,
+    & p {
+        font-size: 1.3rem;
+        color: map-get($colors, 'text');
+        line-height: 1.7em;
+        font-weight: 300;
+    }
+
+    a {
+        transition: color 0.25s ease;
+        color: map-get($colors, 'default');
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            transition: color 0.25s ease;
+            color: map-get($colors, 'secondary');
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        display: block;
+        font-weight: 700;
+        line-height: 1.4em;
+        color: map-get($colors, 'black');
+        font-family: $headings-font-family;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.3rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.6rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.8rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.3rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.8rem;
+        }
+    }
+
+    h4 {
+        font-size: 1.2rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.4rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.6rem;
+        }
+    }
+
+    h5 {
+        font-size: 1rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.2rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.4rem;
+        }
+    }
+
+    h6 {
+        font-size: 0.8rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.2rem;
+        }
+    }
+    
+    .wp-block {
+        max-width: 720px;
+    }
+
+    .wp-block[data-align="wide"] {
+        max-width: 1080px;
+    }
+
+    .wp-block[data-align="full"] {
+        max-width: none;
+    }
+}

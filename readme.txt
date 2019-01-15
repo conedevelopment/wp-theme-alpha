@@ -3,9 +3,9 @@
 Contributors: pine
 Tags: custom-logo, custom-menu, featured-images, translation-ready
 
-Requires at least: 4.5
+Requires at least: 4.7
 Tested up to: 4.9
-Stable tag: 0.1.0
+Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 
 A magazine theme named Alpha.
@@ -28,8 +28,8 @@ Alpha includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 0.1.0 - Sept 20 2018 =
-* Development release
+= 1.0.0 - Dec 20 2018 =
+* Initial release
 
 == Credits ==
 

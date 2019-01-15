@@ -30,7 +30,7 @@ if( ! defined( 'THEME_VERSION' ) ) {
 	/**
 	 * Define theme version
 	 */
-	define( 'THEME_VERSION', '0.1.0' );
+	define( 'THEME_VERSION', '1.0.0' );
 }
 
 if ( ! function_exists( 'pine_alpha_setup' ) ) {
@@ -62,10 +62,20 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 		 */
 		add_theme_support( 'title-tag' );
 		
-		/**
-		 * Add wide image support
-		 */
+		// Add responsive embeds.
+		add_theme_support( 'responsive-embeds' );
+
+		// Add support for Block Styles.
+		add_theme_support( 'wp-block-styles' );
+
+		// Add support for full and wide align images.
 		add_theme_support( 'align-wide' );
+
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		// Enqueue editor styles.
+		add_editor_style( 'style-editor.css' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
@@ -322,21 +332,13 @@ add_filter( 'excerpt_more', 'pine_alpha_excerpt_more' );
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
 function pine_alpha_content_image_sizes_attr( $sizes, $size ) {
-	/*
+	
 	$width = $size[0];
 
-	if ( 740 <= $width ) {
-		$sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
-	}
-
-	if ( is_active_sidebar( 'sidebar-1' ) || is_archive() || is_search() || is_home() || is_page() ) {
-		if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
-			 $sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
-		}
-	}
+	1000 <= $width && $sizes = '(max-width: 575px) 95vw, (max-width: 767px) 240px, (max-width: 991px) 330px, (max-width: 1199px) 290px 400px';
 
 	return $sizes;
-	*/
+	
 }
 add_filter( 'wp_calculate_image_sizes', 'pine_alpha_content_image_sizes_attr', 10, 2 );
 
@@ -351,14 +353,6 @@ function pine_alpha_css_wrap() {
 	</style>
 <?php }
 add_action( 'wp_head', 'pine_alpha_css_wrap' );
-
-/**
- * Remove <p> tags from images.
- */
-function pine_alpha_filter_ptags_on_images($content){
-	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
-}
-add_filter('the_content', 'pine_alpha_filter_ptags_on_images');
 
 /**
  * Register Google Fonts
@@ -390,26 +384,6 @@ function pine_alpha_fonts_url() {
 }
 
 /**
- * Post view counter data save.
- */
-function pine_alpha_count_post_visits() {
-    if( is_single() ) {
-        global $post;
-		$views = get_post_meta( $post->ID, '_pine_alpha_viewed', true );
-		
-        if( $views == '' ) {
-            update_post_meta( $post->ID, '_pine_alpha_viewed', '1' );   
-        } else {
-            $views = intval( $views );
-            update_post_meta( $post->ID, '_pine_alpha_viewed', ++$views );
-        }
-    }
-}
-
-add_action( 'wp_head', 'pine_alpha_count_post_visits' );
-
-
-/**
  * Enqueue scripts and styles.
  */
 function pine_alpha_scripts() {
@@ -439,6 +413,21 @@ function pine_alpha_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pine_alpha_scripts' );
+
+/**
+ * Enqueue admin scripts and styles
+ */
+function atomic_blocks_admin_scripts( $hook ) {
+	if ( 'post.php' != $hook ) {
+        return;
+	}
+	
+	/**
+	* Load editor fonts from Google
+	*/
+	wp_enqueue_style( 'pine-alpha-fonts', pine_alpha_fonts_url(), array(), null );
+}
+add_action( 'admin_enqueue_scripts', 'atomic_blocks_admin_scripts', 5 );
 
 /**
  * Use front-page.php when Front page displays is set to a static page.
@@ -553,11 +542,6 @@ require get_template_directory() . '/inc/custom-styles.php';
  * Add SVG icons.
  */
 require get_template_directory() . '/inc/icon-functions.php';
-
-/**
- * Add helpers.
- */
-require get_template_directory() . '/inc/helpers.php';
 
 /**
  * Load Jetpack compatibility file.

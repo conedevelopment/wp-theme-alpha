@@ -24,6 +24,12 @@
     line-height: 1.5em;
 }
 
+.wp-block-code {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
 .wp-block-code code {
     padding: 2rem;
     border-radius: map-get($settings, 'border-radius');

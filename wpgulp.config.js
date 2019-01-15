@@ -22,6 +22,13 @@ module.exports = {
 	errLogToConsole: true,
 	precision: 10,
 
+	// Gutenberg Editor Style options.
+	gutenbergStyleSRC: './assets/scss/style-editor.scss', // Path to main .scss file.
+	gutenbergStyleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
+	gutenbergOutputStyle: 'compact', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
+	gutenbergErrLogToConsole: true,
+	gutenbergPrecision: 10,
+
 	// JS Vendor options.
 	jsVendorSRC: './assets/js/vendor/*.js', // Path to JS vendor folder.
 	jsVendorDestination: './assets/dist/', // Path to place the compiled JS vendors file.
