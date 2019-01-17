@@ -1,6 +1,6 @@
 $headings-font-family: 'Merriweather', serif;
 $headings-font-weight:  700;
-$headings-line-height:  1.4em !default;
+$headings-line-height:  1.4;
 
 $container-max-widths: (
   sm: 540px,
@@ -11,7 +11,7 @@ $container-max-widths: (
 
 $colors: (
     "default":    #0095FF,
-    "secondary":  #62BDFF,
+    "secondary":  #3be197,
     "black":      #231F20,
 	"light-gray": #F9F9F9,
 	"medium-gray": #a9a9a9,
@@ -23,8 +23,8 @@ $colors: (
 );
 
 $fonts: (
-	"heading": "'Merriweather', serif",
-	"body": "'Source Sans Pro', sans-serif"
+	"heading": #{'Merriweather', serif},
+	"body": #{'Source Sans Pro', sans-serif}
 );
 
 $settings: (
@@ -45,6 +45,3 @@ $columns: (
 );
 
 $columns__margin: 3.8%;
-
-$font__heading: 'Merriweather', serif;
-$font__body: 'Source Sans Pro', sans-serif;

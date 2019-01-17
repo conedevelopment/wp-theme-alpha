@@ -37,12 +37,13 @@
 // Validation messages
 .wpcf7-response-output {
     margin: 1.5rem 0 0 0;
-    padding: 0.6em 1.2em;
+    padding: 0.8em 1.2em;
     border-radius: map-get($settings, 'border-radius');
     background: map-get($colors, 'medium-gray');
     color: map-get($colors, 'black');
     font-size: 1rem;
     font-weight: 700;
+    line-height: 1.4;
 
     &.wpcf7-mail-sent-ok {
         background: map-get($colors, 'success');
@@ -96,7 +97,128 @@
         }
 
         .wpcf7-list-item-label {
-            line-height: 1.2em;
+            line-height: 1.2;
+        }
+    }
+}
+
+.wpcf7-checkbox {
+    .wpcf7-list-item {
+        height: 25px;
+    }
+
+    label {
+        margin: 0;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked + .wpcf7-list-item-label{
+                &::after {
+                    content: '';
+                }
+            }
+
+            &:focus + .wpcf7-list-item-label{
+                &::before {
+                    border-color: map-get($colors, 'default');
+                }
+            }
+        }
+
+        .wpcf7-list-item-label {
+            position: relative;
+            padding-left: 35px;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -2px;
+                left: 0;
+                z-index: 5;
+                width: 25px;
+                height: 25px;
+                border: 1px solid #eee;
+                background: #f6f6f6;
+                border-radius: map-get($colors, 'border-radius');
+            }
+
+            &::after {
+                content: none;
+                display: block;
+                position: absolute;
+                top: 5px;
+                left: 6px;
+                z-index: 10;
+                width: 14px;
+                height: 7px;
+                border-left: 2px solid map-get($colors, 'default');
+                border-bottom: 2px solid map-get($colors, 'default');
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+.wpcf7-radio {
+    .wpcf7-list-item {
+        height: 25px;
+    }
+
+    label {
+        margin: 0;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked + .wpcf7-list-item-label{
+                &::after {
+                    content: '';
+                }
+            }
+
+            &:focus + .wpcf7-list-item-label{
+                &::before {
+                    border-color: map-get($colors, 'default');
+                }
+            }
+        }
+
+        .wpcf7-list-item-label {
+            position: relative;
+            padding-left: 35px;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -2px;
+                left: 0;
+                z-index: 5;
+                width: 25px;
+                height: 25px;
+                border: 1px solid #eee;
+                background: #f6f6f6;
+                border-radius: 50%;
+            }
+
+            &::after {
+                content: none;
+                display: block;
+                position: absolute;
+                top: 5px;
+                left: 7px;
+                z-index: 10;
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                background-color: map-get($colors, 'default'); 
+            }
         }
     }
 }

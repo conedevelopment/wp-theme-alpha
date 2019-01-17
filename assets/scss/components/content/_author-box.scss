@@ -67,7 +67,7 @@
     &__description {
         color: map-get($colors, 'dark-gray');
         font-size: 1.1rem;
-        line-height: 1.6em;
+        line-height: 1.6;
         margin: 0;
     }
 
@@ -93,7 +93,7 @@
         background: map-get($colors, 'default');
         font-size: 0.8rem;
         margin: 0 1rem 0 0;
-        line-height: 1em;
+        line-height: 1;
         text-transform: uppercase;
         transition: background 0.15s ease;
 

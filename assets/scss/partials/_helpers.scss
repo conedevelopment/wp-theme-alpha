@@ -42,7 +42,7 @@
     transition: 0.25s ease;
     font-size: 0.8rem;
     text-transform: uppercase;
-    line-height: 1em;
+    line-height: 1;
     border-radius: map-get($settings, 'border-radius');
     cursor: pointer;
 

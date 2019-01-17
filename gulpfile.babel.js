@@ -161,7 +161,6 @@ gulp.task( 'gutenbergStyles', () => {
 	return gulp
 		.src( config.gutenbergStyleSRC, { allowEmpty: true })
 		.pipe( plumber( errorHandler ) )
-		.pipe( sourcemaps.init() )
 		.pipe(
 			sass({
 				errLogToConsole: config.gutenbergErrLogToConsole,
@@ -170,10 +169,7 @@ gulp.task( 'gutenbergStyles', () => {
 			})
 		)
 		.on( 'error', sass.logError )
-		.pipe( sourcemaps.write({ includeContent: false }) )
-		.pipe( sourcemaps.init({ loadMaps: true }) )
 		.pipe( autoprefixer( config.BROWSERS_LIST ) )
-		.pipe( sourcemaps.write( './' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.gutenbergStyleDestination ) )
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.

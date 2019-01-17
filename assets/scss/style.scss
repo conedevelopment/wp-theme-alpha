@@ -46,7 +46,7 @@ This theme, like WordPress, is licensed under the GPL.
 }
 
 body {
-    font-family: $font__body;
+    font-family: map-get($fonts, 'body');
     font-size: 1rem;
     overflow-x: hidden;
 

@@ -34,7 +34,7 @@
 			font-size: 1.2rem;
 			margin-bottom: 0.3rem;
 			display: block;
-			line-height: 1.3em;
+			line-height: 1.3;
 		}
 
 		.rss-date {
@@ -52,7 +52,7 @@
 	&-title {
 		font-size: 0.9rem;
 		text-transform: uppercase;
-		font-family: $font__body;
+		font-family: map-get($fonts, 'body');
 		color: rgba(0, 0, 0, 0.2);
 		position: relative;
 		margin-bottom: 1rem;

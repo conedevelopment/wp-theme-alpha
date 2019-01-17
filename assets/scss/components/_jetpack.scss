@@ -10,3 +10,13 @@
         }
     }
 }
+
+.infinite-loader {
+    color: #000;
+    text-indent: -9999px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: center;
+    display: flex;
+    height: 3rem;
+}

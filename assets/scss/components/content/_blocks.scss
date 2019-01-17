@@ -2,7 +2,7 @@
     padding: 1rem 2rem;
     font-family: map-get($fonts, 'heading');
     font-size: 1.9rem;
-    line-height: 1.5em;
+    line-height: 1.5;
 }
 
 .wp-block-table {
@@ -21,7 +21,7 @@
     background: #f1f1f1;
     border-radius: map-get($settings, 'border-radius');
     font-size: 0.9rem;
-    line-height: 1.5em;
+    line-height: 1.5;
 }
 
 .wp-block-code {
@@ -34,14 +34,15 @@
     padding: 2rem;
     border-radius: map-get($settings, 'border-radius');
     font-size: 0.9rem;
-    line-height: 1.5em;
+    line-height: 1.5;
 }
 
 .wp-block-button__link {
     @include btn;
 }
 
-.wp-block-file {
+.wp-block-file,
+.wp-block-file__content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -13,13 +13,6 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/root";
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/images";
-@import "../../node_modules/bootstrap/scss/code";
-@import "../../node_modules/bootstrap/scss/grid";
-@import "../../node_modules/bootstrap/scss/tables";
 @import "../../node_modules/bootstrap/scss/utilities";
 
 
@@ -40,29 +33,58 @@
 
 
 
-body {
-    font-family: $font__body;
-    color: map-get($colors, 'text');
+.wp-block {
+    max-width: 720px;
+}
 
-    &,
-    & p {
-        font-size: 1.3rem;
-        color: map-get($colors, 'text');
-        line-height: 1.7em;
-        font-weight: 300;
+.wp-block[data-align="wide"] {
+    max-width: 1080px;
+}
+
+.wp-block[data-align="full"] {
+    max-width: none;
+}
+
+.editor-styles-wrapper {
+    font-family: map-get($fonts, 'body') !important;
+    color: map-get($colors, 'text') !important;
+    
+    p {
+        font-size: 1.3rem !important;
+        color: map-get($colors, 'text') !important;
+        line-height: 1.7 !important;
+        font-weight: 300 !important;
+    }
+
+    p.has-drop-cap:not(:focus)::first-letter {
+        float: left;
+        font-size: 4rem;
+        line-height: 1;
+        font-weight: 100;
+        margin: 0.05em 0.1em 0 0;
+        text-transform: uppercase;
+        font-style: normal;
+        font-family: map-get($fonts, 'heading');
+        color: map-get($colors, 'black');
     }
 
     a {
         transition: color 0.25s ease;
         color: map-get($colors, 'default');
+        font-size: 1.3rem !important;
+        text-decoration: none;
 
         &:hover,
         &:active,
         &:focus {
-            text-decoration: none;
+            text-decoration: underline;
             transition: color 0.25s ease;
             color: map-get($colors, 'secondary');
         }
+    }
+
+    .editor-post-permalink a {
+        font-size: 1rem !important;
     }
 
     h1,
@@ -73,9 +95,9 @@ body {
     h6 {
         display: block;
         font-weight: 700;
-        line-height: 1.4em;
+        line-height: 1.4;
         color: map-get($colors, 'black');
-        font-family: $headings-font-family;
+        font-family: map-get($fonts, 'heading');
     }
 
     h1,
@@ -138,16 +160,220 @@ body {
             font-size: 1.2rem;
         }
     }
+
+    a[href*="http://"],
+    a[href*="https://"],
+    a[href*="www"] {
+        word-wrap: break-word;
+    }
     
-    .wp-block {
-        max-width: 720px;
+    .wp-block-quote,
+    blockquote {
+        padding: 0 2rem;
+        color: map-get($colors, 'black');
+        font-family: map-get($fonts, 'body');
+        border-left: 5px solid map-get($colors, 'black');
+        font-size: 1.1rem;
+        line-height: 1.6;
+
+        &.is-large,
+        &.is-style-large {
+            margin-top: 2rem;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            p {
+                font-size: 1.3rem;
+                line-height: 1.7;
+            }
+        }
+
+        cite {
+            color: rgba(0,0,0,0.5);
+            font-size: 1rem;
+            font-family: map-get($fonts, 'heading');
+        }
     }
 
-    .wp-block[data-align="wide"] {
-        max-width: 1080px;
+    > .alignwide {
+        max-width: 1100px;
     }
 
-    .wp-block[data-align="full"] {
-        max-width: none;
+    > .alignfull {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    ul,
+    ol {
+        list-style-position: outside;
+    }
+
+    .wp-block-video {
+        video {
+            width: 100%;
+        }
+    }
+
+    .wp-block-image img {
+        display: block;
+    }
+
+    .wp-block-image.alignleft,
+    .wp-block-image.alignright {
+        width: 100%
+    }
+
+    .wp-block-image.alignfull img {
+        width: 100vw;
+    }
+
+    ul.wp-block-latest-posts.alignwide,
+    ul.wp-block-latest-posts.alignfull,
+    ul.wp-block-latest-posts.is-grid.alignwide,
+    ul.wp-block-latest-posts.is-grid.alignwide {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .wp-block-audio {
+        audio {
+            width: 100%;
+        }
+    }
+
+    .wp-block-embed.type-video,
+    .wp-block-embed-vimeo,
+    .wp-block-embed-youtube {
+        .wp-block-embed__wrapper {
+            position: relative;
+            display: block;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            padding-bottom: 56.25%;
+        
+            iframe,
+            embed,
+            object,
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                border: 0;
+            }
+        }
+    }
+
+    .wp-block-embed-wordpress,
+    .wp-block-embed-twitter {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wp-block-pullquote>p:first-child {
+        margin-top: 0;
+    }
+    
+    .wp-block-separator {
+        margin: 3em auto;
+        padding: 0;
+    }
+
+    .alignleft, img.alignleft {
+        float: left;
+        margin-right: 1.5rem;
+    }
+
+    .alignright, img.alignright {
+        float: right;
+        margin-left: 1.5rem;
+    }
+
+    .aligncenter, img.aligncenter {
+        clear: both;
+    }
+
+    .alignnone, img.alignnone {
+        clear: both;
+    }
+
+    .wp-caption {
+        height: auto;
+    }
+
+    .wp-caption img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .wp-caption .wp-caption-text  {
+        text-align: center;
+        font-size: 0.85rem;
+        margin-top: 1em;
+        color: #999;
+        line-height: 1.6;
+
+        @include media-breakpoint-up(md) {
+            font-size: 0.95rem;
+        }
+    }
+
+    .gallery-caption {
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: 0.7rem;
+        color: #999;
+        line-height: 1.6;
+    }
+
+    .wp-block-cover-text {
+        padding: 1rem 2rem;
+        font-family: map-get($fonts, 'heading');
+        font-size: 1.9rem !important;
+        line-height: 1.5;
+        color: #fff !important; 
+    }
+
+    
+    table,
+    .wp-block-table {
+        display: table;
+        font-size: 1rem;
+        font-weight: 400;
+        table-layout: fixed;
+        line-height: 1.3;
+
+        thead {
+            tr {
+                td {
+                    border-color: #efefef;
+                    
+                }
+            }
+        }
+        
+        th {
+            border: 1px solid #efefef;
+            padding: 1rem;
+        }
+        td {
+            border: 1px solid #efefef;
+            padding: 0.6rem 1rem;
+        }
+    }
+
+    dt {
+        font-weight: 700;
+    }
+
+    dd {
+        padding: 0 0 0.5em 0;
     }
 }

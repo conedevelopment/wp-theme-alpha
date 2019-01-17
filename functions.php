@@ -74,8 +74,11 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 
+		add_theme_support('disable-custom-font-sizes');
+		add_theme_support( 'disable-custom-colors' );
+
 		// Enqueue editor styles.
-		add_editor_style( 'style-editor.css' );
+		// add_editor_style( 'style-editor.css' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
@@ -332,13 +335,11 @@ add_filter( 'excerpt_more', 'pine_alpha_excerpt_more' );
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
 function pine_alpha_content_image_sizes_attr( $sizes, $size ) {
-	
 	$width = $size[0];
 
 	1000 <= $width && $sizes = '(max-width: 575px) 95vw, (max-width: 767px) 240px, (max-width: 991px) 330px, (max-width: 1199px) 290px 400px';
 
 	return $sizes;
-	
 }
 add_filter( 'wp_calculate_image_sizes', 'pine_alpha_content_image_sizes_attr', 10, 2 );
 
@@ -391,6 +392,8 @@ function pine_alpha_scripts() {
 
 	wp_enqueue_style( 'pine-alpha-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'jquery' );
+
 	if( get_theme_mod( 'pine_alpha_header_section_navigation_sticky', 0 ) == 1 ) {
 		wp_enqueue_script( 'pine-alpha-headroom', get_template_directory_uri() . '/assets/js/plugins/headroom.js', array(), THEME_VERSION, true );
 		wp_enqueue_script( 'pine-alpha-headroom-jquery', get_template_directory_uri() . '/assets/js/plugins/jQuery.headroom.js', array(), THEME_VERSION, true );
@@ -429,6 +432,14 @@ function pine_alpha_admin_scripts( $hook ) {
 	wp_enqueue_style( 'pine-alpha-welcome-style', get_template_directory_uri() . '/inc/welcome/css/style.css', array(), THEME_VERSION, 'all' );
 }
 add_action( 'admin_enqueue_scripts', 'pine_alpha_admin_scripts', 5 );
+
+/**
+ * Add backend styles for Gutenberg.
+ */
+function pine_alpha_add_gutenberg_assets() {
+	wp_enqueue_style( 'pine-alpha-gutenberg',  get_template_directory_uri() . '/style-editor.css', false );
+}
+add_action( 'enqueue_block_editor_assets', 'pine_alpha_add_gutenberg_assets' );
 
 /**
  * Use front-page.php when Front page displays is set to a static page.
