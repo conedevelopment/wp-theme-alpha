@@ -333,21 +333,9 @@
         width: 25px;
         cursor: pointer;
         margin-left: 2rem;
-        display: inline-block;
+        display: block;
         background: none;
         border: none;
-
-        &:hover {
-            span {
-                &:first-child {
-                    width: 20px;
-                }
-
-                &:last-child {
-                    width: 15px;
-                }
-            }
-        }
 
         span {
             background: map-get($colors, 'black');
@@ -355,7 +343,7 @@
             border-radius: map-get($settings, 'border-radius');
             margin: 5px 0;
             display: block;
-            transition: 0.3s;
+            width: 100%;
 
             &:first-child {
                 width: 15px;

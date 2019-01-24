@@ -22,9 +22,8 @@ $slider_posts = new WP_Query( array(
                 <div <?php post_class( 'slider-item' ); ?> style="background-image: url(<?php echo $featured_img_url; ?>); color: <?php echo $term_color; ?>;">
                     <?php /*<div class="slider-item__categories"</div> */ ?>
                     <div class="slider-item__caption">
-                        <span class="slider-item__date">
+                        <span class="slider-item__meta">
                             <?php echo pine_alpha_posted_on(); ?>
-                            <span class="slider-item__separator"></span>
                             <?php pine_alpha_get_category_list( $post->ID, false ); ?>
                         </span>
                         <h2 class="slider-item__title"><?php the_title(); ?></h2>

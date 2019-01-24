@@ -40,21 +40,27 @@ if ( ! function_exists( 'pine_alpha_posted_on' ) ) :
 	 */
 	function pine_alpha_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+		if ( is_singular() && !is_front_page() ) {
+			$time_string = __( 'Posted on ', 'pine-alpha') . $time_string;
+		}
+
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+			$time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
+
+			if ( is_singular() && !is_front_page() ) {
+				$time_string = __( 'Updated on ', 'pine-alpha') . $time_string;
+			}
 		}
 
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() )
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'pine-alpha' ), $time_string
-		);
-
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on">' . $time_string . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;

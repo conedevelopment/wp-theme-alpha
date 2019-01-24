@@ -996,13 +996,15 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 .wp-block[data-align="full"] { max-width: none; }
 
-.editor-styles-wrapper { font-family: Source Sans Pro, sans-serif !important; color: #434343 !important; }
+.editor-styles-wrapper { font-family: Source Sans Pro, sans-serif !important; color: #434343 !important; font-size: 1.3rem !important; line-height: 1.7 !important; font-weight: 300 !important; }
 
 .editor-styles-wrapper p { font-size: 1.3rem !important; color: #434343 !important; line-height: 1.7 !important; font-weight: 300 !important; }
 
+.editor-styles-wrapper strong { font-weight: 400; }
+
 .editor-styles-wrapper p.has-drop-cap:not(:focus)::first-letter { float: left; font-size: 4rem; line-height: 1; font-weight: 100; margin: 0.05em 0.1em 0 0; text-transform: uppercase; font-style: normal; font-family: Merriweather, serif; color: #231F20; }
 
-.editor-styles-wrapper a { -webkit-transition: color 0.25s ease; transition: color 0.25s ease; color: #0095FF; font-size: 1.3rem !important; text-decoration: none; }
+.editor-styles-wrapper a { -webkit-transition: color 0.25s ease; transition: color 0.25s ease; color: #0095FF; font-size: 1.3rem !important; text-decoration: none; font-weight: 400 !important; }
 
 .editor-styles-wrapper a:hover, .editor-styles-wrapper a:active, .editor-styles-wrapper a:focus { text-decoration: underline; -webkit-transition: color 0.25s ease; transition: color 0.25s ease; color: #3be197; }
 
@@ -1046,9 +1048,9 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 .editor-styles-wrapper .wp-block-quote.is-large, .editor-styles-wrapper .wp-block-quote.is-style-large, .editor-styles-wrapper blockquote.is-large, .editor-styles-wrapper blockquote.is-style-large { margin-top: 2rem; margin-bottom: 0; padding-top: 0; padding-bottom: 0; }
 
-.editor-styles-wrapper .wp-block-quote.is-large p, .editor-styles-wrapper .wp-block-quote.is-style-large p, .editor-styles-wrapper blockquote.is-large p, .editor-styles-wrapper blockquote.is-style-large p { font-size: 1.3rem; line-height: 1.7; }
+.editor-styles-wrapper .wp-block-quote.is-large p, .editor-styles-wrapper .wp-block-quote.is-style-large p, .editor-styles-wrapper blockquote.is-large p, .editor-styles-wrapper blockquote.is-style-large p { font-size: 1.3rem; line-height: 1.7; font-weight: 400 !important; }
 
-.editor-styles-wrapper .wp-block-quote cite, .editor-styles-wrapper blockquote cite { color: rgba(0, 0, 0, 0.5); font-size: 1rem; font-family: Merriweather, serif; }
+.editor-styles-wrapper .wp-block-quote cite, .editor-styles-wrapper blockquote cite { color: rgba(0, 0, 0, 0.5); font-size: 1rem; font-family: Merriweather, serif; font-weight: 300 !important; }
 
 .editor-styles-wrapper > .alignwide { max-width: 1100px; }
 

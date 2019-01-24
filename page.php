@@ -12,11 +12,11 @@
  * @package pine-alpha
  */
 
-$title_display_type = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_title_display_type' )  ? get_post_meta( get_the_ID(), '_pine_alpha_title_display_type', true ) : 'white' );
-$title_padding_size = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_title_padding_size' )  ? get_post_meta( get_the_ID(), '_pine_alpha_title_padding_size', true ) : 'medium' );
-$show_meta_data = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_show_meta_data' )  ? get_post_meta( get_the_ID(), '_pine_alpha_show_meta_data', true ) : 'no' );
-$sidebar_poisition = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_sidebar_poisition' )  ? get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) : 'right' );
-$sidebar_style = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_sidebar_style' )  ? get_post_meta( get_the_ID(), '_pine_alpha_sidebar_style', true ) : 'white' );
+$title_display_type = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_title_display_type' )  ? get_post_meta( get_the_ID(), 'pine_alpha_title_display_type', true ) : 'white' );
+$title_padding_size = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_title_padding_size' )  ? get_post_meta( get_the_ID(), 'pine_alpha_title_padding_size', true ) : 'medium' );
+$show_meta_data = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_show_meta_data' )  ? get_post_meta( get_the_ID(), 'pine_alpha_show_meta_data', true ) : 'no' );
+$sidebar_poisition = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_sidebar_poisition' )  ? get_post_meta( get_the_ID(), 'pine_alpha_sidebar_poisition', true ) : 'right' );
+$sidebar_style = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_sidebar_style' )  ? get_post_meta( get_the_ID(), 'pine_alpha_sidebar_style', true ) : 'white' );
 
 get_header();
 ?>
@@ -32,7 +32,7 @@ get_header();
 				echo 'background-image: url(' . get_the_post_thumbnail_url(get_the_ID(),'pine_alpha_category_cover_image_id') . ');';
 			}
 
-			echo 'color: ' . get_post_meta( get_the_ID(), '_pine_alpha_color', true ) . ';';
+			echo 'color: ' . get_post_meta( get_the_ID(), 'pine_alpha_color', true ) . ';';
 		?>
 		">
 		<div class="container">

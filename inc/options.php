@@ -12,7 +12,7 @@ add_action( 'cmb2_admin_init', 'pine_alpha_register_theme_options_metabox' );
  */
 function pine_alpha_register_theme_options_metabox() {
 
-	$prefix = '_pine_alpha_';
+	$prefix = 'pine_alpha_';
 	
 	$cmb_options = new_cmb2_box( array(
 		'id'              => $prefix . 'theme_options_page',
@@ -264,10 +264,10 @@ function pine_alpha_register_theme_options_metabox() {
 function pine_alpha_get_option( $key = '', $default = false ) {
 	if ( function_exists( 'cmb2_get_option' ) ) {
 		// Use cmb2_get_option as it passes through some key filters.
-		return cmb2_get_option( '_pine_alpha_theme_options', $key, $default );
+		return cmb2_get_option( 'pine_alpha_theme_options', $key, $default );
 	}
 	// Fallback to get_option if CMB2 is not loaded yet.
-	$opts = get_option( '_pine_alpha_theme_options', $default );
+	$opts = get_option( 'pine_alpha_theme_options', $default );
 	$val = $default;
 	if ( 'all' == $key ) {
 		$val = $opts;

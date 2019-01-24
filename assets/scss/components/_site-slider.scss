@@ -1,12 +1,22 @@
 .slider-posts {
     position: relative;
-    padding: 1rem 0;
     background: map-get($colors, 'light-gray');
+    visibility: hidden;
+
+    @include media-breakpoint-up(md) {
+        padding: 1rem 0;
+    }
+
+    &.slick-initialized {
+        visibility: visible;
+    }
 }
 
 .slick-slide {
     > div {
-        margin: 1rem;
+        @include media-breakpoint-up(md) {
+            margin: 1rem;
+        }
     }
 }
 
@@ -21,7 +31,7 @@
     flex-wrap: wrap;
     z-index: 10;
     max-width: 100%;
-    height: 420px;
+    height: 400px;
     width: 300px !important;
 
     @include media-breakpoint-up(md) {
@@ -51,13 +61,20 @@
         }
     }
 
-    &__separator {
-        display: inline-block;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.5);
-        margin: 0 1rem;
+    .categories-wrapper {
+        position: relative;
+        padding-left: 1.8rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0.7rem;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+        }
     }
 
     &__categories {
@@ -80,6 +97,7 @@
 
     .category-label {
         margin: 0 0.5rem 0 0;
+        display: inline-block;
     }
 
     &__caption {
@@ -88,13 +106,10 @@
         margin-top: auto;
     }
 
-    &__date {
+    &__meta {
         color: rgba(255,255,255,0.8);
         font-weight: 700;
         text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
     }
 
     &__title {

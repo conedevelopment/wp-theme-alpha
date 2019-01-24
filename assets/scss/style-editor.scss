@@ -48,12 +48,19 @@
 .editor-styles-wrapper {
     font-family: map-get($fonts, 'body') !important;
     color: map-get($colors, 'text') !important;
+    font-size: 1.3rem !important;
+    line-height: 1.7 !important;
+    font-weight: 300 !important;
     
     p {
         font-size: 1.3rem !important;
         color: map-get($colors, 'text') !important;
         line-height: 1.7 !important;
         font-weight: 300 !important;
+    }
+
+    strong {
+        font-weight: 400;
     }
 
     p.has-drop-cap:not(:focus)::first-letter {
@@ -73,6 +80,7 @@
         color: map-get($colors, 'default');
         font-size: 1.3rem !important;
         text-decoration: none;
+        font-weight: 400 !important;
 
         &:hover,
         &:active,
@@ -186,6 +194,7 @@
             p {
                 font-size: 1.3rem;
                 line-height: 1.7;
+                font-weight: 400 !important;
             }
         }
 
@@ -193,6 +202,7 @@
             color: rgba(0,0,0,0.5);
             font-size: 1rem;
             font-family: map-get($fonts, 'heading');
+            font-weight: 300 !important;
         }
     }
 

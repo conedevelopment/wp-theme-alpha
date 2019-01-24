@@ -10,7 +10,7 @@
  * @package pine-alpha
  */
 
-$sidebar_poisition = ( metadata_exists( 'post', get_the_ID(), '_pine_alpha_sidebar_poisition' )  ? get_post_meta( get_the_ID(), '_pine_alpha_sidebar_poisition', true ) : 'right' );
+$sidebar_poisition = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_sidebar_poisition' )  ? get_post_meta( get_the_ID(), 'pine_alpha_sidebar_poisition', true ) : 'right' );
 
 /*
  * If the current post is protected by a password and

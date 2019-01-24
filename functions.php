@@ -556,9 +556,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Load custom code in header.
  */
-if ( pine_alpha_get_option( '_pine_alpha_theme_options_code_head_textareacode' ) ) {
+if ( pine_alpha_get_option( 'pine_alpha_theme_options_code_head_textareacode' ) ) {
 	function pine_alpha_load_custom_code_in_header() {
-		echo pine_alpha_get_option( '_pine_alpha_theme_options_code_head_textareacode' );
+		echo pine_alpha_get_option( 'pine_alpha_theme_options_code_head_textareacode' );
 	}
 
 	add_action( 'wp_head', 'pine_alpha_load_custom_code_in_header', 999 );
@@ -567,9 +567,9 @@ if ( pine_alpha_get_option( '_pine_alpha_theme_options_code_head_textareacode' )
 /**
  * Load custom code in footer.
  */
-if ( pine_alpha_get_option( '_pine_alpha_theme_options_code_body_textareacode' ) ) {
+if ( pine_alpha_get_option( 'pine_alpha_theme_options_code_body_textareacode' ) ) {
 	function pine_alpha_load_custom_code_in_body() {
-		echo pine_alpha_get_option( '_pine_alpha_theme_options_code_body_textareacode' );
+		echo pine_alpha_get_option( 'pine_alpha_theme_options_code_body_textareacode' );
 	}
 
 	add_action( 'wp_footer', 'pine_alpha_load_custom_code_in_body', 999 );
