@@ -15,15 +15,11 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	return;
 }
 
+
 /**
  * Include the TGM_Plugin_Activation class.
  */
 require_once __DIR__ . '/inc/tgmpa/class-tgm-plugin-activation.php';
-
-/**
- * Set up Composer autoload
- */
-// require_once __DIR__ . '/vendor/autoload.php';
 
 
 if( ! defined( 'THEME_VERSION' ) ) {
