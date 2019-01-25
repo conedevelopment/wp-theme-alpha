@@ -46,10 +46,10 @@ if ( ! function_exists( 'pine_alpha_posted_on' ) ) :
 		}
 
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
+			$update_string = '<time class="updated" datetime="%3$s">%4$s</time>';
 
 			if ( is_singular() && !is_front_page() ) {
-				$time_string = __( 'Updated on ', 'pine-alpha') . $time_string;
+				$time_string .= ', ' . __( 'Updated on ', 'pine-alpha') . $update_string;
 			}
 		}
 

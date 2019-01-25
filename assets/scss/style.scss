@@ -27,7 +27,11 @@ This theme, like WordPress, is licensed under the GPL.
 
 :root {
     box-sizing: border-box;
-    font-size: 90%;
+    font-size: 85%;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 90%;
+    }
 
     @include media-breakpoint-up(md) {
         font-size: 100%;

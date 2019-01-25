@@ -20,3 +20,25 @@
     display: flex;
     height: 3rem;
 }
+
+.sharedaddy {
+    .sd-content {
+        margin: 0;
+
+        ul li {
+            margin: 0 0.6rem 0.6rem 0;
+            padding: 0;
+        }
+    }
+}
+
+#jp-relatedposts {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 0 !important;
+    margin-top: 2rem !important;
+
+    .jp-relatedposts-post-img {
+        margin-bottom: 0.5rem;
+    }
+}
