@@ -35,7 +35,7 @@ add_action( 'after_switch_theme', 'pine_alpha_switch_theme' );
  * @global string $wp_version WordPress version.
  */
 function pine_alpha_upgrade_notice() {
-	$message = sprintf( __( 'Alpha requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'pine_alpha' ), $GLOBALS['wp_version'] );
+	$message = sprintf( __( 'Alpha requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'pine-alpha' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -47,7 +47,7 @@ function pine_alpha_upgrade_notice() {
  * @global string $wp_version WordPress version.
  */
 function pine_alpha_customize() {
-	wp_die( sprintf( __( 'Alpha requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'pine_alpha' ), $GLOBALS['wp_version'] ), '', array(
+	wp_die( sprintf( __( 'Alpha requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'pine-alpha' ), $GLOBALS['wp_version'] ), '', array(
 		'back_link' => true,
 	) );
 }
@@ -62,7 +62,7 @@ add_action( 'load-customize.php', 'pine_alpha_customize' );
  */
 function pine_alpha_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( __( 'Alpha requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'pine_alpha' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( __( 'Alpha requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'pine-alpha' ), $GLOBALS['wp_version'] ) );
 	}
 }
 add_action( 'template_redirect', 'pine_alpha_preview' );

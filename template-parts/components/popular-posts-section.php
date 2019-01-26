@@ -19,7 +19,7 @@ $latest_posts = new WP_Query( array(
 					<div class="col-12">
 						<h2 class="section-title">
 							<span class="section-title__helper">
-								<?php echo esc_attr__( get_theme_mod( 'pine_alpha_components_popular_posts_section_title' ), 'pine-alpha'); ?>
+								<?php echo esc_attr__( get_theme_mod( 'pine_alpha_components_popular_posts_section_title' ), 'pine-alpha' ); ?>
 							</span>
 						</h2>
 					</div>

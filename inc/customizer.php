@@ -1184,7 +1184,7 @@ if( class_exists( 'Kirki' ) ) {
 		'settings' => 'pine_alpha_footer_general_legal_copy',
 		'label'    => __( 'Footnote', 'pine-alpha' ),
 		'section'  => 'pine_alpha_footer_general',
-		'default'  => esc_attr__( '© 2018 - Aplha, a magazine theme by Pine.', 'pine-alpha' ),
+		'default'  => esc_attr__( '© 2018 - Alpha, a magazine theme by Pine.', 'pine-alpha' ),
 		'priority' => 10,
 	) );
 
