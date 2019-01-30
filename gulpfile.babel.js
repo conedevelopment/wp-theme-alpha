@@ -61,6 +61,7 @@ const cache = require( 'gulp-cache' ); // Cache files in stream for later use.
 const remember = require( 'gulp-remember' ); //  Adds all the files it has ever seen back into the stream.
 const plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by errors from gulp plugins.
 const beep = require( 'beepbeep' );
+const gulpif = require( 'gulp-if' );
 
 /**
  * Custom Error Handler.
@@ -116,7 +117,7 @@ gulp.task( 'styles', () => {
 	return gulp
 		.src( config.styleSRC, { allowEmpty: true })
 		.pipe( plumber( errorHandler ) )
-		.pipe( sourcemaps.init() )
+		.pipe( gulpif( config.sourceMaps, sourcemaps.init() ) )
 		.pipe(
 			sass({
 				errLogToConsole: config.errLogToConsole,
@@ -125,21 +126,14 @@ gulp.task( 'styles', () => {
 			})
 		)
 		.on( 'error', sass.logError )
-		.pipe( sourcemaps.write({ includeContent: false }) )
-		.pipe( sourcemaps.init({ loadMaps: true }) )
+		.pipe( gulpif( config.sourceMaps, sourcemaps.write({ includeContent: false }) ) )
+		.pipe( gulpif( config.sourceMaps, sourcemaps.init({ loadMaps: true }) ) )
 		.pipe( autoprefixer( config.BROWSERS_LIST ) )
-		.pipe( sourcemaps.write( './' ) )
+		.pipe( gulpif( config.sourceMaps, sourcemaps.write( './' ) ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.styleDestination ) )
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
-		.pipe( mmq({ log: true }) ) // Merge Media Queries only for .min.css version.
 		.pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
-		.pipe( rename({ suffix: '.min' }) )
-		.pipe( minifycss({ maxLineLen: 10 }) )
-		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.styleDestination ) )
-		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
-		.pipe( browserSync.stream() ) // Reloads style.min.css if that is enqueued.
 		.pipe( notify({ message: '\n\n✅  ===> STYLES — completed!\n', onLast: true }) );
 });
 
@@ -175,12 +169,6 @@ gulp.task( 'gutenbergStyles', () => {
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
 		.pipe( mmq({ log: true }) ) // Merge Media Queries only for .min.css version.
 		.pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
-		.pipe( rename({ suffix: '.min' }) )
-		.pipe( minifycss({ maxLineLen: 10 }) )
-		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.gutenbergStyleDestination ) )
-		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
-		.pipe( browserSync.stream() ) // Reloads style.min.css if that is enqueued.
 		.pipe( notify({ message: '\n\n✅  ===> GUTENBERG STYLES — completed!\n', onLast: true }) );
 });
 

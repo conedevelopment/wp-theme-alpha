@@ -18,14 +18,14 @@ module.exports = {
 	// Style options.
 	styleSRC: './assets/scss/style.scss', // Path to main .scss file.
 	styleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
-	outputStyle: 'compact', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
+	outputStyle: 'expanded', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 	errLogToConsole: true,
 	precision: 10,
 
 	// Gutenberg Editor Style options.
 	gutenbergStyleSRC: './assets/scss/style-editor.scss', // Path to main .scss file.
 	gutenbergStyleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
-	gutenbergOutputStyle: 'compact', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
+	gutenbergOutputStyle: 'expanded', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 	gutenbergErrLogToConsole: true,
 	gutenbergPrecision: 10,
 
@@ -72,5 +72,7 @@ module.exports = {
 		'last 2 iOS versions',
 		'last 2 Edge versions',
 		'last 2 Opera versions'
-	]
+	],
+
+	sourceMaps: false
 };
