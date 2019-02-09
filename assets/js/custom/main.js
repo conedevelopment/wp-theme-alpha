@@ -16,7 +16,7 @@
 		]
 	});
 
-	$( '.prevent-default.menu-item a' ).on('click', function(e) {
+	$( '.prevent-default.menu-item > a' ).on('click', function(e) {
 		e.preventDefault();
 	})
 
