@@ -1,10 +1,10 @@
 === pine-alpha ===
 
 Contributors: pine
-Tags: custom-logo, custom-menu, featured-images, translation-ready
+Tags: custom-logo, custom-menu, featured-images, featured-image-header, translation-ready, left-sidebar, right-sidebar, custom-colors, editor-style, footer-widgets, post-formats, theme-options, block-styles, wide-blocks
 
 Requires at least: 4.7
-Tested up to: 4.9
+Tested up to: 5.0
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 
@@ -24,11 +24,12 @@ Alpha is a clean and minimalistic magazine/blog theme for those who like to crea
 
 = Does this theme support any plugins? =
 
-Alpha includes support for Infinite Scroll in Jetpack.
+1. Alpha includes support for Infinite Scroll in Jetpack.
+2. Support default styling for Contact Form 7
 
 == Changelog ==
 
-= 1.0.0 - Dec 20 2018 =
+= 1.0.0 - Feb 01 2018 =
 * Initial release
 
 == Credits ==

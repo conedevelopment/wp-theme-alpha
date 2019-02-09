@@ -417,15 +417,15 @@ add_action( 'wp_enqueue_scripts', 'pine_alpha_scripts' );
  * Enqueue admin scripts and styles
  */
 function pine_alpha_admin_scripts( $hook ) {
+	// Load welcome screen CSS
+	wp_enqueue_style( 'pine-alpha-welcome-style', get_template_directory_uri() . '/inc/welcome/css/style.css', array(), THEME_VERSION, 'all' );
+
 	if ( 'post.php' != $hook ) {
         return;
 	}
 	
 	// Load editor fonts from Google
 	wp_enqueue_style( 'pine-alpha-fonts', pine_alpha_fonts_url(), array(), null );
-
-	// Load welcome screen CSS
-	wp_enqueue_style( 'pine-alpha-welcome-style', get_template_directory_uri() . '/inc/welcome/css/style.css', array(), THEME_VERSION, 'all' );
 }
 add_action( 'admin_enqueue_scripts', 'pine_alpha_admin_scripts', 5 );
 

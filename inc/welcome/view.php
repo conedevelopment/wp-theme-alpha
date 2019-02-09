@@ -16,7 +16,6 @@
 
 	<h2 class="nav-tab-wrapper">
 		<a href="?page=pine_alpha_welcome_page&tab=getting_started" class="nav-tab <?php echo $active_tab == 'getting_started' ? 'nav-tab-active' : ''; ?> <?php echo !isset( $active_tab ) ? 'nav-tab-active' : ''; ?>"><?php _e( 'Getting Started', 'pine-alpha' ); ?></a>
-		<a href="?page=pine_alpha_welcome_page&tab=releases" class="nav-tab <?php echo $active_tab == 'releases' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Releases', 'pine-alpha' ); ?></a>
 		<a href="?page=pine_alpha_welcome_page&tab=about_us" class="nav-tab <?php echo $active_tab == 'about_us' ? 'nav-tab-active' : ''; ?>"><?php _e( 'About Us', 'pine-alpha' ); ?></a>
 	</h2>
 
@@ -30,52 +29,12 @@
 			<div class="col">
 				<h3><?php _e( 'Check out the Documentation', 'pine-alpha' ); ?></h3>
 				<p><?php _e( 'Need help or more information?  Go to Alpha\'s documentation page for detailed information.', 'pine-alpha' ); ?></p>
-				<p><a target="_blank" href="https://pineco.de" rel="noopener" class="button button-primary"><?php _e( 'Go to the Documentation', 'pine-alpha' ); ?></a></p>
+				<p><a target="_blank" href="https://pineco.de/wordpress/theme-alpha/alpha-theme-documentation/" rel="noopener" class="button button-primary"><?php _e( 'Go to the Documentation', 'pine-alpha' ); ?></a></p>
 			</div>
 			<div class="col">
 				<h3><?php _e( 'Go to the Customizer', 'pine-alpha' ); ?></h3>
 				<p><?php _e( 'To customize Alpha, you must navigate to the WordPress Customizer.', 'pine-alpha' ); ?></p>
 				<p><a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php _e( 'Go to the Customizer', 'pine-alpha' ); ?></a></p>
-			</div>
-		</div>
-	<?php elseif ( !isset( $active_tab ) || $active_tab == 'releases' ) : ?>
-		<div class="feature-section one-col">
-			<div class="col">
-				<div class="release-item">
-					<p class="release-item__date">December 16, 2018</p>
-					<div class="release-item__data">
-						<h4 class="release-item__title">1.0.0 - Main version</h4>
-						<ul>
-							<li>WPML support</li>
-							<li>Jetpack support</li>
-							<li>Contact Form 7 support
-								<ul>
-									<li>WPML support</li>
-									<li>Jetpack support</li>
-									<li>Contact Form 7 support</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="release-item">
-					<p class="release-item__date">December 16, 2018</p>
-					<div class="release-item__data">
-						<h4 class="release-item__title">1.0.0 - Main version</h4>
-						<ul>
-							<li>WPML support</li>
-							<li>Jetpack support</li>
-							<li>Contact Form 7 support
-								<ul>
-									<li>WPML support</li>
-									<li>Jetpack support</li>
-									<li>Contact Form 7 support</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
 	<?php else : ?>
