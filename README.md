@@ -2,7 +2,7 @@
 
 [Documentation page](https://pineco.de/wordpress/theme-alpha/alpha-theme-documentation/)
 
-![Alpha Cover Image](https://pineco.de/wp-content/uploads/2019/01/alpha-wordpress-theme-preview-1-1200x874.png)
+![Alpha Cover Image](https://pineco.de/wp-content/uploads/2019/01/alpha-wordpress-theme-preview-1-1200x874.png | width=600)
 
 ## Description
 
@@ -10,10 +10,10 @@ Alpha is a clean and minimalistic magazine/blog theme for those who like to crea
 
 ## Information
 
-**Requires at least:** 4.7
-**Tested up to:** 5.0
-**Stable tag:** 1.0.0
-**License:** GNU General Public License v2 or later
+- **Requires at least:** 4.7
+- **Tested up to:** 5.0
+- **Stable tag:** 1.0.0
+- **License:** GNU General Public License v2 or later
 
 ## Installation 
 
