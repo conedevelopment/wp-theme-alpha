@@ -140,6 +140,15 @@
             display: inline-block;
             list-style: none;
 
+            &.prevent-default  {
+                cursor: default !important;
+
+                > a {
+                    pointer-events: none;
+                    cursor: default;
+                }
+            }
+
             &.current-menu-item {
                 > a {
                     color: map-get($colors, 'default');

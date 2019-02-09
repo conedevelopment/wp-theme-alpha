@@ -15,6 +15,9 @@
       width: '340px'
     }]
   });
+  $('.prevent-default.menu-item a').on('click', function (e) {
+    e.preventDefault();
+  });
 
   if ($('.site-header[data-sticky="true"]').length) {
     $('.site-header[data-sticky="true"]').headroom({

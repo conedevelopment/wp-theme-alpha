@@ -6295,6 +6295,15 @@ hue-6-2: #e6c07b
   list-style: none;
 }
 
+.site-header__navigation li.prevent-default {
+  cursor: default !important;
+}
+
+.site-header__navigation li.prevent-default > a {
+  pointer-events: none;
+  cursor: default;
+}
+
 .site-header__navigation li.current-menu-item > a {
   color: #0095FF;
 }
