@@ -2,7 +2,7 @@
 
 [Documentation page](https://pineco.de/wordpress/theme-alpha/alpha-theme-documentation/)
 
-![Alpha Cover Image](https://pineco.de/wp-content/uploads/2019/01/alpha-wordpress-theme-preview-1.png)
+<img src="https://pineco.de/wp-content/uploads/2019/01/alpha-wordpress-theme-preview-1-1200x874.png" width="600" alt="Alpha Cover Image">
 
 ## Description
 
