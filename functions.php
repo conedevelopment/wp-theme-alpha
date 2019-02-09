@@ -125,77 +125,51 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		// Define and register starter content to showcase the theme on new sites.
-		/*$starter_content = array(
+		$starter_content = array(
 			'widgets' => array(
-				// Place three core-defined widgets in the sidebar area.
 				'sidebar-1' => array(
-					'text_business_info',
-					'search',
-					'text_about',
+					'calendar',
+					'search'
 				),
-
-				// Add the core-defined business info widget to the footer 1 area.
 				'footer-1' => array(
-					'text_business_info',
+					'meta',
 				),
-
-				// Put two core-defined widgets in the footer 2 area.
 				'footer-2' => array(
-					'text_about',
-					'search',
+					'recent-posts',
+				),
+				'footer-3' => array(
+					'archives',
+				),
+				'footer-4' => array(
+					'text_business_info',
 				),
 			),
 
-			// Specify the core-defined pages to create and add custom thumbnails to some of them.
 			'posts' => array(
 				'home',
-				'about' => array(
-					'thumbnail' => '{{image-coast}}',
-				),
-				'contact' => array(
-					'thumbnail' => '{{image-mountain}}',
-				),
-				'blog' => array(
-					'thumbnail' => '{{image-coast}}',
-				),
-				'homepage-section' => array(
-					'thumbnail' => '{{image-mountain}}',
-				),
+				'about',
+				'contact',
+				'blog',
 			),
 
-			// Create the custom image attachments used as post thumbnails for pages.
-			'attachments' => array(
-				'image-coast' => array(
-					'post_title' => _x( 'Espresso', 'Theme starter content', 'pine-alpha' ),
-					'file' => 'assets/demo/thumbnails/coast.jpg', // URL relative to the template directory.
-				),
-				'image-mountain' => array(
-					'post_title' => _x( 'Sandwich', 'Theme starter content', 'pine-alpha' ),
-					'file' => 'assets/demo/thumbnails/mountain.jpg',
-				)
-			),
-
-			// Default to a static front page and assign the front and posts pages.
 			'options' => array(
 				'show_on_front' => 'page',
 				'page_on_front' => '{{home}}',
 				'page_for_posts' => '{{blog}}',
 			),
 
-			// Set up nav menus for each of the two areas registered in the theme.
 			'nav_menus' => array(
-				// Assign a menu to the "top" location.
 				'header' => array(
 					'name' => __( 'Header Menu', 'pine-alpha' ),
 					'items' => array(
-						'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+						'link_home',
 						'page_about',
 						'page_blog',
 						'page_contact',
 					),
 				),
 			),
-		); */
+		);
 
 		/**
 		 * Filters Alpha array of starter content.
@@ -204,9 +178,9 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 		 *
 		 * @param array $starter_content Array of starter content.
 		 */
-		/* $starter_content = apply_filters( 'pine_alpha_starter_content', $starter_content );
+		$starter_content = apply_filters( 'pine_alpha_starter_content', $starter_content );
 
-		add_theme_support( 'starter-content', $starter_content ); */
+		add_theme_support( 'starter-content', $starter_content );
 	}
 }
 add_action( 'after_setup_theme', 'pine_alpha_setup' );

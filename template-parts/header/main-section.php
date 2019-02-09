@@ -21,7 +21,7 @@
                     <?php if( ! empty($site_logo['url']) ) : ?>
                         <img src="<?php echo esc_url( $image['url'] ); ?>" class="img-fluid" alt="<?php _e( 'Site Logo', 'pine-alpha' ); ?>">
                     <?php else : ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/demo/logo.svg" class="img-fluid" alt="<?php _e( 'Alpha Theme Site Logo', 'pine-alpha' ); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" class="img-fluid" alt="<?php _e( 'Alpha Theme Site Logo', 'pine-alpha' ); ?>">
                     <?php endif; ?>
                 </a>
                 
