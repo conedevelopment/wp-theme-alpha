@@ -29,6 +29,13 @@ module.exports = {
 	gutenbergErrLogToConsole: true,
 	gutenbergPrecision: 10,
 
+	// Tiny Mce Editor Style options.
+	tinyMceStyleSRC: './assets/scss/style-editor-tiny-mce.scss', // Path to main .scss file.
+	tinyMceStyleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
+	tinyMceOutputStyle: 'expanded', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
+	tinyMceErrLogToConsole: true,
+	tinyMcePrecision: 10,
+
 	// JS Vendor options.
 	jsVendorSRC: './assets/js/vendor/*.js', // Path to JS vendor folder.
 	jsVendorDestination: './assets/dist/', // Path to place the compiled JS vendors file.

@@ -1,6 +1,6 @@
 .wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+	height: auto;
+	max-width: 100% !important;
 
 	img[class*="wp-image-"] {
 		display: block;
@@ -8,11 +8,24 @@
 		margin-right: auto;
 	}
 
-	.wp-caption-text {
-		margin: 0.8075em 0;
+	.wp-caption-text,
+	.wp-caption-dd  {
+		text-align: center;
+		font-size: 0.85rem;
+		margin-top: 1em;
+		color: #999;
+		line-height: 1.6;
+	
+		@include media-breakpoint-up(md) {
+			font-size: 0.95rem;
+		}
 	}
 }
 
-.wp-caption-text {
+.gallery-caption {
 	text-align: center;
+	font-size: 0.9rem;
+	margin-top: 0.7rem;
+	color: #999;
+	line-height: 1.6;
 }

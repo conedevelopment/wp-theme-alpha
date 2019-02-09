@@ -173,6 +173,41 @@ gulp.task( 'gutenbergStyles', () => {
 });
 
 /**
+ * Task: `tinyMceStyles`.
+ *
+ * Compiles Sass, Autoprefixes it and Minifies CSS.
+ *
+ * This task does the following:
+ *    1. Gets the source scss file
+ *    2. Compiles Sass to CSS
+ *    3. Writes Sourcemaps for it
+ *    4. Autoprefixes it and generates style.css
+ *    5. Renames the CSS file with suffix .min.css
+ *    6. Minifies the CSS file and generates style.min.css
+ *    7. Injects CSS or reloads the browser via browserSync
+ */
+gulp.task( 'tinyMceStyles', () => {
+	return gulp
+		.src( config.tinyMceStyleSRC, { allowEmpty: true })
+		.pipe( plumber( errorHandler ) )
+		.pipe(
+			sass({
+				errLogToConsole: config.gutenbergErrLogToConsole,
+				outputStyle: config.gutenbergOutputStyle,
+				precision: config.gutenbergPrecision
+			})
+		)
+		.on( 'error', sass.logError )
+		.pipe( autoprefixer( config.BROWSERS_LIST ) )
+		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+		.pipe( gulp.dest( config.gutenbergStyleDestination ) )
+		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
+		.pipe( mmq({ log: true }) ) // Merge Media Queries only for .min.css version.
+		.pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
+		.pipe( notify({ message: '\n\n✅  ===> TINY MCE STYLES — completed!\n', onLast: true }) );
+});
+
+/**
  * Task: `stylesRTL`.
  *
  * Compiles Sass, Autoprefixes it, Generates RTL stylesheet, and Minifies CSS.
@@ -384,10 +419,11 @@ gulp.task( 'translate', () => {
  */
 gulp.task(
 	'default',
-	gulp.parallel( 'styles', 'gutenbergStyles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
+	gulp.parallel( 'styles', 'gutenbergStyles', 'tinyMceStyles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
 		gulp.watch( config.watchPhp, reload ); // Reload on PHP file changes.
 		gulp.watch( config.watchStyles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
 		gulp.watch( config.watchStyles, gulp.parallel( 'gutenbergStyles' ) ); // Reload on Gutenberg SCSS file changes.
+		gulp.watch( config.watchStyles, gulp.parallel( 'tinyMceStyles' ) ); // Reload on Tiny MCE SCSS file changes.
 		gulp.watch( config.watchJsVendor, gulp.series( 'vendorsJS', reload ) ); // Reload on vendorsJS file changes.
 		gulp.watch( config.watchJsCustom, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
 		gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJS file changes.

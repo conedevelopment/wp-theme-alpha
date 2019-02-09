@@ -73,8 +73,8 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 		add_theme_support('disable-custom-font-sizes');
 		add_theme_support( 'disable-custom-colors' );
 
-		// Enqueue editor styles.
-		// add_editor_style( 'style-editor.css' );
+		// Enqueue editor styles for Tiny MCE.
+		// add_editor_style( 'style-editor-tiny-mce.css' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
