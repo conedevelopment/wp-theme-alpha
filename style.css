@@ -8639,6 +8639,48 @@ img {
   background-position: right top;
 }
 
+.has-small-font-size {
+  font-size: 1rem;
+}
+
+.has-regular-font-size,
+.has-normal-font-size {
+  font-size: 1.3rem;
+}
+
+.has-medium-font-size {
+  font-size: 1.4rem;
+}
+
+.has-large-font-size {
+  font-size: 1.6rem;
+}
+
+.has-larger-font-size,
+.has-huge-font-size {
+  font-size: 1.8rem;
+}
+
+.wp-block-pullquote {
+  border-top: 4px solid #231F20;
+  border-bottom: 4px solid #231F20;
+  color: #231F20;
+}
+
+.wp-block-pullquote blockquote {
+  border: none;
+}
+
+.wp-block-pullquote p {
+  font-size: 1.5rem;
+}
+
+.wp-block-pullquote .wp-block-pullquote__citation,
+.wp-block-pullquote cite,
+.wp-block-pullquote footer {
+  text-transform: none;
+}
+
 .author-box {
   margin-top: 3rem;
   padding-top: 3rem;

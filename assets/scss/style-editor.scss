@@ -47,14 +47,14 @@
 
 .editor-styles-wrapper {
     font-family: map-get($fonts, 'body') !important;
-    color: map-get($colors, 'text') !important;
+    color: map-get($colors, 'text');
     font-size: 1.3rem !important;
     line-height: 1.7 !important;
     font-weight: 300 !important;
     
     p {
         font-size: 1.3rem !important;
-        color: map-get($colors, 'text') !important;
+        color: map-get($colors, 'text');
         line-height: 1.7 !important;
         font-weight: 300 !important;
     }
@@ -175,14 +175,17 @@
         word-wrap: break-word;
     }
     
-    .wp-block-quote,
-    blockquote {
+    .wp-block-quote {
         padding: 0 2rem;
         color: map-get($colors, 'black');
         font-family: map-get($fonts, 'body');
         border-left: 5px solid map-get($colors, 'black');
-        font-size: 1.1rem;
         line-height: 1.6;
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
 
         &.is-large,
         &.is-style-large {
@@ -196,9 +199,31 @@
                 line-height: 1.7;
                 font-weight: 400 !important;
             }
+
+            .wp-block-quote__citation {
+                text-align: right;
+            }
         }
 
-        cite {
+        &__citation {
+            color: rgba(0,0,0,0.5);
+            font-size: 1rem;
+            font-family: map-get($fonts, 'heading');
+            font-weight: 300 !important;
+        }
+    }
+
+    .wp-block-pullquote {
+        border-top: 4px solid map-get($colors, 'black');
+        border-bottom: 4px solid map-get($colors, 'black');
+        color: map-get($colors, 'black');
+
+        p {
+            font-weight: 400 !important;
+            font-size: 1.5rem !important;
+        }
+
+        &__citation {
             color: rgba(0,0,0,0.5);
             font-size: 1rem;
             font-family: map-get($fonts, 'heading');
@@ -286,7 +311,7 @@
         justify-content: center;
     }
 
-    .wp-block-pullquote>p:first-child {
+    .wp-block-pullquote > p:first-child {
         margin-top: 0;
     }
     

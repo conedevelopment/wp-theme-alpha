@@ -51,3 +51,45 @@
         @include btn;
     }
 }
+
+.has-small-font-size {
+    font-size: 1rem; 
+}
+
+.has-regular-font-size,
+.has-normal-font-size {
+    font-size: 1.3rem; 
+}
+
+.has-medium-font-size {
+    font-size: 1.4rem; 
+}
+
+.has-large-font-size {
+    font-size: 1.6rem; 
+}
+
+.has-larger-font-size,
+.has-huge-font-size {
+    font-size: 1.8rem; 
+}
+
+.wp-block-pullquote {
+    border-top: 4px solid map-get($colors, 'black');
+    border-bottom: 4px solid map-get($colors, 'black');
+    color: map-get($colors, 'black');
+
+    blockquote {
+        border: none;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .wp-block-pullquote__citation, 
+    cite, 
+    footer {
+        text-transform: none;
+    }
+}
