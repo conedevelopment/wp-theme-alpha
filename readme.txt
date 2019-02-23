@@ -4,7 +4,7 @@ Contributors: pine
 Tags: custom-logo, custom-menu, featured-images, featured-image-header, translation-ready, left-sidebar, right-sidebar, custom-colors, editor-style, footer-widgets, post-formats, theme-options, block-styles, wide-blocks
 
 Requires at least: 4.7
-Tested up to: 5.0
+Tested up to: 5.1
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 
