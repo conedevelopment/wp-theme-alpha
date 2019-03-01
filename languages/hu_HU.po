@@ -1,0 +1,1032 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pine-alpha 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2019-02-21 20:16+0000\n"
+"PO-Revision-Date: 2019-03-01 16:03+0100\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: fr_CH\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;_nx;esc_attr__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Loco-Parser: loco_parse_po\n"
+"Last-Translator: \n"
+"Language: hu_HU\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: assets\n"
+
+#: 404.php:20
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hoppá! Ez az oldal nem található."
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Úgy tűnik, semmit nem találtunk ezen a helyen. Esetleg megpróbálja az alábbi "
+"linkeket vagy a keresést?"
+
+#: 404.php:24
+msgid "Go to Home"
+msgstr "Irány a Főoldalra"
+
+#: comments.php:45
+#, php-format
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr "%1$s írta itt: &ldquo;%2$s&rdquo;"
+
+#: comments.php:70
+msgid "Comments are closed."
+msgstr "Hozzászólások lezárva."
+
+#: functions.php:163
+msgid "Header Menu"
+msgstr "Fejléc menü"
+
+#: functions.php:288
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Bővebben:<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: functions.php:455 inc/customizer.php:199 inc/customizer.php:1156
+msgid "Twitter"
+msgstr "Twitter"
+
+#: functions.php:456 inc/customizer.php:200 inc/customizer.php:1157
+msgid "Facebook"
+msgstr "Facebook"
+
+#: functions.php:457 inc/customizer.php:201 inc/customizer.php:1158
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: functions.php:458 inc/customizer.php:202 inc/customizer.php:1159
+msgid "Instagram"
+msgstr "Instagram"
+
+#: functions.php:459 inc/customizer.php:203 inc/customizer.php:1160
+msgid "Flickr"
+msgstr "Flickr"
+
+#: functions.php:460 inc/customizer.php:204 inc/customizer.php:1161
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: functions.php:461 inc/customizer.php:205 inc/customizer.php:1162
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: functions.php:462 inc/customizer.php:206 inc/customizer.php:1163
+msgid "GitHub"
+msgstr "GitHub"
+
+#: functions.php:463 inc/customizer.php:207 inc/customizer.php:1164
+msgid "YouTube"
+msgstr "YouTube"
+
+#: functions.php:464 inc/customizer.php:208 inc/customizer.php:1165
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: functions.php:465 inc/customizer.php:209 inc/customizer.php:1166
+msgid "VK"
+msgstr "VK"
+
+#: functions.php:466 inc/customizer.php:210 inc/customizer.php:1167
+msgid "Spotify"
+msgstr "Spotify"
+
+#: header.php:31
+msgid "Skip to content"
+msgstr "Ugrás a tartalomhoz"
+
+#: header.php:35 inc/customizer.php:66
+msgid "Navigation"
+msgstr "Navigáció"
+
+#: inc/back-compat.php:38 inc/back-compat.php:50 inc/back-compat.php:65
+#, php-format
+msgid ""
+"Alpha requires at least WordPress version 4.7. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
+"Az Alpha legalább 4.7-es WordPress verziót igényel. Jelenleg a %s verzió "
+"fut. Frissíts majd próbáld újra."
+
+#: inc/customizer.php:24
+msgid "Header"
+msgstr "Fejléc"
+
+#: inc/customizer.php:32
+msgid "Logo"
+msgstr "Logó"
+
+#: inc/customizer.php:40
+msgid "Upload your logo"
+msgstr "Logó feltöltése"
+
+#: inc/customizer.php:51
+msgid "Set the max-height of the logo"
+msgstr "Logó maximális magassága"
+
+#: inc/customizer.php:74
+msgid "Push Navigation to The Right"
+msgstr "Navigáció a jobb oldalon"
+
+#: inc/customizer.php:83
+msgid "Remove Separator"
+msgstr "Elválasztó eltávolítása"
+
+#: inc/customizer.php:100
+msgid "Hide Navigation Menu On"
+msgstr "Navigációs menü elrejtése"
+
+#: inc/customizer.php:105 inc/customizer.php:129 inc/customizer.php:172
+#: inc/customizer.php:1129
+msgid "Extra small devices"
+msgstr "Extra kis méretű eszköz"
+
+#: inc/customizer.php:106 inc/customizer.php:130 inc/customizer.php:173
+#: inc/customizer.php:1130
+msgid "Small devices"
+msgstr "Kis méretű eszköz"
+
+#: inc/customizer.php:107 inc/customizer.php:131 inc/customizer.php:174
+#: inc/customizer.php:1131
+msgid "Medium devices"
+msgstr "Közepes méretű eszköz"
+
+#: inc/customizer.php:108 inc/customizer.php:132 inc/customizer.php:175
+#: inc/customizer.php:1132
+msgid "Large devices"
+msgstr "Nagy méretű eszközök"
+
+#: inc/customizer.php:109 inc/customizer.php:133 inc/customizer.php:176
+#: inc/customizer.php:1133
+msgid "Extra large devices"
+msgstr "Extra nagy méretű eszközök"
+
+#: inc/customizer.php:124
+msgid "Hide Mobile Menu On"
+msgstr "Mobil menü elrejtése itt:"
+
+#: inc/customizer.php:142 inc/customizer.php:1099
+msgid "Socials"
+msgstr "Közösségi"
+
+#: inc/customizer.php:150 inc/customizer.php:1107
+msgid "Enable Social Links"
+msgstr "Közösségi linkek engedélyezése"
+
+#: inc/customizer.php:167 inc/customizer.php:1124
+msgid "Hide Social Menu On"
+msgstr "Mobil menü elrejtése itt:"
+
+#: inc/customizer.php:191 inc/customizer.php:1148
+msgid "Social Link Order and Visibility"
+msgstr "Közösségi linkek sorrendje és láthatósága"
+
+#: inc/customizer.php:192 inc/customizer.php:1149
+msgid "Here you can set the order of your social links."
+msgstr "Itt beállíthatóak a közösségi linkek sorrendjei."
+
+#: inc/customizer.php:220 inc/customizer.php:493 inc/customizer.php:1236
+msgid "Display"
+msgstr "Megjelenítés"
+
+#: inc/customizer.php:228
+msgid "Enable Sticky Navigation"
+msgstr "Ragadós menü engedélyezése"
+
+#: inc/customizer.php:237
+msgid "Show Search"
+msgstr "Kereső megjelenítése"
+
+#: inc/customizer.php:246
+msgid "Width"
+msgstr "Szélesség"
+
+#: inc/customizer.php:248
+msgid "Set the width of the header container."
+msgstr "Fejléc konténer szélességének beállítása"
+
+#: inc/customizer.php:252
+msgid "Narrow"
+msgstr "Keskeny"
+
+#: inc/customizer.php:253
+msgid "Wide"
+msgstr "Széles"
+
+#: inc/customizer.php:263 inc/customizer.php:1177
+msgid "General"
+msgstr "Általános"
+
+#: inc/customizer.php:271
+msgid "Colors"
+msgstr "Színek"
+
+#: inc/customizer.php:279
+msgid "Default Color"
+msgstr "Alapértelmezett szín"
+
+#: inc/customizer.php:280
+msgid ""
+"Declare your theme default color. It will be used for basic UI elements."
+msgstr ""
+"Határozd meg az alapértelmezett színt. A UI elemeknél fogjuk használni."
+
+#: inc/customizer.php:288
+msgid "Secondary Color"
+msgstr "Másodlagos szín"
+
+#: inc/customizer.php:289
+msgid ""
+"Declare your theme secondary color. It will be used mostly for :hover states."
+msgstr ""
+"Határozd meg a másodlagos színt. A :hover állpotokhoz fogjuk használni."
+
+#: inc/customizer.php:299
+msgid "Social Links"
+msgstr "Közösségi linkek"
+
+#: inc/customizer.php:307
+msgid "Twitter Page URL"
+msgstr "Twitter URL"
+
+#: inc/customizer.php:308 inc/customizer.php:324 inc/customizer.php:340
+#: inc/customizer.php:356 inc/customizer.php:372 inc/customizer.php:388
+#: inc/customizer.php:404 inc/customizer.php:420 inc/customizer.php:436
+#: inc/customizer.php:452 inc/customizer.php:468 inc/customizer.php:485
+msgid "Please give us a full URL."
+msgstr "Kérünk egy érvényes URL-t adj meg."
+
+#: inc/customizer.php:323
+msgid "Facebook Page URL"
+msgstr "Facebook URL"
+
+#: inc/customizer.php:339
+msgid "LinkedIn Page URL"
+msgstr "LinkedIn URL"
+
+#: inc/customizer.php:355
+msgid "Instagram Page URL"
+msgstr "Instagram URL"
+
+#: inc/customizer.php:371
+msgid "Flickr Page URL"
+msgstr "Flickr URL"
+
+#: inc/customizer.php:387
+msgid "Tumblr Page URL"
+msgstr "Tumblr URL"
+
+#: inc/customizer.php:403
+msgid "Pinterest Page URL"
+msgstr "Pinterest URL"
+
+#: inc/customizer.php:419
+msgid "GitHub Page URL"
+msgstr "GitHub URL"
+
+#: inc/customizer.php:435
+msgid "YouTube Page URL"
+msgstr "YouTube URL"
+
+#: inc/customizer.php:451
+msgid "Dribbble Page URL"
+msgstr "Dribbble URL"
+
+#: inc/customizer.php:467
+msgid "VK Page URL"
+msgstr "VK URL"
+
+#: inc/customizer.php:484
+msgid "Spotify Page URL"
+msgstr "Spotify URL"
+
+#: inc/customizer.php:501
+msgid "Enable Magnific Popup"
+msgstr "Magnific Popup engedélyezése"
+
+#: inc/customizer.php:510
+msgid "Enable highlight.js"
+msgstr "Highlight.js engedélyezése"
+
+#: inc/customizer.php:522
+msgid "Components"
+msgstr "Komponensek"
+
+#: inc/customizer.php:529 inc/customizer.php:539
+msgid "Popular Posts"
+msgstr "Népszerű bejegyzések"
+
+#: inc/customizer.php:537 inc/customizer.php:643 inc/customizer.php:729
+#: inc/customizer.php:1064
+msgid "Section Title"
+msgstr "Szekció cím"
+
+#: inc/customizer.php:546 inc/customizer.php:652 inc/customizer.php:738
+msgid "Hide Section Title"
+msgstr "Szekció cím elrejtése"
+
+#: inc/customizer.php:563 inc/customizer.php:669
+msgid "Background Color"
+msgstr "Háttérszín"
+
+#: inc/customizer.php:564
+msgid ""
+"Set the popular posts section background color. Use the light gray if the "
+"section is placed between white elements."
+msgstr ""
+"Állítsd be a népszerű bejegyzések szekció háttérszínét. Használj "
+"világosszürkét ha a szekciót fehér elemek veszik körül."
+
+#: inc/customizer.php:584 inc/customizer.php:777
+msgid "The Number of Posts to Show"
+msgstr "A megjelenítendő bejegyzések száma"
+
+#: inc/customizer.php:605 inc/customizer.php:690 inc/customizer.php:820
+#: inc/customizer.php:872
+msgid "Padding Top"
+msgstr "Felső kitöltés"
+
+#: inc/customizer.php:607 inc/customizer.php:621 inc/customizer.php:692
+#: inc/customizer.php:706 inc/customizer.php:822 inc/customizer.php:836
+#: inc/customizer.php:874 inc/customizer.php:888
+msgid "You can define this value in rem. 1rem is (1 * the base font-size)."
+msgstr "Ez az érték rem-ben van definiálva. 1 rem az (1 x az alap font méret)."
+
+#: inc/customizer.php:619 inc/customizer.php:704 inc/customizer.php:834
+#: inc/customizer.php:886
+msgid "Padding Bottom"
+msgstr "Alsó kitöltés"
+
+#: inc/customizer.php:635 inc/customizer.php:645
+msgid "Categories"
+msgstr "Kategóriák"
+
+#: inc/customizer.php:670
+msgid ""
+"Set the categories section background color. Use the light gray if the "
+"section is placed between white elements."
+msgstr ""
+"Állítsd be a kategóriák szekció háttérszínét. Használj világosszürkét ha a "
+"szekciót fehér elemek veszik körül."
+
+#: inc/customizer.php:721
+msgid "Blogroll"
+msgstr "Blogroll"
+
+#: inc/customizer.php:731
+msgid "Latest Posts"
+msgstr "Legfrissebb bejegyzések"
+
+#: inc/customizer.php:755 inc/customizer.php:1019
+msgid "Show Sidebar On"
+msgstr "Oldalsáv megjelenítése itt:"
+
+#: inc/customizer.php:760 inc/customizer.php:1024 inc/options.php:102
+#: inc/options.php:190
+msgid "None"
+msgstr "Nincs"
+
+#: inc/customizer.php:761 inc/customizer.php:1025 inc/options.php:103
+#: inc/options.php:191
+msgid "Left"
+msgstr "Bal"
+
+#: inc/customizer.php:762 inc/customizer.php:1026 inc/options.php:104
+#: inc/options.php:192
+msgid "Right"
+msgstr "Jobb"
+
+#: inc/customizer.php:798 inc/customizer.php:1041
+msgid "Sidebar Type"
+msgstr "Oldasáv típusa"
+
+#: inc/customizer.php:800 inc/customizer.php:1043
+msgid "Set the style of the sidebar."
+msgstr "Oldalsáv típusának beállítása"
+
+#: inc/customizer.php:804 inc/customizer.php:863 inc/customizer.php:1047
+#: inc/options.php:114 inc/options.php:125 inc/options.php:202
+#: inc/options.php:213
+msgid "White"
+msgstr "Fehér"
+
+#: inc/customizer.php:805 inc/customizer.php:1048 inc/options.php:115
+#: inc/options.php:203
+msgid "Gray"
+msgstr "Szürke"
+
+#: inc/customizer.php:850
+msgid "Archive Title"
+msgstr "Archívum címe"
+
+#: inc/customizer.php:858
+msgid "Display Type"
+msgstr "Megjelenítés típusa"
+
+#: inc/customizer.php:864 inc/options.php:126 inc/options.php:214
+msgid "Colorful"
+msgstr "Színes"
+
+#: inc/customizer.php:865 inc/customizer.php:975 inc/options.php:127
+#: inc/options.php:215
+msgid "Image"
+msgstr "Kép"
+
+#: inc/customizer.php:903
+msgid "Layout"
+msgstr "Szerkezet"
+
+#: inc/customizer.php:910
+msgid "Front Page"
+msgstr "Kezdőlap"
+
+#: inc/customizer.php:918
+msgid "Component Order"
+msgstr "Komponens sorrend"
+
+#: inc/customizer.php:919
+msgid "Here you can set the component order for the Front Page."
+msgstr "Itt a kezdőlap komponenseinek sorrendjét tudod beállítani."
+
+#: inc/customizer.php:928
+msgid "Hero Section"
+msgstr "Kiemelt szekció"
+
+#: inc/customizer.php:929
+msgid "Popular Posts Section"
+msgstr "Legolvasottabb bejegyzések szekció"
+
+#: inc/customizer.php:930
+msgid "Categories Section"
+msgstr "Kategóriák szekció"
+
+#: inc/customizer.php:931
+msgid "Blogroll Section"
+msgstr "Bejegyzések szekció"
+
+#: inc/customizer.php:941
+msgid "List Item"
+msgstr "Lista elem"
+
+#: inc/customizer.php:949
+msgid "Excerpt Length"
+msgstr "Kivonat hossza"
+
+#: inc/customizer.php:950
+msgid "Set the length of the excerpt text in words."
+msgstr "A kivonat hosszának meghatározása szóban."
+
+#: inc/customizer.php:963
+msgid "Main Component Order"
+msgstr "Fő komponens sorrend"
+
+#: inc/customizer.php:964
+msgid "Here you can set the component order for the main list item."
+msgstr "Itt a fő komponens lista elemeinek sorrendjét tudod beállítani."
+
+#: inc/customizer.php:976 inc/customizer.php:999
+msgid "Meta"
+msgstr "Meta"
+
+#: inc/customizer.php:977 inc/customizer.php:1000
+msgid "Title"
+msgstr "Cím"
+
+#: inc/customizer.php:978 inc/customizer.php:1001
+msgid "Content"
+msgstr "Tartalom"
+
+#: inc/customizer.php:979 inc/customizer.php:1002
+msgid "Author"
+msgstr "Szerző"
+
+#: inc/customizer.php:980 template-parts/post/content-search.php:30
+#: template-parts/post/list-parts/part-read-more.php:2
+msgid "Read More"
+msgstr "Bővebben"
+
+#: inc/customizer.php:989
+msgid "Secondary Component Order"
+msgstr "Másodlagos komponens sorrebd"
+
+#: inc/customizer.php:990
+msgid ""
+"Here you can set the component order for the secondary (top or related "
+"posts) list item."
+msgstr ""
+"Itt a másodlagos komponens (olvasottabb vagy kapcsolódó bejegyzések) lista "
+"elemeinek sorrendjét tudod beállítani."
+
+#: inc/customizer.php:1011
+msgid "Archive Pages"
+msgstr "Archív oldalak"
+
+#: inc/customizer.php:1056 inc/customizer.php:1066 index.php:34
+msgid "Blog"
+msgstr "Blog"
+
+#: inc/customizer.php:1073
+msgid "Description"
+msgstr "Leírás"
+
+#: inc/customizer.php:1081
+msgid "Header Background Image"
+msgstr "Fejléc háttérkép"
+
+#: inc/customizer.php:1092
+msgid "Footer"
+msgstr "Lábléc"
+
+#: inc/customizer.php:1185
+msgid "Footnote"
+msgstr "Lábjegyzet"
+
+#: inc/customizer.php:1187
+msgid "© 2018 - Alpha, a magazine theme by Pine."
+msgstr "© 2018 - Alpha, egy magazin sablon a Pine -tól."
+
+#: inc/customizer.php:1196
+msgid "Scroll Top"
+msgstr "Felgörgetés"
+
+#: inc/customizer.php:1204
+msgid "Enable Scroll Top"
+msgstr "Felgörgetés engedélyezése"
+
+#: inc/customizer.php:1221
+msgid "Position"
+msgstr "Pozíció"
+
+#: inc/customizer.php:1226
+msgid "Bottom left (Fixed)"
+msgstr "Lent bal oldalon (fix)"
+
+#: inc/customizer.php:1227
+msgid "Bottom right (Fixed)"
+msgstr "Lent jobb oldalon (fix)"
+
+#: inc/customizer.php:1244
+msgid "Hide Widgets"
+msgstr "Widgetek elrejtése"
+
+#: inc/icon-functions.php:38
+msgid "Please define default parameters in the form of an array."
+msgstr "Kérlek add meg az alapértelmezett paramétereket tömb formájában."
+
+#: inc/icon-functions.php:43
+msgid "Please define an SVG icon filename."
+msgstr "Kérünk egy SVG icont fájlnevet adj meg."
+
+#: inc/options.php:137 inc/options.php:225
+msgid "Small"
+msgstr "Kicsi"
+
+#: inc/options.php:138 inc/options.php:226
+msgid "Medium"
+msgstr "Közepes"
+
+#: inc/options.php:139 inc/options.php:227
+msgid "Large"
+msgstr "Nagy"
+
+#: inc/options.php:149 inc/options.php:160 inc/options.php:237
+#: inc/options.php:248
+msgid "No"
+msgstr "Nem"
+
+#: inc/options.php:150 inc/options.php:161 inc/options.php:238
+#: inc/options.php:249
+msgid "Yes"
+msgstr "Igen"
+
+#: inc/template-tags.php:45
+msgid "Posted on "
+msgstr "Közzétéve "
+
+#: inc/template-tags.php:52
+msgid "Updated on "
+msgstr "Frissítve "
+
+#: inc/template-tags.php:112
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Írj kommentet<span class=“screen-reader-text”> ide: %s</span>"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr "Szükséges bővítmények telepítése"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:328 inc/welcome/view.php:27
+msgid "Install Plugins"
+msgstr "Bővítmények telepítése"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:330
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "%s bővítmény telepítése"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "%s bővítmény frissítése"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr "A bővítmény API-ja jelenleg nem üzemel megfelelően."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr "Vissza a szükséges bővítmények telepítéséhez"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:386
+msgid "Return to the Dashboard"
+msgstr "Vissza a vezérlőpultra"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:387
+#: inc/tgmpa/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr "A bővítmény sikeresen aktiválva."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:388
+msgid "The following plugin was activated successfully:"
+msgstr "A követkető bővítmény sikeresen aktiválva:"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Nincs művelet végrehajtva. A %1$s bővítmény már aktiválva van."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"A bővítmény nincs aktiválva. Egy magasabb verzió számú %s szükséges a "
+"sablonhoz. Frissítsd a bővíményt."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:394
+#, php-format
+msgctxt "Minden bővítmény telepítése és aktiválása sikeresen befejeződött."
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Minden bővítmény telepítése és aktiválása sikeresen befejeződött. %1$s"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr "Üzenet elrejtése"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+"Egy vagy több szükséges vagy ajánlott bővítmény vár telepítésre, frissítésre "
+"vagy aktiválásra."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr "Kérjük lépjen kapcsolatba az oldal adminisztrátorával."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "A bővítményt frissíteni kell, hogy kompatibilis legyen a sablonnal."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr "Szükséges"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr "Ajánlott"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr "WordPress Repository"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr "Külső forrás"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr "Előre csomagolt"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr "Nincs telepítve"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr "Telepítve, de nem aktív"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2321
+msgctxt "Aktív"
+msgid "Active"
+msgstr "Aktív"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr "A szükséges frissítés nem elérhető"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr "Szükséges frissítés"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr "Ajánlott frissítés"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2388
+#, php-format
+msgctxt "Összes <span class=\"count\">(%s)</span>"
+msgid "All <span class=\"count\">(%s)</span>"
+msgstr "Összes <span class=“count”>(%s)</span>"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr "Telepített verzió:"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr "Minimum verzió:"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr "Elérhető verzió:"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr "Bővítmény"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr "Forrás"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr "Típus"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr "Verzió"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr "Állapot"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr "%2$s telepítése"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr "%2$s frissítése"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2614
+#, php-format
+msgctxt "%2$ Aktiválása"
+msgid "Activate %2$s"
+msgstr "%2$s aktiválása"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr "Telepítés"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr "Frissítése"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2726
+msgctxt "Aktiválás"
+msgid "Activate"
+msgstr "Aktiválás"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Nincs telepítendő bővítmény kiválasztva."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "Nincs frissítendő bővítmény kiválasztva."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr "Nincsenek telepíthető bővítmények jelenleg."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr "Nincsenek frissíthető bővítmények jelenleg."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr "Bővítmény aktiválása sikertelen."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Bővítmény frissítése %1$s (%2$d/%3$d)"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Hiba történt a(z) %1$s telepítése során: <strong>%2$s</strong>."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "A(z) %1$s telepítése sikertelen."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"A telepítési és aktiválási folyamat elkezdődött. Ez a folyamat akár hosszabb "
+"időt is igényelhet, így kérünk légy türelmes."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3509
+#, php-format
+msgctxt "%1$s sikeresen telepítve és aktiválva."
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s sikeresen telepítve és aktiválva."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3510
+msgctxt "Minden telepítés és aktiválás befejeződött."
+msgid "All installations and activations have been completed."
+msgstr "Minden telepítés és aktiválás befejeződött."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "%1$s telepítése és aktiválása (%2$d/%3$d)"
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"A telepítési folyamat elkezdődött. Ez a folyamat akár hosszabb időt is "
+"igényelhet, így kérünk légy türelmes."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3518
+msgctxt "Minden telepítés befejeződött."
+msgid "All installations have been completed."
+msgstr "Minden telepítés bejefeződött."
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "%1$s bővítmény telepítése (%2$d/%3$d)"
+
+#: inc/welcome-screen.php:17
+msgid "Welcome to Alpha! - Version "
+msgstr "Üdvözlünk az Alphában – Verzió "
+
+#: inc/welcome-screen.php:18
+msgctxt "Az Alpha-ról"
+msgid "About Alpha"
+msgstr "Az Alpha-ról"
+
+#: inc/welcome/view.php:7
+#, php-format
+msgid "Welcome to Alpha! - Version  %s"
+msgstr "Üdvözlünk az Alphában - Verzió %s"
+
+#: inc/welcome/view.php:12
+msgctxt ""
+"Az Alpha egy tiszta és minimalista magazin/blog sablon azoknak, akik napi "
+"szinten készítenek tartalmat. A sablon felhasználóbarát, reszponzív és "
+"retina kompatibilis. Contact Form 7 és Jetpack támogatással."
+msgid ""
+"Alpha is a clean and minimalistic magazine/blog theme for those who like to "
+"create content each day. The theme is user-friendly, responsive, retina "
+"ready and performs well. It currently supports Contact Form 7 and various "
+"Jetpack features."
+msgstr ""
+"Az Alpha egy letisztult és minimalista magazin/blog sablon azoknak, akik "
+"napi szinten készítenek tartalmat. A sablon felhasználóbarát, reszponzív és "
+"retina kompatibilis. Contact Form 7 és Jetpack támogatással."
+
+#: inc/welcome/view.php:18
+msgid "Getting Started"
+msgstr "Indulás"
+
+#: inc/welcome/view.php:19
+msgctxt "Rólunk"
+msgid "About Us"
+msgstr "Rólunk"
+
+#: inc/welcome/view.php:25
+msgid "Required Plugins"
+msgstr "Szükséges bővítmények"
+
+#: inc/welcome/view.php:26
+msgid ""
+"For using this theme first, you need to install two required plugin. For "
+"more functionality, we also have recommended ones so you can achieve more."
+msgstr ""
+"A sablon használatához, előbb a szükséges bővítmények telepítését kell "
+"végrehajtani. Több funkcionalitás érdekében, az ajánlott bővítmények "
+"bekapcsolása is javasolt."
+
+#: inc/welcome/view.php:30
+msgid "Check out the Documentation"
+msgstr "A dokumentáció megtekintése"
+
+#: inc/welcome/view.php:31
+msgid ""
+"Need help or more information?  Go to Alpha's documentation page for "
+"detailed information."
+msgstr ""
+"Segítségre van szükséged, vagy több információra? Látogass el az Alpha "
+"dokumentációs oldaléra, hogy részletesen információkat kapj."
+
+#: inc/welcome/view.php:32
+msgid "Go to the Documentation"
+msgstr "Irány a dokumentáció"
+
+#: inc/welcome/view.php:35 inc/welcome/view.php:37
+msgid "Go to the Customizer"
+msgstr "Irány testreszabó felület"
+
+#: inc/welcome/view.php:36
+msgid "To customize Alpha, you must navigate to the WordPress Customizer."
+msgstr ""
+"Az Alpha testreszabásához, a WordPress testreszabó felületére kell "
+"navigálnod."
+
+#: inc/welcome/view.php:43
+msgid "Hello, We Are Pine!"
+msgstr "Hello, mi vagyunk a Pine!"
+
+#: inc/welcome/view.php:44
+msgid ""
+"We are two web developers with a passion for learning and sharing the "
+"knowledge. Our vision, to keep learning and shipping what you know, is a win-"
+"win situation. We also develop open-source like this WordPress theme which "
+"hopefully will be useful for many."
+msgstr ""
+"Két webfejlesztő vagyunk, akik folyamatosan tanulnak és igyekszenek "
+"megosztani a tudásukat. Szerintük ez a körforgás egy mindenki számára nyerő "
+"helyzet. Nyíltforráskódú eszközöket is fejlesztünk, mint ez a WordPress "
+"sablon, remélve, hogy sokaknak hasznos lesz."
+
+#: inc/welcome/view.php:45
+msgid "Check out our Site"
+msgstr "Nézd meg az oldalunkat"
+
+#: template-parts/header/main-section.php:22
+msgid "Site Logo"
+msgstr "Oldal logo"
+
+#: template-parts/header/main-section.php:24
+msgid "Alpha Theme Site Logo"
+msgstr "Alpha sablon oldal logó"
+
+#: template-parts/post/author-box.php:22
+msgid "Website"
+msgstr "Weboldal"
+
+#: template-parts/post/content-none.php:13
+msgid "Nothing Found"
+msgstr "Nincs találat"
+
+#: template-parts/post/content-none.php:22
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Készen állsz az első bejegyzés közzétételére? <a href=“%1$s”>Kezd itt</a>."
+
+#: template-parts/post/content-none.php:35
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sajnáljuk, de semmi sem egyezett a keresett kifejezéssel. Próbáld újra egy "
+"másik kulcsszóval."
+
+#: template-parts/post/content-none.php:42
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Úgy tűnik, itt nem azt találtad amire gondoltál. Talán a kereső segíthet."
