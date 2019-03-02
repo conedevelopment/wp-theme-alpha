@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pine-alpha 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2019-02-09 18:21+0100\n"
+"POT-Creation-Date: 2019-03-02 11:07+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: Poedit 2.2\n"
-"X-Poedit-KeywordsList: __;_e;esc_html_e;_nx;esc_attr__\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;_nx;esc_attr__;esc_html__;esc_attr_x\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
@@ -33,6 +33,11 @@ msgstr ""
 msgid "Go to Home"
 msgstr ""
 
+#: comments.php:39
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
 #: comments.php:45
 #, php-format
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
@@ -42,8 +47,64 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#: functions.php:95 inc/customizer.php:24
+msgid "Header"
+msgstr ""
+
+#: functions.php:96 inc/customizer.php:1092
+msgid "Footer"
+msgstr ""
+
 #: functions.php:163
 msgid "Header Menu"
+msgstr ""
+
+#: functions.php:210
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:212
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:220
+msgid "Canvi (Off-canvas navigation)"
+msgstr ""
+
+#: functions.php:222
+msgid "Add widgets here to appear in your off-canvas navigation."
+msgstr ""
+
+#: functions.php:230
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:232
+msgid "Add widgets here to appear in your footer col #1."
+msgstr ""
+
+#: functions.php:240
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:242
+msgid "Add widgets here to appear in your footer col #2."
+msgstr ""
+
+#: functions.php:250
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:252
+msgid "Add widgets here to appear in your footer col #3."
+msgstr ""
+
+#: functions.php:260
+msgid "Footer 4"
+msgstr ""
+
+#: functions.php:262
+msgid "Add widgets here to appear in your footer col #4."
 msgstr ""
 
 #: functions.php:288
@@ -112,10 +173,6 @@ msgstr ""
 msgid ""
 "Alpha requires at least WordPress version 4.7. You are running version %s. "
 "Please upgrade and try again."
-msgstr ""
-
-#: inc/customizer.php:24
-msgid "Header"
 msgstr ""
 
 #: inc/customizer.php:32
@@ -530,16 +587,12 @@ msgstr ""
 msgid "Header Background Image"
 msgstr ""
 
-#: inc/customizer.php:1092
-msgid "Footer"
-msgstr ""
-
 #: inc/customizer.php:1185
 msgid "Footnote"
 msgstr ""
 
 #: inc/customizer.php:1187
-msgid "© 2018 - Alpha, a magazine theme by Pine."
+msgid "© 2019 - Alpha, a magazine theme by Pine."
 msgstr ""
 
 #: inc/customizer.php:1196
@@ -574,6 +627,72 @@ msgstr ""
 msgid "Please define an SVG icon filename."
 msgstr ""
 
+#: inc/options.php:19
+msgid "Theme Options for Alpha"
+msgstr ""
+
+#: inc/options.php:22
+msgid "Theme Options"
+msgstr ""
+
+#: inc/options.php:28
+msgid "Post Settings"
+msgstr ""
+
+#: inc/options.php:29
+msgid "Set the defaults related to your posts."
+msgstr ""
+
+#: inc/options.php:35
+msgid "<head></head> Code"
+msgstr ""
+
+#: inc/options.php:36
+msgid "Add code between your <head> element."
+msgstr ""
+
+#: inc/options.php:42
+msgid "<body></body> Code"
+msgstr ""
+
+#: inc/options.php:43
+msgid "Add code between your <body> element (before the </body> tag)."
+msgstr ""
+
+#: inc/options.php:53
+msgid "Category Metabox"
+msgstr ""
+
+#: inc/options.php:59
+msgid "Category Color"
+msgstr ""
+
+#: inc/options.php:61
+msgid "We use this color to highlight the category's images in the layout."
+msgstr ""
+
+#: inc/options.php:68
+msgid "Category Cover Image"
+msgstr ""
+
+#: inc/options.php:75
+msgid "Add File"
+msgstr ""
+
+#: inc/options.php:85 inc/options.php:172
+msgid "Theme Specific Settings"
+msgstr ""
+
+#: inc/options.php:90
+msgid "Show this in slider?"
+msgstr ""
+
+#: inc/options.php:91
+msgid ""
+"If you check this field, this post will be shown in the slider section in the "
+"header if it is enabled."
+msgstr ""
+
 #: inc/options.php:137 inc/options.php:225
 msgid "Small"
 msgstr ""
@@ -596,12 +715,34 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
+#: inc/options.php:177
+msgid "Color"
+msgstr ""
+
+#: inc/options.php:180
+msgid "We use this color to highlight the page's header image in the layout."
+msgstr ""
+
 #: inc/template-tags.php:45
 msgid "Posted on "
 msgstr ""
 
 #: inc/template-tags.php:52
 msgid "Updated on "
+msgstr ""
+
+#: inc/template-tags.php:92
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:95
+#, php-format
+msgid "Posted in: %1$s"
+msgstr ""
+
+#: inc/template-tags.php:102
+#, php-format
+msgid "Tagged: %1$s"
 msgstr ""
 
 #: inc/template-tags.php:112
@@ -636,6 +777,9 @@ msgid "Return to Required Plugins Installer"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:386
+#: inc/tgmpa/class-tgm-plugin-activation.php:827
+#: inc/tgmpa/class-tgm-plugin-activation.php:2533
+#: inc/tgmpa/class-tgm-plugin-activation.php:3580
 msgid "Return to the Dashboard"
 msgstr ""
 
@@ -681,6 +825,29 @@ msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:522
 msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug and "
+"renaming did not work."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:934
+#: inc/tgmpa/class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:1982
@@ -749,6 +916,10 @@ msgstr ""
 msgid "Available version:"
 msgstr ""
 
+#: inc/tgmpa/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
 #: inc/tgmpa/class-tgm-plugin-activation.php:2547
 msgid "Plugin"
 msgstr ""
@@ -784,6 +955,10 @@ msgstr ""
 msgid "Activate %2$s"
 msgstr ""
 
+#: inc/tgmpa/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
 #: inc/tgmpa/class-tgm-plugin-activation.php:2717
 msgid "Install"
 msgstr ""
@@ -810,6 +985,14 @@ msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2802
 msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3158
@@ -842,6 +1025,16 @@ msgstr ""
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
+#: inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: inc/tgmpa/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: inc/tgmpa/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
 #: inc/tgmpa/class-tgm-plugin-activation.php:3510
 msgid "All installations and activations have been completed."
 msgstr ""
@@ -855,6 +1048,11 @@ msgstr ""
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3517
+#, php-format
+msgid "%1$s installed successfully."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3518
@@ -943,6 +1141,15 @@ msgstr ""
 msgid "Check out our Site"
 msgstr ""
 
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:18 template-parts/header/search-bar.php:7
+msgid "Search &hellip;"
+msgstr ""
+
 #: template-parts/header/main-section.php:22
 msgid "Site Logo"
 msgstr ""
@@ -974,4 +1181,8 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
 "can help."
+msgstr ""
+
+#: template-parts/post/content-page.php:27
+msgid "Pages:"
 msgstr ""
