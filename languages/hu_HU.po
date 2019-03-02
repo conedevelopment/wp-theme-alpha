@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pine-alpha 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2019-03-02 11:06+0100\n"
-"PO-Revision-Date: 2019-03-02 11:07+0100\n"
+"PO-Revision-Date: 2019-03-02 11:39+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hu_HU\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Loco-Source-Locale: fr_CH\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-KeywordsList: __;_e;esc_html_e;_nx;esc_attr__;esc_html__;"
 "esc_attr_x\n"
 "X-Poedit-Basepath: ..\n"
@@ -38,10 +38,9 @@ msgid "Go to Home"
 msgstr "Irány a Főoldalra"
 
 #: comments.php:39
-#, fuzzy, php-format
-#| msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+#, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr "%1$s írta itt: &ldquo;%2$s&rdquo;"
+msgstr "Egy hozzászólás itt: &ldquo;%1$s&rdquo;"
 
 #: comments.php:45
 #, php-format
@@ -65,62 +64,52 @@ msgid "Header Menu"
 msgstr "Fejléc menü"
 
 #: functions.php:210
-#, fuzzy
-#| msgid "Sidebar Type"
 msgid "Sidebar"
-msgstr "Oldasáv típusa"
+msgstr "Oldalsáv"
 
 #: functions.php:212
 msgid "Add widgets here to appear in your sidebar."
-msgstr ""
+msgstr "Widgetek hozzáadása itt, amelyek az oldalsávban jelennek meg"
 
 #: functions.php:220
 msgid "Canvi (Off-canvas navigation)"
-msgstr ""
+msgstr "Canvi (Elrejtett navigáció)"
 
 #: functions.php:222
 msgid "Add widgets here to appear in your off-canvas navigation."
-msgstr ""
+msgstr "Widgetek hozzáadása az elrejtett navigációban."
 
 #: functions.php:230
-#, fuzzy
-#| msgid "Footer"
 msgid "Footer 1"
-msgstr "Lábléc"
+msgstr "Lábléc 1"
 
 #: functions.php:232
 msgid "Add widgets here to appear in your footer col #1."
-msgstr ""
+msgstr "Widgetek hozzáadása a #1 lábléc oszlophoz."
 
 #: functions.php:240
-#, fuzzy
-#| msgid "Footer"
 msgid "Footer 2"
-msgstr "Lábléc"
+msgstr "Lábléc 2"
 
 #: functions.php:242
 msgid "Add widgets here to appear in your footer col #2."
-msgstr ""
+msgstr "Widgetek hozzáadása a #2 lábléc oszlophoz."
 
 #: functions.php:250
-#, fuzzy
-#| msgid "Footer"
 msgid "Footer 3"
-msgstr "Lábléc"
+msgstr "Lábléc 3"
 
 #: functions.php:252
 msgid "Add widgets here to appear in your footer col #3."
-msgstr ""
+msgstr "Widgetek hozzáadása a #3 lábléc oszlophoz."
 
 #: functions.php:260
-#, fuzzy
-#| msgid "Footer"
 msgid "Footer 4"
-msgstr "Lábléc"
+msgstr "Lábléc 4"
 
 #: functions.php:262
 msgid "Add widgets here to appear in your footer col #4."
-msgstr ""
+msgstr "Widgetek hozzáadása a #4 lábléc oszlophoz."
 
 #: functions.php:288
 #, php-format
@@ -618,8 +607,6 @@ msgid "Footnote"
 msgstr "Lábjegyzet"
 
 #: inc/customizer.php:1187
-#, fuzzy
-#| msgid "© 2018 - Alpha, a magazine theme by Pine."
 msgid "© 2019 - Alpha, a magazine theme by Pine."
 msgstr "© 2018 - Alpha, egy magazin sablon a Pine -tól."
 
@@ -657,73 +644,69 @@ msgstr "Kérünk egy SVG icont fájlnevet adj meg."
 
 #: inc/options.php:19
 msgid "Theme Options for Alpha"
-msgstr ""
+msgstr "Alpha sablon beállítások"
 
 #: inc/options.php:22
 msgid "Theme Options"
-msgstr ""
+msgstr "Sablon beállítások"
 
 #: inc/options.php:28
 msgid "Post Settings"
-msgstr ""
+msgstr "Bejegyzés beállítások"
 
 #: inc/options.php:29
 msgid "Set the defaults related to your posts."
-msgstr ""
+msgstr "Alapértelmezett bejegyzés beállítások."
 
 #: inc/options.php:35
 msgid "<head></head> Code"
-msgstr ""
+msgstr "<head></head> Kód"
 
 #: inc/options.php:36
 msgid "Add code between your <head> element."
-msgstr ""
+msgstr "Kód hozzáadása a <head> elemhez."
 
 #: inc/options.php:42
 msgid "<body></body> Code"
-msgstr ""
+msgstr "<body></body> Kód"
 
 #: inc/options.php:43
 msgid "Add code between your <body> element (before the </body> tag)."
-msgstr ""
+msgstr "Kód hozzáadása a <body> elemhez(a </body> tag elé)."
 
 #: inc/options.php:53
-#, fuzzy
-#| msgid "Categories Section"
 msgid "Category Metabox"
 msgstr "Kategóriák szekció"
 
 #: inc/options.php:59
-#, fuzzy
-#| msgid "Secondary Color"
 msgid "Category Color"
 msgstr "Másodlagos szín"
 
 #: inc/options.php:61
 msgid "We use this color to highlight the category's images in the layout."
-msgstr ""
+msgstr "Ezt a színt használjuk a kategóriák képeinek kiemeléséhez."
 
 #: inc/options.php:68
 msgid "Category Cover Image"
-msgstr ""
+msgstr "Kategória fedőkép"
 
 #: inc/options.php:75
 msgid "Add File"
-msgstr ""
+msgstr "Fájl hozzáadása"
 
 #: inc/options.php:85 inc/options.php:172
 msgid "Theme Specific Settings"
-msgstr ""
+msgstr "Sablon specifikus beállítások"
 
 #: inc/options.php:90
 msgid "Show this in slider?"
-msgstr ""
+msgstr "Slider mutatása?"
 
 #: inc/options.php:91
 msgid ""
 "If you check this field, this post will be shown in the slider section in "
 "the header if it is enabled."
-msgstr ""
+msgstr "Pipáld be ezt a mezőt, hogy a bejegyzés bekerüljön a slider-be."
 
 #: inc/options.php:137 inc/options.php:225
 msgid "Small"
@@ -748,14 +731,12 @@ msgid "Yes"
 msgstr "Igen"
 
 #: inc/options.php:177
-#, fuzzy
-#| msgid "Colors"
 msgid "Color"
-msgstr "Színek"
+msgstr "Szín"
 
 #: inc/options.php:180
 msgid "We use this color to highlight the page's header image in the layout."
-msgstr ""
+msgstr "Ezt a színt használjuk az oldalt fejlécképének kiemelésére."
 
 #: inc/template-tags.php:45
 msgid "Posted on "
@@ -767,18 +748,17 @@ msgstr "Frissítve "
 
 #: inc/template-tags.php:92
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: inc/template-tags.php:95
-#, fuzzy, php-format
-#| msgid "Posted on "
+#, php-format
 msgid "Posted in: %1$s"
-msgstr "Közzétéve "
+msgstr "Kategóriák: %1$s"
 
 #: inc/template-tags.php:102
 #, php-format
 msgid "Tagged: %1$s"
-msgstr ""
+msgstr "Címkék: %1$s"
 
 #: inc/template-tags.php:112
 #, php-format
@@ -842,9 +822,7 @@ msgstr ""
 "sablonhoz. Frissítsd a bővíményt."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:394
-#, fuzzy, php-format
-#| msgctxt "Minden bővítmény telepítése és aktiválása sikeresen befejeződött."
-#| msgid "All plugins installed and activated successfully. %1$s"
+#, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Minden bővítmény telepítése és aktiválása sikeresen befejeződött. %1$s"
 
@@ -869,16 +847,16 @@ msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr "A bővítményt frissíteni kell, hogy kompatibilis legyen a sablonnal."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:523
-#, fuzzy
-#| msgid "Required"
 msgid "Update Required"
-msgstr "Szükséges"
+msgstr "Szükséges bővítmények frissítése"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:934
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
 msgstr ""
+"A távoli bővítmény elnevezése nem megfelelő, illetve az átnevezése nem "
+"megoldható."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:934
 #: inc/tgmpa/class-tgm-plugin-activation.php:937
@@ -886,12 +864,14 @@ msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
 msgstr ""
+"Lépj kapcsolatba a bővítmény fejlesztőjével, a WordPress írányelveken "
+"alapuló fejlesztéssel kapcsolatban."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:937
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
-msgstr ""
+msgstr "A távoli bővítményt több fájlból áll, de nincsenek mappába rendezve."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:1982
 #, php-format
@@ -927,9 +907,6 @@ msgid "Installed But Not Activated"
 msgstr "Telepítve, de nem aktív"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2321
-#, fuzzy
-#| msgctxt "Aktív"
-#| msgid "Active"
 msgid "Active"
 msgstr "Aktív"
 
@@ -946,9 +923,7 @@ msgid "Update recommended"
 msgstr "Ajánlott frissítés"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2388
-#, fuzzy, php-format
-#| msgctxt "Összes <span class=\"count\">(%s)</span>"
-#| msgid "All <span class=\"count\">(%s)</span>"
+#, php-format
 msgid "All <span class=\"count\">(%s)</span>"
 msgstr "Összes <span class=“count”>(%s)</span>"
 
@@ -965,10 +940,6 @@ msgid "Available version:"
 msgstr "Elérhető verzió:"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2533
-#, fuzzy
-#| msgid ""
-#| "There are one or more required or recommended plugins to install, update "
-#| "or activate."
 msgid "No plugins to install, update or activate."
 msgstr ""
 "Egy vagy több szükséges vagy ajánlott bővítmény vár telepítésre, frissítésre "
@@ -1005,15 +976,13 @@ msgid "Update %2$s"
 msgstr "%2$s frissítése"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2614
-#, fuzzy, php-format
-#| msgctxt "%2$ Aktiválása"
-#| msgid "Activate %2$s"
+#, php-format
 msgid "Activate %2$s"
 msgstr "%2$s aktiválása"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2684
 msgid "Upgrade message from the plugin author:"
-msgstr ""
+msgstr "Frissítési üzenet a bővítmény fejlesztőjétől:"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2717
 msgid "Install"
@@ -1024,9 +993,6 @@ msgid "Update"
 msgstr "Frissítése"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2726
-#, fuzzy
-#| msgctxt "Aktiválás"
-#| msgid "Activate"
 msgid "Activate"
 msgstr "Aktiválás"
 
@@ -1047,14 +1013,10 @@ msgid "No plugins are available to be updated at this time."
 msgstr "Nincsenek frissíthető bővítmények jelenleg."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2908
-#, fuzzy
-#| msgid "No plugins were selected to be updated. No action taken."
 msgid "No plugins were selected to be activated. No action taken."
 msgstr "Nincs frissítendő bővítmény kiválasztva."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2934
-#, fuzzy
-#| msgid "No plugins are available to be updated at this time."
 msgid "No plugins are available to be activated at this time."
 msgstr "Nincsenek frissíthető bővítmények jelenleg."
 
@@ -1086,30 +1048,21 @@ msgstr ""
 "időt is igényelhet, így kérünk légy türelmes."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3509
-#, fuzzy, php-format
-#| msgctxt "%1$s sikeresen telepítve és aktiválva."
-#| msgid "%1$s installed and activated successfully."
+#, php-format
 msgid "%1$s installed and activated successfully."
 msgstr "%1$s sikeresen telepítve és aktiválva."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3509
 #: inc/tgmpa/class-tgm-plugin-activation.php:3517
-#, fuzzy
-#| msgid "Show Search"
 msgid "Show Details"
 msgstr "Kereső megjelenítése"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3509
 #: inc/tgmpa/class-tgm-plugin-activation.php:3517
-#, fuzzy
-#| msgid "Hide Widgets"
 msgid "Hide Details"
 msgstr "Widgetek elrejtése"
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3510
-#, fuzzy
-#| msgctxt "Minden telepítés és aktiválás befejeződött."
-#| msgid "All installations and activations have been completed."
 msgid "All installations and activations have been completed."
 msgstr "Minden telepítés és aktiválás befejeződött."
 
@@ -1127,16 +1080,11 @@ msgstr ""
 "igényelhet, így kérünk légy türelmes."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3517
-#, fuzzy, php-format
-#| msgctxt "%1$s sikeresen telepítve és aktiválva."
-#| msgid "%1$s installed and activated successfully."
+#, php-format
 msgid "%1$s installed successfully."
 msgstr "%1$s sikeresen telepítve és aktiválva."
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3518
-#, fuzzy
-#| msgctxt "Minden telepítés befejeződött."
-#| msgid "All installations have been completed."
 msgid "All installations have been completed."
 msgstr "Minden telepítés bejefeződött."
 
@@ -1150,9 +1098,6 @@ msgid "Welcome to Alpha! - Version "
 msgstr "Üdvözlünk az Alphában – Verzió "
 
 #: inc/welcome-screen.php:18
-#, fuzzy
-#| msgctxt "Az Alpha-ról"
-#| msgid "About Alpha"
 msgid "About Alpha"
 msgstr "Az Alpha-ról"
 
@@ -1162,16 +1107,6 @@ msgid "Welcome to Alpha! - Version  %s"
 msgstr "Üdvözlünk az Alphában - Verzió %s"
 
 #: inc/welcome/view.php:12
-#, fuzzy
-#| msgctxt ""
-#| "Az Alpha egy tiszta és minimalista magazin/blog sablon azoknak, akik napi "
-#| "szinten készítenek tartalmat. A sablon felhasználóbarát, reszponzív és "
-#| "retina kompatibilis. Contact Form 7 és Jetpack támogatással."
-#| msgid ""
-#| "Alpha is a clean and minimalistic magazine/blog theme for those who like "
-#| "to create content each day. The theme is user-friendly, responsive, "
-#| "retina ready and performs well. It currently supports Contact Form 7 and "
-#| "various Jetpack features."
 msgid ""
 "Alpha is a clean and minimalistic magazine/blog theme for those who like to "
 "create content each day. The theme is user-friendly, responsive, retina "
@@ -1187,9 +1122,6 @@ msgid "Getting Started"
 msgstr "Indulás"
 
 #: inc/welcome/view.php:19
-#, fuzzy
-#| msgctxt "Rólunk"
-#| msgid "About Us"
 msgid "About Us"
 msgstr "Rólunk"
 
@@ -1255,11 +1187,11 @@ msgstr "Nézd meg az oldalunkat"
 #: search.php:19
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Keresési eredmények erre: %s"
 
 #: searchform.php:18 template-parts/header/search-bar.php:7
 msgid "Search &hellip;"
-msgstr ""
+msgstr "Keresés &hellip;"
 
 #: template-parts/header/main-section.php:22
 msgid "Site Logo"
@@ -1301,4 +1233,4 @@ msgstr ""
 
 #: template-parts/post/content-page.php:27
 msgid "Pages:"
-msgstr ""
+msgstr "Oldalak:"
