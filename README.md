@@ -6,7 +6,7 @@
 
 ## Description
 
-Alpha is a clean and minimalistic magazine/blog theme for those who like to create content each day. It is ideal for creators too because it supports a portfolio CPT. The theme is user-friendly, responsive, retina ready and performs well.
+Alpha is a clean and minimalistic magazine/blog theme for those who like to create content each day. It is user-friendly, responsive, retina ready and performs well.
 
 ## Information
 
