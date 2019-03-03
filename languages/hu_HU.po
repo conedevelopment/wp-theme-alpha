@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pine-alpha 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2019-03-02 11:06+0100\n"
-"PO-Revision-Date: 2019-03-02 11:39+0100\n"
+"PO-Revision-Date: 2019-03-03 10:04+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hu_HU\n"
@@ -740,11 +740,11 @@ msgstr "Ezt a színt használjuk az oldalt fejlécképének kiemelésére."
 
 #: inc/template-tags.php:45
 msgid "Posted on "
-msgstr "Közzétéve "
+msgstr "Közzétéve: "
 
 #: inc/template-tags.php:52
 msgid "Updated on "
-msgstr "Frissítve "
+msgstr "Frissítve: "
 
 #: inc/template-tags.php:92
 msgid ", "
