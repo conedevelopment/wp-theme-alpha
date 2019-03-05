@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pine-alpha 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2019-03-02 11:07+0100\n"
+"POT-Creation-Date: 2019-03-05 13:12+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1080,8 +1080,8 @@ msgstr ""
 #: inc/welcome/view.php:12
 msgid ""
 "Alpha is a clean and minimalistic magazine/blog theme for those who like to "
-"create content each day. The theme is user-friendly, responsive, retina ready "
-"and performs well. It currently supports Contact Form 7 and various Jetpack "
+"create content each day. It is user-friendly, responsive, retina ready and "
+"performs well. It currently supports Contact Form 7 and various Jetpack "
 "features."
 msgstr ""
 
@@ -1146,8 +1146,16 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
+#: searchform.php:16 template-parts/header/search-bar.php:5
+msgid "Search for:"
+msgstr ""
+
 #: searchform.php:18 template-parts/header/search-bar.php:7
 msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:19 template-parts/header/search-bar.php:8
+msgid "Search"
 msgstr ""
 
 #: template-parts/header/main-section.php:22
