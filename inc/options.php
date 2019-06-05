@@ -95,7 +95,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_post->add_field( array(
-		'name'    => 'Sidebar Position',
+		'name'    => esc_html__( 'Sidebar Position', 'pine-alpha' ),
 		'id'      => $prefix . 'sidebar_poisition', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -107,7 +107,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_post->add_field( array(
-		'name'    => 'Sidebar Style',
+		'name'    => esc_html__( 'Sidebar Style', 'pine-alpha' ),
 		'id'      => $prefix . 'sidebar_style', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -118,7 +118,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_post->add_field( array(
-		'name'    => 'Title Display Type',
+		'name'    => esc_html__( 'Title Display Type', 'pine-alpha' ),
 		'id'      => $prefix . 'title_display_type', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -130,7 +130,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_post->add_field( array(
-		'name'    => 'Title Size',
+		'name'    => esc_html__( 'Title Size', 'pine-alpha' ),
 		'id'      => $prefix . 'title_padding_size', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -142,7 +142,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_post->add_field( array(
-		'name'    => 'Show Meta Data After Title',
+		'name'    => esc_html__( 'Show Meta Data After Title', 'pine-alpha' ),
 		'id'      => $prefix . 'show_meta_data', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -153,7 +153,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_post->add_field( array(
-		'name'    => 'Show Author Box',
+		'name'    => esc_html__( 'Show Author Box', 'pine-alpha' ),
 		'id'      => $prefix . 'show_author_box', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -183,7 +183,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_page->add_field( array(
-		'name'    => 'Sidebar Position',
+		'name'    => esc_html__( 'Sidebar Position', 'pine-alpha' ),
 		'id'      => $prefix . 'sidebar_poisition', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -195,7 +195,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_page->add_field( array(
-		'name'    => 'Sidebar Style',
+		'name'    => esc_html__( 'Sidebar Style', 'pine-alpha' ),
 		'id'      => $prefix . 'sidebar_style', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -206,7 +206,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_page->add_field( array(
-		'name'    => 'Title Display Type',
+		'name'    => esc_html__( 'Title Display Type', 'pine-alpha' ),
 		'id'      => $prefix . 'title_display_type', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -218,7 +218,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_page->add_field( array(
-		'name'    => 'Title Size',
+		'name'    => esc_html__( 'Title Size', 'pine-alpha' ),
 		'id'      => $prefix . 'title_padding_size', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -230,7 +230,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_page->add_field( array(
-		'name'    => 'Show Meta Data After Title',
+		'name'    => esc_html__( 'Show Meta Data After Title', 'pine-alpha' ),
 		'id'      => $prefix . 'show_meta_data', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -241,7 +241,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_page->add_field( array(
-		'name'    => 'Show Author Box',
+		'name'    => esc_html__( 'Show Author Box', 'pine-alpha' ),
 		'id'      => $prefix . 'show_author_box', 
 		'type'    => 'radio_inline',
 		'options' => array(
