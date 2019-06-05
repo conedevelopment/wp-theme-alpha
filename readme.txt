@@ -1,12 +1,12 @@
 === pine-alpha ===
-
+Requires at least: 4.7
+Tested up to: 5.2
+Requires PHP: 5.3
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Contributors: pine
 Tags: custom-logo, custom-menu, featured-images, featured-image-header, translation-ready, left-sidebar, right-sidebar, custom-colors, editor-style, footer-widgets, post-formats, theme-options, block-styles, wide-blocks
-
-Requires at least: 4.7
-Tested up to: 5.1
-Stable tag: 1.0.0
-License: GNU General Public License v2 or later
 
 A magazine theme named Alpha.
 
