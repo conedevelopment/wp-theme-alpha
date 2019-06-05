@@ -8014,14 +8014,6 @@ hue-6-2: #e6c07b
   padding-right: 1rem;
 }
 
-.highlighted-posts {
-  padding: 3rem 0 1rem;
-}
-
-.highlighted-posts .list-item {
-  margin-bottom: 0;
-}
-
 .list-item {
   margin-bottom: 3rem;
   word-wrap: break-word;

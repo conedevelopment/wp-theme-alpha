@@ -522,111 +522,6 @@ if( class_exists( 'Kirki' ) ) {
 		'title'       => esc_attr__( 'Components', 'pine-alpha' )
 	) );
 
-	/**
-	 * Add Components / Popular Posts Section
-	 */
-	Kirki::add_section( 'pine_alpha_components_popular_posts', array(
-		'title'          => esc_attr__( 'Popular Posts', 'pine-alpha' ),
-		'panel'          => 'pine_alpha_components',
-		'priority'       => 160,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'     => 'text',
-		'settings' => 'pine_alpha_components_popular_posts_section_title',
-		'label'    => __( 'Section Title', 'pine-alpha' ),
-		'section'  => 'pine_alpha_components_popular_posts',
-		'default'  => esc_attr__( 'Popular Posts', 'pine-alpha' ),
-		'priority' => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'toggle',
-		'settings'    => 'pine_alpha_components_popular_posts_section_hide_title',
-		'label'       => esc_attr__( 'Hide Section Title', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_popular_posts',
-		'default'     => '0',
-		'priority'    => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'custom',
-		'settings'    => 'pine_alpha_components_popular_posts_line_separator_1',
-		'section'     => 'pine_alpha_components_popular_posts',
-		'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
-		'priority'    => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'color-palette',
-		'settings'    => 'pine_alpha_components_popular_posts_section_background',
-		'label'       => esc_attr__( 'Background Color', 'pine-alpha' ),
-		'description' => esc_attr__( 'Set the popular posts section background color. Use the light gray if the section is placed between white elements.', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_popular_posts',
-		'default'     => '#ffffff',
-		'choices'     => array(
-			'colors' => array( '#ffffff', '#f9f9f9' ),
-			'style'  => 'round',
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'custom',
-		'settings'    => 'pine_alpha_components_popular_posts_line_separator_2',
-		'section'     => 'pine_alpha_components_popular_posts',
-		'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
-		'priority'    => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'number',
-		'settings'    => 'pine_alpha_components_popular_posts_section_post_number',
-		'label'       => esc_attr__( 'The Number of Posts to Show', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_popular_posts',
-		'default'     => 4,
-		'choices'     => array(
-			'min'  => 2,
-			'max'  => 6,
-			'step' => 1,
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'custom',
-		'settings'    => 'pine_alpha_components_popular_posts_line_separator_3',
-		'section'     => 'pine_alpha_components_popular_posts',
-		'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
-		'priority'    => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'number',
-		'settings'    => 'pine_alpha_components_popular_posts_section_padding_top',
-		'label'       => esc_attr__( 'Padding Top', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_popular_posts',
-		'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
-		'default'     => 3,
-		'choices'     => array(
-			'min'  => 0,
-			'max'  => 3,
-			'step' => 1,
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'number',
-		'settings'    => 'pine_alpha_components_popular_posts_section_padding_bottom',
-		'label'       => esc_attr__( 'Padding Bottom', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_popular_posts',
-		'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
-		'default'     => 1,
-		'choices'     => array(
-			'min'  => 0,
-			'max'  => 3,
-			'step' => 1,
-		),
-	) );
-
 
 	/**
 	 * Add Components / Categories Section
@@ -920,13 +815,11 @@ if( class_exists( 'Kirki' ) ) {
 		'section'     => 'pine_alpha_layout_front_page',
 		'default'     => array(
 			'hero',
-			'popular-posts',
 			'categories',
 			'blogroll'
 		),
 		'choices'     => array(
 			'hero' => esc_attr__( 'Hero Section', 'pine-alpha' ),
-			'popular-posts' => esc_attr__( 'Popular Posts Section', 'pine-alpha' ),
 			'categories' => esc_attr__( 'Categories Section', 'pine-alpha' ),
 			'blogroll' => esc_attr__( 'Blogroll Section', 'pine-alpha' )
 		),

@@ -46,25 +46,6 @@ add_filter('the_content', 'pine_alpha_filter_ptags_on_images');
 
 
 /**
- * Post view counter data save.
- */
-function pine_alpha_count_post_visits() {
-    if( is_single() ) {
-        global $post;
-		$views = get_post_meta( $post->ID, 'pine_alpha_viewed', true );
-		
-        if( $views == '' ) {
-            update_post_meta( $post->ID, 'pine_alpha_viewed', '1' );   
-        } else {
-            $views = intval( $views );
-            update_post_meta( $post->ID, 'pine_alpha_viewed', ++$views );
-        }
-    }
-}
-
-add_action( 'wp_head', 'pine_alpha_count_post_visits' );
-
-/**
  * Lightens/darkens a given colour (hex format), returning the altered colour in hex format.7
  * @param str $hex Colour as hexadecimal (with or without hash);
  * @percent float $percent Decimal ( 0.2 = lighten by 20%(), -0.4 = darken by 40%() )
