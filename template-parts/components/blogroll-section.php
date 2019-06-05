@@ -49,7 +49,10 @@
 						</div>
 					<?php endwhile; ?>
 				</div>
-			<?php endif; ?>
+			<?php 
+			endif;
+			wp_reset_postdata();
+			?>
 		</main>
 
 		<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'right' ) : ?>
