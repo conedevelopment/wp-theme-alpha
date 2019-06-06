@@ -12,23 +12,19 @@ function pine_alpha_register_required_plugins() {
 	$plugins = array(
 
 		/*
-		* Required plugins.
+		* Recommended plugins.
 		*/
 		array(
 			'name'      => 'CMB2',
 			'slug'      => 'cmb2',
-			'required'  => true,
+			'required'  => false,
 		),
 
 		array(
 			'name'      => 'Kirki',
 			'slug'      => 'kirki',
-			'required'  => true,
+			'required'  => false,
 		),
-
-		/*
-		* Recommended plugins.
-		*/
 		array(
 			'name'      => 'Jetpack by WordPress.com',
 			'slug'      => 'jetpack',
