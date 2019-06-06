@@ -12,7 +12,7 @@
 function pine_alpha_custom_styles() {
     
     $default_color = get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' );
-    $default_color_lighter = color_luminance( $default_color, 0.5);
+    $default_color_lighter = pine_color_luminance( $default_color, 0.5);
     $secondary_color = get_theme_mod( 'pine_alpha_general_colors_section_secondary', '#00f1ff' );
     
     $categories_section_background_color = get_theme_mod( 'pine_alpha_components_categories_section_background', '#f9f9f9' );

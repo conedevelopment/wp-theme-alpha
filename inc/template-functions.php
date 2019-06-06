@@ -51,7 +51,7 @@ add_filter('the_content', 'pine_alpha_filter_ptags_on_images');
  * @percent float $percent Decimal ( 0.2 = lighten by 20%(), -0.4 = darken by 40%() )
  * @return str Lightened/Darkend colour as hexadecimal (with hash);
  */
-function color_luminance( $hex, $percent ) {
+function pine_color_luminance( $hex, $percent ) {
 	
 	// validate hex string
 	
