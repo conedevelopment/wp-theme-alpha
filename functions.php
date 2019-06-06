@@ -359,27 +359,20 @@ function pine_alpha_fonts_url() {
  */
 function pine_alpha_scripts() {
 	wp_enqueue_style( 'pine-alpha-fonts', pine_alpha_fonts_url(), array(), null );
-
 	wp_enqueue_style( 'pine-alpha-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'pine-alpha-slick-vendor', get_template_directory_uri() . '/assets/js/vendor/slick.js', array(), THEME_VERSION, true );
+	wp_enqueue_script( 'pine-alpha-canvi', get_template_directory_uri() . '/assets/js/vendor/canvi.js', array(), THEME_VERSION, true );
 
 	if( get_theme_mod( 'pine_alpha_header_section_navigation_sticky', 0 ) == 1 ) {
-		wp_enqueue_script( 'pine-alpha-headroom', get_template_directory_uri() . '/assets/js/plugins/headroom.js', array(), THEME_VERSION, true );
-		wp_enqueue_script( 'pine-alpha-headroom-jquery', get_template_directory_uri() . '/assets/js/plugins/jQuery.headroom.js', array(), THEME_VERSION, true );
+		wp_enqueue_script( 'pine-alpha-headroom', get_template_directory_uri() . '/assets/js/vendor/headroom.js', array( 'jquery' ), THEME_VERSION, true );
+		wp_enqueue_script( 'pine-alpha-headroom-jquery', get_template_directory_uri() . '/assets/js/vendor/jQuery.headroom.js', array( 'jquery' ), THEME_VERSION, true );
 	}
 
-	if( get_theme_mod( 'pine_alpha_general_display_section_magnific_popup', 0 ) == 1 ) {
-		wp_enqueue_script( 'pine-alpha-magnific-popup', get_template_directory_uri() . '/assets/js/plugins/jquery.magnific-popup.min.js', array(), THEME_VERSION, true );
-	}
-
-	if( get_theme_mod( 'pine_alpha_general_display_section_highlight_js', 0 ) == 1 ) {
-		wp_enqueue_script( 'pine-alpha-highlight-js', get_template_directory_uri() . '/assets/js/plugins/highlight.pack.js', array(), THEME_VERSION, true );
-	}
-
-	wp_enqueue_script( 'pine-alpha-vendor', get_template_directory_uri() . '/assets/dist/vendor.min.js', array(), THEME_VERSION, true );
-
-	wp_enqueue_script( 'pine-alpha-custom', get_template_directory_uri() . '/assets/dist/custom.min.js', array(), THEME_VERSION, true );
+	wp_enqueue_script( 'pine-alpha-main', get_template_directory_uri() . '/assets/js/custom/main.js', array( 'pine-alpha-canvi' ), THEME_VERSION, true );
+	wp_enqueue_script( 'pine-alpha-slick', get_template_directory_uri() . '/assets/js/custom/slick-carousel.js', array(), THEME_VERSION, true );
+	wp_enqueue_script( 'pine-alpha-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/custom/skip-link-focus-fix.js', array(), THEME_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -78,41 +78,4 @@
 		header.removeClass( 'is-search-open' );
 		searchForm.find( 'input' ).blur();
 	});
-
-	if ( $( 'body[data-magnific="true"]' ).length ) {
-		$('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').each( function() {
-			if ( 0 == $( this ).parents( '.gallery' ).length ) {
-				$( this ).magnificPopup({
-					type: 'image',
-					mainClass: 'mfp-with-zoom'
-				});
-			}
-		});
-
-		$( '.gallery, .wp-block-gallery' ).each( function() {
-			$( this ).magnificPopup({
-				delegate: 'a',
-				type: 'image',
-				mainClass: 'mfp-with-zoom',
-				removalDelay: 250,
-				gallery: {
-					enabled: true
-				},
-				callbacks: {
-					beforeOpen: function() {
-						this.st.image.markup = this.st.image.markup.replace(
-							'mfp-figure',
-							'mfp-figure mfp-with-anim'
-						);
-					}
-				}
-			});
-		});
-	}
-
-	if ( $( 'body[data-highlight-js="true"]' ).length ) {
-		$( '.wp-block-code code' ).each(function(i, block) {
-			hljs.highlightBlock(block);
-		});
-	}
 }(jQuery));

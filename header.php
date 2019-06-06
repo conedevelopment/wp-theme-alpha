@@ -24,8 +24,6 @@
 		body_class();
 		if( get_theme_mod( 'pine_alpha_header_section_navigation_sticky', 0 ) == 1 ) { echo ' data-sticky="true"'; }
 		if( get_theme_mod( 'pine_alpha_footer_scrolltop_enable', 0 ) == 1 ) { echo ' data-scroll-top="true"'; }
-		if( get_theme_mod( 'pine_alpha_general_display_section_magnific_popup', 0 ) == 1 ) { echo ' data-magnific="true"'; }
-		if( get_theme_mod( 'pine_alpha_general_display_section_highlight_js', 0 ) == 1 ) { echo ' data-highlight-js="true"'; }
 	?>
 >
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'pine-alpha' ); ?></a>

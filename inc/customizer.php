@@ -486,33 +486,6 @@ if( class_exists( 'Kirki' ) ) {
 		'section'     => 'pine_alpha_general_social_links'
 	) );
 
-	/**
-	 * Add General / Display Section
-	 */
-	Kirki::add_section( 'pine_alpha_general_display', array(
-		'title'          => esc_attr__( 'Display', 'pine-alpha' ),
-		'panel'          => 'pine_alpha_general',
-		'priority'       => 160,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'toggle',
-		'settings'    => 'pine_alpha_general_display_section_magnific_popup',
-		'label'       => esc_attr__( 'Enable Magnific Popup', 'pine-alpha' ),
-		'section'     => 'pine_alpha_general_display',
-		'default'     => '0',
-		'priority'    => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'toggle',
-		'settings'    => 'pine_alpha_general_display_section_highlight_js',
-		'label'       => esc_attr__( 'Enable highlight.js', 'pine-alpha' ),
-		'section'     => 'pine_alpha_general_display',
-		'default'     => '0',
-		'priority'    => 10,
-	) );
-
 
 	/**
 	 * Add Components Panel
