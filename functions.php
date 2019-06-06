@@ -538,3 +538,21 @@ if ( pine_alpha_get_option( 'pine_alpha_theme_options_code_body_textareacode' ) 
 
 	add_action( 'wp_footer', 'pine_alpha_load_custom_code_in_body', 999 );
 }
+
+
+/**
+ * Filter the excerpt length.
+ */
+function pine_custom_excerpt_length( $length ) {
+    return get_theme_mod( 'pine_alpha_layout_list_item_section_excerpt_length', 140 );
+}
+add_filter( 'excerpt_length', 'pine_custom_excerpt_length');
+
+
+/**
+ * Filter the "read more" excerpt string link to the post.
+ */
+function pine_custom_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'pine_custom_excerpt_more' );
