@@ -22,7 +22,7 @@
 					  get_theme_mod( 'pine_alpha_components_blogroll_section_title' )) : ?>
 				<h2 class="section-title">
 					<span class="section-title__helper">
-						<?php echo esc_attr__( get_theme_mod( 'pine_alpha_components_blogroll_section_title' ), 'pine-alpha' ); ?>
+						<?php echo esc_html( get_theme_mod( 'pine_alpha_components_blogroll_section_title' ), 'pine-alpha' ); ?>
 					</span>
 				</h2>
 			<?php endif; ?>

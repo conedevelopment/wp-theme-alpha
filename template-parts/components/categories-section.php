@@ -6,7 +6,7 @@
 				<div class="col-12">
 					<h2 class="section-title">
 						<span class="section-title__helper">
-							<?php echo esc_attr__( get_theme_mod( 'pine_alpha_components_categories_section_title' ), 'pine-alpha' ); ?>
+							<?php echo esc_html( get_theme_mod( 'pine_alpha_components_categories_section_title' ), 'pine-alpha' ); ?>
 						</span>
 					</h2>
 				</div>

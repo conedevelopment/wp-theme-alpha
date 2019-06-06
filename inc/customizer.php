@@ -519,7 +519,7 @@ if( class_exists( 'Kirki' ) ) {
 	 */
 	Kirki::add_panel( 'pine_alpha_components', array(
 		'priority'    => 60,
-		'title'       => esc_attr__( 'Components', 'pine-alpha' )
+		'title'       => esc_attr__( 'Components', 'pine-alpha' ),
 	) );
 
 
