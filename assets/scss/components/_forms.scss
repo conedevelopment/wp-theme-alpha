@@ -7,7 +7,7 @@ input[type="submit"] {
 
 select {
     width: 100%;
-    border: 1px solid #efefef;
+    border: 1px solid map-get($colors, 'medium-gray');
     padding: 0.7rem 0.5rem;
     border-radius: map-get($settings, 'border-radius');
     background: #fff;
@@ -39,7 +39,7 @@ select {
     select,
     textarea {
         width: 100%;
-        border: 1px solid #eee;
+        border: 1px solid map-get($colors, 'medium-gray');
         padding: 0.4em 0.8em;
         border-radius: map-get($settings, 'border-radius');
         background: #f6f6f6;

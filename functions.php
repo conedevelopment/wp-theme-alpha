@@ -106,20 +106,22 @@ if ( ! function_exists( 'pine_alpha_setup' ) ) {
 			'comment-list',
 			'gallery',
 			'caption',
-		) );
+		) );		
 
-		/*
-		 * Enable support for Post Formats.
+		/**
+		 * Add support for core custom logo.
 		 *
-		 * See: https://codex.wordpress.org/Post_Formats
+		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'post-formats', array(
-			'aside',
-			'video',
-			'quote',
-			'gallery',
-			'audio',
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 90,
+				'width'       => 230,
+				'flex-width'  => true,
+				'flex-height' => false,
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -340,7 +342,7 @@ function pine_alpha_fonts_url() {
 	if ( 'off' !== $fonts ) {
 		$font_families = array();
 		$font_families[] = 'Merriweather:400,700';
-		$font_families[] = 'Source Sans Pro:300,400,700';
+		$font_families[] = 'Source Sans Pro:400,700';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),

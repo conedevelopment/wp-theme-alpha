@@ -26,40 +26,6 @@ if( class_exists( 'Kirki' ) ) {
 
 
 	/**
-	 * Add Header / Logo Section
-	 */
-	Kirki::add_section( 'pine_alpha_header_section_logo', array(
-		'title'          => esc_attr__( 'Logo', 'pine-alpha' ),
-		'panel'          => 'pine_alpha_header',
-		'priority'       => 160,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'image',
-		'settings'    => 'pine_alpha_header_section_logo_image',
-		'label'       => esc_attr__( 'Upload your logo', 'pine-alpha' ),
-		'section'     => 'pine_alpha_header_section_logo',
-		'default'     => '',
-		'choices'     => array(
-			'save_as' => 'array',
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'slider',
-		'settings'    => 'pine_alpha_header_section_logo_height',
-		'label'       => esc_attr__( 'Set the max-height of the logo', 'pine-alpha' ),
-		'section'     => 'pine_alpha_header_section_logo',
-		'default'     => 45,
-		'choices'     => array(
-			'min'  => '35',
-			'max'  => '45',
-			'step' => '1',
-		),
-	) );
-
-
-	/**
 	 * Add Header / Navigation Section
 	 */
 	Kirki::add_section( 'pine_alpha_header_section_navigation', array(

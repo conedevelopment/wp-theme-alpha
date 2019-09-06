@@ -9,6 +9,12 @@ $container-max-widths: (
   xl: 1260px
 );
 
+// Overide BS4 colors?
+$theme-colors : (
+    'primary' : #0074d9,
+    'danger'  : #ff4136
+);
+
 $colors: (
     "default":    #0095FF,
     "secondary":  #3be197,

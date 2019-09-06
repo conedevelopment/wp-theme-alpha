@@ -1,12 +1,6 @@
 .slider-posts {
     position: relative;
-    background: map-get($colors, 'light-gray');
     visibility: hidden;
-    padding: 0.5rem 0;
-
-    @include media-breakpoint-up(md) {
-        padding: 1rem 0;
-    }
 
     &.slick-initialized {
         visibility: visible;

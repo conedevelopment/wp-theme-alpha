@@ -1,5 +1,5 @@
 <?php 
-    $site_logo = get_theme_mod( 'pine_alpha_header_section_logo_image' );
+    $site_logo = get_theme_mod( 'custom_logo' );
 ?>
 
 <div class="
@@ -18,10 +18,10 @@
             <?php $image = get_theme_mod( 'pine_alpha_header_section_logo_image', '' ); ?>
             <div class="site-header__helper is-left">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-header__logo">
-                    <?php if( ! empty($site_logo['url']) ) : ?>
-                        <img src="<?php echo esc_url( $image['url'] ); ?>" class="img-fluid" alt="<?php _e( 'Site Logo', 'pine-alpha' ); ?>">
+                    <?php if ( has_custom_logo() ) : ?>
+                        <img src="<?php echo wp_get_attachment_image_src( $site_logo , 'full' )[0]; ?>" class="img-fluid" alt="<?php bloginfo( 'name' ); ?>">
                     <?php else : ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" class="img-fluid" alt="<?php _e( 'Alpha Theme Site Logo', 'pine-alpha' ); ?>">
+                        <?php bloginfo( 'name' ); ?>
                     <?php endif; ?>
                 </a>
                 

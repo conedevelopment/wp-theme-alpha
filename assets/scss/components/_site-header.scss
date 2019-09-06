@@ -115,6 +115,10 @@
 
     &__logo {
         display: block;
+        font-family: map-get($fonts, 'heading');
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: map-get($colors, 'black');
 
         img {
             height: 35px;

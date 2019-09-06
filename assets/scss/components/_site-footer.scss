@@ -1,12 +1,15 @@
 .site-footer {
-	background: map-get($colors, "black");
 	text-align: center;
-	color: #fff;
 	padding: 3rem 0;
+	background: #f9f9f9;
+
+	@include media-breakpoint-up(md) {
+		padding: 5rem 0;
+	}
 
 	&__widgets {
 		text-align: left;
-		color: #fff;
+		color: map-get($colors, 'black');
 		margin-bottom: 2rem;
 	}
 
@@ -14,37 +17,37 @@
 		margin-bottom: 2rem;
 
 		&-title {
-			color: rgba(255, 255, 255, 0.3);
-			margin-bottom: 1.5rem;
+			color: map-get($colors, 'dark-gray');
+			margin-bottom: 2rem;
 		}
 
 		.textwidget {
 			background: transparent;
 			padding: 0;
-			color: rgba(255, 255, 255, 0.8);
+			color: map-get($colors, 'black;');
 		}
 
 		.gallery-caption {
-			color: rgba(255, 255, 255, 0.3);
+			color: map-get($colors, 'light-gray');
 		}
 
 		ul {
 			> * + * {
-				border-top: 1px solid rgba(255, 255, 255, 0.05);
+				border-top: 1px solid rgba(0, 0, 0, 0.05);
 			}
 		}
 
 		ul li {
-			color: rgba(255, 255, 255, 0.6);
+			color: map-get($colors, 'black');
 		}
 
 		a {
-			color: #fff;
+			color: map-get($colors, 'black');
 
 			&:hover,
 			&:focus,
 			&:active {
-				color: map-get($colors, "default");
+				color: map-get($colors, 'default');
 			}
 		}
 
@@ -61,8 +64,8 @@
 				&:hover,
 				&:focus,
 				&:active {
-					background: #fff;
-					color: map-get($colors, "default");
+					background: map-get($colors, 'black');
+					color: #fff;
 				}
 			}
 		}
@@ -74,8 +77,8 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		padding-bottom: 2rem;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 		margin-bottom: 3rem;
+		border-bottom: 1px solid rgba(0,0,0,0.05);
 
 		.social-item {
 			margin-bottom: 1rem;
@@ -84,6 +87,6 @@
 
 	&__copyright {
 		margin: 0;
-		color: rgba(255,255,255,0.6);
+		color: map-get($colors, 'medium-gray');
 	}
 }
