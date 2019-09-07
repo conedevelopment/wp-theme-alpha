@@ -15,14 +15,16 @@
 get_header();
 ?>
 	<header class="page-header is-blog
-		<?php echo 'is-' . get_theme_mod( 'pine_alpha_components_archive_title_section_sidebar_position', 'image' );  ?>
+		<?php echo 'is-' . get_theme_mod( 'pine_alpha_components_archive_title_section_type', 'image' );  ?>
+		<?php echo 'is-' . get_theme_mod( 'pine_alpha_components_archive_title_section_size', 'medium' ); ?>
+		
 		"
 		style="
 		<?php 
 			$image_url = get_theme_mod( 'pine_alpha_layout_blog_background' );
 			$image_id = attachment_url_to_postid( $image_url );
 			
-			if( get_theme_mod( 'pine_alpha_components_archive_title_section_sidebar_position', 'image' ) == 'image' && $image_id ) {
+			if( get_theme_mod( 'pine_alpha_components_archive_title_section_type', 'image' ) == 'image' && $image_id ) {
 				echo 'background-image: url(' . wp_get_attachment_image_src( $image_id, 'alpha-archive-header' )[0] .');'; 
 			}
 		?>

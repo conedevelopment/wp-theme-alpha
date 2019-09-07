@@ -36,13 +36,28 @@
 				<div class="row">
 					<?php while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
 						<div class="col-12 
-						<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'none' ) : ?>
-							col-sm-4 
-						<?php else : ?>
+						<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right') == 'none' &&
+								  get_theme_mod( 'pine_alpha_components_blogroll_section_type', 'default' ) == 'default' ) : ?>
+							col-sm-4
+						<?php endif; ?>
+
+						<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right') != 'none' &&
+								  get_theme_mod( 'pine_alpha_components_blogroll_section_type', 'default' ) == 'default' ) : ?>
 							col-sm-6
 						<?php endif; ?>
+
+						<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right') == 'none' &&
+								  get_theme_mod( 'pine_alpha_components_blogroll_section_type', 'default' ) == 'secondary' ) : ?>
+							col-lg-6
+						<?php endif; ?>
 						">
-							<?php get_template_part( 'template-parts/post/content', 'list' ); ?>
+							<?php 
+							if( get_theme_mod( 'pine_alpha_components_blogroll_section_type', 'default' ) == 'default' ) {
+								get_template_part( 'template-parts/post/content', 'list' );
+							} else {
+								get_template_part( 'template-parts/post/content', 'list-secondary' );
+							}
+							?>
 						</div>
 					<?php endwhile; ?>
 				</div>
@@ -53,9 +68,7 @@
 		</main>
 
 		<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'right' ) : ?>
-			<aside class="site-sidebar is-right col-12 col-lg-4
-				is-<?php echo get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_type', 'white' ); ?>
-			">
+			<aside class="site-sidebar is-right col-12 col-lg-4">
 				<?php get_sidebar(); ?>
 			</aside>
 		<?php endif; ?>

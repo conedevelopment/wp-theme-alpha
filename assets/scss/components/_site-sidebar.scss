@@ -1,55 +1,5 @@
 .site-sidebar {
-    &.is-left.is-gray {
-        .site-sidebar__inside {
-            padding: 3rem 0;
-
-            @include media-breakpoint-up(lg) {
-                padding: 3rem 2rem 3rem 0;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                bottom: 0;
-                left: -100vw;
-                right: -100vw;
-                background: map-get($colors, 'light-gray');
-
-                @include media-breakpoint-up(lg) {
-                    right: 0;
-                }
-            }
-        }
-    }
-
-    &.is-right.is-gray {
-        .site-sidebar__inside {
-            padding: 3rem 0;
-
-            @include media-breakpoint-up(lg) {
-                padding: 3rem 0 3rem 2rem;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                bottom: 0;
-                right: -100vw;
-                left: -100vw;
-                background: map-get($colors, 'light-gray');
-
-                @include media-breakpoint-up(lg) {
-                    left: 0;
-                }
-            }
-        }
-    }
-
-    &.is-left.is-white {
+    &.is-left {
         .site-sidebar__inside {
             padding: 0 0 2rem 0;
 
@@ -60,7 +10,7 @@
         }
     }
 
-    &.is-right.is-white {
+    &.is-right {
         .site-sidebar__inside {
             padding: 2rem 0 0 0;
 

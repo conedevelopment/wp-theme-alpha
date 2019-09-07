@@ -52,27 +52,6 @@
 				color: map-get($colors, 'default');
 			}
 		}
-
-		.tagcloud {
-			ul > * + * {
-				padding-top: 0;
-				margin-bottom: 0.7rem;
-			}
-
-			a {
-				color: #fff;
-				background: map-get($colors, 'default');
-				transition: background 0.15s ease;
-
-				&:hover,
-				&:focus,
-				&:active {
-					background: map-get($colors, 'black');
-					color: #fff;
-					transition: background 0.15s ease;
-				}
-			}
-		}
 	}
 
 	&__socials {

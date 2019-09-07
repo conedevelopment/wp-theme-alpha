@@ -32,6 +32,6 @@ $show_author_box = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_show_aut
 			get_template_part( 'template-parts/post/author', 'box' );
 		}
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>

@@ -14,13 +14,15 @@ get_header();
 			if( empty( get_term_meta( get_queried_object()->term_id, 'pine_alpha_category_color', true ) ) ) {
 				echo 'is-white';
 			} else {
-				echo 'is-' . get_theme_mod( 'pine_alpha_components_archive_title_section_sidebar_position', 'image' );
+				echo 'is-' . get_theme_mod( 'pine_alpha_components_archive_title_section_type', 'image' );
 			}
 		?>
+		
+		<?php echo 'is-' . get_theme_mod( 'pine_alpha_components_archive_title_section_size', 'medium' ); ?>
 		"
 		style="
 		<?php 
-			if( get_queried_object() && get_theme_mod( 'pine_alpha_components_archive_title_section_sidebar_position', 'image' ) == 'image' ) {
+			if( get_queried_object() && get_theme_mod( 'pine_alpha_components_archive_title_section_type', 'image' ) == 'image' ) {
 				echo 'background-image: url(' . wp_get_attachment_image_src( get_term_meta( get_queried_object()->term_id, 'pine_alpha_category_cover_image_id', true ), 'alpha-archive-header' )[0] . ');';
 			}
 			

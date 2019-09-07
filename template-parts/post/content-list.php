@@ -1,8 +1,4 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('list-item');
-    if ( get_post_format() == 'gallery' ) { echo 'data-type="gallery"'; }
-    if ( get_post_format() == 'quote' ) { echo 'data-type="quote"'; }
-    if ( get_post_format() == 'aside' ) { echo 'data-type="aside"'; }
-
     $terms = get_the_terms( get_the_ID(), 'category');
     if( !empty($terms) ) :
         $term = array_shift($terms); ?>

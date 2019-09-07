@@ -26,7 +26,7 @@
 		if( get_theme_mod( 'pine_alpha_footer_scrolltop_enable', 0 ) == 1 ) { echo ' data-scroll-top="true"'; }
 	?>
 >
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'pine-alpha' ); ?></a>
+	<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', 'pine-alpha' ); ?></a>
 
 	<div class="js-canvi-navbar--right canvi-navbar animate--in">
 		<div class="canvi-navbar__inside">

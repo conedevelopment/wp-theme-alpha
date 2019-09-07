@@ -110,7 +110,7 @@
 		}
 
 		a {
-			background: map-get($colors, 'black');
+			background-color: map-get($colors, 'default');
 			display: inline-block;
 			padding: 0.4em 0.8em;
 			border-radius: 2px;
@@ -118,12 +118,14 @@
 			text-transform: uppercase;
 			font-weight: 700;
 			font-size: 0.8rem !important;
+			transition: background-color 0.15s ease;
 
 			&:hover,
 			&:focus,
 			&:active {
-				color: #fff;
-				background: map-get($colors, 'default');
+				color: #fff !important;
+				background: map-get($colors, 'black') !important;
+				transition: background-color 0.15s ease;
 			}
 		}
 	}

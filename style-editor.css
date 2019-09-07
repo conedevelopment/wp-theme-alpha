@@ -3700,8 +3700,7 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-transition: 0.15s ease;
   transition: 0.15s ease;
   color: #fff;
-  text-decoration: none;
-  background-position: right top;
+  background: #231F20;
 }
 
 .wp-block-file,
@@ -3749,8 +3748,7 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-transition: 0.15s ease;
   transition: 0.15s ease;
   color: #fff;
-  text-decoration: none;
-  background-position: right top;
+  background: #231F20;
 }
 
 .has-small-font-size {

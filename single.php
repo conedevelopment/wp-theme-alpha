@@ -16,7 +16,6 @@ $title_display_type = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_title
 $title_padding_size = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_title_padding_size' )  ? get_post_meta( get_the_ID(), 'pine_alpha_title_padding_size', true ) : 'medium' );
 $show_meta_data = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_show_meta_data' )  ? get_post_meta( get_the_ID(), 'pine_alpha_show_meta_data', true ) : 'yes' );
 $sidebar_poisition = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_sidebar_poisition' )  ? get_post_meta( get_the_ID(), 'pine_alpha_sidebar_poisition', true ) : 'right' );
-$sidebar_style = ( metadata_exists( 'post', get_the_ID(), 'pine_alpha_sidebar_style' )  ? get_post_meta( get_the_ID(), 'pine_alpha_sidebar_style', true ) : 'white' );
 $color = ( get_term_meta( get_the_terms( get_the_ID(), 'category' )[0]->term_id, 'pine_alpha_category_color', true )  ? get_term_meta( get_the_terms( get_the_ID(), 'category' )[0]->term_id, 'pine_alpha_category_color', true ) : get_theme_mod( 'pine_alpha_general_colors_section_default', '#283dff' ) );
 
 get_header();
@@ -56,17 +55,14 @@ get_header();
 	<?php if( $sidebar_poisition != 'none' ) : ?>
 		<div class="container site-main-wrapper
 			<?php 
-				if( $sidebar_poisition != 'none' &&
-					$sidebar_style == 'white' ) {
-					echo 'has-sidebar--white';
+				if( $sidebar_poisition != 'none' ) {
+					echo 'has-sidebar';
 				}
 			?>
 		">
 			<div class="row">
 				<?php if( $sidebar_poisition == 'left' ) : ?>
-					<aside class="site-sidebar is-left col-12 col-lg-4
-						is-<?php echo $sidebar_style; ?>
-					">
+					<aside class="site-sidebar is-left col-12 col-lg-4">
 						<?php get_sidebar(); ?>
 					</aside>
 				<?php endif; ?>
@@ -88,9 +84,7 @@ get_header();
 				</main>
 
 				<?php if( $sidebar_poisition == 'right' ) : ?>
-					<aside class="site-sidebar is-right col-12 col-lg-4
-						is-<?php echo $sidebar_style; ?>
-					">
+					<aside class="site-sidebar is-right col-12 col-lg-4">
 						<?php get_sidebar(); ?>
 					</aside>
 				<?php endif; ?>

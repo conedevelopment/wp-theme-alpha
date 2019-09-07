@@ -541,6 +541,19 @@ if( class_exists( 'Kirki' ) ) {
 	) );
 
 	Kirki::add_field( 'pine_alpha', array(
+		'type'        => 'radio-buttonset',
+		'settings'    => 'pine_alpha_components_blogroll_section_type',
+		'label'       => __( 'List Type', 'pine-alpha' ),
+		'section'     => 'pine_alpha_components_blogroll',
+		'default'     => 'default',
+		'priority'    => 10,
+		'choices'     => array(
+			'default'   => esc_attr__( 'Default', 'pine-alpha' ),
+			'secondary' => esc_attr__( 'Secondary', 'pine-alpha' )
+		),
+	) );
+
+	Kirki::add_field( 'pine_alpha', array(
 		'type'        => 'custom',
 		'settings'    => 'pine_alpha_components_blogroll_section_line_separator_2',
 		'section'     => 'pine_alpha_components_blogroll',
@@ -561,23 +574,6 @@ if( class_exists( 'Kirki' ) ) {
 		),
 	) );
 
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'custom',
-		'settings'    => 'pine_alpha_components_blogroll_section_line_separator_3',
-		'section'     => 'pine_alpha_components_blogroll',
-		'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
-		'priority'    => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'custom',
-		'settings'    => 'pine_alpha_components_blogroll_section_line_separator_4',
-		'section'     => 'pine_alpha_components_blogroll',
-		'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
-		'priority'    => 10,
-	) );
-
-
 
 	/**
 	 * Add Components / Archive Title Section
@@ -590,7 +586,7 @@ if( class_exists( 'Kirki' ) ) {
 
 	Kirki::add_field( 'pine_alpha', array(
 		'type'        => 'radio-buttonset',
-		'settings'    => 'pine_alpha_components_archive_title_section_sidebar_position',
+		'settings'    => 'pine_alpha_components_archive_title_section_type',
 		'label'       => __( 'Display Type', 'pine-alpha' ),
 		'section'     => 'pine_alpha_components_archive_title',
 		'default'     => 'image',
@@ -599,6 +595,20 @@ if( class_exists( 'Kirki' ) ) {
 			'white'   => esc_attr__( 'White', 'pine-alpha' ),
 			'colorful' => esc_attr__( 'Colorful', 'pine-alpha' ),
 			'image'  => esc_attr__( 'Image', 'pine-alpha' ),
+		),
+	) );
+
+	Kirki::add_field( 'pine_alpha', array(
+		'type'        => 'radio-buttonset',
+		'settings'    => 'pine_alpha_components_archive_title_section_size',
+		'label'       => __( 'Heading Height', 'pine-alpha' ),
+		'section'     => 'pine_alpha_components_archive_title',
+		'default'     => 'medium',
+		'priority'    => 10,
+		'choices'     => array(
+			'small'   => esc_attr__( 'Small', 'pine-alpha' ),
+			'medium' => esc_attr__( 'Medium', 'pine-alpha' ),
+			'large'  => esc_attr__( 'Large', 'pine-alpha' ),
 		),
 	) );
 
@@ -730,6 +740,19 @@ if( class_exists( 'Kirki' ) ) {
 			'none'   => esc_attr__( 'None', 'pine-alpha' ),
 			'left' => esc_attr__( 'Left', 'pine-alpha' ),
 			'right'  => esc_attr__( 'Right', 'pine-alpha' ),
+		),
+	) );
+
+	Kirki::add_field( 'pine_alpha', array(
+		'type'        => 'radio-buttonset',
+		'settings'    => 'pine_alpha_layout_archive_pages_section_type',
+		'label'       => __( 'List Type', 'pine-alpha' ),
+		'section'     => 'pine_alpha_layout_archive_pages',
+		'default'     => 'default',
+		'priority'    => 10,
+		'choices'     => array(
+			'default'   => esc_attr__( 'Default', 'pine-alpha' ),
+			'secondary' => esc_attr__( 'Secondary', 'pine-alpha' )
 		),
 	) );
 

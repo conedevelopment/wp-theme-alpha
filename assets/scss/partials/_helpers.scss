@@ -53,8 +53,7 @@
     &:focus {
         transition: 0.15s ease;
         color: #fff;
-        text-decoration: none;
-        background-position: right top;
+        background: map-get($colors, 'black');
     }
 }
 

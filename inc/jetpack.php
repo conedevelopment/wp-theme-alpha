@@ -37,14 +37,29 @@ function pine_alpha_infinite_scroll_render() {
 			</div>
 		<?php else : ?>
 			<div class="col-12 
-			<?php if( get_theme_mod( 'pine_alpha_layout_archive_pages_section_sidebar_position', 'right' ) == 'none' ) : ?>
-				col-sm-4
-			<?php else : ?>
-				col-sm-6
-			<?php endif; ?>
-			">
-				<?php get_template_part( 'template-parts/post/content', 'list' ); ?>
-			</div>
+                <?php if( get_theme_mod( 'pine_alpha_layout_archive_pages_section_sidebar_position', 'right') == 'none' &&
+                          get_theme_mod( 'pine_alpha_layout_archive_pages_section_type', 'default' ) == 'default' ) : ?>
+                    col-sm-4
+                <?php endif; ?>
+
+                <?php if( get_theme_mod( 'pine_alpha_layout_archive_pages_section_sidebar_position', 'right') != 'none' &&
+                          get_theme_mod( 'pine_alpha_layout_archive_pages_section_type', 'default' ) == 'default' ) : ?>
+                    col-sm-6
+                <?php endif; ?>
+
+                <?php if( get_theme_mod( 'pine_alpha_layout_archive_pages_section_sidebar_position', 'right') == 'none' &&
+                          get_theme_mod( 'pine_alpha_layout_archive_pages_section_type', 'default' ) == 'secondary' ) : ?>
+                    col-lg-6
+                <?php endif; ?>
+                ">
+                <?php 
+                if( get_theme_mod( 'pine_alpha_layout_archive_pages_section_type', 'default' ) == 'default' ) {
+                    get_template_part( 'template-parts/post/content', 'list' );
+                } else {
+                    get_template_part( 'template-parts/post/content', 'list-secondary' );
+                }
+                ?>
+            </div>
 		<?php endif;
 	}
 }

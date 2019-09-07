@@ -107,17 +107,6 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_post->add_field( array(
-		'name'    => esc_html__( 'Sidebar Style', 'pine-alpha' ),
-		'id'      => $prefix . 'sidebar_style', 
-		'type'    => 'radio_inline',
-		'options' => array(
-			'white' => __( 'White', 'pine-alpha' ),
-			'gray'   => __( 'Gray', 'pine-alpha' ),
-		),
-		'default' => 'white',
-	) );
-
-	$cmb_post->add_field( array(
 		'name'    => esc_html__( 'Title Display Type', 'pine-alpha' ),
 		'id'      => $prefix . 'title_display_type', 
 		'type'    => 'radio_inline',
@@ -130,7 +119,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_post->add_field( array(
-		'name'    => esc_html__( 'Title Size', 'pine-alpha' ),
+		'name'    => esc_html__( 'Heading Height', 'pine-alpha' ),
 		'id'      => $prefix . 'title_padding_size', 
 		'type'    => 'radio_inline',
 		'options' => array(
@@ -195,17 +184,6 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_page->add_field( array(
-		'name'    => esc_html__( 'Sidebar Style', 'pine-alpha' ),
-		'id'      => $prefix . 'sidebar_style', 
-		'type'    => 'radio_inline',
-		'options' => array(
-			'white' => __( 'White', 'pine-alpha' ),
-			'gray'   => __( 'Gray', 'pine-alpha' ),
-		),
-		'default' => 'white',
-	) );
-
-	$cmb_page->add_field( array(
 		'name'    => esc_html__( 'Title Display Type', 'pine-alpha' ),
 		'id'      => $prefix . 'title_display_type', 
 		'type'    => 'radio_inline',
@@ -218,7 +196,7 @@ function pine_alpha_register_theme_options_metabox() {
 	) );
 
 	$cmb_page->add_field( array(
-		'name'    => esc_html__( 'Title Size', 'pine-alpha' ),
+		'name'    => esc_html__( 'Heading Height', 'pine-alpha' ),
 		'id'      => $prefix . 'title_padding_size', 
 		'type'    => 'radio_inline',
 		'options' => array(
