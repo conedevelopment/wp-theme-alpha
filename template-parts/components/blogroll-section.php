@@ -1,14 +1,11 @@
 <div class="container site-main-wrapper is-component
-	<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) != 'none' &&
-			  get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_type', 'white' ) == 'white' ) : ?>
-		has-sidebar--white
+	<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) != 'none' ) : ?>
+		has-sidebar
 	<?php endif; ?>
 ">
 	<div class="row">
 		<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'left' ) : ?>
-			<aside class="site-sidebar is-left col-12 col-lg-4
-				is-<?php echo get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_type', 'white' ); ?>
-			">
+			<aside class="site-sidebar is-left col-12 col-lg-4">
 				<?php get_sidebar(); ?>
 			</aside>
 		<?php endif; ?>
@@ -40,7 +37,7 @@
 					<?php while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
 						<div class="col-12 
 						<?php if( get_theme_mod( 'pine_alpha_components_blogroll_section_sidebar_position', 'right' ) == 'none' ) : ?>
-							col-sm-4
+							col-sm-4 
 						<?php else : ?>
 							col-sm-6
 						<?php endif; ?>

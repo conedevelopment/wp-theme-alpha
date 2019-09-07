@@ -489,63 +489,6 @@ if( class_exists( 'Kirki' ) ) {
 		'priority'    => 10,
 	) );
 
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'custom',
-		'settings'    => 'pine_alpha_components_categories_line_separator_1',
-		'section'     => 'pine_alpha_components_categories',
-		'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
-		'priority'    => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'color-palette',
-		'settings'    => 'pine_alpha_components_categories_section_background',
-		'label'       => esc_attr__( 'Background Color', 'pine-alpha' ),
-		'description' => esc_attr__( 'Set the categories section background color. Use the light gray if the section is placed between white elements.', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_categories',
-		'default'     => '#f9f9f9',
-		'choices'     => array(
-			'colors' => array( '#ffffff', '#f9f9f9' ),
-			'style'  => 'round',
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'custom',
-		'settings'    => 'pine_alpha_components_categories_line_separator_2',
-		'section'     => 'pine_alpha_components_categories',
-		'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
-		'priority'    => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'number',
-		'settings'    => 'pine_alpha_components_categories_section_padding_top',
-		'label'       => esc_attr__( 'Padding Top', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_categories',
-		'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
-		'default'     => 3,
-		'choices'     => array(
-			'min'  => 0,
-			'max'  => 3,
-			'step' => 1,
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'number',
-		'settings'    => 'pine_alpha_components_categories_section_padding_bottom',
-		'label'       => esc_attr__( 'Padding Bottom', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_categories',
-		'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
-		'default'     => 3,
-		'choices'     => array(
-			'min'  => 0,
-			'max'  => 3,
-			'step' => 1,
-		),
-	) );
-
 
 
 	/**
@@ -627,20 +570,6 @@ if( class_exists( 'Kirki' ) ) {
 	) );
 
 	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'pine_alpha_components_blogroll_section_sidebar_type',
-		'label'       => __( 'Sidebar Type', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_blogroll',
-		'description' => esc_attr__( 'Set the style of the sidebar.', 'pine-alpha' ),
-		'default'     => 'gray',
-		'priority'    => 10,
-		'choices'     => array(
-			'white'   => esc_attr__( 'White', 'pine-alpha' ),
-			'gray' => esc_attr__( 'Gray', 'pine-alpha' )
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
 		'type'        => 'custom',
 		'settings'    => 'pine_alpha_components_blogroll_section_line_separator_4',
 		'section'     => 'pine_alpha_components_blogroll',
@@ -648,33 +577,6 @@ if( class_exists( 'Kirki' ) ) {
 		'priority'    => 10,
 	) );
 
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'number',
-		'settings'    => 'pine_alpha_components_blogroll_section_padding_top',
-		'label'       => esc_attr__( 'Padding Top', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_blogroll',
-		'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
-		'default'     => 3,
-		'choices'     => array(
-			'min'  => 0,
-			'max'  => 3,
-			'step' => 1,
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'number',
-		'settings'    => 'pine_alpha_components_blogroll_section_padding_bottom',
-		'label'       => esc_attr__( 'Padding Bottom', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_blogroll',
-		'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
-		'default'     => 3,
-		'choices'     => array(
-			'min'  => 0,
-			'max'  => 3,
-			'step' => 1,
-		),
-	) );
 
 
 	/**
@@ -697,34 +599,6 @@ if( class_exists( 'Kirki' ) ) {
 			'white'   => esc_attr__( 'White', 'pine-alpha' ),
 			'colorful' => esc_attr__( 'Colorful', 'pine-alpha' ),
 			'image'  => esc_attr__( 'Image', 'pine-alpha' ),
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'number',
-		'settings'    => 'pine_alpha_components_archive_title_padding_top',
-		'label'       => esc_attr__( 'Padding Top', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_archive_title',
-		'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
-		'default'     => 3,
-		'choices'     => array(
-			'min'  => 2,
-			'max'  => 8,
-			'step' => 1,
-		),
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'number',
-		'settings'    => 'pine_alpha_components_archive_title_padding_bottom',
-		'label'       => esc_attr__( 'Padding Bottom', 'pine-alpha' ),
-		'section'     => 'pine_alpha_components_archive_title',
-		'description' => esc_attr__( 'You can define this value in rem. 1rem is (1 * the base font-size).', 'pine-alpha' ),
-		'default'     => 3,
-		'choices'     => array(
-			'min'  => 2,
-			'max'  => 8,
-			'step' => 1,
 		),
 	) );
 
@@ -865,20 +739,6 @@ if( class_exists( 'Kirki' ) ) {
 		'section'     => 'pine_alpha_layout_archive_pages',
 		'default'     => '<hr style="margin: 6px 0; border: none; height: 1px; background: rgba(0,0,0,0.05);" />',
 		'priority'    => 10,
-	) );
-
-	Kirki::add_field( 'pine_alpha', array(
-		'type'        => 'radio-buttonset',
-		'settings'    => 'pine_alpha_layout_archive_pages_section_sidebar_type',
-		'label'       => __( 'Sidebar Type', 'pine-alpha' ),
-		'section'     => 'pine_alpha_layout_archive_pages',
-		'description' => esc_attr__( 'Set the style of the sidebar.', 'pine-alpha' ),
-		'default'     => 'gray',
-		'priority'    => 10,
-		'choices'     => array(
-			'white'   => esc_attr__( 'White', 'pine-alpha' ),
-			'gray' => esc_attr__( 'Gray', 'pine-alpha' )
-		),
 	) );
 
 	/**

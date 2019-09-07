@@ -304,14 +304,14 @@
         &:active {
             svg {
                 fill: map-get($colors, 'default');
-                transition: fill 0.25s ease;
+                transition: fill 0.15s ease;
             }
         }
 
         svg {
             height: 1rem;
             width: 1rem;
-            transition: fill 0.25s ease;
+            transition: fill 0.15s ease;
         }
     }
 
@@ -332,7 +332,7 @@
         &:hover,
         &:focus,
         &:active {
-            background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 10%));
+            background: map-get($colors, 'default');
         }
 
         svg {
@@ -426,13 +426,13 @@
         border-radius: 50%;
         border: none;
         cursor: pointer;
-        transition: background 0.25s ease;
+        transition: background 0.15s ease;
 
         &:hover,
         &:focus,
         &:active {
             background: rgba(0,0,0,0.4);
-            transition: background 0.25s ease;
+            transition: background 0.15s ease;
         }
 
         &::before {

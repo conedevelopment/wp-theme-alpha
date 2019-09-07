@@ -76,7 +76,7 @@
     }
 
     a {
-        transition: color 0.25s ease;
+        transition: color 0.15s ease;
         color: map-get($colors, 'default');
         font-size: 1.3rem !important;
         text-decoration: none;
@@ -86,7 +86,7 @@
         &:active,
         &:focus {
             text-decoration: underline;
-            transition: color 0.25s ease;
+            transition: color 0.15s ease;
             color: map-get($colors, 'secondary');
         }
     }

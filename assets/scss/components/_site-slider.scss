@@ -1,6 +1,11 @@
 .slider-posts {
     position: relative;
     visibility: hidden;
+    margin-top: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 1rem;
+    }
 
     &.slick-initialized {
         visibility: visible;
@@ -9,10 +14,10 @@
 
 .slick-slide {
     > div {
-        margin: 0.5rem;
+        margin: 0 0.5rem;
 
         @include media-breakpoint-up(md) {
-            margin: 1rem;
+            margin: 0 1rem;
         }
     }
 }
@@ -46,7 +51,7 @@
         display: block;
         z-index: -1;
         background: linear-gradient(0deg, currentColor, rgba(255, 255, 255, 0.7));
-        transition: opacity 0.25s ease;
+        transition: opacity 0.15s ease;
         opacity: 0.65;
         backface-visibility: hidden;
     }
@@ -54,7 +59,7 @@
     &:hover {
         &::before {
             opacity: 0.85;
-            transition: opacity 0.25s ease;
+            transition: opacity 0.15s ease;
         }
     }
 

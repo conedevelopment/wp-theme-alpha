@@ -117,14 +117,14 @@
         &:active {
             svg {
                 fill: map-get($colors, 'default');
-                transition: fill 0.25s ease;
+                transition: fill 0.15s ease;
             }
         }
 
         svg {
             height: 1rem;
             width: 1rem;
-            transition: fill 0.25s ease;
+            transition: fill 0.15s ease;
         }
     }
 }

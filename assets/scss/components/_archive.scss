@@ -17,7 +17,7 @@
         &:hover,
         &:active,
         &:focus {
-            background: linear-gradient(45deg, map-get($colors, 'default'), lighten(map-get($colors, 'default'), 20%));
+            background: map-get($colors, 'default');
             text-decoration: none;
             transition: 0.15s ease;
         }

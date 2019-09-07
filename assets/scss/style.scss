@@ -89,14 +89,14 @@ body {
 }
 
 a {
-    transition: color 0.25s ease;
+    transition: color 0.15s ease;
     color: map-get($colors, 'default');
 
     &:hover,
     &:active,
     &:focus {
         text-decoration: none;
-        transition: color 0.25s ease;
+        transition: color 0.15s ease;
         color: map-get($colors, 'secondary');
     }
 }

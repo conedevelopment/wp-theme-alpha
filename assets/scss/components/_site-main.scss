@@ -1,19 +1,24 @@
 .site-main-wrapper {
-    &.has-sidebar--white {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+    &.has-sidebar {    
+        margin-top: 2.5rem ;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 4rem;
+        }
 
         .site-main {
-            padding-top: 0;
-            padding-bottom: 0;
+            margin-top: 0;
         }
     }
 }
 
 .site-main {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
     width: 100%;
+    margin-top: 2.5rem ;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 4rem;
+    }
 
     &.is-single {
         margin-right: 15px;

@@ -3678,13 +3678,11 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0.9rem 1.1rem;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(45deg, #0095FF, #33aaff);
-  background-size: 140% auto;
-  background-position: left top;
+  background: #0095FF;
   border: none;
   font-weight: 700;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
+  -webkit-transition: 0.15s ease;
+  transition: 0.15s ease;
   font-size: 0.8rem;
   text-transform: uppercase;
   line-height: 1;
@@ -3699,8 +3697,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .wp-block-button__link:hover, .wp-block-button__link:active, .wp-block-button__link:focus {
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
+  -webkit-transition: 0.15s ease;
+  transition: 0.15s ease;
   color: #fff;
   text-decoration: none;
   background-position: right top;
@@ -3725,13 +3723,11 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0.9rem 1.1rem;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(45deg, #0095FF, #33aaff);
-  background-size: 140% auto;
-  background-position: left top;
+  background: #0095FF;
   border: none;
   font-weight: 700;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
+  -webkit-transition: 0.15s ease;
+  transition: 0.15s ease;
   font-size: 0.8rem;
   text-transform: uppercase;
   line-height: 1;
@@ -3750,8 +3746,8 @@ a.text-dark:hover, a.text-dark:focus {
 .wp-block-file__content-wrapper .wp-block-file__button:hover,
 .wp-block-file__content-wrapper .wp-block-file__button:active,
 .wp-block-file__content-wrapper .wp-block-file__button:focus {
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
+  -webkit-transition: 0.15s ease;
+  transition: 0.15s ease;
   color: #fff;
   text-decoration: none;
   background-position: right top;
@@ -3843,8 +3839,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .editor-styles-wrapper a {
-  -webkit-transition: color 0.25s ease;
-  transition: color 0.25s ease;
+  -webkit-transition: color 0.15s ease;
+  transition: color 0.15s ease;
   color: #0095FF;
   font-size: 1.3rem !important;
   text-decoration: none;
@@ -3853,8 +3849,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 .editor-styles-wrapper a:hover, .editor-styles-wrapper a:active, .editor-styles-wrapper a:focus {
   text-decoration: underline;
-  -webkit-transition: color 0.25s ease;
-  transition: color 0.25s ease;
+  -webkit-transition: color 0.15s ease;
+  transition: color 0.15s ease;
   color: #3be197;
 }
 

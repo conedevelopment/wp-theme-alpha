@@ -1,9 +1,9 @@
 .categories-section {
-    background: map-get($colors, 'light-gray');
-    padding: 2rem 0;
+    background: #fff;
+    margin-top: 2.5rem;
 
     @include media-breakpoint-up(lg) {
-        padding: 3rem 0;
+        margin-top: 4rem;
     }
 
     &__inside {
@@ -50,7 +50,7 @@
         display: block;
         z-index: 3;
         background: linear-gradient(45deg, currentColor, rgba(255, 255, 255, 0.7));
-        transition: opacity 0.25s ease;
+        transition: opacity 0.15s ease;
         opacity: 0.65;
     }
 
