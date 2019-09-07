@@ -14,7 +14,7 @@
     "@babel/register": "^7.4.4",
     "beepbeep": "^1.2.2",
     "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.7",
     "eslint": "^5.16.0",
     "eslint-config-wordpress": "^2.0.0",
     "gulp": "^4.0.2",
