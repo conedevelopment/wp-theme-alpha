@@ -59,7 +59,7 @@
             <?php endif; ?>
 
             <?php 
-                if ( class_exists( 'Jetpack' ) && !Jetpack::is_module_active( 'infinite-scroll' ) ) {
+                if ( ! class_exists( 'Jetpack' ) || ! Jetpack::is_module_active( 'infinite-scroll' ) ) {
                     the_posts_pagination();
                 }
             ?>
