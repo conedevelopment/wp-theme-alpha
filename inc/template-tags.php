@@ -7,32 +7,37 @@
  * @package pine-alpha
  */
 
- function pine_alpha_get_category_list($ID, $url) {
-	$categories = get_the_category($ID);
-	$i = 0;
-	$length = count($categories);
+function pine_alpha_get_category_list( $ID, $url = false ) {
+	$categories           = get_the_category( $ID );
+	$length               = count( $categories );
+	$category_labels_html = array();
 
-	if ( $categories  ) {
-		echo '<span class="categories-wrapper">';
-		foreach  ($categories as $category) {
-			if ( $i != $length - 1 ) {
-				if ( $url == true ) {
-					echo '<span class="category-label"><a href="' . get_category_link( $category->term_taxonomy_id ) . '">' . $category->name . '</a><span class="separator">,</span></span>';
-				} else {
-					echo '<span class="category-label">' . $category->name . ',</span>';
-				}
-			} else {
-				if ( $url == true ) {
-					echo '<span class="category-label"><a href="' . get_category_link( $category->term_taxonomy_id ) . '">' . $category->name . '</a></span>';
-				} else {
-					echo '<span class="category-label">' . $category->name . '</span>';
-				}
-			}
-			$i++;
-		}
-		echo '</span>';
+	if ( 0 === $length ) {
+		return;
 	}
- }
+
+	foreach ( $categories as $category ) {
+		$category_labels_html[] = $url === true
+			? sprintf( '<a href="%s">%s</a>', esc_url( get_category_link( $category->term_taxonomy_id ) ), esc_html( $category->name ) )
+			: esc_html( $category->name );
+	}
+
+	printf(
+		'<span class="categories-wrapper">%s</span>',
+		implode(
+			'<span class="separator">,</span>',
+			array_map(
+				/**
+				 * Wrap labels in spans.
+				 */
+				static function ( $html ) {
+					return sprintf( '<span class="category-label">%s</span>', $html );
+				},
+				$category_labels_html
+			)
+		)
+	);
+}
 
 if ( ! function_exists( 'pine_alpha_posted_on' ) ) :
 	/**
