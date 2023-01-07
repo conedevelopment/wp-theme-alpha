@@ -66,7 +66,7 @@ class Back_Compat {
 	 *
 	 * @hook load-customize.php
 	 */
-	public function pine_alpha_customize() {
+	public function customize() {
 		wp_die( esc_html( $this->message ), '', array(
 			'back_link' => true,
 		) );
